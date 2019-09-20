@@ -13,12 +13,31 @@
     
     <item>
       <title></title>
+      <link>https://koki-nakamura22.github.io/blog/posts/en/hoge/</link>
+      <pubDate>Sun, 15 Sep 2019 22:39:57 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/posts/en/hoge/</guid>
+      <description>Nya-n
+public class Person { public string name { get; set; } public Person() { } private string SetName(string name) { this.name = name; } }  $(() =&amp;gt; { console.log(&amp;quot;Nya-n!&amp;quot;); })  &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;aaa&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Hello nya-n! &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  @echo off REM Build the project. hugo REM Go to public directory. cd public REM Add changes to git. git add . REM Create a commit message. set d=%date% set yyyy=%d:~-10,4% set mm=%d:~-5,2% set dd=%d:~-2,2% set t=%time: =0% set hh=%t:~0,2% set mn=%t:~3,2% set ss=%t:~6,2% set commitMsg=Site updated: %yyyy%-%mm%-%dd% %hh%:%mn%:%ss% REM Commit.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://koki-nakamura22.github.io/blog/posts/hoge/</link>
       <pubDate>Sun, 15 Sep 2019 22:39:57 +1000</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/posts/hoge/</guid>
       <description>Nya-n
 public class Person { public string name { get; set; } public Person() { } private string SetName(string name) { this.name = name; } }  $(() =&amp;gt; { console.log(&amp;quot;Nya-n!&amp;quot;); })  &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;aaa&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; Hello nya-n! &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  @echo off REM Build the project. hugo REM Go to public directory. cd public REM Add changes to git. git add . REM Create a commit message. set d=%date% set yyyy=%d:~-10,4% set mm=%d:~-5,2% set dd=%d:~-2,2% set t=%time: =0% set hh=%t:~0,2% set mn=%t:~3,2% set ss=%t:~6,2% set commitMsg=Site updated: %yyyy%-%mm%-%dd% %hh%:%mn%:%ss% REM Commit.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>https://koki-nakamura22.github.io/blog/posts/en/welcome/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/posts/en/welcome/</guid>
+      <description>Hello World!</description>
     </item>
     
     <item>
