@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://koki-nakamura22.github.io/blog/posts/en/hoge/</loc>
-    <lastmod>2019-09-15T22:39:57+10:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/posts/hoge/</loc>
-    <lastmod>2019-09-15T22:39:57+10:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://koki-nakamura22.github.io/blog/categories/</loc>
     <lastmod>2019-09-15T22:39:57+10:00</lastmod>
     <xhtml:link
@@ -59,37 +49,12 @@
   
   <url>
     <loc>https://koki-nakamura22.github.io/blog/categories/test/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/categories/test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/categories/test/"
-                />
+    <lastmod>2019-09-15T22:39:57+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://koki-nakamura22.github.io/blog/posts/en/welcome/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/posts/welcome/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/posts/welcome/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/posts/welcome/"
-                />
+    <loc>https://koki-nakamura22.github.io/blog/2019/09/15/test/</loc>
+    <lastmod>2019-09-15T22:39:57+10:00</lastmod>
   </url>
   
   <url>
