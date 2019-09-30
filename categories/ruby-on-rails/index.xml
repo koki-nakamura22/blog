@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Koki&#39;s personal blog</title>
-    <link>https://koki-nakamura22.github.io/blog/</link>
-    <description>Recent content on Koki&#39;s personal blog</description>
+    <title>Ruby on Rails on Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/categories/ruby-on-rails/</link>
+    <description>Recent content in Ruby on Rails on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 30 Sep 2019 18:55:46 +1000</lastBuildDate>
     
-	<atom:link href="https://koki-nakamura22.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://koki-nakamura22.github.io/blog/categories/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,18 +20,6 @@
       <description>This article explain how to install Ruby on Rails on Windows 10.
 The following lists are the table of contents about this article.
  Target audience Environment Preconditions Install How to check installed packages Reference articles  Target audience  Those who want to create Ruby on Rails environment on Windows 10.   Environment  Windows 10 (1903) Chocolatey (0.10.15)   Preconditions  Already installed Chocolatey   Install Execute the following commands on Command Prompt or PowerShell as administrator.</description>
-    </item>
-    
-    <item>
-      <title>How to install Chocolatey on Windows 10.</title>
-      <link>https://koki-nakamura22.github.io/blog/2019/09/04/how-to-install-chocolatey/</link>
-      <pubDate>Wed, 04 Sep 2019 16:38:27 +1000</pubDate>
-      
-      <guid>https://koki-nakamura22.github.io/blog/2019/09/04/how-to-install-chocolatey/</guid>
-      <description>This article explain how to install Chocolatey on Windows 10.
-Chocolatey is Package Management Tools that is like apt-get or yum on Linux.
-The following lists are the table of contents about this article.
- Target audience How to install Confirm Chocolatey is installed Install something to example How to check installed packages How to uninstall package How to update package Reference articles  Target audience  Those who want to use functions like apt-get or yum on Windows.</description>
     </item>
     
   </channel>
