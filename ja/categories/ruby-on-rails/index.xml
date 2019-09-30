@@ -20,7 +20,7 @@
       <description>本記事では、Windows 10環境にRuby on Railsをインストールする方法を説明していきます。
 本記事の内容です。
  対象読者 環境 前提条件 インストール方法 RubyとRuby on Railsがインストールされたことを確認 参考にさせていただいたページ  対象読者  Windows 10にRuby on Rails環境を作成したい方   環境  Windows 10 (1903) Chocolatey (0.10.15)   前提条件  Chocolateyインストール済み   インストール方法 下記のコマンドたちを管理者権限のコマンドプロンプトもしくはPowerShellで実行します。
-REM Install Yarn choco install yarn -y REM Install Ruby choco install ruby -y REM Install msys2 choco install msys2 --params &amp;quot;/NoUpdate&amp;quot; -y refreshenv ridk install 2 3 REM Install SQLite gem uninstall sqlite3 --all ridk exec pacman -S mingw-w64-x86_64-sqlite3 gem install sqlite3 --platform ruby REM Install bundle gem install bundle REM Install Ruby on Rails gem install rails  RubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。</description>
+REM Install Yarn choco install yarn -y REM Install Ruby choco install ruby -y REM Install msys2 choco install msys2 --params &amp;#34;/NoUpdate&amp;#34; -y refreshenv ridk install 2 3 REM Install SQLite gem uninstall sqlite3 --all ridk exec pacman -S mingw-w64-x86_64-sqlite3 gem install sqlite3 --platform ruby REM Install bundle gem install bundle REM Install Ruby on Rails gem install rails RubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。</description>
     </item>
     
   </channel>
