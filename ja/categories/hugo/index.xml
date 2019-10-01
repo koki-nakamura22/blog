@@ -6,10 +6,26 @@
     <description>Recent content in Hugo on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 15 Sep 2019 22:39:57 +1000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2019 20:50:01 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugoブログにシンタックスハイライト機能を追加する方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/</link>
+      <pubDate>Tue, 01 Oct 2019 20:50:01 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/</guid>
+      <description> この記事では、Hugoで作成したブログにシンタックスハイライト機能を追加する方法を説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 シンタックスハイライト機能を追加 参考にさせていただいたページ  対象読者  Hugoで作成したブログにシンタックスハイライト機能を追加したい方   環境  Hugo 0.57.2 Hugo-extended 0.58.2   前提条件  HugoおよびHugo-entendedインストール済み   シンタックスハイライト機能を追加 config.tomlへ下記のコードを追加します。
+pygmentsCodefences = true pygmentsStyle = &amp;#34;fruity&amp;#34; pygmentsStyleへ代入する値を変更することで、様々なスタイルを使用することができます。
+また、スタイルは下記のページから選択することができます。
+Chroma Style Galleryxxxxxxxxxx
+ちなみに、上記のコードで使用しているスタイルは&amp;rdquo;fruity&amp;rdquo;です。
+ 参考にさせていただいたページ Syntax highlighting in Hugo with Chroma | zwbetzxxxxxxxxxx </description>
+    </item>
     
     <item>
       <title>Hugo &#43; GitHub Pagesでブログを作成する方法</title>

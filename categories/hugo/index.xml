@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/categories/hugo/</link>
+    <description>Recent content in Hugo on Koki&#39;s personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 01 Oct 2019 20:50:00 +1000</lastBuildDate>
+    
+	<atom:link href="https://koki-nakamura22.github.io/blog/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to add a function of syntax highlight to Hugo blog</title>
+      <link>https://koki-nakamura22.github.io/blog/2019/10/01/hugo-syntax-highlight/</link>
+      <pubDate>Tue, 01 Oct 2019 20:50:00 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/2019/10/01/hugo-syntax-highlight/</guid>
+      <description>This article explains how to add a function of syntax highlight on Hugo blog.
+The following lists are the table of contents about this article.
+ Target audience Environment Preconditions Add a function of syntax highlight Reference articles  Target audience  Those who want to add a function of syntax highlight on Hugo blog.   Environment  Hugo 0.57.2 Hugo-extended 0.58.2   Preconditions  Installed Hugo and Hugo-extended   Add a function of syntax highlight Add the following codes to config.</description>
+    </item>
+    
+  </channel>
+</rss>
