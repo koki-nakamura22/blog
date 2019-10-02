@@ -6,10 +6,21 @@
     <description>Recent content in Hugo on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Oct 2019 20:50:00 +1000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2019 21:30:24 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to add a title to code block on Hugo blog</title>
+      <link>https://koki-nakamura22.github.io/blog/2019/10/02/hugo-code-block-title/</link>
+      <pubDate>Wed, 02 Oct 2019 21:30:24 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/2019/10/02/hugo-code-block-title/</guid>
+      <description>This article explains how to add a title to code block on Hugo blog.
+The following lists are the table of contents about this article.
+ Target audience Environment Preconditions Add a title to code block  Add JavaScript code Add CSS code How to set a title  Reference articles   Target audience  Those who want to add a title to code block on Hugo blog.   Environment  Hugo 0.</description>
+    </item>
     
     <item>
       <title>How to add a function of syntax highlight to Hugo blog</title>
