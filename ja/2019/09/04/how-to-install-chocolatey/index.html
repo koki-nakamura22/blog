@@ -307,12 +307,6 @@
 
   </section>
   
-  <a href="/blog/ja/2019/09/04/how-to-install-chocolatey/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
   <div class="content">
     
@@ -343,17 +337,17 @@
 <h1 id="インストール方法">インストール方法</h1>
 
 <p>下記のコマンドを、管理者権限で起動したコマンドプロンプト上で実行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#0086d2">&#34;</span><span style="color:#fb660a">%SystemRoot%</span><span style="color:#0086d2">\System32\WindowsPowerShell\v1.0\powershell.exe&#34;</span> -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command <span style="color:#0086d2">&#34;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span> &amp;&amp; <span style="color:#fb660a;font-weight:bold">SET</span> <span style="color:#0086d2">&#34;PATH=</span><span style="color:#fb660a">%PATH%</span><span style="color:#0086d2">;</span><span style="color:#fb660a">%ALLUSERSPROFILE%</span><span style="color:#0086d2">\chocolatey\bin&#34;</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#a31515">&#34;</span>%SystemRoot%<span style="color:#a31515">\System32\WindowsPowerShell\v1.0\powershell.exe&#34;</span> -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command <span style="color:#a31515">&#34;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span> &amp;&amp; <span style="color:#00f">SET</span> <span style="color:#a31515">&#34;PATH=</span>%PATH%<span style="color:#a31515">;</span>%ALLUSERSPROFILE%<span style="color:#a31515">\chocolatey\bin&#34;</span></code></pre></div>
 <p>もしくは、下記のコマンドを管理者権限で起動したPowerShell上で実行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope <span style="color:#fb660a;font-weight:bold">Process</span> -Force; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#0086d2">&#39;https://chocolatey.org/install.ps1&#39;</span>))</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope <span style="color:#00f">Process</span> -Force; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#a31515">&#39;https://chocolatey.org/install.ps1&#39;</span>))</code></pre></div>
 <h2 id="br-1"><br></h2>
 
 <h1 id="インストールされたことを確認">インストールされたことを確認</h1>
 
 <p>上記のコマンドが終了した後に</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco -v</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco -v</code></pre></div>
 <p>を実行し、下記のようにバージョン情報が表示されたらインストールが成功しています。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\WINDOWS\system32<span style="color:#080;background-color:#0f140f;font-style:italic">&gt;choco -v</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\WINDOWS\system32<span style="color:#008000">&gt;choco -v</span>
 0.10.15</code></pre></div>
 <h2 id="br-2"><br></h2>
 
@@ -365,31 +359,31 @@
 下記のコマンドを実行します。<br />
 この時、コマンドプロンプトやPowerShellは管理者権限で起動しておきましょう。(ソフトウェアをインストールする時は管理者権限が求められるため。)<br />
 また、途中で処理を続行するかを問われるので、「Y」を入力し続行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">choco install 7zip</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">choco install 7zip</code></pre></div>
 <h2 id="br-3"><br></h2>
 
 <h1 id="インストール済みのパッケージ確認">インストール済みのパッケージ確認</h1>
 
 <p>インストール済みのパッケージを確認する場合は、下記のコマンドを実行します。<br />
 試しに、上記でインストールした7zipが表示されるか確認してみましょう。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco list -localonly</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco list -localonly</code></pre></div>
 <h2 id="br-4"><br></h2>
 
 <h1 id="アンインストール方法">アンインストール方法</h1>
 
 <p>インストール済みのパッケージをアンインストールする際は、下記コマンドを実行します。<br />
 この時、本当に削除してもよいかを聞かれるので「Y」を入力し、処理を続行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install [package name]</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install [package name]</code></pre></div>
 <p>例えば、上記でインストールしたものをアンインストールするには下記のコマンドを実行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco uninstall 7zip</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco uninstall 7zip</code></pre></div>
 <h2 id="br-5"><br></h2>
 
 <h1 id="パッケージのアップデート方法">パッケージのアップデート方法</h1>
 
 <p>すべてのパッケージをアップデートする場合は下記のコマンドを、</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update all</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update all</code></pre></div>
 <p>パッケージを指定してアップデートする場合は下記のコマンドを実行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update [package name]</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update [package name]</code></pre></div>
 <h2 id="br-6"><br></h2>
 
 <h1 id="参考にさせていただいたページ">参考にさせていただいたページ</h1>
@@ -445,12 +439,17 @@
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/10/02/hugo-code-block-title/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
 
+        </section>
+        <header>
+          <h1><a href="/blog/ja/2019/10/03/hugo-adding-copy-button/">Hugoブログのコードブロックにコピーボタンを追加する方法</a></h1>
+          <time class="published" datetime="">October 3, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
 
         </section>
         <header>
@@ -462,12 +461,6 @@
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/10/01/hugo-syntax-highlight/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -479,12 +472,6 @@
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/09/30/how-to-install-rails-on-windows/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -496,34 +483,11 @@
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
           <h1><a href="/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/">Hugo &#43; GitHub Pagesでブログを作成する方法</a></h1>
           <time class="published" datetime="">September 15, 2019</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-  <a href="/blog/ja/2019/09/04/how-to-install-chocolatey/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/blog/ja/2019/09/04/how-to-install-chocolatey/">Windows 10でパッケージマネージャ(Chocolatey)を使用する方法</a></h1>
-          <time class="published" datetime="">September 4, 2019</time>
         </header>
       </article>
       
@@ -546,7 +510,7 @@
           
           <li>
             
-              <a href="/blog/ja/categories/hugo/">hugo<span class="count">3</span></a>
+              <a href="/blog/ja/categories/hugo/">hugo<span class="count">4</span></a>
             
           
           <li>

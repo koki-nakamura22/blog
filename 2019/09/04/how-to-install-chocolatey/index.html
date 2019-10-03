@@ -307,12 +307,6 @@
 
   </section>
   
-  <a href="/blog/2019/09/04/how-to-install-chocolatey/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
   <div class="content">
     
@@ -344,17 +338,17 @@ Chocolatey is Package Management Tools that is like apt-get or yum on Linux.</p>
 <h1 id="how-to-install">How to install</h1>
 
 <p>Execute the following command on Command Prompt as Administrator.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#0086d2">&#34;</span><span style="color:#fb660a">%SystemRoot%</span><span style="color:#0086d2">\System32\WindowsPowerShell\v1.0\powershell.exe&#34;</span> -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command <span style="color:#0086d2">&#34;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span> &amp;&amp; <span style="color:#fb660a;font-weight:bold">SET</span> <span style="color:#0086d2">&#34;PATH=</span><span style="color:#fb660a">%PATH%</span><span style="color:#0086d2">;</span><span style="color:#fb660a">%ALLUSERSPROFILE%</span><span style="color:#0086d2">\chocolatey\bin&#34;</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#a31515">&#34;</span>%SystemRoot%<span style="color:#a31515">\System32\WindowsPowerShell\v1.0\powershell.exe&#34;</span> -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command <span style="color:#a31515">&#34;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span> &amp;&amp; <span style="color:#00f">SET</span> <span style="color:#a31515">&#34;PATH=</span>%PATH%<span style="color:#a31515">;</span>%ALLUSERSPROFILE%<span style="color:#a31515">\chocolatey\bin&#34;</span></code></pre></div>
 <p>Or, execute the following command on PowerShell as Administrator.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope <span style="color:#fb660a;font-weight:bold">Process</span> -Force; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#0086d2">&#39;https://chocolatey.org/install.ps1&#39;</span>))</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope <span style="color:#00f">Process</span> -Force; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#a31515">&#39;https://chocolatey.org/install.ps1&#39;</span>))</code></pre></div>
 <h2 id="br-1"><br></h2>
 
 <h1 id="confirm-chocolatey-is-installed">Confirm Chocolatey is installed</h1>
 
 <p>After execute install, execute the following command on Command Prompt or PowerShell.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco -v</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco -v</code></pre></div>
 <p>If version information appears like the following information, install was a success.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\WINDOWS\system32<span style="color:#080;background-color:#0f140f;font-style:italic">&gt;choco -v</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\WINDOWS\system32<span style="color:#008000">&gt;choco -v</span>
 0.10.15</code></pre></div>
 <h2 id="br-2"><br></h2>
 
@@ -365,13 +359,13 @@ Chocolatey is Package Management Tools that is like apt-get or yum on Linux.</p>
 <p>Refer to the above article, let&rsquo;s install 7zip as a test.<br />
 Execute the following command on Command Prompt or PowerShell as Administrator.<br />
 When installing it, Command Prompt and Powershell will ask you if you want to continue. Press &ldquo;Y&rdquo; to continue a process.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">choco install 7zip</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">choco install 7zip</code></pre></div>
 <h2 id="br-3"><br></h2>
 
 <h1 id="how-to-check-installed-packages">How to check installed packages</h1>
 
 <p>Execute the following command on Command Prompt or PowerShell.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco list -localonly</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco list -localonly</code></pre></div>
 <h2 id="br-4"><br></h2>
 
 <h1 id="how-to-uninstall-package">How to uninstall package</h1>
@@ -379,17 +373,17 @@ When installing it, Command Prompt and Powershell will ask you if you want to co
 <p>Execute the following command on Command Prompt or PowerShell.<br />
 When uninstalling a package, you have to specify package that uninstalling.<br />
 And Command Prompt and Powershell will ask you if you want to continue. Press &ldquo;Y&rdquo; to continue a process.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install [package name]</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install [package name]</code></pre></div>
 <p>For example, if uninstalling 7zip, execute the following command on Command Prompt or PowerShell.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco uninstall 7zip</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco uninstall 7zip</code></pre></div>
 <h2 id="br-5"><br></h2>
 
 <h1 id="how-to-update-package">How to update package</h1>
 
 <p>If you want to update all packages, execute the following command,</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update all</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update all</code></pre></div>
 <p>if you want to specify package, execute the following command on Command Prompt or PowerShell.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update [package name]</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update [package name]</code></pre></div>
 <h2 id="br-6"><br></h2>
 
 <h1 id="reference-articles">Reference articles</h1>
@@ -445,12 +439,17 @@ And Command Prompt and Powershell will ask you if you want to continue. Press &l
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/10/02/hugo-code-block-title/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
 
+        </section>
+        <header>
+          <h1><a href="/blog/2019/10/03/hugo-adding-copy-button/">Adding copy code button to Hugo blog</a></h1>
+          <time class="published" datetime="">October 3, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
 
         </section>
         <header>
@@ -462,12 +461,6 @@ And Command Prompt and Powershell will ask you if you want to continue. Press &l
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/10/01/hugo-syntax-highlight/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -479,12 +472,6 @@ And Command Prompt and Powershell will ask you if you want to continue. Press &l
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/09/30/how-to-install-rails-on-windows/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -496,12 +483,6 @@ And Command Prompt and Powershell will ask you if you want to continue. Press &l
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/09/04/how-to-install-chocolatey/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -510,6 +491,8 @@ And Command Prompt and Powershell will ask you if you want to continue. Press &l
         </header>
       </article>
       
+      
+        <a href="/blog/blog/" class="button">See more</a>
       
     </section>
   
@@ -527,7 +510,7 @@ And Command Prompt and Powershell will ask you if you want to continue. Press &l
           
           <li>
             
-              <a href="/blog/categories/hugo/">hugo<span class="count">2</span></a>
+              <a href="/blog/categories/hugo/">hugo<span class="count">3</span></a>
             
           
           <li>

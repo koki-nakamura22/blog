@@ -6,10 +6,21 @@
     <description>Recent content on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Oct 2019 21:30:24 +1000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 21:52:51 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adding copy code button to Hugo blog</title>
+      <link>https://koki-nakamura22.github.io/blog/2019/10/03/hugo-adding-copy-button/</link>
+      <pubDate>Thu, 03 Oct 2019 21:52:51 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/2019/10/03/hugo-adding-copy-button/</guid>
+      <description>This article explains how to add a copy code button on Hugo blog.
+The following lists are the table of contents about this article.
+ Target audience Environment Preconditions Adding copy code button  Adding JavaScript code Adding CSS code  Reference articles   Target audience  Those who want to add a copy code button to code block on Hugo blog.   Environment  Hugo 0.57.2 Hugo-extended 0.</description>
+    </item>
     
     <item>
       <title>How to add a title to code block on Hugo blog</title>

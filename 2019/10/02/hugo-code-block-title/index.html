@@ -307,12 +307,6 @@
 
   </section>
   
-  <a href="/blog/2019/10/02/hugo-code-block-title/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
   <div class="content">
     
@@ -368,17 +362,17 @@
 
 <p>Add the following code to static/js/add-on.js.<br />
 I use IIFE (Immediately Invoked Function Expression) because I want to narrow the scope of a variable.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:add-on.js" data-lang="javascript:add-on.js">(<span style="color:#fb660a;font-weight:bold">function</span> addTitleToCodeBlock() {
-  <span style="color:#fb660a;font-weight:bold">let</span> list = document.body.getElementsByClassName(<span style="color:#0086d2">&#34;highlight&#34;</span>);
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:add-on.js" data-lang="javascript:add-on.js">(<span style="color:#00f">function</span> addTitleToCodeBlock() {
+  <span style="color:#00f">let</span> list = document.body.getElementsByClassName(<span style="color:#a31515">&#34;highlight&#34;</span>);
 
-  <span style="color:#fb660a;font-weight:bold">for</span> (i = <span style="color:#0086f7;font-weight:bold">0</span>; i &lt;= list.length - <span style="color:#0086f7;font-weight:bold">1</span>; i++) {
-    <span style="color:#fb660a;font-weight:bold">let</span> code = list[i].firstElementChild.firstElementChild;
-    <span style="color:#fb660a;font-weight:bold">let</span> codeName = code ? code.className.split(<span style="color:#0086d2">&#34;:&#34;</span>)[<span style="color:#0086f7;font-weight:bold">1</span>] : <span style="color:#fb660a;font-weight:bold">null</span>;
+  <span style="color:#00f">for</span> (i = 0; i &lt;= list.length - 1; i++) {
+    <span style="color:#00f">let</span> code = list[i].firstElementChild.firstElementChild;
+    <span style="color:#00f">let</span> codeName = code ? code.className.split(<span style="color:#a31515">&#34;:&#34;</span>)[1] : <span style="color:#00f">null</span>;
 
-    <span style="color:#fb660a;font-weight:bold">if</span> (codeName) {
-      <span style="color:#fb660a;font-weight:bold">let</span> div = document.createElement(<span style="color:#0086d2">&#34;div&#34;</span>);
+    <span style="color:#00f">if</span> (codeName) {
+      <span style="color:#00f">let</span> div = document.createElement(<span style="color:#a31515">&#34;div&#34;</span>);
       div.textContent = codeName;
-      div.classList.add(<span style="color:#0086d2">&#34;code-name&#34;</span>);
+      div.classList.add(<span style="color:#a31515">&#34;code-name&#34;</span>);
       code.parentNode.insertBefore(div, code);
     }
   }
@@ -387,20 +381,20 @@ I use IIFE (Immediately Invoked Function Expression) because I want to narrow th
 <h2 id="add-css-code">Add CSS code</h2>
 
 <p>Add the following code to static/css/add-on.css.</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css"><span style="color:#fb660a;font-weight:bold">pre</span>.chroma <span style="color:#fb660a;font-weight:bold">code</span> {  
-  <span style="color:#fb660a;font-weight:bold">margin-top</span>: <span style="color:#0086f7;font-weight:bold">-28</span><span style="color:#cdcaa9;font-weight:bold">px</span>;
-  <span style="color:#fb660a;font-weight:bold">padding-top</span>: <span style="color:#0086f7;font-weight:bold">40</span><span style="color:#cdcaa9;font-weight:bold">px</span>;
-  <span style="color:#fb660a;font-weight:bold">padding-bottom</span>: <span style="color:#0086f7;font-weight:bold">12</span><span style="color:#cdcaa9;font-weight:bold">px</span>;
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css">pre.<span style="color:#2b91af">chroma</span> code {  
+  <span style="color:#00f">margin-top</span>: -28<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">padding-top</span>: 40<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">padding-bottom</span>: 12<span style="color:#2b91af">px</span>;
 }
 
-.code-name {
-  <span style="color:#fb660a;font-weight:bold">display</span>: <span style="color:#fb660a;font-weight:bold">inline</span>-<span style="color:#fb660a;font-weight:bold">block</span>;
-  <span style="color:#fb660a;font-weight:bold">position</span>: <span style="color:#fb660a;font-weight:bold">relative</span>;
-  <span style="color:#fb660a;font-weight:bold">padding</span>: <span style="color:#0086f7;font-weight:bold">4</span><span style="color:#cdcaa9;font-weight:bold">px</span> <span style="color:#0086f7;font-weight:bold">8</span><span style="color:#cdcaa9;font-weight:bold">px</span>;
-  <span style="color:#fb660a;font-weight:bold">background-color</span>: <span style="color:#0086f7;font-weight:bold">#E7E9EB</span>;
-  <span style="color:#fb660a;font-weight:bold">color</span>: <span style="color:#0086f7;font-weight:bold">#485A60</span>;
-  <span style="color:#fb660a;font-weight:bold">font-size</span>: <span style="color:#0086f7;font-weight:bold">13</span><span style="color:#cdcaa9;font-weight:bold">px</span>;
-  <span style="color:#fb660a;font-weight:bold">font-weight</span>: <span style="color:#0086f7;font-weight:bold">400</span>;
+.<span style="color:#2b91af">code-name</span> {
+  <span style="color:#00f">display</span>: <span style="color:#00f">inline</span>-<span style="color:#00f">block</span>;
+  <span style="color:#00f">position</span>: <span style="color:#00f">relative</span>;
+  <span style="color:#00f">padding</span>: 4<span style="color:#2b91af">px</span> 8<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">background-color</span>: #E7E9EB;
+  <span style="color:#00f">color</span>: #485A60;
+  <span style="color:#00f">font-size</span>: 13<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">font-weight</span>: 400;
 }</code></pre></div>
 <h2 id="how-to-set-a-title">How to set a title</h2>
 
@@ -457,6 +451,8 @@ Guys, have a nice blog life!</p>
     <a href="/blog/2019/10/01/hugo-syntax-highlight/" class="button big previous"><i class="fas fa-angle-left"></i> How to add a function of syntax highlight to Hugo blog</a>
   
   
+    <a href="/blog/2019/10/03/hugo-adding-copy-button/" class="button big next">Adding copy code button to Hugo blog <i class="fas fa-angle-right"></i></a>
+  
 </div>
 
 
@@ -471,12 +467,17 @@ Guys, have a nice blog life!</p>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/10/02/hugo-code-block-title/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
 
+        </section>
+        <header>
+          <h1><a href="/blog/2019/10/03/hugo-adding-copy-button/">Adding copy code button to Hugo blog</a></h1>
+          <time class="published" datetime="">October 3, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
 
         </section>
         <header>
@@ -488,12 +489,6 @@ Guys, have a nice blog life!</p>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/10/01/hugo-syntax-highlight/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -505,12 +500,6 @@ Guys, have a nice blog life!</p>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/09/30/how-to-install-rails-on-windows/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -522,12 +511,6 @@ Guys, have a nice blog life!</p>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/2019/09/04/how-to-install-chocolatey/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -536,6 +519,8 @@ Guys, have a nice blog life!</p>
         </header>
       </article>
       
+      
+        <a href="/blog/blog/" class="button">See more</a>
       
     </section>
   
@@ -553,7 +538,7 @@ Guys, have a nice blog life!</p>
           
           <li>
             
-              <a href="/blog/categories/hugo/">hugo<span class="count">2</span></a>
+              <a href="/blog/categories/hugo/">hugo<span class="count">3</span></a>
             
           
           <li>

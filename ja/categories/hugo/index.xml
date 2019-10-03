@@ -6,10 +6,23 @@
     <description>Recent content in Hugo on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 02 Oct 2019 21:30:25 +1000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 21:52:51 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugoブログのコードブロックにコピーボタンを追加する方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/</link>
+      <pubDate>Thu, 03 Oct 2019 21:52:51 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/</guid>
+      <description>この記事では、Hugoで作成したブログのコードブロックにコピーボタンを追加する方法を説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 コードブロックへコピーボタンを追加  JavaScriptのコードを追加 CSSのコードを追加  参考にさせていただいたページ   対象読者  Hugoで作成したブログのコードブロックにコピーボタンを追加したい方   環境  Hugo 0.57.2 Hugo-extended 0.58.2   前提条件  HugoおよびHugo-entendedインストール済み   コードブロックへコピーボタンを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
+今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。
+(() =&amp;gt; { &amp;#39;use strict&amp;#39;; if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) { return; } function flashCopyMessage(el, msg) { el.textContent = msg; setTimeout(() =&amp;gt; { el.textContent = &amp;#34;Copy&amp;#34;; }, 1000); } function selectText(node) { let selection = window.getSelection(); let range = document.</description>
+    </item>
     
     <item>
       <title>Hugoブログのコードブロックにタイトルを追加する方法</title>

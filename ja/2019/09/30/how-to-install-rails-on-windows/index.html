@@ -307,12 +307,6 @@
 
   </section>
   
-  <a href="/blog/ja/2019/09/30/how-to-install-rails-on-windows/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
   <div class="content">
     
@@ -358,45 +352,45 @@
 <h1 id="インストール方法">インストール方法</h1>
 
 <p>下記のコマンドたちを管理者権限のコマンドプロンプトもしくはPowerShellで実行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#080;background-color:#0f140f;font-style:italic">REM Install Yarn</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#008000">REM Install Yarn</span>
 choco install yarn -y
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Install Ruby</span>
+<span style="color:#008000">REM Install Ruby</span>
 choco install ruby -y
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Install msys2</span>
-choco install msys2 --params <span style="color:#0086d2">&#34;/NoUpdate&#34;</span>  -y
+<span style="color:#008000">REM Install msys2</span>
+choco install msys2 --params <span style="color:#a31515">&#34;/NoUpdate&#34;</span>  -y
 refreshenv
 ridk install 2 3
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Install SQLite</span>
+<span style="color:#008000">REM Install SQLite</span>
 gem uninstall sqlite3 --all
 ridk exec pacman -S mingw-w64-x86_64-sqlite3
 gem install sqlite3 --platform ruby
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Install bundle</span>
+<span style="color:#008000">REM Install bundle</span>
 gem install bundle
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Install Ruby on Rails</span>
+<span style="color:#008000">REM Install Ruby on Rails</span>
 gem install rails</code></pre></div>
 <p>RubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。<br />
 下記はサンプルです。<br />
 Rubyインストール時にバージョン2.4.2.2を指定する場合は、&rdquo;choco install ruby -y&rdquo;の代わりに下記を実行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install ruby --version=2.4.2.2 -y</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install ruby --version=2.4.2.2 -y</code></pre></div>
 <p>また、Ruby on Railsインストール時にバージョン5.2.2を指定する場合は、&rdquo;gem install bundle rails&rdquo;の代わりに下記を実行します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">gem install rails -v 5.2.2</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">gem install rails -v 5.2.2</code></pre></div>
 <h2 id="br-3"><br></h2>
 
 <h1 id="rubyとruby-on-railsがインストールされたことを確認">RubyとRuby on Railsがインストールされたことを確認</h1>
 
 <p>それぞれ下記のコマンドをコマンドプロンプトもしくはPowerShellで実行し、インストールされたことを確認します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">ruby -v
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">ruby -v
 rails -v</code></pre></div>
 <p>インストールに成功している場合は、それぞれ下記の様にバージョン情報が表示されます。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\Users\testuser<span style="color:#080;background-color:#0f140f;font-style:italic">&gt;ruby -v</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\Users\testuser<span style="color:#008000">&gt;ruby -v</span>
 ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
 
-C:\Users\testuser<span style="color:#080;background-color:#0f140f;font-style:italic">&gt;rails -v</span>
+C:\Users\testuser<span style="color:#008000">&gt;rails -v</span>
 Rails 6.0.0</code></pre></div>
 <h2 id="br-4"><br></h2>
 
@@ -456,12 +450,17 @@ Rails 6.0.0</code></pre></div>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/10/02/hugo-code-block-title/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
 
+        </section>
+        <header>
+          <h1><a href="/blog/ja/2019/10/03/hugo-adding-copy-button/">Hugoブログのコードブロックにコピーボタンを追加する方法</a></h1>
+          <time class="published" datetime="">October 3, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
 
         </section>
         <header>
@@ -473,12 +472,6 @@ Rails 6.0.0</code></pre></div>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/10/01/hugo-syntax-highlight/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -490,12 +483,6 @@ Rails 6.0.0</code></pre></div>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/09/30/how-to-install-rails-on-windows/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -507,34 +494,11 @@ Rails 6.0.0</code></pre></div>
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
           <h1><a href="/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/">Hugo &#43; GitHub Pagesでブログを作成する方法</a></h1>
           <time class="published" datetime="">September 15, 2019</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-  <a href="/blog/ja/2019/09/04/how-to-install-chocolatey/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/blog/ja/2019/09/04/how-to-install-chocolatey/">Windows 10でパッケージマネージャ(Chocolatey)を使用する方法</a></h1>
-          <time class="published" datetime="">September 4, 2019</time>
         </header>
       </article>
       
@@ -557,7 +521,7 @@ Rails 6.0.0</code></pre></div>
           
           <li>
             
-              <a href="/blog/ja/categories/hugo/">hugo<span class="count">3</span></a>
+              <a href="/blog/ja/categories/hugo/">hugo<span class="count">4</span></a>
             
           
           <li>

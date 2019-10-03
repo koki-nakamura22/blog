@@ -312,12 +312,6 @@
 
   </section>
   
-  <a href="/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
   <div class="content">
     
@@ -374,7 +368,7 @@
 <h1 id="インストール">インストール</h1>
 
 <p>下記コマンドを実行します。コマンドを実行するディレクトリはどこでも良いです。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install hugo -confirm
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install hugo -confirm
 choco install hugo-extended -confirm</code></pre></div>
 <hr />
 
@@ -382,7 +376,7 @@ choco install hugo-extended -confirm</code></pre></div>
 
 <p>サイトを作成したいディレクトリで下記コマンドを実行します。<br />
 [サイト名]には、好きなサイト名を入力してください。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo new site [サイト名]</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo new site [サイト名]</code></pre></div>
 <hr />
 
 <h1 id="記事を作成">記事を作成</h1>
@@ -390,7 +384,7 @@ choco install hugo-extended -confirm</code></pre></div>
 <p>記事を作成するには、作成したサイトディレクトリのルートで下記コマンドを実行します。<br />
 [ディレクトリ名]は、後述する各テーマに沿って指定します。<br />
 [記事名]は、好きな記事名を入力してください。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo new [ディレクトリ名]/[記事名].md</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo new [ディレクトリ名]/[記事名].md</code></pre></div>
 <p>記事作成後は、自由に作成したMarkdownファイルを編集します。</p>
 
 <hr />
@@ -399,11 +393,11 @@ choco install hugo-extended -confirm</code></pre></div>
 
 <p>本記事内では、hugo-future-imperfect-slimを適用します。<br />
 最初に作成したサイトディレクトリのルートで下記のコマンドを実行し、GitHubからthemesディレクトリへテーマをダウンロードします。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">git clone https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">git clone https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim</code></pre></div>
 <p>その後、下記コマンドを同ディレクトリで実行し、サンプルサイトの設定を適用します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">xcopy /s /e .\themes\hugo-future-imperfect-slim\exampleSite .</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">xcopy /s /e .\themes\hugo-future-imperfect-slim\exampleSite .</code></pre></div>
 <p>ちなみに、テーマを適用する場合は、下記の様にconfig.tomlへ「theme=&rdquo;[テーマ名]&ldquo;」の行を追記します。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">theme = <span style="color:#0086d2">&#34;hugo-future-imperfect-slim&#34;</span></code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">theme = <span style="color:#a31515">&#34;hugo-future-imperfect-slim&#34;</span></code></pre></div>
 <p>テーマの一覧を確認できるページについては、本記事最後に記述します。</p>
 
 <hr />
@@ -411,9 +405,9 @@ choco install hugo-extended -confirm</code></pre></div>
 <h1 id="ローカルでサーバ起動">ローカルでサーバ起動</h1>
 
 <p>下記コマンドを実行する。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo server</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo server</code></pre></div>
 <p>また、下記のように「-p [ポート番号]」とオプションを付けると、そのポート番号で起動することが可能。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo server -p 12345</code></pre></div>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo server -p 12345</code></pre></div>
 <p><br>
 これで、最低限ホームページを作成することができます。</p>
 
@@ -440,45 +434,45 @@ choco install hugo-extended -confirm</code></pre></div>
 
 <p>サイトディレクトリのルートで下記コマンドを実行し、作成したリポジトリをクローンします。<br />
 下記のコマンドでは、念のためクローン前に既存のpublicディレクトリを削除しています。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#fb660a;font-weight:bold">rmdir</span> /s /q public
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#00f">rmdir</span> /s /q public
 git clone https://github.com/koki-nakamura22/test-hugo-blog.git public</code></pre></div>
 <hr />
 
 <h2 id="デプロイ用スクリプト作成">デプロイ用スクリプト作成</h2>
 
 <p>deploy.batというファイルをサイトディレクトリのルートに作成し、下記コードをファイル内にコピー&amp;ペーストします。</p>
-<div class="highlight"><pre style="color:#fff;background-color:#111;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#fb660a;font-weight:bold">echo</span> off
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#00f">echo</span> off
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Build the project.</span>
+<span style="color:#008000">REM Build the project.</span>
 hugo
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Go to public directory.</span>
-<span style="color:#fb660a;font-weight:bold">cd</span> public
+<span style="color:#008000">REM Go to public directory.</span>
+<span style="color:#00f">cd</span> public
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Add changes to git.</span>
+<span style="color:#008000">REM Add changes to git.</span>
 git add .
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Create a commit message.</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">d</span>=<span style="color:#fb660a">%date%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">yyyy</span>=<span style="color:#fb660a">%d:~-10,4%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">mm</span>=<span style="color:#fb660a">%d:~-5,2%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">dd</span>=<span style="color:#fb660a">%d:~-2,2%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">t</span>=<span style="color:#fb660a">%time: =0%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">hh</span>=<span style="color:#fb660a">%t:~0,2%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">mn</span>=<span style="color:#fb660a">%t:~3,2%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">ss</span>=<span style="color:#fb660a">%t:~6,2%</span>
-<span style="color:#fb660a;font-weight:bold">set</span> <span style="color:#fb660a">commitMsg</span>=Site updated: <span style="color:#fb660a">%yyyy%</span>-<span style="color:#fb660a">%mm%</span>-<span style="color:#fb660a">%dd%</span> <span style="color:#fb660a">%hh%</span>:<span style="color:#fb660a">%mn%</span>:<span style="color:#fb660a">%ss%</span>
+<span style="color:#008000">REM Create a commit message.</span>
+<span style="color:#00f">set</span> d=%date%
+<span style="color:#00f">set</span> yyyy=%d:~-10,4%
+<span style="color:#00f">set</span> mm=%d:~-5,2%
+<span style="color:#00f">set</span> dd=%d:~-2,2%
+<span style="color:#00f">set</span> t=%time: =0%
+<span style="color:#00f">set</span> hh=%t:~0,2%
+<span style="color:#00f">set</span> mn=%t:~3,2%
+<span style="color:#00f">set</span> ss=%t:~6,2%
+<span style="color:#00f">set</span> commitMsg=Site updated: %yyyy%-%mm%-%dd% %hh%:%mn%:%ss%
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Commit.</span>
-git commit -m <span style="color:#0086d2">&#34;</span><span style="color:#fb660a">%commitMsg%</span><span style="color:#0086d2">&#34;</span>
+<span style="color:#008000">REM Commit.</span>
+git commit -m <span style="color:#a31515">&#34;</span>%commitMsg%<span style="color:#a31515">&#34;</span>
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Push source and build repos.</span>
+<span style="color:#008000">REM Push source and build repos.</span>
 git push origin master
 
-<span style="color:#080;background-color:#0f140f;font-style:italic">REM Come back to the project root.</span>
-<span style="color:#fb660a;font-weight:bold">cd</span> ..
+<span style="color:#008000">REM Come back to the project root.</span>
+<span style="color:#00f">cd</span> ..
 
-<span style="color:#fb660a;font-weight:bold">echo</span> <span style="color:#0086d2">&#34;The web page has been updated!&#34;</span></code></pre></div>
+<span style="color:#00f">echo</span> <span style="color:#a31515">&#34;The web page has been updated!&#34;</span></code></pre></div>
 <hr />
 
 <h2 id="github-pagesの設定">GitHub Pagesの設定</h2>
@@ -572,12 +566,17 @@ Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合�
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/10/02/hugo-code-block-title/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
 
+        </section>
+        <header>
+          <h1><a href="/blog/ja/2019/10/03/hugo-adding-copy-button/">Hugoブログのコードブロックにコピーボタンを追加する方法</a></h1>
+          <time class="published" datetime="">October 3, 2019</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
 
         </section>
         <header>
@@ -589,12 +588,6 @@ Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合�
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/10/01/hugo-syntax-highlight/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -606,12 +599,6 @@ Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合�
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/09/30/how-to-install-rails-on-windows/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
@@ -623,34 +610,11 @@ Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合�
       <article class="mini-post">
         <section>
           
-  <a href="/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
 
         </section>
         <header>
           <h1><a href="/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/">Hugo &#43; GitHub Pagesでブログを作成する方法</a></h1>
           <time class="published" datetime="">September 15, 2019</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-        <section>
-          
-  <a href="/blog/ja/2019/09/04/how-to-install-chocolatey/" class="image featured">
-    
-      <img src="/blog/" alt="">
-    
-  </a>
-
-
-        </section>
-        <header>
-          <h1><a href="/blog/ja/2019/09/04/how-to-install-chocolatey/">Windows 10でパッケージマネージャ(Chocolatey)を使用する方法</a></h1>
-          <time class="published" datetime="">September 4, 2019</time>
         </header>
       </article>
       
@@ -673,7 +637,7 @@ Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合�
           
           <li>
             
-              <a href="/blog/ja/categories/hugo/">hugo<span class="count">3</span></a>
+              <a href="/blog/ja/categories/hugo/">hugo<span class="count">4</span></a>
             
           
           <li>
