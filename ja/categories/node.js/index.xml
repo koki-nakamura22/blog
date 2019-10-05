@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/ja/categories/node.js/</link>
+    <description>Recent content in Node.js on Koki&#39;s personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 05 Oct 2019 21:09:21 +1000</lastBuildDate>
+    
+	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/05/creating-dev-env-of-nodejs/</link>
+      <pubDate>Sat, 05 Oct 2019 21:09:21 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/05/creating-dev-env-of-nodejs/</guid>
+      <description>この記事では、VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 開発環境構築  プロジェクトディレクトリを作成 Expressインストール  インストール テスト用環境を構築  Nodemonのグローバルインストール  インストール 設定ファイル作成 launch.jsonの作成および編集 package.jsonを編集  プログラムのデバッグ実行方法  参考にさせていただいたページ   対象読者  VS Code上でNode.js(Express)の開発環境を構築したい方   環境  Windows 10 (1903) Visual Studio Code (1.38.1) Node.js (v10.16.3) npm (6.11.2)   前提条件  Node.js, npmおよびVS Codeインストール済   開発環境構築 プロジェクトディレクトリを作成 下記のコマンドを実行し、プロジェクト用のディレクトリを作成します。
+使用するコマンドはWindows, MacおよびLinux環境すべてで同じです。
+mkdir [project name] Expressインストール インストール 最初に、作成したプロジェクト用ディレクトリへ移動しておきます。
+次に、下記のコマンドを実行しExpressをローカルインストールします。
+npm install express --save-dev テスト用環境を構築 最初に下記にコマンドを実行します。</description>
+    </item>
+    
+  </channel>
+</rss>
