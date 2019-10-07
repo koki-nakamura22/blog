@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 05 Oct 2019 21:09:21 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2019 18:31:02 +1100</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS</title>
+      <link>https://koki-nakamura22.github.io/blog/categories/css/</link>
+      <pubDate>Mon, 07 Oct 2019 18:31:02 +1100</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/categories/css/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Node.js</title>
