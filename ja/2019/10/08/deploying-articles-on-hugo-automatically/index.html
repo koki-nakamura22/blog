@@ -2,26 +2,40 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title>Koki&#39;s personal blog</title>
+<title>Hugoブログの記事を自動デプロイする方法 - Koki&#39;s personal blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <meta name="generator" content="Hugo 0.58.2" />
-  <meta itemprop="name" content="Koki&#39;s personal blog">
-<meta itemprop="description" content="調べたことや試したことを書いていきます。">
+  <meta itemprop="name" content="Hugoブログの記事を自動デプロイする方法">
+<meta itemprop="description" content="Hugoブログの記事を自動デプロイする方法について説明します">
 
 
-  <meta property="og:title" content="Koki&#39;s personal blog" />
-<meta property="og:description" content="調べたことや試したことを書いていきます。" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/" />
+<meta itemprop="datePublished" content="2019-10-08T22:33:13&#43;11:00" />
+<meta itemprop="dateModified" content="2019-10-08T22:33:13&#43;11:00" />
+<meta itemprop="wordCount" content="115">
 
-<meta property="og:updated_time" content="2019-10-08T22:33:13+11:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
+  <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Koki&#39;s personal blog"/>
-<meta name="twitter:description" content="調べたことや試したことを書いていきます。"/>
+
+
+<meta itemprop="keywords" content="" />
+
+  <meta property="og:title" content="Hugoブログの記事を自動デプロイする方法" />
+<meta property="og:description" content="Hugoブログの記事を自動デプロイする方法について説明します" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/" />
+
+<meta property="og:image" content="https://koki-nakamura22.github.io/blog/" />
+<meta property="article:published_time" content="2019-10-08T22:33:13+11:00" />
+<meta property="article:modified_time" content="2019-10-08T22:33:13+11:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://koki-nakamura22.github.io/blog/"/>
+
+<meta name="twitter:title" content="Hugoブログの記事を自動デプロイする方法"/>
+<meta name="twitter:description" content="Hugoブログの記事を自動デプロイする方法について説明します"/>
 <meta name="twitter:site" content="@kai_j_levia"/>
 
   
@@ -53,7 +67,9 @@
     <h1 class="nav-title">
       <a href="/blog/ja/">
         
-          Koki's personal blog
+          
+            posts
+          
         
       </a>
     </h1>
@@ -107,7 +123,7 @@
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="ja" class="link active">日本語 (ja)</a>
   
-      <a href="https://koki-nakamura22.github.io/blog/" lang="en" class="link">English (en)</a>
+      <a href="https://koki-nakamura22.github.io/blog/2019/10/08/deploying-articles-on-hugo-automatically/" lang="en" class="link">English (en)</a>
     
   
 </menu>
@@ -122,37 +138,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Koki%27s%20personal%20blog&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f" target="_blank" rel="noopener" class="share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f" target="_blank" rel="noopener" class="share-btn facebook">
         <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f&amp;title=Koki%27s%20personal%20blog" target="_blank" rel="noopener" class="share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="share-btn reddit">
           <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f&amp;title=Koki%27s%20personal%20blog" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f&amp;description=Koki%27s%20personal%20blog" target="_blank" rel="noopener" class="share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f&amp;description=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="share-btn pinterest">
           <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f" target="_blank" class="share-btn email" data-proofer-ignore>
           <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
         </a>
   
@@ -175,8 +191,6 @@
     <footer>
       <ul class="socnet-icons">
         
-    <li><a href="/blog/ja/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
@@ -225,9 +239,7 @@
 </section>
 
       <main id="site-main">
-        
-        
-          <article class="post">
+        <article class="post">
   <header>
   <div class="title">
     
@@ -248,12 +260,151 @@
   </div>
 </header>
 
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
   
 
   
-  <p>この記事では、Hugoブログの記事を自動デプロイする方法を説明します。</p>
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f&amp;description=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e8%a8%98%e4%ba%8b%e3%82%92%e8%87%aa%e5%8b%95%e3%83%87%e3%83%97%e3%83%ad%e3%82%a4%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f08%2fdeploying-articles-on-hugo-automatically%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    
+
+<p>この記事では、Hugoブログの記事を自動デプロイする方法を説明します。</p>
+
+<p>この記事の内容です。</p>
+
+<ul>
+<li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
+<li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
+<li><font color="#1111cc"><a href="#%E8%87%AA%E5%8B%95%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF%E3%82%92%E4%BD%9C%E3%82%8B">自動デプロイの仕組みを作る</a></font>
+
+<ul>
+<li><font color="#1111cc"><a href="#bat%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90">batファイルを作成</a></font></li>
+<li><font color="#1111cc"><a href="#powershell%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BD%9C%E6%88%90">PowerShellスクリプトファイルを作成</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">スクリプトファイルの使い方</a></font></li>
+</ul></li>
+</ul>
+
+<h2 id="br"><br></h2>
+
+<h1 id="対象読者">対象読者</h1>
+
+<ul>
+<li>Hugoでブログを作成しておりかつ自動でデプロイしたい方</li>
+</ul>
+
+<h2 id="br-1"><br></h2>
+
+<h1 id="環境">環境</h1>
+
+<ul>
+<li>Windows 10 (1903)</li>
+<li>Command Prompt</li>
+<li>Power Shell (5.1.18362.145)</li>
+<li>Hugo (0.57.2)</li>
+<li>Hugo-extended (0.58.2)</li>
+</ul>
+
+<h2 id="br-2"><br></h2>
+
+<h1 id="前提条件">前提条件</h1>
+
+<ul>
+<li>GitHub上でHugoのブログ記事を管理している</li>
+<li>GitHub上のブログリポジトリを&rdquo;public&rdquo;ディレクトリとしてクローン済</li>
+</ul>
+
+<h2 id="br-3"><br></h2>
+
+<h1 id="自動デプロイの仕組みを作る">自動デプロイの仕組みを作る</h1>
+
+<p>スクリプトファイルを作成し、それを実行することで自動デプロイを行います。<br />
+今回はbatファイルとPowerShellのスクリプトファイルの両方を使います。<br />
+batファイルを使用する理由は、PowerShellスクリプトファイルを実行するのが楽になるからです。</p>
+
+<h2 id="batファイルを作成">batファイルを作成</h2>
+
+<p>&ldquo;deploy.bat&rdquo;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1</code></pre></div>
+<h2 id="powershellスクリプトファイルを作成">PowerShellスクリプトファイルを作成</h2>
+
+<p>&ldquo;deploy.ps1&rdquo;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#008000"># Build the project.</span>
+hugo
+
+<span style="color:#008000"># Go to public directory.</span>
+Set-Location .\public
+
+<span style="color:#008000"># Add changes to git.</span>
+git add .
+
+<span style="color:#008000"># Create a commit message.</span>
+$dateTime = Get-Date -format <span style="color:#a31515">&#34;yyyy-MM-dd HH:mm:ss K&#34;</span>
+$commitMsg = <span style="color:#a31515">&#34;Site updated: ${dateTime}&#34;</span>
+
+<span style="color:#008000"># Commit.</span>
+git commit -m $commitMsg
+
+<span style="color:#008000"># Push source and build repos.</span>
+git push origin master
+
+<span style="color:#008000"># Come back to the project root.</span>
+Set-Location .\..
+
+Write-Host <span style="color:#a31515">&#34;The web page has been updated!&#34;</span> -ForegroundColor <span style="color:#a31515">&#34;Cyan&#34;</span></code></pre></div>
+<h2 id="スクリプトファイルの使い方">スクリプトファイルの使い方</h2>
+
+<p>&ldquo;deploy.bat&rdquo;を実行するだけです。</p>
+
+<h2 id="br-4"><br></h2>
+
+<p>Hugoのブログ記事を自動デプロイする仕組みについては以上です。<br />
+良いブログライフを！</p>
+
+  </div>
   <footer>
-    <a href="/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/" class="button big">Read more</a>
     <ul class="stats">
   
     
@@ -280,341 +431,14 @@
   </footer>
 </article>
 
-        
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/blog/ja/2019/10/07/adjusting-link-dests-position/">&lt;a&gt;タグをクリックした時の表示先位置を調整する方法</a></h2>
-    
-    
-        <p>同一ページ内へ飛ぶ&lt;a&gt;タグをクリックした時の表示先位置を調整する方法を説明します。</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2019-10-07 18:31:02 &#43;1100 AEDT">
-      October 7, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p>1 minute read</p>
-    
-  </div>
-</header>
 
-  
-
-  
-  <p>この記事では、同一ページ内へ飛ぶ&lt;a&gt;タグをクリックした時の表示先位置を調整する方法を説明します。<br />
-何故調整する必要があるのか？それは、本ブログの様に固定ヘッダを使用していると、&lt;a&gt;タグをクリックした時に表示されるアンカーがヘッダの後ろに隠れるからです。</p>
-  <footer>
-    <a href="/blog/ja/2019/10/07/adjusting-link-dests-position/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/css">CSS</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
-  
-</ul>
-
-  </footer>
-</article>
-
-        
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/blog/ja/2019/10/05/creating-dev-env-of-nodejs/">VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法</a></h2>
-    
-    
-        <p>VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2019-10-05 21:09:21 &#43;1000 AEST">
-      October 5, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p>2 minutes read</p>
-    
-  </div>
-</header>
-
-  
-
-  
-  <p>この記事では、VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。</p>
-  <footer>
-    <a href="/blog/ja/2019/10/05/creating-dev-env-of-nodejs/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/node.js">Node.js</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
-  
-</ul>
-
-  </footer>
-</article>
-
-        
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/blog/ja/2019/10/04/making-table-of-contents-of-markdown/">Markdownファイルの目次を自動生成する方法</a></h2>
-    
-    
-        <p>Markdownファイルの目次を自動生成する方法を説明します。</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2019-10-04 22:48:18 &#43;1000 AEST">
-      October 4, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p>1 minute read</p>
-    
-  </div>
-</header>
-
-  
-
-  
-  <p>この記事では、Markdownファイルの目次を自動生成する方法を説明します。</p>
-  <footer>
-    <a href="/blog/ja/2019/10/04/making-table-of-contents-of-markdown/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/markdown">Markdown</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
-  
-</ul>
-
-  </footer>
-</article>
-
-        
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/blog/ja/2019/10/03/hugo-adding-copy-button/">Hugoブログのコードブロックにコピーボタンを追加する方法</a></h2>
-    
-    
-        <p>Hugoで作成したブログのコードブロックにコピーボタンを追加する方法を説明します。</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2019-10-03 21:52:51 &#43;1000 AEST">
-      October 3, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p>1 minute read</p>
-    
-  </div>
-</header>
-
-  
-
-  
-  <p>この記事では、Hugoで作成したブログのコードブロックにコピーボタンを追加する方法を説明します。</p>
-  <footer>
-    <a href="/blog/ja/2019/10/03/hugo-adding-copy-button/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/hugo">Hugo</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
-  
-</ul>
-
-  </footer>
-</article>
-
-        
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/blog/ja/2019/10/02/hugo-code-block-title/">Hugoブログのコードブロックにタイトルを追加する方法</a></h2>
-    
-    
-        <p>Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2019-10-02 21:30:25 &#43;1000 AEST">
-      October 2, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p>1 minute read</p>
-    
-  </div>
-</header>
-
-  
-
-  
-  <p>この記事では、Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。</p>
-  <footer>
-    <a href="/blog/ja/2019/10/02/hugo-code-block-title/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/hugo">Hugo</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
-  
-</ul>
-
-  </footer>
-</article>
-
-        
-          <article class="post">
-  <header>
-  <div class="title">
-    
-        <h2><a href="/blog/ja/2019/10/01/hugo-syntax-highlight/">Hugoブログにシンタックスハイライト機能を追加する方法</a></h2>
-    
-    
-        <p>Hugoで作成したブログにシンタックスハイライト機能を追加する方法を説明します。</p>
-    
-</div>
-  <div class="meta">
-    <time class="published" datetime="2019-10-01 20:50:01 &#43;1000 AEST">
-      October 1, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p>1 minute read</p>
-    
-  </div>
-</header>
-
-  
-
-  
-  <p>この記事では、Hugoで作成したブログにシンタックスハイライト機能を追加する方法を説明します。</p>
-  <footer>
-    <a href="/blog/ja/2019/10/01/hugo-syntax-highlight/" class="button big">Read more</a>
-    <ul class="stats">
-  
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/hugo">Hugo</a></li>
-          
-        </ul>
-      </li>
-    
-  
-  
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
-  
-</ul>
-
-  </footer>
-</article>
-
-        
-        
 <div class="pagination">
   
-    <a href="#" class="disabled button big previous"><i class="fas fa-angle-left"></i></a>
+    <a href="/blog/ja/2019/10/07/adjusting-link-dests-position/" class="button big previous"><i class="fas fa-angle-left"></i> &lt;a&gt;タグをクリックした時の表示先位置を調整する方法</a>
   
-  
-    <a href="/blog/ja/page/2/" class="button big next"><i class="fas fa-angle-right"></i></a>
   
 </div>
+
 
       </main>
       <section id="site-sidebar">
@@ -747,8 +571,6 @@
   
       <ul class="socnet-icons">
         
-    <li><a href="/blog/ja/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 

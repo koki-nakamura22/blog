@@ -6,10 +6,26 @@
     <description>Recent content in Posts on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 07 Oct 2019 18:31:02 +1100</lastBuildDate>
+    <lastBuildDate>Tue, 08 Oct 2019 22:33:13 +1100</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugoブログの記事を自動デプロイする方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/</link>
+      <pubDate>Tue, 08 Oct 2019 22:33:13 +1100</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/</guid>
+      <description>この記事では、Hugoブログの記事を自動デプロイする方法を説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 自動デプロイの仕組みを作る  batファイルを作成 PowerShellスクリプトファイルを作成 スクリプトファイルの使い方    対象読者  Hugoでブログを作成しておりかつ自動でデプロイしたい方   環境  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2)   前提条件  GitHub上でHugoのブログ記事を管理している GitHub上のブログリポジトリを&amp;rdquo;public&amp;rdquo;ディレクトリとしてクローン済   自動デプロイの仕組みを作る スクリプトファイルを作成し、それを実行することで自動デプロイを行います。
+今回はbatファイルとPowerShellのスクリプトファイルの両方を使います。
+batファイルを使用する理由は、PowerShellスクリプトファイルを実行するのが楽になるからです。
+batファイルを作成 &amp;ldquo;deploy.bat&amp;rdquo;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
+powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1 PowerShellスクリプトファイルを作成 &amp;ldquo;deploy.ps1&amp;rdquo;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
+# Build the project. hugo # Go to public directory. Set-Location .\public # Add changes to git.</description>
+    </item>
     
     <item>
       <title>&lt;a&gt;タグをクリックした時の表示先位置を調整する方法</title>
