@@ -6,10 +6,21 @@
     <description>Recent content in Ruby on Rails on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Sep 2019 18:55:46 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2019 21:33:28 +1100</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/categories/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to build an environment of Ruby on Rails tutorial on WSL</title>
+      <link>https://koki-nakamura22.github.io/blog/2019/10/13/building-env-of-rails-tutorial-wsl/</link>
+      <pubDate>Sun, 13 Oct 2019 21:33:28 +1100</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/2019/10/13/building-env-of-rails-tutorial-wsl/</guid>
+      <description>This article explains how to build the environment of Ruby on Rails tutorial on WSL.
+The following lists are the table of contents about this article.
+ Target audience Environment Preconditions Building the environment of Ruby on Rails tutorial Reference articles   Target audience  Those who want to build the environment of Ruby on Rails tutorial on WSL.   Environment  Windows 10 (1903) Ubuntu (Distribution of WSL, have to use without version.</description>
+    </item>
     
     <item>
       <title>How to install Ruby on Rails on Windows 10</title>

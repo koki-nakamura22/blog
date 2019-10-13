@@ -6,10 +6,23 @@
     <description>Recent content in Ruby on Rails on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 30 Sep 2019 21:23:27 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2019 21:33:28 +1100</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WSL上にRuby on Railsのチュートリアル環境を構築する方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/</link>
+      <pubDate>Sun, 13 Oct 2019 21:33:28 +1100</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/</guid>
+      <description>この記事では、WSL上にRuby on Railsのチュートリアル環境を構築する方法を説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 Ruby on Railsチュートリアルの構築 参考にさせていただいたページ   対象読者  WSL上にRuby on Railsのチュートリアル環境を構築したい方   環境  Windows 10 (1903) Ubuntu (WSLのディストリビューション, 必ず、バージョン情報が無いものを使用すること)   前提条件  WSL有効済み Ubuntu (WSL)インストール済み   Ruby on Railsチュートリアルの構築 下記のコマンドを上から順に実行してください。
+以上です！
+# Install necessary tools sudo apt update sudo apt upgrade -y sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs-dev node-gyp npm git -y sudo npm install --global yarn # Install rbenv git clone https://github.</description>
+    </item>
     
     <item>
       <title>Windows 10にRuby on Railsをインストールする方法</title>
