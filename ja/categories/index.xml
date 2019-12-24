@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 13 Oct 2019 21:33:28 +1100</lastBuildDate>
+    <lastBuildDate>Tue, 24 Dec 2019 13:15:50 +1100</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/categories/javascript/</link>
+      <pubDate>Tue, 24 Dec 2019 13:15:50 +1100</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/categories/javascript/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ruby on Rails</title>
