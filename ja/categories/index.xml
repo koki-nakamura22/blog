@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 24 Dec 2019 13:15:50 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 20:26:18 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/categories/python/</link>
+      <pubDate>Sun, 26 Apr 2020 20:26:18 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WSL</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/categories/wsl/</link>
+      <pubDate>Sun, 26 Apr 2020 20:26:18 +1000</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/categories/wsl/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JavaScript</title>
