@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WSL on Koki&#39;s personal blog</title>
@@ -6,6 +6,7 @@
     <description>Recent content in WSL on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
     <lastBuildDate>Sun, 26 Apr 2020 20:26:18 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/wsl/index.xml" rel="self" type="application/rss+xml" />
@@ -19,8 +20,10 @@
       <guid>https://koki-nakamura22.github.io/blog/ja/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
       <description>この記事では、WSL (Ubuntu 18.04 LTS)へpyenvおよびpyenvを使用してPythonをインストールする方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 pyenvインストール Pythonインストール  Pythonをインストールするために必要なライブラリをインストール Pythonをインストール  参考にさせていただいたページ   対象読者  WSLへpyenvとPythonをインストールしたい方   環境  WSL (Ubuntu 18.04 LTS)   前提条件  Gitインストール済み。   pyenvインストール 以下のコマンドを実行してpyenvをインストールします。
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile exec &amp;#34;$SHELL&amp;#34; コマンドの実行が終わったら、設定を反映させるためにWSLを再起動します。</description>
+ 対象読者 環境 前提条件 pyenvインストール Pythonインストール Pythonをインストールするために必要なライブラリをインストール Pythonをインストール   参考にさせていただいたページ  対象読者  WSLへpyenvとPythonをインストールしたい方  環境  WSL (Ubuntu 18.04 LTS)  前提条件  Gitインストール済み。  pyenvインストール 以下のコマンドを実行してpyenvをインストールします。
+git clone https://github.com/pyenv/pyenv.git ~/.pyenvecho &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileecho &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileecho -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileexec &amp;#34;$SHELL&amp;#34;コマンドの実行が終わったら、設定を反映させるためにWSLを再起動します。
+これで、pyenvのインストールは完了です。
+Pythonインストール Pythonをインストールするために必要なライブラリをインストール 以下のコマンドを実行します。</description>
     </item>
     
   </channel>

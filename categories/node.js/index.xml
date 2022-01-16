@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Node.js on Koki&#39;s personal blog</title>
@@ -6,6 +6,7 @@
     <description>Recent content in Node.js on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
     <lastBuildDate>Sat, 05 Oct 2019 21:09:21 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/categories/node.js/index.xml" rel="self" type="application/rss+xml" />
@@ -19,8 +20,7 @@
       <guid>https://koki-nakamura22.github.io/blog/2019/10/05/creating-dev-env-of-nodejs/</guid>
       <description>This article explains how to create a development environment of Node.js (Use Express) including a function of hot reload. (VS Code)
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Creating the development environment  Make project directory Install Express
- Install Create a environment for test  Install Nodemon globally  Install Make a setting file Make and edit launch.json Edit package.</description>
+ Target audience Environment Preconditions Creating the development environment Make project directory Install Express Install Create a environment for test   Install Nodemon globally Install Make a setting file Make and edit launch.json Edit package.json   How to execute in debug mode   Reference articles  Target audience  Those who want to create the development environment of Node.</description>
     </item>
     
   </channel>

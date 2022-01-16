@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chocolatey on Koki&#39;s personal blog</title>
@@ -6,6 +6,7 @@
     <description>Recent content in Chocolatey on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
     <lastBuildDate>Wed, 04 Sep 2019 16:38:27 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/categories/chocolatey/index.xml" rel="self" type="application/rss+xml" />

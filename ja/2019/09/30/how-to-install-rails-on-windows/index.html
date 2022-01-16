@@ -7,26 +7,21 @@
 
 
 
-  <meta name="generator" content="Hugo 0.58.2" />
+  <meta name="generator" content="Hugo 0.68.3" />
   <meta itemprop="name" content="Windows 10にRuby on Railsをインストールする方法">
 <meta itemprop="description" content="Windows 10にRuby on Railsをインストールする方法を説明します。">
-
-
 <meta itemprop="datePublished" content="2019-09-30T21:23:27&#43;10:00" />
 <meta itemprop="dateModified" content="2019-09-30T21:23:27&#43;10:00" />
-<meta itemprop="wordCount" content="145">
-
-  <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
+<meta itemprop="wordCount" content="135">
+<meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
 
 <meta itemprop="keywords" content="" />
-
   <meta property="og:title" content="Windows 10にRuby on Railsをインストールする方法" />
 <meta property="og:description" content="Windows 10にRuby on Railsをインストールする方法を説明します。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/2019/09/30/how-to-install-rails-on-windows/" />
-
 <meta property="og:image" content="https://koki-nakamura22.github.io/blog/" />
 <meta property="article:published_time" content="2019-09-30T21:23:27+10:00" />
 <meta property="article:modified_time" content="2019-09-30T21:23:27+10:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
@@ -36,7 +31,7 @@
 
 <meta name="twitter:title" content="Windows 10にRuby on Railsをインストールする方法"/>
 <meta name="twitter:description" content="Windows 10にRuby on Railsをインストールする方法を説明します。"/>
-<meta name="twitter:site" content="@kai_j_levia"/>
+<meta name="twitter:site" content="@koki_n22"/>
 
   
 
@@ -51,7 +46,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
       
       
-      <link rel="stylesheet" href="/blog/css/main.min.df53c1edadafb8a1aaadcf6624a13b50f5d7bc72fd7e046927c32c5ea541e244.css" integrity="sha256-31PB7a2vuKGqrc9mJKE7UPXXvHL9fgRpJ8MsXqVB4kQ=">
+      <link rel="stylesheet" href="/blog/css/main.min.1ef73455ed94bf3a90936ea9321231bc257897b2807dcef51ae18bd6697f0ed9.css" integrity="sha256-Hvc0Ve2UvzqQk26pMhIxvCV4l7KAfc71GuGL1ml/Dtk=">
       <link rel="stylesheet" href="/blog/css/add-on.css">
     
   
@@ -220,7 +215,7 @@
 
 
 
-<li><a href="//twitter.com/kai_j_levia" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//twitter.com/koki_n22" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
 <li><a href="skype:koki.nakamura22?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
 
 
@@ -250,12 +245,12 @@
     
 </div>
   <div class="meta">
-    <time class="published" datetime="2019-09-30 21:23:27 &#43;1000 AEST">
-      September 30, 2019
+    <time class="published" datetime="2019-09-30 21:23:27 &#43;1000 &#43;1000">
+      2019-09-30
     </time>
     <span class="author">Koki</span>
     
-      <p>1 minute read</p>
+      <p></p>
     
   </div>
 </header>
@@ -308,96 +303,76 @@
   
 
   <div class="content">
-    
-
-<p>本記事では、Windows 10環境にRuby on Railsをインストールする方法を説明していきます。</p>
-
+    <p>本記事では、Windows 10環境にRuby on Railsをインストールする方法を説明していきます。</p>
 <p>本記事の内容です。</p>
-
 <ul>
-<li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
-<li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
-<li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
-<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</a></font></li>
-<li><font color="#1111cc"><a href="#ruby%E3%81%A8ruby-on-rails%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%95%E3%82%8C%E3%81%9F%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D">RubyとRuby on Railsがインストールされたことを確認</a></font></li>
-<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a></font></li>
+<li><!-- raw HTML omitted --><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a><!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted --><a href="#%E7%92%B0%E5%A2%83">環境</a><!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted --><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a><!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted --><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</a><!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted --><a href="#ruby%E3%81%A8ruby-on-rails%E3%81%8C%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%95%E3%82%8C%E3%81%9F%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D">RubyとRuby on Railsがインストールされたことを確認</a><!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted --><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a><!-- raw HTML omitted --></li>
 </ul>
-
 <h1 id="対象読者">対象読者</h1>
-
 <ul>
 <li>Windows 10にRuby on Rails環境を作成したい方</li>
 </ul>
-
-<h2 id="br"><br></h2>
-
+<!-- raw HTML omitted -->
 <h1 id="環境">環境</h1>
-
 <ul>
 <li>Windows 10 (1903)</li>
 <li>Chocolatey (0.10.15)</li>
 </ul>
-
-<h2 id="br-1"><br></h2>
-
+<!-- raw HTML omitted -->
 <h1 id="前提条件">前提条件</h1>
-
 <ul>
 <li>Chocolateyインストール済み</li>
 </ul>
-
-<h2 id="br-2"><br></h2>
-
+<!-- raw HTML omitted -->
 <h1 id="インストール方法">インストール方法</h1>
-
 <p>下記のコマンドたちを管理者権限のコマンドプロンプトもしくはPowerShellで実行します。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#008000">REM Install Yarn</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#008000">REM Install Yarn</span>
 choco install yarn -y
 
-<span style="color:#008000">REM Install Ruby</span>
+<span style="color:#008000">REM Install Ruby</span>
 choco install ruby -y
 
-<span style="color:#008000">REM Install msys2</span>
+<span style="color:#008000">REM Install msys2</span>
 choco install msys2 --params <span style="color:#a31515">&#34;/NoUpdate&#34;</span>  -y
 refreshenv
 ridk install 2 3
 
-<span style="color:#008000">REM Install SQLite</span>
+<span style="color:#008000">REM Install SQLite</span>
 gem uninstall sqlite3 --all
 ridk exec pacman -S mingw-w64-x86_64-sqlite3
 gem install sqlite3 --platform ruby
 
-<span style="color:#008000">REM Install bundle</span>
+<span style="color:#008000">REM Install bundle</span>
 gem install bundle
 
-<span style="color:#008000">REM Install Ruby on Rails</span>
-gem install rails</code></pre></div>
-<p>RubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。<br />
-下記はサンプルです。<br />
-Rubyインストール時にバージョン2.4.2.2を指定する場合は、&rdquo;choco install ruby -y&rdquo;の代わりに下記を実行します。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install ruby --version=2.4.2.2 -y</code></pre></div>
-<p>また、Ruby on Railsインストール時にバージョン5.2.2を指定する場合は、&rdquo;gem install bundle rails&rdquo;の代わりに下記を実行します。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">gem install rails -v 5.2.2</code></pre></div>
-<h2 id="br-3"><br></h2>
-
+<span style="color:#008000">REM Install Ruby on Rails</span>
+gem install rails
+</code></pre></div><p>RubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。<br>
+下記はサンプルです。<br>
+Rubyインストール時にバージョン2.4.2.2を指定する場合は、&ldquo;choco install ruby -y&quot;の代わりに下記を実行します。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install ruby --version=2.4.2.2 -y
+</code></pre></div><p>また、Ruby on Railsインストール時にバージョン5.2.2を指定する場合は、&ldquo;gem install bundle rails&quot;の代わりに下記を実行します。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">gem install rails -v 5.2.2
+</code></pre></div><!-- raw HTML omitted -->
 <h1 id="rubyとruby-on-railsがインストールされたことを確認">RubyとRuby on Railsがインストールされたことを確認</h1>
-
 <p>それぞれ下記のコマンドをコマンドプロンプトもしくはPowerShellで実行し、インストールされたことを確認します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">ruby -v
-rails -v</code></pre></div>
-<p>インストールに成功している場合は、それぞれ下記の様にバージョン情報が表示されます。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\Users\testuser<span style="color:#008000">&gt;ruby -v</span>
+rails -v
+</code></pre></div><p>インストールに成功している場合は、それぞれ下記の様にバージョン情報が表示されます。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\Users\testuser<span style="color:#008000">&gt;ruby -v</span>
 ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
 
-C:\Users\testuser<span style="color:#008000">&gt;rails -v</span>
-Rails 6.0.0</code></pre></div>
-<h2 id="br-4"><br></h2>
-
+C:\Users\testuser<span style="color:#008000">&gt;rails -v</span>
+Rails 6.0.0
+</code></pre></div><!-- raw HTML omitted -->
 <h1 id="参考にさせていただいたページ">参考にさせていただいたページ</h1>
-
-<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">chocolateyでruby on rails環境を構築 - Qiita</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://qiita.com/toriiico/items/a0765ffdc0419512ae53" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://qiita.com/toriiico/items/a0765ffdc0419512ae53" border="0" alt="" /></a></span></div></div>
-
-<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://prog-8.com/docs/rails-env-win" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://prog-8.com/docs/rails-env-win" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://prog-8.com/docs/rails-env-win" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Ruby on Railsの環境構築をしてみよう！(Windows) | プログラミングの入門なら基礎から学べるProgate[プロゲート]</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://prog-8.com/docs/rails-env-win" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://prog-8.com/docs/rails-env-win" border="0" alt="" /></a></span></div></div>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
   </div>
   <footer>
@@ -443,7 +418,7 @@ Rails 6.0.0</code></pre></div>
   
     <section id="recent-posts">
       <header>
-        <h1>Recent posts</h1>
+        <h1>最近の投稿</h1>
       </header>
       
       <article class="mini-post">
@@ -453,7 +428,7 @@ Rails 6.0.0</code></pre></div>
         </section>
         <header>
           <h1><a href="/blog/ja/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/">WSL (Ubuntu 18.04 LTS)へpyenvおよびPythonをインストールする方法</a></h1>
-          <time class="published" datetime="">April 26, 2020</time>
+          <time class="published" datetime="">2020-04-26</time>
         </header>
       </article>
       
@@ -464,7 +439,7 @@ Rails 6.0.0</code></pre></div>
         </section>
         <header>
           <h1><a href="/blog/ja/2019/12/24/operating-vimeo-by-js/">埋め込みVimeo動画をJavaScriptで操作するサンプルコード</a></h1>
-          <time class="published" datetime="">December 24, 2019</time>
+          <time class="published" datetime="">2019-12-24</time>
         </header>
       </article>
       
@@ -475,7 +450,7 @@ Rails 6.0.0</code></pre></div>
         </section>
         <header>
           <h1><a href="/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/">WSL上にRuby on Railsのチュートリアル環境を構築する方法</a></h1>
-          <time class="published" datetime="">October 13, 2019</time>
+          <time class="published" datetime="">2019-10-13</time>
         </header>
       </article>
       
@@ -486,7 +461,7 @@ Rails 6.0.0</code></pre></div>
         </section>
         <header>
           <h1><a href="/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/">Hugoブログの記事を自動デプロイする方法</a></h1>
-          <time class="published" datetime="">October 8, 2019</time>
+          <time class="published" datetime="">2019-10-08</time>
         </header>
       </article>
       
@@ -497,12 +472,12 @@ Rails 6.0.0</code></pre></div>
         </section>
         <header>
           <h1><a href="/blog/ja/2019/10/07/adjusting-link-dests-position/">&lt;a&gt;タグをクリックした時の表示先位置を調整する方法</a></h1>
-          <time class="published" datetime="">October 7, 2019</time>
+          <time class="published" datetime="">2019-10-07</time>
         </header>
       </article>
       
       
-        <a href="/blog/ja/posts/" class="button">See more</a>
+        <a href="/blog/ja/posts/" class="button">続きを見る</a>
       
     </section>
   
@@ -511,7 +486,7 @@ Rails 6.0.0</code></pre></div>
     
       <section id="categories">
         <header>
-          <h1><a href="/blog/ja/categories">Categories</a></h1>
+          <h1><a href="/blog/ja/categories">カテゴリー</a></h1>
         </header>
         <ul>
           
@@ -571,11 +546,11 @@ Rails 6.0.0</code></pre></div>
 
   <section id="mini-bio">
     <header>
-      <h1>About</h1>
+      <h1>本サイトについて</h1>
     </header>
     <p></p>
     <footer>
-      <a href="/blog/ja/about" class="button">Learn More</a>
+      <a href="/blog/ja/about" class="button">もっと詳しく知る</a>
     </footer>
   </section>
 </section>
@@ -613,7 +588,7 @@ Rails 6.0.0</code></pre></div>
 
 
 
-<li><a href="//twitter.com/kai_j_levia" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+<li><a href="//twitter.com/koki_n22" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
 <li><a href="skype:koki.nakamura22?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
 
 
@@ -630,12 +605,9 @@ Rails 6.0.0</code></pre></div>
   
   <p class="copyright">
     
-      &copy; 2020
-      
-        Koki&#39;s personal blog
-      
+      Powered by Hugo. Copyright © 2022 Koki NAKAMURA
     . <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.58.2' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.68.3' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>

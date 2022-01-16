@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Koki&#39;s personal blog</title>
@@ -6,6 +6,7 @@
     <description>Recent content in Posts on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
     <lastBuildDate>Sun, 26 Apr 2020 20:26:18 +1000</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -19,8 +20,10 @@
       <guid>https://koki-nakamura22.github.io/blog/ja/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
       <description>この記事では、WSL (Ubuntu 18.04 LTS)へpyenvおよびpyenvを使用してPythonをインストールする方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 pyenvインストール Pythonインストール  Pythonをインストールするために必要なライブラリをインストール Pythonをインストール  参考にさせていただいたページ   対象読者  WSLへpyenvとPythonをインストールしたい方   環境  WSL (Ubuntu 18.04 LTS)   前提条件  Gitインストール済み。   pyenvインストール 以下のコマンドを実行してpyenvをインストールします。
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile exec &amp;#34;$SHELL&amp;#34; コマンドの実行が終わったら、設定を反映させるためにWSLを再起動します。</description>
+ 対象読者 環境 前提条件 pyenvインストール Pythonインストール Pythonをインストールするために必要なライブラリをインストール Pythonをインストール   参考にさせていただいたページ  対象読者  WSLへpyenvとPythonをインストールしたい方  環境  WSL (Ubuntu 18.04 LTS)  前提条件  Gitインストール済み。  pyenvインストール 以下のコマンドを実行してpyenvをインストールします。
+git clone https://github.com/pyenv/pyenv.git ~/.pyenvecho &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileecho &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileecho -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileexec &amp;#34;$SHELL&amp;#34;コマンドの実行が終わったら、設定を反映させるためにWSLを再起動します。
+これで、pyenvのインストールは完了です。
+Pythonインストール Pythonをインストールするために必要なライブラリをインストール 以下のコマンドを実行します。</description>
     </item>
     
     <item>
@@ -31,10 +34,10 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/12/24/operating-vimeo-by-js/</guid>
       <description>この記事では、埋め込みVimeo動画をJavaScriptで操作するサンプコードについて説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 JavaScriptでVimeo動画を操作する  HTMLファイルに埋め込み用Vimeo動画を読み込む 各HTML用のJavaScriptファイルを作成する Vimeoビデオを操作する機能のJavaScriptファイルを作成する  サンプルコード 参考にさせていただいたページ   対象読者  JavaScriptで埋め込みVimeo動画を操作したい方   環境  JavaScript (ES2015)   前提条件 なし
- JavaScriptでVimeo動画を操作する HTMLファイルに埋め込み用Vimeo動画を読み込む 最初に、埋め込み用Vimeo動画をiframeを使用して読み込みます。
+ 対象読者 環境 前提条件 JavaScriptでVimeo動画を操作する HTMLファイルに埋め込み用Vimeo動画を読み込む 各HTML用のJavaScriptファイルを作成する Vimeoビデオを操作する機能のJavaScriptファイルを作成する   サンプルコード 参考にさせていただいたページ  対象読者  JavaScriptで埋め込みVimeo動画を操作したい方  環境  JavaScript (ES2015)  前提条件 なし
+JavaScriptでVimeo動画を操作する HTMLファイルに埋め込み用Vimeo動画を読み込む 最初に、埋め込み用Vimeo動画をiframeを使用して読み込みます。
 この記事では、サンプルのVimeo動画を使用しています。
-&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- Specific your video URL on src attribute. --&amp;gt; &amp;lt;iframe id=&amp;#34;sample-player&amp;#34; src=&amp;#34;https://player.vimeo.com/video/76979871&amp;#34; width=&amp;#34;640&amp;#34; height=&amp;#34;360&amp;#34; frameborder=&amp;#34;0&amp;#34; webkitallowfullscreen mozallowfullscreen allowfullscreen allow=&amp;#34;autoplay&amp;#34; &amp;gt;&amp;lt;/iframe&amp;gt; &amp;lt;div&amp;gt; &amp;lt;button id=&amp;#34;play-button&amp;#34;&amp;gt;play&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;#34;pause-button&amp;#34;&amp;gt;pause&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;#34;play-pause-button&amp;#34;&amp;gt;play and pause&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 各HTML用のJavaScriptファイルを作成する もし、各HTML用にJavaScriptファイルを作成しない方なら、この内容は読み飛ばしてください。</description>
+&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;!-- Specific your video URL on src attribute. --&amp;gt;&amp;lt;iframeid=&amp;#34;sample-player&amp;#34;src=&amp;#34;https://player.vimeo.com/video/76979871&amp;#34;width=&amp;#34;640&amp;#34;height=&amp;#34;360&amp;#34;frameborder=&amp;#34;0&amp;#34;webkitallowfullscreenmozallowfullscreenallowfullscreenallow=&amp;#34;autoplay&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;div&amp;gt;&amp;lt;button id=&amp;#34;play-button&amp;#34;&amp;gt;play&amp;lt;/button&amp;gt;&amp;lt;button id=&amp;#34;pause-button&amp;#34;&amp;gt;pause&amp;lt;/button&amp;gt;&amp;lt;button id=&amp;#34;play-pause-button&amp;#34;&amp;gt;play and pause&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;各HTML用のJavaScriptファイルを作成する もし、各HTML用にJavaScriptファイルを作成しない方なら、この内容は読み飛ばしてください。</description>
     </item>
     
     <item>
@@ -45,9 +48,9 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/</guid>
       <description>この記事では、WSL上にRuby on Railsのチュートリアル環境を構築する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 Ruby on Railsチュートリアルの構築 参考にさせていただいたページ   対象読者  WSL上にRuby on Railsのチュートリアル環境を構築したい方   環境  Windows 10 (1903) Ubuntu (WSLのディストリビューション, 必ず、バージョン情報が無いものを使用すること)   前提条件  WSL有効済み Ubuntu (WSL)インストール済み   Ruby on Railsチュートリアルの構築 下記のコマンドを上から順に実行してください。
+ 対象読者 環境 前提条件 Ruby on Railsチュートリアルの構築 参考にさせていただいたページ  対象読者  WSL上にRuby on Railsのチュートリアル環境を構築したい方  環境  Windows 10 (1903) Ubuntu (WSLのディストリビューション, 必ず、バージョン情報が無いものを使用すること)  前提条件  WSL有効済み Ubuntu (WSL)インストール済み  Ruby on Railsチュートリアルの構築 下記のコマンドを上から順に実行してください。
 以上です！
-# Install necessary tools sudo apt update sudo apt upgrade -y sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs-dev node-gyp npm git -y sudo npm install --global yarn # Install rbenv git clone https://github.</description>
+# Install necessary toolssudo apt updatesudo apt upgrade -ysudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs-dev node-gyp npm git -ysudo npm install --global yarn# Install rbenvgit clone https://github.</description>
     </item>
     
     <item>
@@ -58,12 +61,12 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/</guid>
       <description>この記事では、Hugoブログの記事を自動デプロイする方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 自動デプロイの仕組みを作る  batファイルを作成 PowerShellスクリプトファイルを作成 スクリプトファイルの使い方    対象読者  Hugoでブログを作成しておりかつ自動でデプロイしたい方   環境  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2)   前提条件  GitHub上でHugoのブログ記事を管理している GitHub上のブログリポジトリを&amp;rdquo;public&amp;rdquo;ディレクトリとしてクローン済   自動デプロイの仕組みを作る スクリプトファイルを作成し、それを実行することで自動デプロイを行います。
+ 対象読者 環境 前提条件 自動デプロイの仕組みを作る batファイルを作成 PowerShellスクリプトファイルを作成 スクリプトファイルの使い方    対象読者  Hugoでブログを作成しておりかつ自動でデプロイしたい方  環境  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2)  前提条件  GitHub上でHugoのブログ記事を管理している GitHub上のブログリポジトリを&amp;quot;public&amp;quot;ディレクトリとしてクローン済  自動デプロイの仕組みを作る スクリプトファイルを作成し、それを実行することで自動デプロイを行います。
 今回はbatファイルとPowerShellのスクリプトファイルの両方を使います。
 batファイルを使用する理由は、PowerShellスクリプトファイルを実行するのが楽になるからです。
-batファイルを作成 &amp;ldquo;deploy.bat&amp;rdquo;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
-powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1 PowerShellスクリプトファイルを作成 &amp;ldquo;deploy.ps1&amp;rdquo;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
-# Build the project. hugo # Go to public directory. Set-Location .\public # Add changes to git.</description>
+batファイルを作成 &amp;ldquo;deploy.bat&amp;quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
+powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1PowerShellスクリプトファイルを作成 &amp;ldquo;deploy.ps1&amp;quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
+# Build the project. hugo# Go to public directory. Set-Location .\public# Add changes to git. git add .</description>
     </item>
     
     <item>
@@ -72,13 +75,13 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1 PowerShellス�
       <pubDate>Mon, 07 Oct 2019 18:31:02 +1100</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/07/adjusting-link-dests-position/</guid>
-      <description> この記事では、同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整する方法を説明します。
+      <description>この記事では、同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整する方法を説明します。
 何故調整する必要があるのか？それは、本ブログの様に固定ヘッダを使用していると、&amp;lt;a&amp;gt;タグをクリックした時に表示されるアンカーがヘッダの後ろに隠れるからです。
 この記事の内容です。
- 対象読者 環境 前提条件 リンクのジャンプ先位置調整 参考にさせていただいたページ   対象読者  同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整したい方   環境  CSS3   前提条件  なし   リンクのジャンプ先位置調整 add-on.css内で、下記のコードをリンク先のタグ(アンカー)に設定します。
+ 対象読者 環境 前提条件 リンクのジャンプ先位置調整 参考にさせていただいたページ  対象読者  同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整したい方  環境  CSS3  前提条件  なし  リンクのジャンプ先位置調整 add-on.css内で、下記のコードをリンク先のタグ(アンカー)に設定します。
 この時、padding-topとmargin-topに設定する数値は必ず同じにしてください。
-#target-tag { display: block; padding-top: 60px; margin-top: -60px; } このブログでは、下記のコードにて各見出しに対する調整を行っています。
-/* For link destinations adjustment. */ #site-main .post .content h1, #site-main .post .content h2, #site-main .post .content h3, #site-main .post .content h4, #site-main .post .content h5, #site-main .post .content h6 { display: block; padding-top: 60px; margin-top: -60px; }  参考にさせていただいたページ ページ内リンクのジャンプ先の位置を複雑なタグは無しでCSSだけで調整する方法 | 大阪のホームページ制作会社YCOMxxxxxxxxxx </description>
+#target-tag {display: block;padding-top: 60px;margin-top: -60px;}このブログでは、下記のコードにて各見出しに対する調整を行っています。
+/* For link destinations adjustment. */#site-main .post .content h1,#site-main .post .content h2,#site-main .post .content h3,#site-main .post .content h4,#site-main .post .content h5,#site-main .post .content h6 {display: block;padding-top: 60px;margin-top: -60px;}参考にさせていただいたページ </description>
     </item>
     
     <item>
@@ -89,11 +92,12 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1 PowerShellス�
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/05/creating-dev-env-of-nodejs/</guid>
       <description>この記事では、VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 開発環境構築  プロジェクトディレクトリを作成 Expressインストール  インストール テスト用環境を構築  Nodemonのグローバルインストール  インストール 設定ファイル作成 launch.jsonの作成および編集 package.jsonを編集  プログラムのデバッグ実行方法  参考にさせていただいたページ   対象読者  VS Code上でNode.js(Express)の開発環境を構築したい方   環境  Windows 10 (1903) Visual Studio Code (1.38.1) Node.js (v10.16.3) npm (6.11.2)   前提条件  Node.js, npmおよびVS Codeインストール済   開発環境構築 プロジェクトディレクトリを作成 下記のコマンドを実行し、プロジェクト用のディレクトリを作成します。
+ 対象読者 環境 前提条件 開発環境構築 プロジェクトディレクトリを作成 Expressインストール インストール テスト用環境を構築   Nodemonのグローバルインストール インストール 設定ファイル作成 launch.jsonの作成および編集 package.jsonを編集   プログラムのデバッグ実行方法   参考にさせていただいたページ  対象読者  VS Code上でNode.js(Express)の開発環境を構築したい方  環境  Windows 10 (1903) Visual Studio Code (1.38.1) Node.js (v10.16.3) npm (6.11.2)  前提条件  Node.js, npmおよびVS Codeインストール済  開発環境構築 プロジェクトディレクトリを作成 下記のコマンドを実行し、プロジェクト用のディレクトリを作成します。
 使用するコマンドはWindows, MacおよびLinux環境すべてで同じです。
-mkdir [project name] Expressインストール インストール 最初に、作成したプロジェクト用ディレクトリへ移動しておきます。
+mkdir [project name]Expressインストール インストール 最初に、作成したプロジェクト用ディレクトリへ移動しておきます。
 次に、下記のコマンドを実行しExpressをローカルインストールします。
-npm install express --save-dev テスト用環境を構築 最初に下記にコマンドを実行します。</description>
+npm install express --save-devテスト用環境を構築 最初に下記にコマンドを実行します。
+npm init次にapp.</description>
     </item>
     
     <item>
@@ -104,14 +108,13 @@ npm install express --save-dev テスト用環境を構築 最初に下記にコ
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/04/making-table-of-contents-of-markdown/</guid>
       <description>この記事では、Markdownファイルの目次を自動生成する方法を説明します。
 この記事の内容です。
- 対象読者 前提条件 doctocをインストール 目次を自動生成 参考にさせていただいたページ   対象読者  Markdownで記述したドキュメントの目次を自動生成したい方   前提条件 お使いのPCにNode.jsをインストールしていること。
- doctocをインストール 下記のコマンドを実行します。
-npm install -g doctoc  目次を自動生成 目次を作成したいMarkdownファイルが存在するディレクトリをパラメータに指定し、doctocコマンドを実行します。
+ 対象読者 前提条件 doctocをインストール 目次を自動生成 参考にさせていただいたページ  対象読者  Markdownで記述したドキュメントの目次を自動生成したい方  前提条件 お使いのPCにNode.jsをインストールしていること。
+doctocをインストール 下記のコマンドを実行します。
+npm install -g doctoc目次を自動生成 目次を作成したいMarkdownファイルが存在するディレクトリをパラメータに指定し、doctocコマンドを実行します。
 下記は、カレントディレクトリを指定しています。
-doctoc . 
-「Everything is OK.」が表示されるまで待ち、その後、ファイルを開いてみると先頭に
-&amp;lt;!-- START doctoc generated TOC please keep comment here to allow auto update --&amp;gt; &amp;lt;!-- DON&amp;#39;T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --&amp;gt; **Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)* と
-&amp;lt;!-- END doctoc generated TOC please keep comment here to allow auto update --&amp;gt; に囲まれて、目次が生成されているのを確認することができます。</description>
+doctoc .「Everything is OK.」が表示されるまで待ち、その後、ファイルを開いてみると先頭に
+&amp;lt;!-- START doctoc generated TOC please keep comment here to allow auto update --&amp;gt;&amp;lt;!-- DON&amp;#39;T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --&amp;gt;**Table of Contents** *generated with [DocToc](https://github.com/thlorenz/doctoc)*と
+&amp;lt;!-- END doctoc generated TOC please keep comment here to allow auto update --&amp;gt;に囲まれて、目次が生成されているのを確認することができます。</description>
     </item>
     
     <item>
@@ -122,9 +125,9 @@ doctoc .
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/</guid>
       <description>この記事では、Hugoで作成したブログのコードブロックにコピーボタンを追加する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 コードブロックへコピーボタンを追加  JavaScriptのコードを追加 CSSのコードを追加  参考にさせていただいたページ   対象読者  Hugoで作成したブログのコードブロックにコピーボタンを追加したい方   環境  Hugo 0.57.2 Hugo-extended 0.58.2   前提条件  HugoおよびHugo-entendedインストール済み   コードブロックへコピーボタンを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
+ 対象読者 環境 前提条件 コードブロックへコピーボタンを追加 JavaScriptのコードを追加 CSSのコードを追加   参考にさせていただいたページ  対象読者  Hugoで作成したブログのコードブロックにコピーボタンを追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  コードブロックへコピーボタンを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
 今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。
-(() =&amp;gt; { &amp;#39;use strict&amp;#39;; if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) { return; } function flashCopyMessage(el, msg) { el.textContent = msg; setTimeout(() =&amp;gt; { el.textContent = &amp;#34;Copy&amp;#34;; }, 1000); } function selectText(node) { let selection = window.getSelection(); let range = document.</description>
+(() =&amp;gt; {&amp;#39;use strict&amp;#39;;if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) {return;}function flashCopyMessage(el, msg) {el.textContent = msg;setTimeout(() =&amp;gt; {el.textContent = &amp;#34;Copy&amp;#34;;}, 1000);}function selectText(node) {let selection = window.getSelection();let range = document.createRange();if (node.childElementCount === 2) {// Skip the title.</description>
     </item>
     
     <item>
@@ -135,9 +138,9 @@ doctoc .
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/02/hugo-code-block-title/</guid>
       <description>この記事では、Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 コードブロックへタイトルを追加  JavaScriptのコードを追加 CSSのコードを追加 タイトルの設定方法  参考にさせていただいたページ   対象読者  Hugoで作成したブログのコードブロックにタイトルを追加したい方   環境  Hugo 0.57.2 Hugo-extended 0.58.2   前提条件  HugoおよびHugo-entendedインストール済み   コードブロックへタイトルを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
+ 対象読者 環境 前提条件 コードブロックへタイトルを追加 JavaScriptのコードを追加 CSSのコードを追加 タイトルの設定方法   参考にさせていただいたページ  対象読者  Hugoで作成したブログのコードブロックにタイトルを追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  コードブロックへタイトルを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
 今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。
-(function addTitleToCodeBlock() { let list = document.body.getElementsByClassName(&amp;#34;highlight&amp;#34;); for (i = 0; i &amp;lt;= list.length - 1; i++) { let code = list[i].firstElementChild.firstElementChild; let codeName = code ? code.className.split(&amp;#34;:&amp;#34;)[1] : null; if (codeName) { let div = document.</description>
+(function addTitleToCodeBlock() {let list = document.body.getElementsByClassName(&amp;#34;highlight&amp;#34;);for (i = 0; i &amp;lt;= list.length - 1; i++) {let code = list[i].firstElementChild.firstElementChild;let codeName = code ? code.className.split(&amp;#34;:&amp;#34;)[1] : null;if (codeName) {let div = document.createElement(&amp;#34;div&amp;#34;);div.</description>
     </item>
     
     <item>
@@ -146,14 +149,13 @@ doctoc .
       <pubDate>Tue, 01 Oct 2019 20:50:01 +1000</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/</guid>
-      <description> この記事では、Hugoで作成したブログにシンタックスハイライト機能を追加する方法を説明します。
+      <description>この記事では、Hugoで作成したブログにシンタックスハイライト機能を追加する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 シンタックスハイライト機能を追加 参考にさせていただいたページ  対象読者  Hugoで作成したブログにシンタックスハイライト機能を追加したい方   環境  Hugo 0.57.2 Hugo-extended 0.58.2   前提条件  HugoおよびHugo-entendedインストール済み   シンタックスハイライト機能を追加 config.tomlへ下記のコードを追加します。
-pygmentsCodefences = true pygmentsStyle = &amp;#34;fruity&amp;#34; pygmentsStyleへ代入する値を変更することで、様々なスタイルを使用することができます。
+ 対象読者 環境 前提条件 シンタックスハイライト機能を追加 参考にさせていただいたページ  対象読者  Hugoで作成したブログにシンタックスハイライト機能を追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  シンタックスハイライト機能を追加 config.tomlへ下記のコードを追加します。
+pygmentsCodefences = truepygmentsStyle = &amp;#34;fruity&amp;#34;pygmentsStyleへ代入する値を変更することで、様々なスタイルを使用することができます。
 また、スタイルは下記のページから選択することができます。
-Chroma Style Galleryxxxxxxxxxx
-ちなみに、上記のコードで使用しているスタイルは&amp;rdquo;fruity&amp;rdquo;です。
- 参考にさせていただいたページ Syntax highlighting in Hugo with Chroma | zwbetzxxxxxxxxxx </description>
+ちなみに、上記のコードで使用しているスタイルは&amp;quot;fruity&amp;quot;です。
+参考にさせていただいたページ </description>
     </item>
     
     <item>
@@ -164,8 +166,8 @@ Chroma Style Galleryxxxxxxxxxx
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/09/30/how-to-install-rails-on-windows/</guid>
       <description>本記事では、Windows 10環境にRuby on Railsをインストールする方法を説明していきます。
 本記事の内容です。
- 対象読者 環境 前提条件 インストール方法 RubyとRuby on Railsがインストールされたことを確認 参考にさせていただいたページ  対象読者  Windows 10にRuby on Rails環境を作成したい方   環境  Windows 10 (1903) Chocolatey (0.10.15)   前提条件  Chocolateyインストール済み   インストール方法 下記のコマンドたちを管理者権限のコマンドプロンプトもしくはPowerShellで実行します。
-REM Install Yarn choco install yarn -y REM Install Ruby choco install ruby -y REM Install msys2 choco install msys2 --params &amp;#34;/NoUpdate&amp;#34; -y refreshenv ridk install 2 3 REM Install SQLite gem uninstall sqlite3 --all ridk exec pacman -S mingw-w64-x86_64-sqlite3 gem install sqlite3 --platform ruby REM Install bundle gem install bundle REM Install Ruby on Rails gem install rails RubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。</description>
+ 対象読者 環境 前提条件 インストール方法 RubyとRuby on Railsがインストールされたことを確認 参考にさせていただいたページ  対象読者  Windows 10にRuby on Rails環境を作成したい方  環境  Windows 10 (1903) Chocolatey (0.10.15)  前提条件  Chocolateyインストール済み  インストール方法 下記のコマンドたちを管理者権限のコマンドプロンプトもしくはPowerShellで実行します。
+REM Install Yarn choco install yarn -yREM Install Ruby choco install ruby -yREM Install msys2 choco install msys2 --params &amp;#34;/NoUpdate&amp;#34; -yrefreshenvridk install 2 3REM Install SQLite gem uninstall sqlite3 --allridk exec pacman -S mingw-w64-x86_64-sqlite3gem install sqlite3 --platform rubyREM Install bundle gem install bundleREM Install Ruby on Rails gem install railsRubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。</description>
     </item>
     
     <item>
@@ -177,17 +179,14 @@ REM Install Yarn choco install yarn -y REM Install Ruby choco install ruby -y RE
       <description>本記事では、Hugo + GitHub Pagesの組み合わせでブログ環境を構築する方法について説明します。
 上から順番に読んでいただくと、ブログを作成できるような流れになっています。
 本記事の内容です。
- 環境 前提条件 インストール サイトを作成 記事を作成 テーマを適用 ローカルでサーバ起動 GitHub PagesへDeploy  ゴール GitHub上でブログ用のリポジトリを作成 作成したリポジトリをクローン デプロイ用スクリプト作成 GitHub Pagesの設定 デプロイ  テーマ  テーマ一覧 個人的おすすめテーマ  参考にしたページ  環境 Windows10 (1903)
-前提条件  Chocolateyインストール済み Gitインストール済み  インストール 下記コマンドを実行します。コマンドを実行するディレクトリはどこでも良いです。
-choco install hugo -confirm choco install hugo-extended -confirm サイトを作成 サイトを作成したいディレクトリで下記コマンドを実行します。
+ 環境 前提条件 インストール サイトを作成 記事を作成 テーマを適用 ローカルでサーバ起動 GitHub PagesへDeploy ゴール GitHub上でブログ用のリポジトリを作成 作成したリポジトリをクローン デプロイ用スクリプト作成 GitHub Pagesの設定 デプロイ   テーマ テーマ一覧 個人的おすすめテーマ   参考にしたページ   環境 Windows10 (1903)
+ 前提条件  Chocolateyインストール済み Gitインストール済み   インストール 下記コマンドを実行します。コマンドを実行するディレクトリはどこでも良いです。
+choco install hugo -confirm choco install hugo-extended -confirm  サイトを作成 サイトを作成したいディレクトリで下記コマンドを実行します。
 [サイト名]には、好きなサイト名を入力してください。
-hugo new site [サイト名] 記事を作成 記事を作成するには、作成したサイトディレクトリのルートで下記コマンドを実行します。
+hugo new site [サイト名]  記事を作成 記事を作成するには、作成したサイトディレクトリのルートで下記コマンドを実行します。
 [ディレクトリ名]は、後述する各テーマに沿って指定します。
 [記事名]は、好きな記事名を入力してください。
-hugo new [ディレクトリ名]/[記事名].md 記事作成後は、自由に作成したMarkdownファイルを編集します。
-テーマを適用 本記事内では、hugo-future-imperfect-slimを適用します。
-最初に作成したサイトディレクトリのルートで下記のコマンドを実行し、GitHubからthemesディレクトリへテーマをダウンロードします。
-git clone https://github.</description>
+hugo new [ディレクトリ名]/[記事名].md 記事作成後は、自由に作成したMarkdownファイルを編集します。</description>
     </item>
     
     <item>
@@ -198,17 +197,19 @@ git clone https://github.</description>
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/09/04/how-to-install-chocolatey/</guid>
       <description>本記事では、Chocolateyを使用し、Windows環境でLinuxのapt-getやyumを使用するパッケージ管理を実現する方法について説明します。
 本記事の内容です。
- 対象読者 インストール方法 インストールされたことを確認 実際に何かインストールしてみる インストール済みのパッケージ確認 アンインストール方法 パッケージのアップデート方法 参考にさせていただいたページ  対象読者  WindowsでもLinuxのapt-getやyumのような機能を使用したい方   インストール方法 下記のコマンドを、管理者権限で起動したコマンドプロンプト上で実行します。
-@&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;#34;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34; &amp;amp;&amp;amp; SET &amp;#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;#34; もしくは、下記のコマンドを管理者権限で起動したPowerShell上で実行します。
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))  インストールされたことを確認 上記のコマンドが終了した後に
-choco -v を実行し、下記のようにバージョン情報が表示されたらインストールが成功しています。
-C:\WINDOWS\system32&amp;gt;choco -v 0.10.15  実際に何かインストールしてみる Chocolatey Software | Packagesxxxxxxxxxx を参考に、試しに7zipをインストールしてみます。
+ 対象読者 インストール方法 インストールされたことを確認 実際に何かインストールしてみる インストール済みのパッケージ確認 アンインストール方法 パッケージのアップデート方法 参考にさせていただいたページ  対象読者  WindowsでもLinuxのapt-getやyumのような機能を使用したい方  インストール方法 下記のコマンドを、管理者権限で起動したコマンドプロンプト上で実行します。
+@&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;#34;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34; &amp;amp;&amp;amp; SET &amp;#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;#34;もしくは、下記のコマンドを管理者権限で起動したPowerShell上で実行します。
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))インストールされたことを確認 上記のコマンドが終了した後に
+choco -vを実行し、下記のようにバージョン情報が表示されたらインストールが成功しています。
+C:\WINDOWS\system32&amp;gt;choco -v 0.10.15実際に何かインストールしてみる を参考に、試しに7zipをインストールしてみます。
 下記のコマンドを実行します。
 この時、コマンドプロンプトやPowerShellは管理者権限で起動しておきましょう。(ソフトウェアをインストールする時は管理者権限が求められるため。)
 また、途中で処理を続行するかを問われるので、「Y」を入力し続行します。
-choco install 7zip  インストール済みのパッケージ確認 インストール済みのパッケージを確認する場合は、下記のコマンドを実行します。
+choco install 7zipインストール済みのパッケージ確認 インストール済みのパッケージを確認する場合は、下記のコマンドを実行します。
 試しに、上記でインストールした7zipが表示されるか確認してみましょう。
-choco list -localonly  アンインストール方法 インストール済みのパッケージをアンインストールする際は、下記コマンドを実行します。</description>
+choco list -localonlyアンインストール方法 インストール済みのパッケージをアンインストールする際は、下記コマンドを実行します。
+この時、本当に削除してもよいかを聞かれるので「Y」を入力し、処理を続行します。
+choco install [package name]例えば、上記でインストールしたものをアンインストールするには下記のコマンドを実行します。</description>
     </item>
     
   </channel>
