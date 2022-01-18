@@ -71,10 +71,25 @@ pre.chroma code {
 h1, h2, h3, h4, h5, h6,
 #categories a,
 .stats .categories li a,
-.stats .tags li a {
+.stats .tags li a,
+.pagination a {
   text-transform: none;
 }
 
 #site-nav .nav-title h1 {
   font-size: 0.7em;
+}
+
+#lang-menu a {
+  font-family: "Raleway",Helvetica,sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  margin: 0;
+  padding: 0 1.5em;
+}
+
+.pagination a {
+  height: 100%;
+  line-height: 1.65;
 }
