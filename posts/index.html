@@ -45,64 +45,50 @@
 
   <body>
     
+
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/blog/">
-        
-          
-            posts
-          
-        
+      <a href="/blog/" class="nav">
+        <h1>Koki's personal blog</h1>
       </a>
     </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
+    <menu id="site-nav-menu" class="flyout-menu menu">
       
         
           
-          
-            <a href="/blog/" class="link"><i class='fa fa-home'></i> Home</a>
-          
-        
-      
-        
-          
-          
-            <a href="/blog/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
+          <a href="/blog/" class="nav link"><i class='fa fa-home'></i> Home</a>
         
       
         
           
-          
-            <a href="/blog/posts/" class="link"><i class='far fa-newspaper'></i> Posts</a>
-          
+          <a href="/blog/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
         
       
         
           
-          
-            <a href="/blog/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
+          <a href="/blog/posts/" class="nav link"><i class='far fa-newspaper'></i> Posts</a>
         
       
         
           
-          
-            <a href="/blog/contact/" class="link"><i class='far fa-envelope'></i> Contact</a>
-          
+          <a href="/blog/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
         
       
-      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+        
+          
+          <a href="/blog/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
       
-
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
-    
-
-    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
-    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
-    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="en" class="link active">English (en)</a>
   
@@ -112,7 +98,7 @@
 </menu>
 
   
-    <menu id="share-menu" class="flyout-menu">
+    <menu id="share-menu" class="flyout-menu menu">
       <h1>Share Post</h1>
       
 
@@ -253,31 +239,24 @@
   <p>This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).</p>
   <footer>
     <a href="/blog/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/" class="button big">Read More</a>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/python">Python</a></li>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/wsl">WSL</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/python/">Python</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/categories/wsl/">WSL</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>
@@ -310,28 +289,22 @@
   <p>This article explains the example codes of operating the embedded Vimeo video by JavaScript.</p>
   <footer>
     <a href="/blog/2019/12/24/operating-vimeo-by-js/" class="button big">Read More</a>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/javascript">JavaScript</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/javascript/">JavaScript</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>
@@ -364,28 +337,22 @@
   <p>This article explains how to build the environment of Ruby on Rails tutorial on WSL.</p>
   <footer>
     <a href="/blog/2019/10/13/building-env-of-rails-tutorial-wsl/" class="button big">Read More</a>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/ruby-on-rails">Ruby on Rails</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/ruby-on-rails/">Ruby on Rails</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>
@@ -418,28 +385,22 @@
   <p>This article explains how to deploy articles on Hugo blog automatically.</p>
   <footer>
     <a href="/blog/2019/10/08/deploying-articles-on-hugo-automatically/" class="button big">Read More</a>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/hugo">Hugo</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/hugo/">Hugo</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>
@@ -474,28 +435,22 @@ If we are using a fixed header, we need to adjust the position of the anchor whe
 Because the anchor is hidden behind the header.</p>
   <footer>
     <a href="/blog/2019/10/07/adjusting-link-dests-position/" class="button big">Read More</a>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/css">CSS</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/css/">CSS</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>
@@ -528,28 +483,22 @@ Because the anchor is hidden behind the header.</p>
   <p>This article explains how to create a development environment of Node.js (Use Express) including a function of hot reload. (VS Code)</p>
   <footer>
     <a href="/blog/2019/10/05/creating-dev-env-of-nodejs/" class="button big">Read More</a>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/node.js">Node.js</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/node.js/">Node.js</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>
@@ -582,28 +531,22 @@ Because the anchor is hidden behind the header.</p>
   <p>This article explains how to make a table of contents of Markdown automatically..</p>
   <footer>
     <a href="/blog/2019/10/04/making-table-of-contents-of-markdown/" class="button big">Read More</a>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/markdown">Markdown</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/markdown/">Markdown</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>

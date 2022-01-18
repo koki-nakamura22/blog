@@ -20,7 +20,7 @@
       <guid>https://koki-nakamura22.github.io/blog/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
       <description>This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Installing pyenv Installing Python by pyenv Installing libraries that need for installing Python Installing Python   Reference articles  Target audience  Those who want to install pyenv and Python on WSL.  Environment  WSL (Ubuntu 18.</description>
+ Target audience Environment Preconditions Installing pyenv Installing Python by pyenv  Installing libraries that need for installing Python Installing Python   Reference articles  ---Target audience  Those who want to install pyenv and Python on WSL.  ---Environment  WSL (Ubuntu 18.</description>
     </item>
     
   </channel>

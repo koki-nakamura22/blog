@@ -12,7 +12,7 @@
 <meta itemprop="description" content="Explain how to deploy articles on Hugo blog automatically.">
 <meta itemprop="datePublished" content="2019-10-08T22:33:12&#43;11:00" />
 <meta itemprop="dateModified" content="2019-10-08T22:33:12&#43;11:00" />
-<meta itemprop="wordCount" content="241">
+<meta itemprop="wordCount" content="246">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -57,64 +57,50 @@
 
   <body>
     
+
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/blog/">
-        
-          
-            posts
-          
-        
+      <a href="/blog/" class="nav">
+        <h1>Koki's personal blog</h1>
       </a>
     </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
+    <menu id="site-nav-menu" class="flyout-menu menu">
       
         
           
-          
-            <a href="/blog/" class="link"><i class='fa fa-home'></i> Home</a>
-          
-        
-      
-        
-          
-          
-            <a href="/blog/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
+          <a href="/blog/" class="nav link"><i class='fa fa-home'></i> Home</a>
         
       
         
           
-          
-            <a href="/blog/posts/" class="link"><i class='far fa-newspaper'></i> Posts</a>
-          
+          <a href="/blog/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
         
       
         
           
-          
-            <a href="/blog/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
+          <a href="/blog/posts/" class="nav link"><i class='far fa-newspaper'></i> Posts</a>
         
       
         
           
-          
-            <a href="/blog/contact/" class="link"><i class='far fa-envelope'></i> Contact</a>
-          
+          <a href="/blog/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
         
       
-      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+        
+          
+          <a href="/blog/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
       
-
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
-    
-
-    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
-    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
-    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="en" class="link active">English (en)</a>
   
@@ -124,7 +110,7 @@
 </menu>
 
   
-    <menu id="share-menu" class="flyout-menu">
+    <menu id="share-menu" class="flyout-menu menu">
       <h1>Share Post</h1>
       
 
@@ -306,23 +292,25 @@
     <p>This article explains how to deploy articles on Hugo blog automatically.</p>
 <p>The following lists are the table of contents about this article.</p>
 <ul>
-<li><!-- raw HTML omitted --><a href="#target-audience">Target audience</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#environment">Environment</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#preconditions">Preconditions</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#how-to-deploy-articles-automatically">How to deploy articles automatically</a><!-- raw HTML omitted -->
+<li><font color="#1111cc"><a href="#target-audience">Target audience</a></font></li>
+<li><font color="#1111cc"><a href="#environment">Environment</a></font></li>
+<li><font color="#1111cc"><a href="#preconditions">Preconditions</a></font></li>
+<li><font color="#1111cc"><a href="#how-to-deploy-articles-automatically">How to deploy articles automatically</a></font>
 <ul>
-<li><!-- raw HTML omitted --><a href="#make-batch-file">Make batch file</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#make-powershell-script-file">Make PowerShell script file</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#how-to-use-script-files">How to use script files</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#make-batch-file">Make batch file</a></font></li>
+<li><font color="#1111cc"><a href="#make-powershell-script-file">Make PowerShell script file</a></font></li>
+<li><font color="#1111cc"><a href="#how-to-use-script-files">How to use script files</a></font></li>
 </ul>
 </li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="target-audience">Target audience</h1>
 <ul>
 <li>Those who want to deploy articles automatically.</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="environment">Environment</h1>
 <ul>
 <li>Windows 10 (1903)</li>
@@ -331,13 +319,15 @@
 <li>Hugo (0.57.2)</li>
 <li>Hugo-extended (0.58.2)</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="preconditions">Preconditions</h1>
 <ul>
 <li>Manage blog posts on GitHub.</li>
 <li>Cloned Hugo blog repository as &ldquo;public&rdquo; directory.</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="how-to-deploy-articles-automatically">How to deploy articles automatically</h1>
 <p>Make script files, then execute it.<br>
 In this case, use batch file and Powershell script file because use batch file is easier to execute PowerShell script file.</p>
@@ -371,34 +361,29 @@ Set-Location .\..
 Write-Host <span style="color:#a31515">&#34;The web page has been updated!&#34;</span> -ForegroundColor <span style="color:#a31515">&#34;Cyan&#34;</span>
 </code></pre></div><h2 id="how-to-use-script-files">How to use script files</h2>
 <p>Execute &ldquo;deploy.bat&rdquo;.</p>
-<!-- raw HTML omitted -->
+<br>
+---
 <p>That it! It&rsquo;s easy!<br>
 Have a good blog life!!</p>
 
   </div>
   <footer>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/hugo">Hugo</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/hugo/">Hugo</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>

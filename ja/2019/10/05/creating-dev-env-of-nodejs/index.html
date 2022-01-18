@@ -12,7 +12,7 @@
 <meta itemprop="description" content="VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。">
 <meta itemprop="datePublished" content="2019-10-05T21:09:21&#43;10:00" />
 <meta itemprop="dateModified" content="2019-10-05T21:09:21&#43;10:00" />
-<meta itemprop="wordCount" content="217">
+<meta itemprop="wordCount" content="246">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -57,64 +57,50 @@
 
   <body>
     
+
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/blog/ja/">
-        
-          
-            posts
-          
-        
+      <a href="/blog/ja/" class="nav">
+        <h1>Koki's personal blog</h1>
       </a>
     </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
+    <menu id="site-nav-menu" class="flyout-menu menu">
       
         
           
-          
-            <a href="/blog/ja/" class="link"><i class='fas fa-home'></i> ホーム</a>
-          
-        
-      
-        
-          
-          
-            <a href="/blog/ja/about/" class="link"><i class='far fa-id-card'></i> このブログについて</a>
-          
+          <a href="/blog/ja/" class="nav link"><i class='fas fa-home'></i> ホーム</a>
         
       
         
           
-          
-            <a href="/blog/ja/posts/" class="link"><i class='far fa-newspaper'></i> 記事一覧</a>
-          
+          <a href="/blog/ja/about/" class="nav link"><i class='far fa-id-card'></i> このブログについて</a>
         
       
         
           
-          
-            <a href="/blog/ja/categories/" class="link"><i class='fas fa-sitemap'></i> カテゴリ</a>
-          
+          <a href="/blog/ja/posts/" class="nav link"><i class='far fa-newspaper'></i> 記事一覧</a>
         
       
         
           
-          
-            <a href="/blog/ja/contact/" class="link"><i class='far fa-envelope'></i> コンタクト</a>
-          
+          <a href="/blog/ja/categories/" class="nav link"><i class='fas fa-sitemap'></i> カテゴリ</a>
         
       
-      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+        
+          
+          <a href="/blog/ja/contact/" class="nav link"><i class='far fa-envelope'></i> コンタクト</a>
+        
       
-
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
-    
-
-    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
-    <a href="#lang-menu" class="lang-toggle" lang="ja">ja</a>
-    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="ja">ja</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="ja" class="link active">日本語 (ja)</a>
   
@@ -124,7 +110,7 @@
 </menu>
 
   
-    <menu id="share-menu" class="flyout-menu">
+    <menu id="share-menu" class="flyout-menu menu">
       <h1>Share Post</h1>
       
 
@@ -306,37 +292,39 @@
     <p>この記事では、VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。</p>
 <p>この記事の内容です。</p>
 <ul>
-<li><!-- raw HTML omitted --><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E7%92%B0%E5%A2%83">環境</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89">開発環境構築</a><!-- raw HTML omitted -->
+<li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
+<li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
+<li><font color="#1111cc"><a href="#%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89">開発環境構築</a></font>
 <ul>
-<li><!-- raw HTML omitted --><a href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E4%BD%9C%E6%88%90">プロジェクトディレクトリを作成</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#express%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Expressインストール</a><!-- raw HTML omitted -->
+<li><font color="#1111cc"><a href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E4%BD%9C%E6%88%90">プロジェクトディレクトリを作成</a></font></li>
+<li><font color="#1111cc"><a href="#express%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Expressインストール</a></font>
 <ul>
-<li><!-- raw HTML omitted --><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E3%83%86%E3%82%B9%E3%83%88%E7%94%A8%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89">テスト用環境を構築</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">インストール</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%83%86%E3%82%B9%E3%83%88%E7%94%A8%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89">テスト用環境を構築</a></font></li>
 </ul>
 </li>
-<li><!-- raw HTML omitted --><a href="#nodemon%E3%81%AE%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Nodemonのグローバルインストール</a><!-- raw HTML omitted -->
+<li><font color="#1111cc"><a href="#nodemon%E3%81%AE%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Nodemonのグローバルインストール</a></font>
 <ul>
-<li><!-- raw HTML omitted --><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-1">インストール</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%BD%9C%E6%88%90">設定ファイル作成</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#launchjson%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%8A%E3%82%88%E3%81%B3%E7%B7%A8%E9%9B%86">launch.jsonの作成および編集</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#packagejson%E3%82%92%E7%B7%A8%E9%9B%86">package.jsonを編集</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-1">インストール</a></font></li>
+<li><font color="#1111cc"><a href="#%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E4%BD%9C%E6%88%90">設定ファイル作成</a></font></li>
+<li><font color="#1111cc"><a href="#launchjson%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%8A%E3%82%88%E3%81%B3%E7%B7%A8%E9%9B%86">launch.jsonの作成および編集</a></font></li>
+<li><font color="#1111cc"><a href="#packagejson%E3%82%92%E7%B7%A8%E9%9B%86">package.jsonを編集</a></font></li>
 </ul>
 </li>
-<li><!-- raw HTML omitted --><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E5%AE%9F%E8%A1%8C%E6%96%B9%E6%B3%95">プログラムのデバッグ実行方法</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E5%AE%9F%E8%A1%8C%E6%96%B9%E6%B3%95">プログラムのデバッグ実行方法</a></font></li>
 </ul>
 </li>
-<li><!-- raw HTML omitted --><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a></font></li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="対象読者">対象読者</h1>
 <ul>
 <li>VS Code上でNode.js(Express)の開発環境を構築したい方</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="環境">環境</h1>
 <ul>
 <li>Windows 10 (1903)</li>
@@ -344,12 +332,14 @@
 <li>Node.js (v10.16.3)</li>
 <li>npm (6.11.2)</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="前提条件">前提条件</h1>
 <ul>
 <li>Node.js, npmおよびVS Codeインストール済</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="開発環境構築">開発環境構築</h1>
 <h2 id="プロジェクトディレクトリを作成">プロジェクトディレクトリを作成</h2>
 <p>下記のコマンドを実行し、プロジェクト用のディレクトリを作成します。<br>
@@ -378,7 +368,7 @@ app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
 });
 </code></pre></div><p>これでExpressの環境構築は終了です。<br>
 次は、ホットリロードの設定をしていきます。
-<!-- raw HTML omitted --></p>
+<br></p>
 <h2 id="nodemonのグローバルインストール">Nodemonのグローバルインストール</h2>
 <p>ホットリロードの環境を構築するためにNodemonを使用します。</p>
 <h3 id="インストール-1">インストール</h3>
@@ -394,9 +384,9 @@ app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
 }
 </code></pre></div><h3 id="launchjsonの作成および編集">launch.jsonの作成および編集</h3>
 <p>最初に、launch.jsonを下記の作業を行い作成します。
-<!-- raw HTML omitted -->
+<br>
 [Debug] in a left menu -&gt; [Gear icon] -&gt; Select Environmentのところで&quot;Node.js&quot;を選択.
-<!-- raw HTML omitted -->
+<br>
 次に、launch.json内の&quot;configuration&quot;の中身を下記に置き換えます。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     &#34;type&#34;: <span style="color:#a31515">&#34;node&#34;</span>,
@@ -427,41 +417,40 @@ app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
 <p>最後に、プログラムを実行するためのコマンドをpackage.jsonへ追加します。<br>
 下記のコマンドをファイル内の&quot;script&quot;へ追加します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a31515">&#34;debug&#34;</span><span style="">:</span> <span style="color:#a31515">&#34;nodemon --inspect app.js&#34;</span>
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+これで開発環境の構築は終了です。
+<br>
 <h2 id="プログラムのデバッグ実行方法">プログラムのデバッグ実行方法</h2>
 <p>プログラムをデバッグ実行する場合、下記のコマンドをプロジェクト用ディレクトリのルートで実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm run debug
 </code></pre></div><p>その後、VS Code上でF5キーを押します。<br>
 この時にVS Codeからアタッチするプロセスを聞かれた場合は、&ldquo;node &ndash;inspect app.js&quot;を選択してください。<br>
 プログラムを終了したい場合はShift + F5を押すか、デバッグメニューの&quot;Disconnect&quot;をクリックしてください。また、コマンドプロンプトもしくはPowerShell上でCtrl + Cを押すのも忘れないようにしてください。</p>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="参考にさせていただいたページ">参考にさせていただいたページ</h1>
-<!-- raw HTML omitted -->
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://expressjs.com/ja/starter/installing.html" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://expressjs.com/ja/starter/installing.html" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://expressjs.com/ja/starter/installing.html" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Express のインストール</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://expressjs.com/ja/starter/installing.html" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://expressjs.com/ja/starter/installing.html" border="0" alt="" /></a></span></div></div>
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://expressjs.com/ja/starter/hello-world.html" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://expressjs.com/ja/starter/hello-world.html" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://expressjs.com/ja/starter/hello-world.html" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Express の「Hello World」の例</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://expressjs.com/ja/starter/hello-world.html" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://expressjs.com/ja/starter/hello-world.html" border="0" alt="" /></a></span></div></div>
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://github.com/remy/nodemon" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://github.com/remy/nodemon" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://github.com/remy/nodemon" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">remy/nodemon: Monitor for any changes in your node.js application and automatically restart the server - perfect for development</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://github.com/remy/nodemon" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://github.com/remy/nodemon" border="0" alt="" /></a></span></div></div>
 
   </div>
   <footer>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/node.js">Node.js</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/categories/node.js/">Node.js</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>

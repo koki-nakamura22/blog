@@ -12,7 +12,7 @@
 <meta itemprop="description" content="This article explain how to install Ruby on Rails on Windows 10.">
 <meta itemprop="datePublished" content="2019-09-30T18:55:46&#43;10:00" />
 <meta itemprop="dateModified" content="2019-09-30T18:55:46&#43;10:00" />
-<meta itemprop="wordCount" content="242">
+<meta itemprop="wordCount" content="257">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -57,64 +57,50 @@
 
   <body>
     
+
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/blog/">
-        
-          
-            posts
-          
-        
+      <a href="/blog/" class="nav">
+        <h1>Koki's personal blog</h1>
       </a>
     </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
+    <menu id="site-nav-menu" class="flyout-menu menu">
       
         
           
-          
-            <a href="/blog/" class="link"><i class='fa fa-home'></i> Home</a>
-          
-        
-      
-        
-          
-          
-            <a href="/blog/about/" class="link"><i class='far fa-id-card'></i> About</a>
-          
+          <a href="/blog/" class="nav link"><i class='fa fa-home'></i> Home</a>
         
       
         
           
-          
-            <a href="/blog/posts/" class="link"><i class='far fa-newspaper'></i> Posts</a>
-          
+          <a href="/blog/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
         
       
         
           
-          
-            <a href="/blog/categories/" class="link"><i class='fas fa-sitemap'></i> Categories</a>
-          
+          <a href="/blog/posts/" class="nav link"><i class='far fa-newspaper'></i> Posts</a>
         
       
         
           
-          
-            <a href="/blog/contact/" class="link"><i class='far fa-envelope'></i> Contact</a>
-          
+          <a href="/blog/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
         
       
-      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+        
+          
+          <a href="/blog/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
       
-
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
-    
-
-    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
-    <a href="#lang-menu" class="lang-toggle" lang="en">en</a>
-    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="en" class="link active">English (en)</a>
   
@@ -124,7 +110,7 @@
 </menu>
 
   
-    <menu id="share-menu" class="flyout-menu">
+    <menu id="share-menu" class="flyout-menu menu">
       <h1>Share Post</h1>
       
 
@@ -306,29 +292,32 @@
     <p>This article explain how to install Ruby on Rails on Windows 10.</p>
 <p>The following lists are the table of contents about this article.</p>
 <ul>
-<li><!-- raw HTML omitted --><a href="#target-audience">Target audience</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#environment">Environment</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#preconditions">Preconditions</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#install">Install</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#how-to-check-installed-packages">How to check installed packages</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#reference-articles">Reference articles</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#target-audience">Target audience</a></font></li>
+<li><font color="#1111cc"><a href="#environment">Environment</a></font></li>
+<li><font color="#1111cc"><a href="#preconditions">Preconditions</a></font></li>
+<li><font color="#1111cc"><a href="#install">Install</a></font></li>
+<li><font color="#1111cc"><a href="#how-to-check-installed-packages">How to check installed packages</a></font></li>
+<li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
 <h1 id="target-audience">Target audience</h1>
 <ul>
 <li>Those who want to create Ruby on Rails environment on Windows 10.</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="environment">Environment</h1>
 <ul>
 <li>Windows 10 (1903)</li>
 <li>Chocolatey (0.10.15)</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="preconditions">Preconditions</h1>
 <ul>
 <li>Already installed Chocolatey</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="install">Install</h1>
 <p>Execute the following commands on Command Prompt or PowerShell as administrator.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#008000">REM Install Yarn</span>
@@ -358,7 +347,8 @@ When you install Ruby 2.4.2.2, use the following command instead of &ldquo;choco
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install ruby --version=2.4.2.2 -y
 </code></pre></div><p>Also, when you install Ruby on Rails 5.2.2, use the following command instead of &ldquo;gem install bundle rails&rdquo;.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">gem install rails -v 5.2.2
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="how-to-check-installed-packages">How to check installed packages</h1>
 <p>Execute the following commands on Command Prompt or Power Shell.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">ruby -v
@@ -369,35 +359,30 @@ ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
 
 C:\Users\testuser<span style="color:#008000">&gt;rails -v</span>
 Rails 6.0.0
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="reference-articles">Reference articles</h1>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">chocolateyでruby on rails環境を構築 - Qiita</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://qiita.com/toriiico/items/a0765ffdc0419512ae53" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://qiita.com/toriiico/items/a0765ffdc0419512ae53" border="0" alt="" /></a></span></div></div>
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://prog-8.com/docs/rails-env-win" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://prog-8.com/docs/rails-env-win" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://prog-8.com/docs/rails-env-win" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Ruby on Railsの環境構築をしてみよう！(Windows) | プログラミングの入門なら基礎から学べるProgate[プロゲート]</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://prog-8.com/docs/rails-env-win" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://prog-8.com/docs/rails-env-win" border="0" alt="" /></a></span></div></div>
 
   </div>
   <footer>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/categories/ruby-on-rails">Ruby on Rails</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/categories/ruby-on-rails/">Ruby on Rails</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>

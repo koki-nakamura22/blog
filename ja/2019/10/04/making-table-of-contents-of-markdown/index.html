@@ -12,7 +12,7 @@
 <meta itemprop="description" content="Markdownファイルの目次を自動生成する方法を説明します。">
 <meta itemprop="datePublished" content="2019-10-04T22:48:18&#43;10:00" />
 <meta itemprop="dateModified" content="2019-10-04T22:48:18&#43;10:00" />
-<meta itemprop="wordCount" content="85">
+<meta itemprop="wordCount" content="114">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -57,64 +57,50 @@
 
   <body>
     
+
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/blog/ja/">
-        
-          
-            posts
-          
-        
+      <a href="/blog/ja/" class="nav">
+        <h1>Koki's personal blog</h1>
       </a>
     </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
+    <menu id="site-nav-menu" class="flyout-menu menu">
       
         
           
-          
-            <a href="/blog/ja/" class="link"><i class='fas fa-home'></i> ホーム</a>
-          
-        
-      
-        
-          
-          
-            <a href="/blog/ja/about/" class="link"><i class='far fa-id-card'></i> このブログについて</a>
-          
+          <a href="/blog/ja/" class="nav link"><i class='fas fa-home'></i> ホーム</a>
         
       
         
           
-          
-            <a href="/blog/ja/posts/" class="link"><i class='far fa-newspaper'></i> 記事一覧</a>
-          
+          <a href="/blog/ja/about/" class="nav link"><i class='far fa-id-card'></i> このブログについて</a>
         
       
         
           
-          
-            <a href="/blog/ja/categories/" class="link"><i class='fas fa-sitemap'></i> カテゴリ</a>
-          
+          <a href="/blog/ja/posts/" class="nav link"><i class='far fa-newspaper'></i> 記事一覧</a>
         
       
         
           
-          
-            <a href="/blog/ja/contact/" class="link"><i class='far fa-envelope'></i> コンタクト</a>
-          
+          <a href="/blog/ja/categories/" class="nav link"><i class='fas fa-sitemap'></i> カテゴリ</a>
         
       
-      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+        
+          
+          <a href="/blog/ja/contact/" class="nav link"><i class='far fa-envelope'></i> コンタクト</a>
+        
       
-
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
-    
-
-    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
-    <a href="#lang-menu" class="lang-toggle" lang="ja">ja</a>
-    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="ja">ja</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="ja" class="link active">日本語 (ja)</a>
   
@@ -124,7 +110,7 @@
 </menu>
 
   
-    <menu id="share-menu" class="flyout-menu">
+    <menu id="share-menu" class="flyout-menu menu">
       <h1>Share Post</h1>
       
 
@@ -306,30 +292,34 @@
     <p>この記事では、Markdownファイルの目次を自動生成する方法を説明します。</p>
 <p>この記事の内容です。</p>
 <ul>
-<li><!-- raw HTML omitted --><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#doctoc%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">doctocをインストール</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E7%9B%AE%E6%AC%A1%E3%82%92%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90">目次を自動生成</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
+<li><font color="#1111cc"><a href="#doctoc%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">doctocをインストール</a></font></li>
+<li><font color="#1111cc"><a href="#%E7%9B%AE%E6%AC%A1%E3%82%92%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90">目次を自動生成</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a></font></li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="対象読者">対象読者</h1>
 <ul>
 <li>Markdownで記述したドキュメントの目次を自動生成したい方</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="前提条件">前提条件</h1>
 <p>お使いのPCにNode.jsをインストールしていること。</p>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="doctocをインストール">doctocをインストール</h1>
 <p>下記のコマンドを実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm install -g doctoc
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="目次を自動生成">目次を自動生成</h1>
 <p>目次を作成したいMarkdownファイルが存在するディレクトリをパラメータに指定し、doctocコマンドを実行します。<br>
 下記は、カレントディレクトリを指定しています。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">doctoc .
-</code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted -->
+</code></pre></div><p><br><br>
 「Everything is OK.」が表示されるまで待ち、その後、ファイルを開いてみると先頭に</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">&lt;!-- START doctoc generated TOC please keep comment here to allow auto update --&gt;
 &lt;!-- DON&#39;T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --&gt;
@@ -338,41 +328,35 @@
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">&lt;!-- END doctoc generated TOC please keep comment here to allow auto update --&gt;
 </code></pre></div><p>に囲まれて、目次が生成されているのを確認することができます。<br>
 あとはそれらをコピーし、自由にお使いください。<br>
-<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<br><br>
 ちなみに、本記事の目次は下記の形で出力されました。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown"><span style="color:#00f">-</span> [対象読者](#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85)
 <span style="color:#00f">-</span> [前提条件](#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6)
 <span style="color:#00f">-</span> [doctocをインストール](#doctoc%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
 <span style="color:#00f">-</span> [目次を自動生成](#%E7%9B%AE%E6%AC%A1%E3%82%92%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90)
 <span style="color:#00f">-</span> [参考にさせていただいたページ](#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8)
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="参考にさせていただいたページ">参考にさせていただいたページ</h1>
-<!-- raw HTML omitted -->
-
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://github.com/thlorenz/doctoc" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://github.com/thlorenz/doctoc" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://github.com/thlorenz/doctoc" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">thlorenz/doctoc: 📜 Generates table of contents for markdown files inside local git repository. Links are compatible with anchors generated by github or other sites.</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://github.com/thlorenz/doctoc" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://github.com/thlorenz/doctoc" border="0" alt="" /></a></span></div></div>
   </div>
   <footer>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/markdown">Markdown</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/categories/markdown/">Markdown</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>

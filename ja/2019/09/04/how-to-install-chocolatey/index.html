@@ -12,7 +12,7 @@
 <meta itemprop="description" content="Windows 10でLinuxのapt-getやyumの様にパッケージを管理する環境を構築する方法を説明します。">
 <meta itemprop="datePublished" content="2019-09-04T16:38:27&#43;10:00" />
 <meta itemprop="dateModified" content="2019-09-04T16:38:27&#43;10:00" />
-<meta itemprop="wordCount" content="80">
+<meta itemprop="wordCount" content="99">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -57,64 +57,50 @@
 
   <body>
     
+
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/blog/ja/">
-        
-          
-            posts
-          
-        
+      <a href="/blog/ja/" class="nav">
+        <h1>Koki's personal blog</h1>
       </a>
     </h1>
-    <menu id="site-nav-menu" class="flyout-menu">
+    <menu id="site-nav-menu" class="flyout-menu menu">
       
         
           
-          
-            <a href="/blog/ja/" class="link"><i class='fas fa-home'></i> ホーム</a>
-          
-        
-      
-        
-          
-          
-            <a href="/blog/ja/about/" class="link"><i class='far fa-id-card'></i> このブログについて</a>
-          
+          <a href="/blog/ja/" class="nav link"><i class='fas fa-home'></i> ホーム</a>
         
       
         
           
-          
-            <a href="/blog/ja/posts/" class="link"><i class='far fa-newspaper'></i> 記事一覧</a>
-          
+          <a href="/blog/ja/about/" class="nav link"><i class='far fa-id-card'></i> このブログについて</a>
         
       
         
           
-          
-            <a href="/blog/ja/categories/" class="link"><i class='fas fa-sitemap'></i> カテゴリ</a>
-          
+          <a href="/blog/ja/posts/" class="nav link"><i class='far fa-newspaper'></i> 記事一覧</a>
         
       
         
           
-          
-            <a href="/blog/ja/contact/" class="link"><i class='far fa-envelope'></i> コンタクト</a>
-          
+          <a href="/blog/ja/categories/" class="nav link"><i class='fas fa-sitemap'></i> カテゴリ</a>
         
       
-      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+        
+          
+          <a href="/blog/ja/contact/" class="nav link"><i class='far fa-envelope'></i> コンタクト</a>
+        
       
-
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
     </menu>
-    
-
-    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
-    <a href="#lang-menu" class="lang-toggle" lang="ja">ja</a>
-    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="ja">ja</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
   </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="ja" class="link active">日本語 (ja)</a>
   
@@ -124,7 +110,7 @@
 </menu>
 
   
-    <menu id="share-menu" class="flyout-menu">
+    <menu id="share-menu" class="flyout-menu menu">
       <h1>Share Post</h1>
       
 
@@ -306,86 +292,88 @@
     <p>本記事では、Chocolateyを使用し、Windows環境でLinuxのapt-getやyumを使用するパッケージ管理を実現する方法について説明します。</p>
 <p>本記事の内容です。</p>
 <ul>
-<li><!-- raw HTML omitted --><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%95%E3%82%8C%E3%81%9F%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D">インストールされたことを確認</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E5%AE%9F%E9%9A%9B%E3%81%AB%E4%BD%95%E3%81%8B%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">実際に何かインストールしてみる</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%A2%BA%E8%AA%8D">インストール済みのパッケージ確認</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">アンインストール方法</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E6%96%B9%E6%B3%95">パッケージのアップデート方法</a><!-- raw HTML omitted --></li>
-<li><!-- raw HTML omitted --><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a><!-- raw HTML omitted --></li>
+<li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">インストール方法</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%95%E3%82%8C%E3%81%9F%E3%81%93%E3%81%A8%E3%82%92%E7%A2%BA%E8%AA%8D">インストールされたことを確認</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%AE%9F%E9%9A%9B%E3%81%AB%E4%BD%95%E3%81%8B%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">実際に何かインストールしてみる</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%B8%88%E3%81%BF%E3%81%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%A2%BA%E8%AA%8D">インストール済みのパッケージ確認</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%96%B9%E6%B3%95">アンインストール方法</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%87%E3%83%BC%E3%83%88%E6%96%B9%E6%B3%95">パッケージのアップデート方法</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a></font></li>
 </ul>
 <h1 id="対象読者">対象読者</h1>
 <ul>
 <li>WindowsでもLinuxのapt-getやyumのような機能を使用したい方</li>
 </ul>
-<!-- raw HTML omitted -->
+<br>
+---
 <h1 id="インストール方法">インストール方法</h1>
 <p>下記のコマンドを、管理者権限で起動したコマンドプロンプト上で実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#a31515">&#34;</span>%SystemRoot%<span style="color:#a31515">\System32\WindowsPowerShell\v1.0\powershell.exe&#34;</span> -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command <span style="color:#a31515">&#34;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span> &amp;&amp; <span style="color:#00f">SET</span> <span style="color:#a31515">&#34;PATH=</span>%PATH%<span style="color:#a31515">;</span>%ALLUSERSPROFILE%<span style="color:#a31515">\chocolatey\bin&#34;</span>
 </code></pre></div><p>もしくは、下記のコマンドを管理者権限で起動したPowerShell上で実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope <span style="color:#00f">Process</span> -Force; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#a31515">&#39;https://chocolatey.org/install.ps1&#39;</span>))
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="インストールされたことを確認">インストールされたことを確認</h1>
 <p>上記のコマンドが終了した後に</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco -v
 </code></pre></div><p>を実行し、下記のようにバージョン情報が表示されたらインストールが成功しています。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\WINDOWS\system32<span style="color:#008000">&gt;choco -v</span>
 0.10.15
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="実際に何かインストールしてみる">実際に何かインストールしてみる</h1>
-<!-- raw HTML omitted -->
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://chocolatey.org/packages" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://chocolatey.org/packages" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://chocolatey.org/packages" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Chocolatey Software | Packages</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://chocolatey.org/packages" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://chocolatey.org/packages" border="0" alt="" /></a></span></div></div>
 <p>を参考に、試しに7zipをインストールしてみます。<br>
 下記のコマンドを実行します。<br>
 この時、コマンドプロンプトやPowerShellは管理者権限で起動しておきましょう。(ソフトウェアをインストールする時は管理者権限が求められるため。)<br>
 また、途中で処理を続行するかを問われるので、「Y」を入力し続行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">choco install 7zip
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="インストール済みのパッケージ確認">インストール済みのパッケージ確認</h1>
 <p>インストール済みのパッケージを確認する場合は、下記のコマンドを実行します。<br>
 試しに、上記でインストールした7zipが表示されるか確認してみましょう。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco list -localonly
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="アンインストール方法">アンインストール方法</h1>
 <p>インストール済みのパッケージをアンインストールする際は、下記コマンドを実行します。<br>
 この時、本当に削除してもよいかを聞かれるので「Y」を入力し、処理を続行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install [package name]
 </code></pre></div><p>例えば、上記でインストールしたものをアンインストールするには下記のコマンドを実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco uninstall 7zip
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="パッケージのアップデート方法">パッケージのアップデート方法</h1>
 <p>すべてのパッケージをアップデートする場合は下記のコマンドを、</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update all
 </code></pre></div><p>パッケージを指定してアップデートする場合は下記のコマンドを実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update [package name]
-</code></pre></div><!-- raw HTML omitted -->
+</code></pre></div><br>
+---
 <h1 id="参考にさせていただいたページ">参考にさせていただいたページ</h1>
-<!-- raw HTML omitted -->
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://chocolatey.org/docs/installation" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://chocolatey.org/docs/installation" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://chocolatey.org/docs/installation" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Chocolatey Software | Installation</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://chocolatey.org/docs/installation" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://chocolatey.org/docs/installation" border="0" alt="" /></a></span></div></div>
+<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://www.nuits.jp/entry/hello-Chocolatey" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://www.nuits.jp/entry/hello-Chocolatey" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://www.nuits.jp/entry/hello-Chocolatey" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">はじめてのChocolatey - nuits.jp blog</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://www.nuits.jp/entry/hello-Chocolatey" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://www.nuits.jp/entry/hello-Chocolatey" border="0" alt="" /></a></span></div></div>
 
   </div>
   <footer>
-    <ul class="stats">
+    <div class="stats">
   
-    
-    
-      <li class="categories">
-        <ul>
-          
-            
-            <li><a class="article-category-link" href="https://koki-nakamura22.github.io/blog/ja/categories/chocolatey">Chocolatey</a></li>
-          
-        </ul>
-      </li>
-    
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/categories/chocolatey/">Chocolatey</a></li>
+        
+      
+    </ul>
   
   
-    <li class="tags">
-      <ul>
-        <li>None</li>
-      </ul>
-    </li>
+    <ul class="tags">
+      <li>None</li>
+    </ul>
   
-</ul>
+</div>
 
   </footer>
 </article>

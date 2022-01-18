@@ -21,10 +21,10 @@
       <description>この記事では、同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整する方法を説明します。
 何故調整する必要があるのか？それは、本ブログの様に固定ヘッダを使用していると、&amp;lt;a&amp;gt;タグをクリックした時に表示されるアンカーがヘッダの後ろに隠れるからです。
 この記事の内容です。
- 対象読者 環境 前提条件 リンクのジャンプ先位置調整 参考にさせていただいたページ  対象読者  同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整したい方  環境  CSS3  前提条件  なし  リンクのジャンプ先位置調整 add-on.css内で、下記のコードをリンク先のタグ(アンカー)に設定します。
+ 対象読者 環境 前提条件 リンクのジャンプ先位置調整 参考にさせていただいたページ  ---対象読者  同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整したい方  ---環境  CSS3  ---前提条件  なし  ---リンクのジャンプ先位置調整 add-on.css内で、下記のコードをリンク先のタグ(アンカー)に設定します。
 この時、padding-topとmargin-topに設定する数値は必ず同じにしてください。
 #target-tag {display: block;padding-top: 60px;margin-top: -60px;}このブログでは、下記のコードにて各見出しに対する調整を行っています。
-/* For link destinations adjustment. */#site-main .post .content h1,#site-main .post .content h2,#site-main .post .content h3,#site-main .post .content h4,#site-main .post .content h5,#site-main .post .content h6 {display: block;padding-top: 60px;margin-top: -60px;}参考にさせていただいたページ </description>
+/* For link destinations adjustment. */#site-main .post .content h1,#site-main .post .content h2,#site-main .post .content h3,#site-main .post .content h4,#site-main .post .content h5,#site-main .post .content h6 {display: block;padding-top: 60px;margin-top: -60px;}</description>
     </item>
     
   </channel>

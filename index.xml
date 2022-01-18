@@ -20,7 +20,7 @@
       <guid>https://koki-nakamura22.github.io/blog/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
       <description>This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Installing pyenv Installing Python by pyenv Installing libraries that need for installing Python Installing Python   Reference articles  Target audience  Those who want to install pyenv and Python on WSL.  Environment  WSL (Ubuntu 18.</description>
+ Target audience Environment Preconditions Installing pyenv Installing Python by pyenv  Installing libraries that need for installing Python Installing Python   Reference articles  ---Target audience  Those who want to install pyenv and Python on WSL.  ---Environment  WSL (Ubuntu 18.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/12/24/operating-vimeo-by-js/</guid>
       <description>This article explains the example codes of operating the embedded Vimeo video by JavaScript.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Operating an embedded Vimeo video by JavaScript Loading the embedded Vimeo video to a HTML file Create a JavaScript file for each HTML file Create a JavaScript to operating the Vimeo video.   Example code Reference articles  Target audience  Those who want to operating the Vimeo video by JavaScript.</description>
+ Target audience Environment Preconditions Operating an embedded Vimeo video by JavaScript  Loading the embedded Vimeo video to a HTML file Create a JavaScript file for each HTML file Create a JavaScript to operating the Vimeo video.   Example code Reference articles  ---Target audience  Those who want to operating the Vimeo video by JavaScript.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/13/building-env-of-rails-tutorial-wsl/</guid>
       <description>This article explains how to build the environment of Ruby on Rails tutorial on WSL.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Building the environment of Ruby on Rails tutorial Reference articles  Target audience  Those who want to build the environment of Ruby on Rails tutorial on WSL.  Environment  Windows 10 (1903) Ubuntu (Distribution of WSL, have to use without version.</description>
+ Target audience Environment Preconditions Building the environment of Ruby on Rails tutorial Reference articles  ---Target audience  Those who want to build the environment of Ruby on Rails tutorial on WSL.  ---Environment  Windows 10 (1903) Ubuntu (Distribution of WSL, have to use without version.</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/08/deploying-articles-on-hugo-automatically/</guid>
       <description>This article explains how to deploy articles on Hugo blog automatically.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions How to deploy articles automatically Make batch file Make PowerShell script file How to use script files    Target audience  Those who want to deploy articles automatically.  Environment  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.</description>
+ Target audience Environment Preconditions How to deploy articles automatically  Make batch file Make PowerShell script file How to use script files    ---Target audience  Those who want to deploy articles automatically.  ---Environment  Windows 10 (1903) Command Prompt Power Shell (5.</description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@ The following lists are the table of contents about this article.
 If we are using a fixed header, we need to adjust the position of the anchor when clicked the &amp;lt;a&amp;gt; link.
 Because the anchor is hidden behind the header.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Adjusting link destinations position Reference articles  Target audience  Those who want to adjust the display position of the &amp;lt;a&amp;gt; link destination in the same page.</description>
+ Target audience Environment Preconditions Adjusting link destinations position Reference articles  ---Target audience  Those who want to adjust the display position of the &amp;lt;a&amp;gt; link destination in the same page.</description>
     </item>
     
     <item>
@@ -77,7 +77,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/05/creating-dev-env-of-nodejs/</guid>
       <description>This article explains how to create a development environment of Node.js (Use Express) including a function of hot reload. (VS Code)
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Creating the development environment Make project directory Install Express Install Create a environment for test   Install Nodemon globally Install Make a setting file Make and edit launch.json Edit package.json   How to execute in debug mode   Reference articles  Target audience  Those who want to create the development environment of Node.</description>
+ Target audience Environment Preconditions Creating the development environment  Make project directory Install Express  Install Create a environment for test   Install Nodemon globally  Install Make a setting file Make and edit launch.json Edit package.</description>
     </item>
     
     <item>
@@ -88,8 +88,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/04/making-table-of-contents-of-markdown/</guid>
       <description>This article explains how to make a table of contents of Markdown automatically..
 The following lists are the table of contents about this article.
- Target audience Preconditions Install doctoc Making a table of contents of Markdown automatically Reference articles  Target audience  Those who want to make a table of contents of Markdown automatically.  Preconditions  Installed Node.js  Install doctoc Execute the following command.
-npm install -g doctocMaking a table of contents of Markdown automatically Specify the directory where contains the Markdown file for making the table of contents exists in the doctoc parameter, and execute it.</description>
+ Target audience Preconditions Install doctoc Making a table of contents of Markdown automatically Reference articles  ---Target audience  Those who want to make a table of contents of Markdown automatically.  ---Preconditions  Installed Node.js  ---Install doctoc Execute the following command.</description>
     </item>
     
     <item>
@@ -100,7 +99,7 @@ npm install -g doctocMaking a table of contents of Markdown automatically Speci
       <guid>https://koki-nakamura22.github.io/blog/2019/10/03/hugo-adding-copy-button/</guid>
       <description>This article explains how to add a copy code button on Hugo blog.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Adding copy code button Adding JavaScript code Adding CSS code   Reference articles  Target audience  Those who want to add a copy code button to code block on Hugo blog.  Environment  Hugo 0.57.2 Hugo-extended 0.58.2  Preconditions  Installed Hugo and Hugo-extended  Adding copy code button Adding JavaScript code Add the following code to static/js/add-on.</description>
+ Target audience Environment Preconditions Adding copy code button  Adding JavaScript code Adding CSS code   Reference articles  ---Target audience  Those who want to add a copy code button to code block on Hugo blog.  ---Environment  Hugo 0.57.2 Hugo-extended 0.</description>
     </item>
     
     <item>
@@ -111,7 +110,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/02/hugo-code-block-title/</guid>
       <description>This article explains how to add a title to code block on Hugo blog.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Add a title to code block Add JavaScript code Add CSS code How to set a title   Reference articles  Target audience  Those who want to add a title to code block on Hugo blog.  Environment  Hugo 0.</description>
+ Target audience Environment Preconditions Add a title to code block  Add JavaScript code Add CSS code How to set a title   Reference articles  ---Target audience  Those who want to add a title to code block on Hugo blog.  ---Environment  Hugo 0.</description>
     </item>
     
     <item>
@@ -122,7 +121,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/01/hugo-syntax-highlight/</guid>
       <description>This article explains how to add a function of syntax highlight on Hugo blog.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Add a function of syntax highlight Reference articles  Target audience  Those who want to add a function of syntax highlight on Hugo blog.  Environment  Hugo 0.57.2 Hugo-extended 0.58.2  Preconditions  Installed Hugo and Hugo-extended  Add a function of syntax highlight Add the following codes to config.</description>
+ Target audience Environment Preconditions Add a function of syntax highlight Reference articles  Target audience  Those who want to add a function of syntax highlight on Hugo blog.  ---Environment  Hugo 0.57.2 Hugo-extended 0.58.2  ---Preconditions  Installed Hugo and Hugo-extended  ---Add a function of syntax highlight Add the following codes to config.</description>
     </item>
     
     <item>
@@ -133,7 +132,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/09/30/how-to-install-rails-on-windows/</guid>
       <description>This article explain how to install Ruby on Rails on Windows 10.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Install How to check installed packages Reference articles  Target audience  Those who want to create Ruby on Rails environment on Windows 10.  Environment  Windows 10 (1903) Chocolatey (0.10.15)  Preconditions  Already installed Chocolatey  Install Execute the following commands on Command Prompt or PowerShell as administrator.</description>
+ Target audience Environment Preconditions Install How to check installed packages Reference articles  Target audience  Those who want to create Ruby on Rails environment on Windows 10.  ---Environment  Windows 10 (1903) Chocolatey (0.10.15)  ---Preconditions  Already installed Chocolatey  ---Install Execute the following commands on Command Prompt or PowerShell as administrator.</description>
     </item>
     
     <item>
