@@ -12,7 +12,7 @@
 <meta itemprop="description" content="This article explains how to add a function of syntax highlight on Hugo blog.">
 <meta itemprop="datePublished" content="2019-10-01T20:50:00&#43;10:00" />
 <meta itemprop="dateModified" content="2019-10-01T20:50:00&#43;10:00" />
-<meta itemprop="wordCount" content="116">
+<meta itemprop="wordCount" content="112">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/2019/10/01/hugo-syntax-highlight/">How to add a function of syntax highlight to Hugo blog</a></h1>
     
-        <h2><a href="/blog/2019/10/01/hugo-syntax-highlight/">How to add a function of syntax highlight to Hugo blog</a></h2>
     
+      <p>This article explains how to add a function of syntax highlight on Hugo blog.</p>
     
-        <p>This article explains how to add a function of syntax highlight on Hugo blog.</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-10-01 20:50:00 &#43;1000 &#43;1000">
-      October 1, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-10-01 20:50:00 &#43;1000 &#43;1000">October 1, 2019</time>
+    <p>Koki</p>
+    <p>1-Minute Read</p>
   </div>
 </header>
 
@@ -298,35 +293,27 @@
 <li><font color="#1111cc"><a href="#add-a-function-of-syntax-highlight">Add a function of syntax highlight</a></font></li>
 <li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
-<h1 id="target-audience">Target audience</h1>
+<h2 id="target-audience">Target audience</h2>
 <ul>
 <li>Those who want to add a function of syntax highlight on Hugo blog.</li>
 </ul>
-<br>
----
-<h1 id="environment">Environment</h1>
+<h2 id="environment">Environment</h2>
 <ul>
 <li>Hugo 0.57.2</li>
 <li>Hugo-extended 0.58.2</li>
 </ul>
-<br>
----
-<h1 id="preconditions">Preconditions</h1>
+<h2 id="preconditions">Preconditions</h2>
 <ul>
 <li>Installed Hugo and Hugo-extended</li>
 </ul>
-<br>
----
-<h1 id="add-a-function-of-syntax-highlight">Add a function of syntax highlight</h1>
+<h2 id="add-a-function-of-syntax-highlight">Add a function of syntax highlight</h2>
 <p>Add the following codes to config.toml.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">pygmentsCodefences = <span style="color:#00f">true</span>
 pygmentsStyle = <span style="color:#a31515">&#34;fruity&#34;</span>
 </code></pre></div><p>You can chose a style on pygmentsStyle from the below pages.</p>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://xyproto.github.io/splash/docs/all.html" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://xyproto.github.io/splash/docs/all.html" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://xyproto.github.io/splash/docs/all.html" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Chroma Style Gallery</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://xyproto.github.io/splash/docs/all.html" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://xyproto.github.io/splash/docs/all.html" border="0" alt="" /></a></span></div></div>
 <p>The above code chooses style that is &ldquo;fruity&rdquo;.</p>
-<br>
----
-<h1 id="reference-articles">Reference articles</h1>
+<h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma/?fbclid=IwAR2DS1e2wbYdyw1ZMnt_XWoAPpwXRXjYozd_UuupfNxHqTxWGwOuMvFwuXo" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma/?fbclid=IwAR2DS1e2wbYdyw1ZMnt_XWoAPpwXRXjYozd_UuupfNxHqTxWGwOuMvFwuXo" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma/?fbclid=IwAR2DS1e2wbYdyw1ZMnt_XWoAPpwXRXjYozd_UuupfNxHqTxWGwOuMvFwuXo" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Syntax highlighting in Hugo with Chroma | zwbetz</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma/?fbclid=IwAR2DS1e2wbYdyw1ZMnt_XWoAPpwXRXjYozd_UuupfNxHqTxWGwOuMvFwuXo" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://zwbetz.com/syntax-highlighting-in-hugo-with-chroma/?fbclid=IwAR2DS1e2wbYdyw1ZMnt_XWoAPpwXRXjYozd_UuupfNxHqTxWGwOuMvFwuXo" border="0" alt="" /></a></span></div></div>
 
   </div>

@@ -12,7 +12,7 @@
 <meta itemprop="description" content="Explain how to create a development environment of Node.js (Use Express) including a function of hot reload. (VS Code)">
 <meta itemprop="datePublished" content="2019-10-05T21:09:21&#43;10:00" />
 <meta itemprop="dateModified" content="2019-10-05T21:09:21&#43;10:00" />
-<meta itemprop="wordCount" content="538">
+<meta itemprop="wordCount" content="533">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/2019/10/05/creating-dev-env-of-nodejs/">Creating a development environment of Node.js (Use Express and VS Code)</a></h1>
     
-        <h2><a href="/blog/2019/10/05/creating-dev-env-of-nodejs/">Creating a development environment of Node.js (Use Express and VS Code)</a></h2>
     
+      <p>Explain how to create a development environment of Node.js (Use Express) including a function of hot reload. (VS Code)</p>
     
-        <p>Explain how to create a development environment of Node.js (Use Express) including a function of hot reload. (VS Code)</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-10-05 21:09:21 &#43;1000 &#43;1000">
-      October 5, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-10-05 21:09:21 &#43;1000 &#43;1000">October 5, 2019</time>
+    <p>Koki</p>
+    <p>3-Minute Read</p>
   </div>
 </header>
 
@@ -317,41 +312,33 @@
 </li>
 <li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
-<br>
----
-<h1 id="target-audience">Target audience</h1>
+<h2 id="target-audience">Target audience</h2>
 <ul>
 <li>Those who want to create the development environment of Node.js (Express) on VS Code.</li>
 </ul>
-<br>
----
-<h1 id="environment">Environment</h1>
+<h2 id="environment">Environment</h2>
 <ul>
 <li>Windows 10 (1903)</li>
 <li>Visual Studio Code (1.38.1)</li>
 <li>Node.js (v10.16.3)</li>
 <li>npm (6.11.2)</li>
 </ul>
-<br>
----
-<h1 id="preconditions">Preconditions</h1>
+<h2 id="preconditions">Preconditions</h2>
 <ul>
 <li>Installed Node.js, npm and VS Code</li>
 </ul>
-<br>
----
-<h1 id="creating-the-development-environment">Creating the development environment</h1>
-<h2 id="make-project-directory">Make project directory</h2>
+<h2 id="creating-the-development-environment">Creating the development environment</h2>
+<h3 id="make-project-directory">Make project directory</h3>
 <p>Execute the following command to make the directory.<br>
 Use the command that is the same on Windows, Mac and Linux.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch"><span style="color:#00f">mkdir</span> [project name]
 </code></pre></div><br>
-<h2 id="install-express">Install Express</h2>
-<h3 id="install">Install</h3>
+<h3 id="install-express">Install Express</h3>
+<h4 id="install">Install</h4>
 <p>First, Move to the directory that was made.<br>
 Then execute the following command to install Express locally.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm install express --save-dev
-</code></pre></div><h3 id="create-a-environment-for-test">Create a environment for test</h3>
+</code></pre></div><h4 id="create-a-environment-for-test">Create a environment for test</h4>
 <p>First, execute the following command to init npm.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm init
 </code></pre></div><p>Then create a app.js file and copy the following codes to the file.</p>
@@ -370,12 +357,12 @@ app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
 </code></pre></div><p>Creating a developing environment of Node.js (Express) that finished.<br>
 Next, setting up an environment of hot reload.
 <br></p>
-<h2 id="install-nodemon-globally">Install Nodemon globally</h2>
+<h3 id="install-nodemon-globally">Install Nodemon globally</h3>
 <p>Use Nodemon to creating an environment of hot reload.</p>
-<h3 id="install-1">Install</h3>
+<h4 id="install-1">Install</h4>
 <p>Execute the following command to install nodemon globally.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm install nodemon -g
-</code></pre></div><h3 id="make-a-setting-file">Make a setting file</h3>
+</code></pre></div><h4 id="make-a-setting-file">Make a setting file</h4>
 <p>Make .nodemon.json file at project&rsquo;s root path.<br>
 Then paste the following codes to the file.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json:.nodemon.json" data-lang="json:.nodemon.json">{
@@ -383,7 +370,7 @@ Then paste the following codes to the file.</p>
   &#34;ext&#34;: <span style="color:#a31515">&#34;js,json&#34;</span>,
   &#34;exec&#34;: <span style="color:#a31515">&#34;node ./app&#34;</span>
 }
-</code></pre></div><h3 id="make-and-edit-launchjson">Make and edit launch.json</h3>
+</code></pre></div><h4 id="make-and-edit-launchjson">Make and edit launch.json</h4>
 <p>First, make launch.json by the following work.<br>
 <br>
 [Debug] in a left menu -&gt; [Gear icon] -&gt; Choose &ldquo;Node.js&rdquo; on Select Environment.
@@ -414,22 +401,20 @@ Then replace the contents of &ldquo;configuration&rdquo; from source to the foll
         }
     ]
 }
-</code></pre></div><h3 id="edit-packagejson">Edit package.json</h3>
+</code></pre></div><h4 id="edit-packagejson">Edit package.json</h4>
 <p>Finally, adding a command to package.json for executing program.<br>
 Adding the following command to &ldquo;script&rdquo; in the package.json.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a31515">&#34;debug&#34;</span><span style="">:</span> <span style="color:#a31515">&#34;nodemon --inspect app.js&#34;</span>
 </code></pre></div><br>
 This is the end of creating the development environment.
 <br>
-<h2 id="how-to-execute-in-debug-mode">How to execute in debug mode</h2>
+<h3 id="how-to-execute-in-debug-mode">How to execute in debug mode</h3>
 <p>To start the program in debug mode, execute the following command at project&rsquo;s root path.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm run debug
 </code></pre></div><p>Then press &ldquo;F5&rdquo; key on VS Code.<br>
 If VS Code ask for you about &ldquo;Pick the node.js process to attach to&rdquo;, choose &ldquo;node &ndash;inspect app.js&rdquo;.<br>
 When you want to exit, press F5 or click &ldquo;Disconnect&rdquo; in a debug menu. And, press Ctrl + C in Command Prompt or PowerShell.</p>
-<br>
----
-<h1 id="reference-articles">Reference articles</h1>
+<h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://expressjs.com/en/starter/installing.html" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://expressjs.com/en/starter/installing.html" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://expressjs.com/en/starter/installing.html" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Installing Express</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://expressjs.com/en/starter/installing.html" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://expressjs.com/en/starter/installing.html" border="0" alt="" /></a></span></div></div>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://expressjs.com/en/starter/hello-world.html" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://expressjs.com/en/starter/hello-world.html" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://expressjs.com/en/starter/hello-world.html" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Express "Hello World" example</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://expressjs.com/en/starter/hello-world.html" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://expressjs.com/en/starter/hello-world.html" border="0" alt="" /></a></span></div></div>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://github.com/remy/nodemon" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://github.com/remy/nodemon" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://github.com/remy/nodemon" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">remy/nodemon: Monitor for any changes in your node.js application and automatically restart the server - perfect for development</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://github.com/remy/nodemon" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://github.com/remy/nodemon" border="0" alt="" /></a></span></div></div>

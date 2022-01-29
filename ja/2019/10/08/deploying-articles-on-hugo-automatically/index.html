@@ -12,7 +12,7 @@
 <meta itemprop="description" content="Hugoブログの記事を自動デプロイする方法について説明します">
 <meta itemprop="datePublished" content="2019-10-08T22:33:13&#43;11:00" />
 <meta itemprop="dateModified" content="2019-10-08T22:33:13&#43;11:00" />
-<meta itemprop="wordCount" content="119">
+<meta itemprop="wordCount" content="115">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/">Hugoブログの記事を自動デプロイする方法</a></h1>
     
-        <h2><a href="/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/">Hugoブログの記事を自動デプロイする方法</a></h2>
     
+      <p>Hugoブログの記事を自動デプロイする方法について説明します</p>
     
-        <p>Hugoブログの記事を自動デプロイする方法について説明します</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-10-08 22:33:13 &#43;1100 &#43;1100">
-      2019-10-08
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-10-08 22:33:13 &#43;1100 &#43;1100">2019-10-08</time>
+    <p>Koki</p>
+    <p>1 分で読めます</p>
   </div>
 </header>
 
@@ -303,15 +298,11 @@
 </ul>
 </li>
 </ul>
-<br>
----
-<h1 id="対象読者">対象読者</h1>
+<h2 id="対象読者">対象読者</h2>
 <ul>
 <li>Hugoでブログを作成しておりかつ自動でデプロイしたい方</li>
 </ul>
-<br>
----
-<h1 id="環境">環境</h1>
+<h2 id="環境">環境</h2>
 <ul>
 <li>Windows 10 (1903)</li>
 <li>Command Prompt</li>
@@ -319,23 +310,19 @@
 <li>Hugo (0.57.2)</li>
 <li>Hugo-extended (0.58.2)</li>
 </ul>
-<br>
----
-<h1 id="前提条件">前提条件</h1>
+<h2 id="前提条件">前提条件</h2>
 <ul>
 <li>GitHub上でHugoのブログ記事を管理している</li>
 <li>GitHub上のブログリポジトリを&quot;public&quot;ディレクトリとしてクローン済</li>
 </ul>
-<br>
----
-<h1 id="自動デプロイの仕組みを作る">自動デプロイの仕組みを作る</h1>
+<h2 id="自動デプロイの仕組みを作る">自動デプロイの仕組みを作る</h2>
 <p>スクリプトファイルを作成し、それを実行することで自動デプロイを行います。<br>
 今回はbatファイルとPowerShellのスクリプトファイルの両方を使います。<br>
 batファイルを使用する理由は、PowerShellスクリプトファイルを実行するのが楽になるからです。</p>
-<h2 id="batファイルを作成">batファイルを作成</h2>
+<h3 id="batファイルを作成">batファイルを作成</h3>
 <p>&ldquo;deploy.bat&quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1
-</code></pre></div><h2 id="powershellスクリプトファイルを作成">PowerShellスクリプトファイルを作成</h2>
+</code></pre></div><h3 id="powershellスクリプトファイルを作成">PowerShellスクリプトファイルを作成</h3>
 <p>&ldquo;deploy.ps1&quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#008000"># Build the project.</span>
 hugo
@@ -360,9 +347,8 @@ git push origin master
 Set-Location .\..
 
 Write-Host <span style="color:#a31515">&#34;The web page has been updated!&#34;</span> -ForegroundColor <span style="color:#a31515">&#34;Cyan&#34;</span>
-</code></pre></div><h2 id="スクリプトファイルの使い方">スクリプトファイルの使い方</h2>
-<h2 id="br">&ldquo;deploy.bat&quot;を実行するだけです。
-<br></h2>
+</code></pre></div><h3 id="スクリプトファイルの使い方">スクリプトファイルの使い方</h3>
+<p>&ldquo;deploy.bat&quot;を実行するだけです。</p>
 <p>Hugoのブログ記事を自動デプロイする仕組みについては以上です。<br>
 良いブログライフを！</p>
 

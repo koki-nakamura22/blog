@@ -12,7 +12,7 @@
 <meta itemprop="description" content="This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).">
 <meta itemprop="datePublished" content="2020-04-26T20:26:18&#43;10:00" />
 <meta itemprop="dateModified" content="2020-04-26T20:26:18&#43;10:00" />
-<meta itemprop="wordCount" content="191">
+<meta itemprop="wordCount" content="186">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/">Installing pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS)</a></h1>
     
-        <h2><a href="/blog/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/">Installing pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS)</a></h2>
     
+      <p>This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).</p>
     
-        <p>This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2020-04-26 20:26:18 &#43;1000 &#43;1000">
-      April 26, 2020
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2020-04-26 20:26:18 &#43;1000 &#43;1000">April 26, 2020</time>
+    <p>Koki</p>
+    <p>1-Minute Read</p>
   </div>
 </header>
 
@@ -304,27 +299,19 @@
 </li>
 <li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
-<br>
----
-<h1 id="target-audience">Target audience</h1>
+<h2 id="target-audience">Target audience</h2>
 <ul>
 <li>Those who want to install pyenv and Python on WSL.</li>
 </ul>
-<br>
----
-<h1 id="environment">Environment</h1>
+<h2 id="environment">Environment</h2>
 <ul>
 <li>WSL (Ubuntu 18.04 LTS)</li>
 </ul>
-<br>
----
-<h1 id="preconditions">Preconditions</h1>
+<h2 id="preconditions">Preconditions</h2>
 <ul>
 <li>Already installed git.</li>
 </ul>
-<br>
----
-<h1 id="installing-pyenv">Installing pyenv</h1>
+<h2 id="installing-pyenv">Installing pyenv</h2>
 <p>Execution the following commands.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 echo <span style="color:#a31515">&#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39;</span> &gt;&gt; ~/.bash_profile
@@ -333,18 +320,16 @@ echo -e <span style="color:#a31515">&#39;if command -v pyenv 1&gt;/dev/null 2&gt
 exec <span style="color:#a31515">&#34;</span>$SHELL<span style="color:#a31515">&#34;</span>
 </code></pre></div><p>Then reboot WSL for applying the setting.<br>
 Installation of pyenv is now complete.</p>
-<h1 id="installing-python-by-pyenv">Installing Python by pyenv</h1>
-<h2 id="installing-libraries-that-need-for-installing-python">Installing libraries that need for installing Python</h2>
+<h2 id="installing-python-by-pyenv">Installing Python by pyenv</h2>
+<h3 id="installing-libraries-that-need-for-installing-python">Installing libraries that need for installing Python</h3>
 <p>Execution the following command.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
-</code></pre></div><h2 id="installing-python">Installing Python</h2>
+</code></pre></div><h3 id="installing-python">Installing Python</h3>
 <p>Execution the following command, then setting Python version that will use.<br>
 In this case, installing Python 3.8.2.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pyenv install 3.8.2
 pyenv global 3.8.2
-</code></pre></div><br>
----
-<h1 id="reference-articles">Reference articles</h1>
+</code></pre></div><h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://github.com/pyenv/pyenv#basic-github-checkout" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://github.com/pyenv/pyenv#basic-github-checkout" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://github.com/pyenv/pyenv#basic-github-checkout" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">GitHub - pyenv/pyenv: Simple Python version management</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://github.com/pyenv/pyenv#basic-github-checkout" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://github.com/pyenv/pyenv#basic-github-checkout" border="0" alt="" /></a></span></div></div>
 
   </div>

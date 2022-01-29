@@ -12,7 +12,7 @@
 <meta itemprop="description" content="Explain how to add a copy code button on Hugo blog.">
 <meta itemprop="datePublished" content="2019-10-03T21:52:51&#43;10:00" />
 <meta itemprop="dateModified" content="2019-10-03T21:52:51&#43;10:00" />
-<meta itemprop="wordCount" content="280">
+<meta itemprop="wordCount" content="275">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/2019/10/03/hugo-adding-copy-button/">Adding copy code button to Hugo blog</a></h1>
     
-        <h2><a href="/blog/2019/10/03/hugo-adding-copy-button/">Adding copy code button to Hugo blog</a></h2>
     
+      <p>Explain how to add a copy code button on Hugo blog.</p>
     
-        <p>Explain how to add a copy code button on Hugo blog.</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-10-03 21:52:51 &#43;1000 &#43;1000">
-      October 3, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-10-03 21:52:51 &#43;1000 &#43;1000">October 3, 2019</time>
+    <p>Koki</p>
+    <p>2-Minute Read</p>
   </div>
 </header>
 
@@ -303,29 +298,21 @@
 </li>
 <li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
-<br>
----
-<h1 id="target-audience">Target audience</h1>
+<h2 id="target-audience">Target audience</h2>
 <ul>
 <li>Those who want to add a copy code button to code block on Hugo blog.</li>
 </ul>
-<br>
----
-<h1 id="environment">Environment</h1>
+<h2 id="environment">Environment</h2>
 <ul>
 <li>Hugo 0.57.2</li>
 <li>Hugo-extended 0.58.2</li>
 </ul>
-<br>
----
-<h1 id="preconditions">Preconditions</h1>
+<h2 id="preconditions">Preconditions</h2>
 <ul>
 <li>Installed Hugo and Hugo-extended</li>
 </ul>
-<br>
----
-<h1 id="adding-copy-code-button">Adding copy code button</h1>
-<h2 id="adding-javascript-code">Adding JavaScript code</h2>
+<h2 id="adding-copy-code-button">Adding copy code button</h2>
+<h3 id="adding-javascript-code">Adding JavaScript code</h3>
 <p>Add the following code to static/js/add-on.js.<br>
 I use IIFE (Immediately Invoked Function Expression) because I want to narrow the scope of a variable.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:add-on.js" data-lang="javascript:add-on.js">(() =&gt; {
@@ -382,7 +369,7 @@ I use IIFE (Immediately Invoked Function Expression) because I want to narrow th
 </span><span style="color:#008000"></span>  <span style="color:#00f">let</span> highlightBlocks = document.getElementsByClassName(<span style="color:#a31515">&#39;highlight&#39;</span>);
   Array.prototype.forEach.call(highlightBlocks, addCopyButton);
 })();
-</code></pre></div><h2 id="adding-css-code">Adding CSS code</h2>
+</code></pre></div><h3 id="adding-css-code">Adding CSS code</h3>
 <p>Add the following code to static/css/add-on.css.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css">.<span style="color:#2b91af">highlight</span> {
     <span style="color:#00f">position</span>: <span style="color:#00f">relative</span>;
@@ -409,9 +396,7 @@ I use IIFE (Immediately Invoked Function Expression) because I want to narrow th
 }
 </code></pre></div><br>
 That's it!
-<br>
----
-<h1 id="reference-articles">Reference articles</h1>
+<h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://www.fiznool.com/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://www.fiznool.com/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://www.fiznool.com/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Adding click-to-copy buttons to a Hugo powered blog</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://www.fiznool.com/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://www.fiznool.com/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/" border="0" alt="" /></a></span></div></div>
 
   </div>

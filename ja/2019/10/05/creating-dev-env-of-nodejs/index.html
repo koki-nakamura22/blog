@@ -12,7 +12,7 @@
 <meta itemprop="description" content="VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。">
 <meta itemprop="datePublished" content="2019-10-05T21:09:21&#43;10:00" />
 <meta itemprop="dateModified" content="2019-10-05T21:09:21&#43;10:00" />
-<meta itemprop="wordCount" content="246">
+<meta itemprop="wordCount" content="241">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/ja/2019/10/05/creating-dev-env-of-nodejs/">VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法</a></h1>
     
-        <h2><a href="/blog/ja/2019/10/05/creating-dev-env-of-nodejs/">VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法</a></h2>
     
+      <p>VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。</p>
     
-        <p>VS Code上でホットリロード機能を含めたNode.js(Express)の開発環境構築方法について説明します。</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-10-05 21:09:21 &#43;1000 &#43;1000">
-      2019-10-05
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-10-05 21:09:21 &#43;1000 &#43;1000">2019-10-05</time>
+    <p>Koki</p>
+    <p>2 分で読めます</p>
   </div>
 </header>
 
@@ -317,40 +312,32 @@
 </li>
 <li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a></font></li>
 </ul>
-<br>
----
-<h1 id="対象読者">対象読者</h1>
+<h2 id="対象読者">対象読者</h2>
 <ul>
 <li>VS Code上でNode.js(Express)の開発環境を構築したい方</li>
 </ul>
-<br>
----
-<h1 id="環境">環境</h1>
+<h2 id="環境">環境</h2>
 <ul>
 <li>Windows 10 (1903)</li>
 <li>Visual Studio Code (1.38.1)</li>
 <li>Node.js (v10.16.3)</li>
 <li>npm (6.11.2)</li>
 </ul>
-<br>
----
-<h1 id="前提条件">前提条件</h1>
+<h2 id="前提条件">前提条件</h2>
 <ul>
 <li>Node.js, npmおよびVS Codeインストール済</li>
 </ul>
-<br>
----
-<h1 id="開発環境構築">開発環境構築</h1>
-<h2 id="プロジェクトディレクトリを作成">プロジェクトディレクトリを作成</h2>
+<h2 id="開発環境構築">開発環境構築</h2>
+<h3 id="プロジェクトディレクトリを作成">プロジェクトディレクトリを作成</h3>
 <p>下記のコマンドを実行し、プロジェクト用のディレクトリを作成します。<br>
 使用するコマンドはWindows, MacおよびLinux環境すべてで同じです。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch"><span style="color:#00f">mkdir</span> [project name]
-</code></pre></div><h2 id="expressインストール">Expressインストール</h2>
-<h3 id="インストール">インストール</h3>
+</code></pre></div><h3 id="expressインストール">Expressインストール</h3>
+<h4 id="インストール">インストール</h4>
 <p>最初に、作成したプロジェクト用ディレクトリへ移動しておきます。<br>
 次に、下記のコマンドを実行しExpressをローカルインストールします。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm install express --save-dev
-</code></pre></div><h3 id="テスト用環境を構築">テスト用環境を構築</h3>
+</code></pre></div><h4 id="テスト用環境を構築">テスト用環境を構築</h4>
 <p>最初に下記にコマンドを実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm init
 </code></pre></div><p>次にapp.jsというファイルを作成し、下記のコマンドをペーストします。</p>
@@ -369,12 +356,12 @@ app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
 </code></pre></div><p>これでExpressの環境構築は終了です。<br>
 次は、ホットリロードの設定をしていきます。
 <br></p>
-<h2 id="nodemonのグローバルインストール">Nodemonのグローバルインストール</h2>
+<h3 id="nodemonのグローバルインストール">Nodemonのグローバルインストール</h3>
 <p>ホットリロードの環境を構築するためにNodemonを使用します。</p>
-<h3 id="インストール-1">インストール</h3>
+<h4 id="インストール-1">インストール</h4>
 <p>下記のコマンドを実行し、Nodemonをグローバルインストールします。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm install nodemon -g
-</code></pre></div><h3 id="設定ファイル作成">設定ファイル作成</h3>
+</code></pre></div><h4 id="設定ファイル作成">設定ファイル作成</h4>
 <p>.nodemon.jsonをプロジェクトのルートパスに作成します。<br>
 ファイルを作成したら、下記のコードをファイル内へペーストします。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json:.nodemon.json" data-lang="json:.nodemon.json">{
@@ -382,7 +369,7 @@ app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
   &#34;ext&#34;: <span style="color:#a31515">&#34;js,json&#34;</span>,
   &#34;exec&#34;: <span style="color:#a31515">&#34;node ./app&#34;</span>
 }
-</code></pre></div><h3 id="launchjsonの作成および編集">launch.jsonの作成および編集</h3>
+</code></pre></div><h4 id="launchjsonの作成および編集">launch.jsonの作成および編集</h4>
 <p>最初に、launch.jsonを下記の作業を行い作成します。
 <br>
 [Debug] in a left menu -&gt; [Gear icon] -&gt; Select Environmentのところで&quot;Node.js&quot;を選択.
@@ -413,21 +400,19 @@ app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
         }
     ]
 }
-</code></pre></div><h3 id="packagejsonを編集">package.jsonを編集</h3>
+</code></pre></div><h4 id="packagejsonを編集">package.jsonを編集</h4>
 <p>最後に、プログラムを実行するためのコマンドをpackage.jsonへ追加します。<br>
 下記のコマンドをファイル内の&quot;script&quot;へ追加します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a31515">&#34;debug&#34;</span><span style="">:</span> <span style="color:#a31515">&#34;nodemon --inspect app.js&#34;</span>
 </code></pre></div><br>
 これで開発環境の構築は終了です。
 <br>
-<h2 id="プログラムのデバッグ実行方法">プログラムのデバッグ実行方法</h2>
+<h3 id="プログラムのデバッグ実行方法">プログラムのデバッグ実行方法</h3>
 <p>プログラムをデバッグ実行する場合、下記のコマンドをプロジェクト用ディレクトリのルートで実行します。</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm run debug
 </code></pre></div><p>その後、VS Code上でF5キーを押します。<br>
 この時にVS Codeからアタッチするプロセスを聞かれた場合は、&ldquo;node &ndash;inspect app.js&quot;を選択してください。<br>
 プログラムを終了したい場合はShift + F5を押すか、デバッグメニューの&quot;Disconnect&quot;をクリックしてください。また、コマンドプロンプトもしくはPowerShell上でCtrl + Cを押すのも忘れないようにしてください。</p>
-<br>
----
 <h1 id="参考にさせていただいたページ">参考にさせていただいたページ</h1>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://expressjs.com/ja/starter/installing.html" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://expressjs.com/ja/starter/installing.html" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://expressjs.com/ja/starter/installing.html" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Express のインストール</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://expressjs.com/ja/starter/installing.html" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://expressjs.com/ja/starter/installing.html" border="0" alt="" /></a></span></div></div>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://expressjs.com/ja/starter/hello-world.html" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://expressjs.com/ja/starter/hello-world.html" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://expressjs.com/ja/starter/hello-world.html" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Express の「Hello World」の例</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://expressjs.com/ja/starter/hello-world.html" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://expressjs.com/ja/starter/hello-world.html" border="0" alt="" /></a></span></div></div>

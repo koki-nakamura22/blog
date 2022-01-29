@@ -20,8 +20,8 @@
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/12/24/operating-vimeo-by-js/</guid>
       <description>この記事では、埋め込みVimeo動画をJavaScriptで操作するサンプコードについて説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 JavaScriptでVimeo動画を操作する  HTMLファイルに埋め込み用Vimeo動画を読み込む 各HTML用のJavaScriptファイルを作成する Vimeoビデオを操作する機能のJavaScriptファイルを作成する   サンプルコード 参考にさせていただいたページ  ---対象読者  JavaScriptで埋め込みVimeo動画を操作したい方  ---環境  JavaScript (ES2015)  ---前提条件 なし
----JavaScriptでVimeo動画を操作する HTMLファイルに埋め込み用Vimeo動画を読み込む 最初に、埋め込み用Vimeo動画をiframeを使用して読み込みます。
+ 対象読者 環境 前提条件 JavaScriptでVimeo動画を操作する  HTMLファイルに埋め込み用Vimeo動画を読み込む 各HTML用のJavaScriptファイルを作成する Vimeoビデオを操作する機能のJavaScriptファイルを作成する   サンプルコード 参考にさせていただいたページ  対象読者  JavaScriptで埋め込みVimeo動画を操作したい方  環境  JavaScript (ES2015)  前提条件 なし
+JavaScriptでVimeo動画を操作する HTMLファイルに埋め込み用Vimeo動画を読み込む 最初に、埋め込み用Vimeo動画をiframeを使用して読み込みます。
 この記事では、サンプルのVimeo動画を使用しています。
 &amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;!-- Specific your video URL on src attribute. --&amp;gt;&amp;lt;iframeid=&amp;#34;sample-player&amp;#34;src=&amp;#34;https://player.vimeo.com/video/76979871&amp;#34;width=&amp;#34;640&amp;#34;height=&amp;#34;360&amp;#34;frameborder=&amp;#34;0&amp;#34;webkitallowfullscreenmozallowfullscreenallowfullscreenallow=&amp;#34;autoplay&amp;#34;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;div&amp;gt;&amp;lt;button id=&amp;#34;play-button&amp;#34;&amp;gt;play&amp;lt;/button&amp;gt;&amp;lt;button id=&amp;#34;pause-button&amp;#34;&amp;gt;pause&amp;lt;/button&amp;gt;&amp;lt;button id=&amp;#34;play-pause-button&amp;#34;&amp;gt;play and pause&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;各HTML用のJavaScriptファイルを作成する もし、各HTML用にJavaScriptファイルを作成しない方なら、この内容は読み飛ばしてください。</description>
     </item>

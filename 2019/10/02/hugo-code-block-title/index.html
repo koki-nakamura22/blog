@@ -12,7 +12,7 @@
 <meta itemprop="description" content="This article explains how to add a title to code block on Hugo blog.">
 <meta itemprop="datePublished" content="2019-10-02T21:30:24&#43;10:00" />
 <meta itemprop="dateModified" content="2019-10-02T21:30:24&#43;10:00" />
-<meta itemprop="wordCount" content="245">
+<meta itemprop="wordCount" content="240">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/2019/10/02/hugo-code-block-title/">How to add a title to code block on Hugo blog</a></h1>
     
-        <h2><a href="/blog/2019/10/02/hugo-code-block-title/">How to add a title to code block on Hugo blog</a></h2>
     
+      <p>This article explains how to add a title to code block on Hugo blog.</p>
     
-        <p>This article explains how to add a title to code block on Hugo blog.</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-10-02 21:30:24 &#43;1000 &#43;1000">
-      October 2, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-10-02 21:30:24 &#43;1000 &#43;1000">October 2, 2019</time>
+    <p>Koki</p>
+    <p>2-Minute Read</p>
   </div>
 </header>
 
@@ -304,29 +299,21 @@
 </li>
 <li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
-<br>
----
-<h1 id="target-audience">Target audience</h1>
+<h2 id="target-audience">Target audience</h2>
 <ul>
 <li>Those who want to add a title to code block on Hugo blog.</li>
 </ul>
-<br>
----
-<h1 id="environment">Environment</h1>
+<h2 id="environment">Environment</h2>
 <ul>
 <li>Hugo 0.57.2</li>
 <li>Hugo-extended 0.58.2</li>
 </ul>
-<br>
----
-<h1 id="preconditions">Preconditions</h1>
+<h2 id="preconditions">Preconditions</h2>
 <ul>
 <li>Installed Hugo and Hugo-extended</li>
 </ul>
-<br>
----
-<h1 id="add-a-title-to-code-block">Add a title to code block</h1>
-<h2 id="add-javascript-code">Add JavaScript code</h2>
+<h2 id="add-a-title-to-code-block">Add a title to code block</h2>
+<h3 id="add-javascript-code">Add JavaScript code</h3>
 <p>Add the following code to static/js/add-on.js.<br>
 I use IIFE (Immediately Invoked Function Expression) because I want to narrow the scope of a variable.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:add-on.js" data-lang="javascript:add-on.js">(<span style="color:#00f">function</span> addTitleToCodeBlock() {
@@ -344,7 +331,7 @@ I use IIFE (Immediately Invoked Function Expression) because I want to narrow th
     }
   }
 }());
-</code></pre></div><h2 id="add-css-code">Add CSS code</h2>
+</code></pre></div><h3 id="add-css-code">Add CSS code</h3>
 <p>Add the following code to static/css/add-on.css.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css">pre.<span style="color:#2b91af">chroma</span> code {  
   <span style="color:#00f">margin-top</span>: -28<span style="color:#2b91af">px</span>;
@@ -361,7 +348,7 @@ I use IIFE (Immediately Invoked Function Expression) because I want to narrow th
   <span style="color:#00f">font-size</span>: 13<span style="color:#2b91af">px</span>;
   <span style="color:#00f">font-weight</span>: 400;
 }
-</code></pre></div><h2 id="how-to-set-a-title">How to set a title</h2>
+</code></pre></div><h3 id="how-to-set-a-title">How to set a title</h3>
 <p>When you use code block, add &ldquo;:[title]&rdquo; to after language name.<br>
 The following thing is example.</p>
 <pre><code>```javascript:test.js
@@ -371,9 +358,7 @@ console.log(&quot;Have a nice blog life!!!&quot;);
 That's it! It's so easy!  
 Thank you very much author of above codes!  
 Guys, have a nice blog life!
-<br>
----
-<h1 id="reference-articles">Reference articles</h1>
+<h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://aakira.app/blog/2018/12/code-block-title/" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://aakira.app/blog/2018/12/code-block-title/" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://aakira.app/blog/2018/12/code-block-title/" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">HugoのコードブロックにQiitaのようなTitleをつける | AABrain</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://aakira.app/blog/2018/12/code-block-title/" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://aakira.app/blog/2018/12/code-block-title/" border="0" alt="" /></a></span></div></div>
 
   </div>

@@ -20,7 +20,7 @@
       <guid>https://koki-nakamura22.github.io/blog/2019/10/13/building-env-of-rails-tutorial-wsl/</guid>
       <description>This article explains how to build the environment of Ruby on Rails tutorial on WSL.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Building the environment of Ruby on Rails tutorial Reference articles  ---Target audience  Those who want to build the environment of Ruby on Rails tutorial on WSL.  ---Environment  Windows 10 (1903) Ubuntu (Distribution of WSL, have to use without version.</description>
+ Target audience Environment Preconditions Building the environment of Ruby on Rails tutorial Reference articles  Target audience  Those who want to build the environment of Ruby on Rails tutorial on WSL.  Environment  Windows 10 (1903) Ubuntu (Distribution of WSL, have to use without version.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/09/30/how-to-install-rails-on-windows/</guid>
       <description>This article explain how to install Ruby on Rails on Windows 10.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Install How to check installed packages Reference articles  Target audience  Those who want to create Ruby on Rails environment on Windows 10.  ---Environment  Windows 10 (1903) Chocolatey (0.10.15)  ---Preconditions  Already installed Chocolatey  ---Install Execute the following commands on Command Prompt or PowerShell as administrator.</description>
+ Target audience Environment Preconditions Install How to check installed packages Reference articles  Target audience  Those who want to create Ruby on Rails environment on Windows 10.  Environment  Windows 10 (1903) Chocolatey (0.10.15)  Preconditions  Already installed Chocolatey  Install Execute the following commands on Command Prompt or PowerShell as administrator.</description>
     </item>
     
   </channel>

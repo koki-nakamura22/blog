@@ -20,10 +20,9 @@
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/04/making-table-of-contents-of-markdown/</guid>
       <description>この記事では、Markdownファイルの目次を自動生成する方法を説明します。
 この記事の内容です。
- 対象読者 前提条件 doctocをインストール 目次を自動生成 参考にさせていただいたページ  ---対象読者  Markdownで記述したドキュメントの目次を自動生成したい方  ---前提条件 お使いのPCにNode.jsをインストールしていること。
----doctocをインストール 下記のコマンドを実行します。
-npm install -g doctoc
----目次を自動生成 目次を作成したいMarkdownファイルが存在するディレクトリをパラメータに指定し、doctocコマンドを実行します。
+ 対象読者 前提条件 doctocをインストール 目次を自動生成 参考にさせていただいたページ  対象読者  Markdownで記述したドキュメントの目次を自動生成したい方  前提条件 お使いのPCにNode.jsをインストールしていること。
+doctocをインストール 下記のコマンドを実行します。
+npm install -g doctoc目次を自動生成 目次を作成したいMarkdownファイルが存在するディレクトリをパラメータに指定し、doctocコマンドを実行します。
 下記は、カレントディレクトリを指定しています。
 doctoc .
 「Everything is OK.」が表示されるまで待ち、その後、ファイルを開いてみると先頭に

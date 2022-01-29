@@ -20,7 +20,7 @@
       <guid>https://koki-nakamura22.github.io/blog/2019/10/08/deploying-articles-on-hugo-automatically/</guid>
       <description>This article explains how to deploy articles on Hugo blog automatically.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions How to deploy articles automatically  Make batch file Make PowerShell script file How to use script files    ---Target audience  Those who want to deploy articles automatically.  ---Environment  Windows 10 (1903) Command Prompt Power Shell (5.</description>
+ Target audience Environment Preconditions How to deploy articles automatically  Make batch file Make PowerShell script file How to use script files    Target audience  Those who want to deploy articles automatically.  Environment  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/03/hugo-adding-copy-button/</guid>
       <description>This article explains how to add a copy code button on Hugo blog.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Adding copy code button  Adding JavaScript code Adding CSS code   Reference articles  ---Target audience  Those who want to add a copy code button to code block on Hugo blog.  ---Environment  Hugo 0.57.2 Hugo-extended 0.</description>
+ Target audience Environment Preconditions Adding copy code button  Adding JavaScript code Adding CSS code   Reference articles  Target audience  Those who want to add a copy code button to code block on Hugo blog.  Environment  Hugo 0.57.2 Hugo-extended 0.58.2  Preconditions  Installed Hugo and Hugo-extended  Adding copy code button Adding JavaScript code Add the following code to static/js/add-on.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/02/hugo-code-block-title/</guid>
       <description>This article explains how to add a title to code block on Hugo blog.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Add a title to code block  Add JavaScript code Add CSS code How to set a title   Reference articles  ---Target audience  Those who want to add a title to code block on Hugo blog.  ---Environment  Hugo 0.</description>
+ Target audience Environment Preconditions Add a title to code block  Add JavaScript code Add CSS code How to set a title   Reference articles  Target audience  Those who want to add a title to code block on Hugo blog.  Environment  Hugo 0.</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@ The following lists are the table of contents about this article.
       <guid>https://koki-nakamura22.github.io/blog/2019/10/01/hugo-syntax-highlight/</guid>
       <description>This article explains how to add a function of syntax highlight on Hugo blog.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Add a function of syntax highlight Reference articles  Target audience  Those who want to add a function of syntax highlight on Hugo blog.  ---Environment  Hugo 0.57.2 Hugo-extended 0.58.2  ---Preconditions  Installed Hugo and Hugo-extended  ---Add a function of syntax highlight Add the following codes to config.</description>
+ Target audience Environment Preconditions Add a function of syntax highlight Reference articles  Target audience  Those who want to add a function of syntax highlight on Hugo blog.  Environment  Hugo 0.57.2 Hugo-extended 0.58.2  Preconditions  Installed Hugo and Hugo-extended  Add a function of syntax highlight Add the following codes to config.</description>
     </item>
     
   </channel>

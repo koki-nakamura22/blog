@@ -12,7 +12,7 @@
 <meta itemprop="description" content="Example codes about operating an embedded Vimeo video by JavaScript.">
 <meta itemprop="datePublished" content="2019-12-24T13:15:49&#43;11:00" />
 <meta itemprop="dateModified" content="2019-12-24T13:15:49&#43;11:00" />
-<meta itemprop="wordCount" content="480">
+<meta itemprop="wordCount" content="475">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/2019/12/24/operating-vimeo-by-js/">Example codes about operating an embedded Vimeo video by JavaScript.</a></h1>
     
-        <h2><a href="/blog/2019/12/24/operating-vimeo-by-js/">Example codes about operating an embedded Vimeo video by JavaScript.</a></h2>
     
+      <p>Example codes about operating an embedded Vimeo video by JavaScript.</p>
     
-        <p>Example codes about operating an embedded Vimeo video by JavaScript.</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-12-24 13:15:49 &#43;1100 &#43;1100">
-      December 24, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-12-24 13:15:49 &#43;1100 &#43;1100">December 24, 2019</time>
+    <p>Koki</p>
+    <p>3-Minute Read</p>
   </div>
 </header>
 
@@ -305,26 +300,18 @@
 <li><font color="#1111cc"><a href="#example-code">Example code</a></font></li>
 <li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
-<br>
----
-<h1 id="target-audience">Target audience</h1>
+<h2 id="target-audience">Target audience</h2>
 <ul>
 <li>Those who want to operating the Vimeo video by JavaScript.</li>
 </ul>
-<br>
----
-<h1 id="environment">Environment</h1>
+<h2 id="environment">Environment</h2>
 <ul>
 <li>JavaScript (ES2015)</li>
 </ul>
-<br>
----
-<h1 id="preconditions">Preconditions</h1>
+<h2 id="preconditions">Preconditions</h2>
 <p>Nothing.</p>
-<br>
----
-<h1 id="operating-an-embedded-vimeo-video-by-javascript">Operating an embedded Vimeo video by JavaScript</h1>
-<h2 id="loading-the-embedded-vimeo-video-to-a-html-file">Loading the embedded Vimeo video to a HTML file</h2>
+<h2 id="operating-an-embedded-vimeo-video-by-javascript">Operating an embedded Vimeo video by JavaScript</h2>
+<h3 id="loading-the-embedded-vimeo-video-to-a-html-file">Loading the embedded Vimeo video to a HTML file</h3>
 <p>First, load the embedded Vimeo video to a HTML file by iframe.<br>
 In this article case, using a sample Vimeo video.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:index.html" data-lang="html:index.html">&lt;html&gt;
@@ -351,7 +338,7 @@ In this article case, using a sample Vimeo video.</p>
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div><h2 id="create-a-javascript-file-for-each-html-file">Create a JavaScript file for each HTML file</h2>
+</code></pre></div><h3 id="create-a-javascript-file-for-each-html-file">Create a JavaScript file for each HTML file</h3>
 <p>If you do not create a JavaScript file each HTML file, ignore this chapter, please.<br>
 Next, create a JavaScript file for each HTML file, and loading a function of operation any embedded Vimeo videos.<br>
 What about &ldquo;vimeo-api-practice.js&rdquo; I will explain on next chapter.</p>
@@ -368,7 +355,7 @@ window.onload = () =&gt; {
   );
   vimeo.settingPlayer(playerInformation);
 }
-</code></pre></div><h2 id="create-a-javascript-to-operating-the-vimeo-video">Create a JavaScript to operating the Vimeo video.</h2>
+</code></pre></div><h3 id="create-a-javascript-to-operating-the-vimeo-video">Create a JavaScript to operating the Vimeo video.</h3>
 <p>Finally, create a JavaScript file to operating an embedded Vimeo video.<br>
 <br>
 First, load the Vimeo API in this file so that we can use this file as a common part.<br>
@@ -407,11 +394,9 @@ document.getElementsByTagName(<span style="color:#a31515">&#39;head&#39;</span>)
     <span style="color:#00f">if</span> (buttonIds.playPauseButtonId) <span style="color:#00f">this</span>.playPauseButtonId = buttonIds.playPauseButtonId;
   }
 }
-</code></pre></div><h1 id="example-code">Example code</h1>
+</code></pre></div><h2 id="example-code">Example code</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://github.com/koki-nakamura22/vimeo-js-example" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://github.com/koki-nakamura22/vimeo-js-example" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://github.com/koki-nakamura22/vimeo-js-example" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">koki-nakamura22/vimeo-js-example: This repository is example.</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://github.com/koki-nakamura22/vimeo-js-example" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://github.com/koki-nakamura22/vimeo-js-example" border="0" alt="" /></a></span></div></div>
-<br>
----
-<h1 id="reference-articles">Reference articles</h1>
+<h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://developer.vimeo.com/player/sdk/basics" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://developer.vimeo.com/player/sdk/basics" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://developer.vimeo.com/player/sdk/basics" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Player SDK: The Basics | Vimeo Developer</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://developer.vimeo.com/player/sdk/basics" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://developer.vimeo.com/player/sdk/basics" border="0" alt="" /></a></span></div></div>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://github.com/vimeo/player.js/" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://github.com/vimeo/player.js/" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://github.com/vimeo/player.js/" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">vimeo/player.js: Interact with and control an embedded Vimeo Player.</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://github.com/vimeo/player.js/" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://github.com/vimeo/player.js/" border="0" alt="" /></a></span></div></div>
 

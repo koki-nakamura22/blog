@@ -20,18 +20,18 @@
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/09/04/how-to-install-chocolatey/</guid>
       <description>本記事では、Chocolateyを使用し、Windows環境でLinuxのapt-getやyumを使用するパッケージ管理を実現する方法について説明します。
 本記事の内容です。
- 対象読者 インストール方法 インストールされたことを確認 実際に何かインストールしてみる インストール済みのパッケージ確認 アンインストール方法 パッケージのアップデート方法 参考にさせていただいたページ  対象読者  WindowsでもLinuxのapt-getやyumのような機能を使用したい方  ---インストール方法 下記のコマンドを、管理者権限で起動したコマンドプロンプト上で実行します。
+ 対象読者 インストール方法 インストールされたことを確認 実際に何かインストールしてみる インストール済みのパッケージ確認 アンインストール方法 パッケージのアップデート方法 参考にさせていただいたページ  対象読者  WindowsでもLinuxのapt-getやyumのような機能を使用したい方  インストール方法 下記のコマンドを、管理者権限で起動したコマンドプロンプト上で実行します。
 @&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;#34;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34; &amp;amp;&amp;amp; SET &amp;#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;#34;もしくは、下記のコマンドを管理者権限で起動したPowerShell上で実行します。
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))
----インストールされたことを確認 上記のコマンドが終了した後に
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))インストールされたことを確認 上記のコマンドが終了した後に
 choco -vを実行し、下記のようにバージョン情報が表示されたらインストールが成功しています。
-C:\WINDOWS\system32&amp;gt;choco -v 0.10.15
----実際に何かインストールしてみる Chocolatey Software | Packagesxxxxxxxxxxを参考に、試しに7zipをインストールしてみます。
+C:\WINDOWS\system32&amp;gt;choco -v 0.10.15実際に何かインストールしてみる Chocolatey Software | Packagesxxxxxxxxxxを参考に、試しに7zipをインストールしてみます。
 下記のコマンドを実行します。
 この時、コマンドプロンプトやPowerShellは管理者権限で起動しておきましょう。(ソフトウェアをインストールする時は管理者権限が求められるため。)
 また、途中で処理を続行するかを問われるので、「Y」を入力し続行します。
-choco install 7zip
----インストール済みのパッケージ確認 インストール済みのパッケージを確認する場合は、下記のコマンドを実行します。</description>
+choco install 7zipインストール済みのパッケージ確認 インストール済みのパッケージを確認する場合は、下記のコマンドを実行します。
+試しに、上記でインストールした7zipが表示されるか確認してみましょう。
+choco list -localonlyアンインストール方法 インストール済みのパッケージをアンインストールする際は、下記コマンドを実行します。
+この時、本当に削除してもよいかを聞かれるので「Y」を入力し、処理を続行します。</description>
     </item>
     
   </channel>

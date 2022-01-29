@@ -20,12 +20,12 @@
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/</guid>
       <description>この記事では、Hugoブログの記事を自動デプロイする方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 自動デプロイの仕組みを作る  batファイルを作成 PowerShellスクリプトファイルを作成 スクリプトファイルの使い方    ---対象読者  Hugoでブログを作成しておりかつ自動でデプロイしたい方  ---環境  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2)  ---前提条件  GitHub上でHugoのブログ記事を管理している GitHub上のブログリポジトリを&amp;quot;public&amp;quot;ディレクトリとしてクローン済  ---自動デプロイの仕組みを作る スクリプトファイルを作成し、それを実行することで自動デプロイを行います。
+ 対象読者 環境 前提条件 自動デプロイの仕組みを作る  batファイルを作成 PowerShellスクリプトファイルを作成 スクリプトファイルの使い方    対象読者  Hugoでブログを作成しておりかつ自動でデプロイしたい方  環境  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2)  前提条件  GitHub上でHugoのブログ記事を管理している GitHub上のブログリポジトリを&amp;quot;public&amp;quot;ディレクトリとしてクローン済  自動デプロイの仕組みを作る スクリプトファイルを作成し、それを実行することで自動デプロイを行います。
 今回はbatファイルとPowerShellのスクリプトファイルの両方を使います。
 batファイルを使用する理由は、PowerShellスクリプトファイルを実行するのが楽になるからです。
 batファイルを作成 &amp;ldquo;deploy.bat&amp;quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
 powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1PowerShellスクリプトファイルを作成 &amp;ldquo;deploy.ps1&amp;quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
-# Build the project. hugo# Go to public directory. Set-Location .\public# Add changes to git.</description>
+# Build the project. hugo# Go to public directory. Set-Location .\public# Add changes to git. git add .</description>
     </item>
     
     <item>
@@ -36,9 +36,9 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1PowerShellス�
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/</guid>
       <description>この記事では、Hugoで作成したブログのコードブロックにコピーボタンを追加する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 コードブロックへコピーボタンを追加  JavaScriptのコードを追加 CSSのコードを追加   参考にさせていただいたページ  ---対象読者  Hugoで作成したブログのコードブロックにコピーボタンを追加したい方  ---環境  Hugo 0.57.2 Hugo-extended 0.58.2  ---前提条件  HugoおよびHugo-entendedインストール済み  ---コードブロックへコピーボタンを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
+ 対象読者 環境 前提条件 コードブロックへコピーボタンを追加  JavaScriptのコードを追加 CSSのコードを追加   参考にさせていただいたページ  対象読者  Hugoで作成したブログのコードブロックにコピーボタンを追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  コードブロックへコピーボタンを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
 今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。
-(() =&amp;gt; {&amp;#39;use strict&amp;#39;;if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) {return;}function flashCopyMessage(el, msg) {el.textContent = msg;setTimeout(() =&amp;gt; {el.textContent = &amp;#34;Copy&amp;#34;;}, 1000);}function selectText(node) {let selection = window.getSelection();let range = document.</description>
+(() =&amp;gt; {&amp;#39;use strict&amp;#39;;if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) {return;}function flashCopyMessage(el, msg) {el.textContent = msg;setTimeout(() =&amp;gt; {el.textContent = &amp;#34;Copy&amp;#34;;}, 1000);}function selectText(node) {let selection = window.getSelection();let range = document.createRange();if (node.</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1PowerShellス�
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/02/hugo-code-block-title/</guid>
       <description>この記事では、Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 コードブロックへタイトルを追加  JavaScriptのコードを追加 CSSのコードを追加 タイトルの設定方法   参考にさせていただいたページ  ---対象読者  Hugoで作成したブログのコードブロックにタイトルを追加したい方  ---環境  Hugo 0.57.2 Hugo-extended 0.58.2  ---前提条件  HugoおよびHugo-entendedインストール済み  ---コードブロックへタイトルを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
+ 対象読者 環境 前提条件 コードブロックへタイトルを追加  JavaScriptのコードを追加 CSSのコードを追加 タイトルの設定方法   参考にさせていただいたページ  対象読者  Hugoで作成したブログのコードブロックにタイトルを追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  コードブロックへタイトルを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
 今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。
 (function addTitleToCodeBlock() {let list = document.body.getElementsByClassName(&amp;#34;highlight&amp;#34;);for (i = 0; i &amp;lt;= list.length - 1; i++) {let code = list[i].firstElementChild.firstElementChild;let codeName = code ? code.className.split(&amp;#34;:&amp;#34;)[1] : null;if (codeName) {let div = document.</description>
     </item>
@@ -62,11 +62,11 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1PowerShellス�
       <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/</guid>
       <description>この記事では、Hugoで作成したブログにシンタックスハイライト機能を追加する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 シンタックスハイライト機能を追加 参考にさせていただいたページ  対象読者  Hugoで作成したブログにシンタックスハイライト機能を追加したい方  ---環境  Hugo 0.57.2 Hugo-extended 0.58.2  ---前提条件  HugoおよびHugo-entendedインストール済み  ---シンタックスハイライト機能を追加 config.tomlへ下記のコードを追加します。
+ 対象読者 環境 前提条件 シンタックスハイライト機能を追加 参考にさせていただいたページ  対象読者  Hugoで作成したブログにシンタックスハイライト機能を追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  シンタックスハイライト機能を追加 config.tomlへ下記のコードを追加します。
 pygmentsCodefences = truepygmentsStyle = &amp;#34;fruity&amp;#34;pygmentsStyleへ代入する値を変更することで、様々なスタイルを使用することができます。
 また、スタイルは下記のページから選択することができます。
 Chroma Style Galleryxxxxxxxxxxちなみに、上記のコードで使用しているスタイルは&amp;quot;fruity&amp;quot;です。
----参考にさせていただいたページ Syntax highlighting in Hugo with Chroma | zwbetzxxxxxxxxxx</description>
+参考にさせていただいたページ Syntax highlighting in Hugo with Chroma | zwbetzxxxxxxxxxx</description>
     </item>
     
     <item>
@@ -78,14 +78,16 @@ Chroma Style Galleryxxxxxxxxxxちなみに、上記のコードで使用して�
       <description>本記事では、Hugo + GitHub Pagesの組み合わせでブログ環境を構築する方法について説明します。
 上から順番に読んでいただくと、ブログを作成できるような流れになっています。
 本記事の内容です。
- 環境 前提条件 インストール サイトを作成 記事を作成 テーマを適用 ローカルでサーバ起動 GitHub PagesへDeploy  ゴール GitHub上でブログ用のリポジトリを作成 作成したリポジトリをクローン デプロイ用スクリプト作成 GitHub Pagesの設定 デプロイ   テーマ  テーマ一覧 個人的おすすめテーマ   参考にしたページ   環境 Windows10 (1903)
- 前提条件  Chocolateyインストール済み Gitインストール済み   インストール 下記コマンドを実行します。コマンドを実行するディレクトリはどこでも良いです。
-choco install hugo -confirm choco install hugo-extended -confirm  サイトを作成 サイトを作成したいディレクトリで下記コマンドを実行します。
+ 環境 前提条件 インストール サイトを作成 記事を作成 テーマを適用 ローカルでサーバ起動 GitHub PagesへDeploy  ゴール GitHub上でブログ用のリポジトリを作成 作成したリポジトリをクローン デプロイ用スクリプト作成 GitHub Pagesの設定 デプロイ   テーマ  テーマ一覧 個人的おすすめテーマ   参考にしたページ  環境 Windows10 (1903)
+前提条件  Chocolateyインストール済み Gitインストール済み  インストール 下記コマンドを実行します。コマンドを実行するディレクトリはどこでも良いです。
+choco install hugo -confirm choco install hugo-extended -confirm サイトを作成 サイトを作成したいディレクトリで下記コマンドを実行します。
 [サイト名]には、好きなサイト名を入力してください。
-hugo new site [サイト名]  記事を作成 記事を作成するには、作成したサイトディレクトリのルートで下記コマンドを実行します。
+hugo new site [サイト名] 記事を作成 記事を作成するには、作成したサイトディレクトリのルートで下記コマンドを実行します。
 [ディレクトリ名]は、後述する各テーマに沿って指定します。
 [記事名]は、好きな記事名を入力してください。
-hugo new [ディレクトリ名]/[記事名].</description>
+hugo new [ディレクトリ名]/[記事名].md 記事作成後は、自由に作成したMarkdownファイルを編集します。
+テーマを適用 本記事内では、hugo-future-imperfect-slimを適用します。
+最初に作成したサイトディレクトリのルートで下記のコマンドを実行し、GitHubからthemesディレクトリへテーマをダウンロードします。</description>
     </item>
     
   </channel>

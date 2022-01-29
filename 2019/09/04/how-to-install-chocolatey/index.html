@@ -12,7 +12,7 @@
 <meta itemprop="description" content="This article explain how to install Chocolatey on Windows 10.">
 <meta itemprop="datePublished" content="2019-09-04T16:38:27&#43;10:00" />
 <meta itemprop="dateModified" content="2019-09-04T16:38:27&#43;10:00" />
-<meta itemprop="wordCount" content="340">
+<meta itemprop="wordCount" content="333">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
@@ -223,21 +223,16 @@
         <article class="post">
   <header>
   <div class="title">
+    <h1><a href="/blog/2019/09/04/how-to-install-chocolatey/">How to install Chocolatey on Windows 10.</a></h1>
     
-        <h2><a href="/blog/2019/09/04/how-to-install-chocolatey/">How to install Chocolatey on Windows 10.</a></h2>
     
+      <p>This article explain how to install Chocolatey on Windows 10.</p>
     
-        <p>This article explain how to install Chocolatey on Windows 10.</p>
-    
-</div>
+  </div>
   <div class="meta">
-    <time class="published" datetime="2019-09-04 16:38:27 &#43;1000 &#43;1000">
-      September 4, 2019
-    </time>
-    <span class="author">Koki</span>
-    
-      <p></p>
-    
+    <time datetime="2019-09-04 16:38:27 &#43;1000 &#43;1000">September 4, 2019</time>
+    <p>Koki</p>
+    <p>2-Minute Read</p>
   </div>
 </header>
 
@@ -302,57 +297,43 @@ Chocolatey is Package Management Tools that is like apt-get or yum on Linux.</p>
 <li><font color="#1111cc"><a href="#how-to-update-package">How to update package</a></font></li>
 <li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
 </ul>
-<h1 id="target-audience">Target audience</h1>
+<h2 id="target-audience">Target audience</h2>
 <ul>
 <li>Those who want to use functions like apt-get or yum on Windows.</li>
 </ul>
-<br>
----
-<h1 id="how-to-install">How to install</h1>
+<h2 id="how-to-install">How to install</h2>
 <p>Execute the following command on Command Prompt as Administrator.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#a31515">&#34;</span>%SystemRoot%<span style="color:#a31515">\System32\WindowsPowerShell\v1.0\powershell.exe&#34;</span> -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command <span style="color:#a31515">&#34;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span> &amp;&amp; <span style="color:#00f">SET</span> <span style="color:#a31515">&#34;PATH=</span>%PATH%<span style="color:#a31515">;</span>%ALLUSERSPROFILE%<span style="color:#a31515">\chocolatey\bin&#34;</span>
 </code></pre></div><p>Or, execute the following command on PowerShell as Administrator.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Set-ExecutionPolicy Bypass -Scope <span style="color:#00f">Process</span> -Force; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#a31515">&#39;https://chocolatey.org/install.ps1&#39;</span>))
-</code></pre></div><br>
----
-<h1 id="confirm-chocolatey-is-installed">Confirm Chocolatey is installed</h1>
+</code></pre></div><h2 id="confirm-chocolatey-is-installed">Confirm Chocolatey is installed</h2>
 <p>After execute install, execute the following command on Command Prompt or PowerShell.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco -v
 </code></pre></div><p>If version information appears like the following information, install was a success.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\WINDOWS\system32<span style="color:#008000">&gt;choco -v</span>
 0.10.15
-</code></pre></div><br>
----
-<h1 id="install-something-to-example">Install something to example</h1>
+</code></pre></div><h2 id="install-something-to-example">Install something to example</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://chocolatey.org/packages" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://chocolatey.org/packages" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://chocolatey.org/packages" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Chocolatey Software | Packages</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://chocolatey.org/packages" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://chocolatey.org/packages" border="0" alt="" /></a></span></div></div>
 <p>Refer to the above article, let&rsquo;s install 7zip as a test.<br>
 Execute the following command on Command Prompt or PowerShell as Administrator.<br>
 When installing it, Command Prompt and Powershell will ask you if you want to continue. Press &ldquo;Y&rdquo; to continue a process.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">choco install 7zip
-</code></pre></div><br>
----
-<h1 id="how-to-check-installed-packages">How to check installed packages</h1>
+</code></pre></div><h2 id="how-to-check-installed-packages">How to check installed packages</h2>
 <p>Execute the following command on Command Prompt or PowerShell.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco list -localonly
-</code></pre></div><br>
----
-<h1 id="how-to-uninstall-package">How to uninstall package</h1>
+</code></pre></div><h2 id="how-to-uninstall-package">How to uninstall package</h2>
 <p>Execute the following command on Command Prompt or PowerShell.<br>
 When uninstalling a package, you have to specify package that uninstalling.<br>
 And Command Prompt and Powershell will ask you if you want to continue. Press &ldquo;Y&rdquo; to continue a process.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install [package name]
 </code></pre></div><p>For example, if uninstalling 7zip, execute the following command on Command Prompt or PowerShell.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco uninstall 7zip
-</code></pre></div><br>
----
-<h1 id="how-to-update-package">How to update package</h1>
+</code></pre></div><h2 id="how-to-update-package">How to update package</h2>
 <p>If you want to update all packages, execute the following command,</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update all
 </code></pre></div><p>if you want to specify package, execute the following command on Command Prompt or PowerShell.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco update [package name]
-</code></pre></div><br>
----
-<h1 id="reference-articles">Reference articles</h1>
+</code></pre></div><h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://chocolatey.org/docs/installation" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://chocolatey.org/docs/installation" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://chocolatey.org/docs/installation" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Chocolatey Software | Installation</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://chocolatey.org/docs/installation" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://chocolatey.org/docs/installation" border="0" alt="" /></a></span></div></div>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://www.nuits.jp/entry/hello-Chocolatey" class="blog-card-thumbnail-link" target="_blank"><img src="http://capture.heartrails.com/120x120/shorten?https://www.nuits.jp/entry/hello-Chocolatey" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://www.nuits.jp/entry/hello-Chocolatey" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">はじめてのChocolatey - nuits.jp blog</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="http://b.hatena.ne.jp/entry/https://www.nuits.jp/entry/hello-Chocolatey" target="_blank"><img border="0" src="http://b.hatena.ne.jp/entry/image/https://www.nuits.jp/entry/hello-Chocolatey" border="0" alt="" /></a></span></div></div>
 
