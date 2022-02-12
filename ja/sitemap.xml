@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
-    <lastmod>2020-04-26T20:26:18+10:00</lastmod>
+    <lastmod>2022-02-12T20:54:50+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
-    <lastmod>2020-04-26T20:26:18+10:00</lastmod>
+    <lastmod>2022-02-12T20:54:50+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,7 +34,7 @@
   
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
-    <lastmod>2020-04-26T20:26:18+10:00</lastmod>
+    <lastmod>2022-02-12T20:54:50+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -45,6 +45,16 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/posts/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/windows/</loc>
+    <lastmod>2022-02-12T20:54:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/2022/02/12/setting-environment-variable-permanently/</loc>
+    <lastmod>2022-02-12T20:54:50+09:00</lastmod>
   </url>
   
   <url>
