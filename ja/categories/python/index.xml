@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Sun, 26 Apr 2020 20:26:18 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Feb 2022 20:46:22 +0900</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windowsにpyenvをインストールする方法 (Chocolatey使用)</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/2022/02/13/install-pyenv-to-windows/</link>
+      <pubDate>Sun, 13 Feb 2022 20:46:22 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/2022/02/13/install-pyenv-to-windows/</guid>
+      <description>この記事では、WindowsでChocolateyを使用し、pyenvをインストールする方法を説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 インストール  1. インストールコマンド実行 2. 環境変数設定 3. インストールされたことを確認   余談  対象読者  Windowsにpyenvをインストールしたい方  環境  Windows 10  前提条件  Chocolateyインストール済み
+インストール方法はWindows 10でパッケージマネージャ(Chocolatey)を使用する方法を参照。  インストール 1. インストールコマンド実行 以下のコマンドをPowershellコンソール上で実行します。
+choco install pyenv-win2. 環境変数設定 以下、2つのパスを環境変数Pathへ追加します。
+%USERPROFILE%\.pyenv\pyenv-win\bin%USERPROFILE%\.pyenv\pyenv-win\shims3. インストールされたことを確認 最後に、Powershell コンソールで
+pyenv --versionを実行し、以下のようにバージョン情報が表示されたらインストール完了です。
+pyenv 1.2.22-47-g4c302a02余談 環境変数Pathの設定は
+SETX PATH &amp;#34;%PATH%;%USERPROFILE%\.pyenv\pyenv-win\bin;%USERPROFILE%\.pyenv\pyenv-win\shims&amp;#34;をPowershellコンソール上で実行しても行うことができます。が、これを行う時に環境変数の値の合計文字数が1024文字を超えていると、警告: 保存されたデータは 1024 文字に切り捨てられました。と表示され、環境変数Pathの値の一部が吹っ飛ぶので気を付けましょう。 筆者は一度Pathの一部を吹っ飛ばしましたが、幸い、直前にPathの値すべてをテキストエディタに貼り付けていたため、事なきを得ました。</description>
+    </item>
     
     <item>
       <title>WSL (Ubuntu 18.04 LTS)へpyenvおよびPythonをインストールする方法</title>
