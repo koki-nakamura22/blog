@@ -2,35 +2,35 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title>Hugoブログのコードブロックにタイトルを追加する方法 - Koki&#39;s personal blog</title>
+<title>WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法 - Koki&#39;s personal blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <meta name="generator" content="Hugo 0.68.3" />
-  <meta itemprop="name" content="Hugoブログのコードブロックにタイトルを追加する方法">
-<meta itemprop="description" content="Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。">
-<meta itemprop="datePublished" content="2019-10-02T21:30:25&#43;10:00" />
-<meta itemprop="dateModified" content="2019-10-02T21:30:25&#43;10:00" />
-<meta itemprop="wordCount" content="115">
+  <meta itemprop="name" content="WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法">
+<meta itemprop="description" content="本記事では、WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法を説明します。コマンド一発で対処する方法も載せています。">
+<meta itemprop="datePublished" content="2022-02-19T19:53:40&#43;09:00" />
+<meta itemprop="dateModified" content="2022-02-19T19:53:40&#43;09:00" />
+<meta itemprop="wordCount" content="43">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
 
 <meta itemprop="keywords" content="" />
-  <meta property="og:title" content="Hugoブログのコードブロックにタイトルを追加する方法" />
-<meta property="og:description" content="Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。" />
+  <meta property="og:title" content="WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法" />
+<meta property="og:description" content="本記事では、WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法を説明します。コマンド一発で対処する方法も載せています。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/2019/10/02/hugo-code-block-title/" />
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/2022/02/19/uninstall-google-drive-app-on-windows/" />
 <meta property="og:image" content="https://koki-nakamura22.github.io/blog/" />
-<meta property="article:published_time" content="2019-10-02T21:30:25+10:00" />
-<meta property="article:modified_time" content="2019-10-02T21:30:25+10:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
+<meta property="article:published_time" content="2022-02-19T19:53:40+09:00" />
+<meta property="article:modified_time" content="2022-02-19T19:53:40+09:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
 
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://koki-nakamura22.github.io/blog/"/>
 
-<meta name="twitter:title" content="Hugoブログのコードブロックにタイトルを追加する方法"/>
-<meta name="twitter:description" content="Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。"/>
+<meta name="twitter:title" content="WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法"/>
+<meta name="twitter:description" content="本記事では、WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法を説明します。コマンド一発で対処する方法も載せています。"/>
 <meta name="twitter:site" content="@koki_n22"/>
 
   
@@ -104,7 +104,12 @@
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="ja" class="link active">日本語 (ja)</a>
   
-      <a href="https://koki-nakamura22.github.io/blog/2019/10/02/hugo-code-block-title/" lang="en" class="link">English (en)</a>
+    
+      
+        <a href="/blog/en" lang="en" class="no-lang link">English (en)</a>
+      
+    
+      
     
   
 </menu>
@@ -119,37 +124,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f&amp;title=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f&amp;title=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f&amp;description=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f&amp;description=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -223,14 +228,14 @@
         <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/ja/2019/10/02/hugo-code-block-title/">Hugoブログのコードブロックにタイトルを追加する方法</a></h1>
+    <h1><a href="/blog/ja/2022/02/19/uninstall-google-drive-app-on-windows/">WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法</a></h1>
     
     
-      <p>Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。</p>
+      <p>本記事では、WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法を説明します。コマンド一発で対処する方法も載せています。</p>
     
   </div>
   <div class="meta">
-    <time datetime="2019-10-02 21:30:25 &#43;1000 &#43;1000">2019-10-02</time>
+    <time datetime="2022-02-19 19:53:40 &#43;0900 JST">2022-02-19</time>
     <p>Koki</p>
     <p>1 分で読めます</p>
   </div>
@@ -244,37 +249,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f&amp;title=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f&amp;title=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f&amp;title=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f&amp;description=Hugo%e3%83%96%e3%83%ad%e3%82%b0%e3%81%ae%e3%82%b3%e3%83%bc%e3%83%89%e3%83%96%e3%83%ad%e3%83%83%e3%82%af%e3%81%ab%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f&amp;description=Windows%e3%81%a7Google%20Drive%e3%82%92%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%99%82%e3%81%ab%e3%80%8cGoogle%e3%83%89%e3%83%a9%e3%82%a4%e3%83%96%e3%81%8c%e4%bd%bf%e7%94%a8%e4%b8%ad%e3%81%a7%e3%81%99%e3%80%82%e7%b5%82%e4%ba%86%e3%81%97%e3%81%a6%e3%81%8b%e3%82%89%e3%82%a2%e3%83%b3%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%8d%e3%81%a8%e8%a8%80%e3%82%8f%e3%82%8c%e3%81%9f%e6%99%82%e3%81%ae%e5%af%be%e5%87%a6%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f02%2fhugo-code-block-title%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f02%2f19%2funinstall-google-drive-app-on-windows%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -284,81 +289,46 @@
   
 
   <div class="content">
-    <p>この記事では、Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。</p>
+    <p>この記事では、WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法を説明します。</p>
 <p>この記事の内容です。</p>
 <ul>
 <li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
 <li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
 <li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
-<li><font color="#1111cc"><a href="#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%B8%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%82%92%E8%BF%BD%E5%8A%A0">コードブロックへタイトルを追加</a></font>
+<li><font color="#1111cc"><a href="#%E5%8E%9F%E5%9B%A0">原因</a></font></li>
+<li><font color="#1111cc"><a href="#google-drive%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E7%B5%82%E4%BA%86%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95">Google Driveアプリを終了させる方法</a></font>
 <ul>
-<li><font color="#1111cc"><a href="#javascript%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0">JavaScriptのコードを追加</a></font></li>
-<li><font color="#1111cc"><a href="#css%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E8%BF%BD%E5%8A%A0">CSSのコードを追加</a></font></li>
-<li><font color="#1111cc"><a href="#%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AE%E8%A8%AD%E5%AE%9A%E6%96%B9%E6%B3%95">タイトルの設定方法</a></font></li>
+<li><font color="#1111cc"><a href="#%E6%89%8B%E5%8B%95%E3%81%A7%E8%A1%8C%E3%81%86%E6%96%B9%E6%B3%95">手動で行う方法</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E7%99%BA%E3%81%A7%E8%A1%8C%E3%81%86%E6%96%B9%E6%B3%95">コマンド一発で行う方法</a></font></li>
 </ul>
 </li>
-<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a></font></li>
 </ul>
 <h2 id="対象読者">対象読者</h2>
 <ul>
-<li>Hugoで作成したブログのコードブロックにタイトルを追加したい方</li>
+<li>WindowsでGoogle Driveをアンインストールする時にメッセージが表示され邪魔された方</li>
 </ul>
 <h2 id="環境">環境</h2>
 <ul>
-<li>Hugo 0.57.2</li>
-<li>Hugo-extended 0.58.2</li>
+<li>Windows 10</li>
 </ul>
 <h2 id="前提条件">前提条件</h2>
-<ul>
-<li>HugoおよびHugo-entendedインストール済み</li>
-</ul>
-<h2 id="コードブロックへタイトルを追加">コードブロックへタイトルを追加</h2>
-<h3 id="javascriptのコードを追加">JavaScriptのコードを追加</h3>
-<p>下記のコードをstatic/js/add-on.jsへ追加します。<br>
-今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:add-on.js" data-lang="javascript:add-on.js">(<span style="color:#00f">function</span> addTitleToCodeBlock() {
-  <span style="color:#00f">let</span> list = document.body.getElementsByClassName(<span style="color:#a31515">&#34;highlight&#34;</span>);
+<p>なし</p>
+<h2 id="原因">原因</h2>
+<p>表示されるメッセージの通り、Google Driveアプリが起動されているせいです。<br>
+<del>空気を読んで、自分で自分を終了させてくれりゃいいのに。</del></p>
+<h2 id="google-driveアプリを終了させる方法">Google Driveアプリを終了させる方法</h2>
+<h3 id="手動で行う方法">手動で行う方法</h3>
+<p>以下の流れで作業を行います。</p>
+<ol>
+<li>ctrl, shift, escキーを同時押しし、タスクマネージャーを起動します。</li>
+<li>「プロセス」タブを開きます。</li>
+<li>「バックグラウンドプロセス」一覧から「Google Drive」を右クリックし、「タスクの終了」をクリックします。(表示されている複数のGoogle Driveに対して行います。)</li>
+</ol>
+<h3 id="コマンド一発で行う方法">コマンド一発で行う方法</h3>
+<p>Windows Powershellを起動し、以下のコマンドを実行し、数秒待ちます。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">taskkill /F /IM GoogleDriveFS.exe
+</code></pre></div><p>上記を行った後、Google Driveをアンインストールできるようになります。</p>
 
-  <span style="color:#00f">for</span> (i = 0; i &lt;= list.length - 1; i++) {
-    <span style="color:#00f">let</span> code = list[i].firstElementChild.firstElementChild;
-    <span style="color:#00f">let</span> codeName = code ? code.className.split(<span style="color:#a31515">&#34;:&#34;</span>)[1] : <span style="color:#00f">null</span>;
-
-    <span style="color:#00f">if</span> (codeName) {
-      <span style="color:#00f">let</span> div = document.createElement(<span style="color:#a31515">&#34;div&#34;</span>);
-      div.textContent = codeName;
-      div.classList.add(<span style="color:#a31515">&#34;code-name&#34;</span>);
-      code.parentNode.insertBefore(div, code);
-    }
-  }
-}());
-</code></pre></div><h3 id="cssのコードを追加">CSSのコードを追加</h3>
-<p>下記のコードをstatic/css/add-on.cssへ追加します。</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css">pre.<span style="color:#2b91af">chroma</span> code {  
-  <span style="color:#00f">margin-top</span>: -28<span style="color:#2b91af">px</span>;
-  <span style="color:#00f">padding-top</span>: 40<span style="color:#2b91af">px</span>;
-  <span style="color:#00f">padding-bottom</span>: 12<span style="color:#2b91af">px</span>;
-}
-
-.<span style="color:#2b91af">code-name</span> {
-  <span style="color:#00f">display</span>: <span style="color:#00f">inline</span>-<span style="color:#00f">block</span>;
-  <span style="color:#00f">position</span>: <span style="color:#00f">relative</span>;
-  <span style="color:#00f">padding</span>: 4<span style="color:#2b91af">px</span> 8<span style="color:#2b91af">px</span>;
-  <span style="color:#00f">background-color</span>: #E7E9EB;
-  <span style="color:#00f">color</span>: #485A60;
-  <span style="color:#00f">font-size</span>: 13<span style="color:#2b91af">px</span>;
-  <span style="color:#00f">font-weight</span>: 400;
-}
-</code></pre></div><h3 id="タイトルの設定方法">タイトルの設定方法</h3>
-<p>コードブロックを使用する時、言語名の後ろに&rdquo;:[title]&ldquo;を追加します。<br>
-下記はサンプルです。</p>
-<pre><code>```javascript:test.js
-console.log(&quot;Have a nice blog life!!!&quot;);
-```
-</code></pre><br>
-以上の設定で、コードブロックへタイトルを表示することができます。  
-簡単ですね！上記のコードを考えた方に感謝です。
-<h2 id="参考にさせていただいたページ">参考にさせていただいたページ</h2>
-<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://aakira.app/blog/2018/12/code-block-title/" class="blog-card-thumbnail-link" target="_blank"><img src="https://capture.heartrails.com/120x120/shorten?https://aakira.app/blog/2018/12/code-block-title/" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://aakira.app/blog/2018/12/code-block-title/" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">HugoのコードブロックにQiitaのようなTitleをつける | AABrain</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="https://b.hatena.ne.jp/entry/https://aakira.app/blog/2018/12/code-block-title/" target="_blank"><img border="0" src="https://b.hatena.ne.jp/entry/image/https://aakira.app/blog/2018/12/code-block-title/" border="0" alt="" /></a></span></div></div>
   </div>
   <footer>
     <div class="stats">
@@ -366,7 +336,9 @@ console.log(&quot;Have a nice blog life!!!&quot;);
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/blog/ja/categories/hugo/">Hugo</a></li>
+          <li><a class="article-terms-link" href="/blog/ja/categories/windows/">Windows</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/ja/categories/google-drive/">Google Drive</a></li>
         
       
     </ul>
@@ -384,10 +356,8 @@ console.log(&quot;Have a nice blog life!!!&quot;);
 
 <div class="pagination">
   
-    <a href="/blog/ja/2019/10/01/hugo-syntax-highlight/" class="button big previous"><i class="fas fa-angle-left"></i> Hugoブログにシンタックスハイライト機能を追加する方法</a>
+    <a href="/blog/ja/2022/02/13/install-pyenv-to-windows/" class="button big previous"><i class="fas fa-angle-left"></i> Windowsにpyenvをインストールする方法 (Chocolatey使用)</a>
   
-  
-    <a href="/blog/ja/2019/10/03/hugo-adding-copy-button/" class="button big next">Hugoブログのコードブロックにコピーボタンを追加する方法 <i class="fas fa-angle-right"></i></a>
   
 </div>
 
