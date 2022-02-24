@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Sat, 19 Feb 2022 19:53:40 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 24 Feb 2022 10:34:15 +0900</lastBuildDate>
     
 	<atom:link href="https://koki-nakamura22.github.io/blog/ja/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WSL2 (Ubuntu 20.04) 上でVS Codeを使用したHaskell開発環境を構築する方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/2022/02/24/setup-haskell-dev-env-on-wsl2/</link>
+      <pubDate>Thu, 24 Feb 2022 10:34:15 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/2022/02/24/setup-haskell-dev-env-on-wsl2/</guid>
+      <description>この記事では、WSL2 (Ubuntu 20.04) 上でVS Codeを使用したHaskell開発環境を構築する方法を説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 開発環境構築  1. インストール 2. プロジェクト作成 3. プロジェクトをビルド可能にするための準備 4. インストールおよび環境構築に成功したことの確認 5. VS Codeの拡張機能インストール   参考にしたページ  対象読者  WSL2 (Ubuntu 20.04) 上で、VS Codeを使用したHaskell開発環境を構築したい方  環境  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS)  前提条件  WSL 2の環境構築済み WSL 2へVS Codeインストール済み  開発環境構築 1. インストール wget -qO- https://get.haskellstack.org/ | sh2. プロジェクト作成 stack new [your project name]3.</description>
+    </item>
     
     <item>
       <title>WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法</title>
