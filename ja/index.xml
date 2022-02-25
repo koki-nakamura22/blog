@@ -158,7 +158,7 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1PowerShellス�
  対象読者 環境 前提条件 リンクのジャンプ先位置調整 参考にさせていただいたページ  対象読者  同一ページ内へ飛ぶ&amp;lt;a&amp;gt;タグをクリックした時の表示先位置を調整したい方  環境  CSS3  前提条件  なし  リンクのジャンプ先位置調整 add-on.css内で、下記のコードをリンク先のタグ(アンカー)に設定します。
 この時、padding-topとmargin-topに設定する数値は必ず同じにしてください。
 #target-tag {display: block;padding-top: 60px;margin-top: -60px;}このブログでは、下記のコードにて各見出しに対する調整を行っています。
-/* For link destinations adjustment. */#site-main .post .content h1,#site-main .post .content h2,#site-main .post .content h3,#site-main .post .content h4,#site-main .post .content h5,#site-main .post .content h6 {display: block;padding-top: 60px;margin-top: -60px;}参考にさせていただいたページ ページ内リンクのジャンプ先の位置を複雑なタグは無しでCSSだけで調整する方法 | 大阪のホームページ制作会社YCOMxxxxxxxxxx</description>
+/* For link destinations adjustment. */ #site-main .post .content h1,#site-main .post .content h2,#site-main .post .content h3,#site-main .post .content h4,#site-main .post .content h5,#site-main .post .content h6 {display: block;padding-top: 60px;margin-top: -60px;}参考にさせていただいたページ ページ内リンクのジャンプ先の位置を複雑なタグは無しでCSSだけで調整する方法 | 大阪のホームページ制作会社YCOMxxxxxxxxxx</description>
     </item>
     
     <item>
