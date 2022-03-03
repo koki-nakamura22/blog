@@ -2,24 +2,24 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title>Google PlayからダウンロードしたAndroidアプリのログを取得 (Windows使用) - Koki&#39;s personal blog</title>
+<title>Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用) - Koki&#39;s personal blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <meta name="generator" content="Hugo 0.68.3" />
-  <meta itemprop="name" content="Google PlayからダウンロードしたAndroidアプリのログを取得 (Windows使用)">
-<meta itemprop="description" content="この記事では、Google PlayからダウンロードしたAndroidアプリのログを取得する方法について説明します。">
+  <meta itemprop="name" content="Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用)">
+<meta itemprop="description" content="この記事では、Google Play ストアからダウンロードしたAndroidアプリのログを取得する方法について説明します。">
 <meta itemprop="datePublished" content="2022-03-03T20:49:15&#43;09:00" />
 <meta itemprop="dateModified" content="2022-03-03T20:49:15&#43;09:00" />
-<meta itemprop="wordCount" content="160">
+<meta itemprop="wordCount" content="162">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
 
 <meta itemprop="keywords" content="" />
-  <meta property="og:title" content="Google PlayからダウンロードしたAndroidアプリのログを取得 (Windows使用)" />
-<meta property="og:description" content="この記事では、Google PlayからダウンロードしたAndroidアプリのログを取得する方法について説明します。" />
+  <meta property="og:title" content="Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用)" />
+<meta property="og:description" content="この記事では、Google Play ストアからダウンロードしたAndroidアプリのログを取得する方法について説明します。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/2022/03/03/collecting-logs-from-released-android-app/" />
 <meta property="og:image" content="https://koki-nakamura22.github.io/blog/" />
@@ -29,8 +29,8 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://koki-nakamura22.github.io/blog/"/>
 
-<meta name="twitter:title" content="Google PlayからダウンロードしたAndroidアプリのログを取得 (Windows使用)"/>
-<meta name="twitter:description" content="この記事では、Google PlayからダウンロードしたAndroidアプリのログを取得する方法について説明します。"/>
+<meta name="twitter:title" content="Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用)"/>
+<meta name="twitter:description" content="この記事では、Google Play ストアからダウンロードしたAndroidアプリのログを取得する方法について説明します。"/>
 <meta name="twitter:site" content="@koki_n22"/>
 
   
@@ -124,7 +124,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -136,19 +136,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;description=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;description=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -228,10 +228,10 @@
         <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/ja/2022/03/03/collecting-logs-from-released-android-app/">Google PlayからダウンロードしたAndroidアプリのログを取得 (Windows使用)</a></h1>
+    <h1><a href="/blog/ja/2022/03/03/collecting-logs-from-released-android-app/">Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用)</a></h1>
     
     
-      <p>この記事では、Google PlayからダウンロードしたAndroidアプリのログを取得する方法について説明します。</p>
+      <p>この記事では、Google Play ストアからダウンロードしたAndroidアプリのログを取得する方法について説明します。</p>
     
   </div>
   <div class="meta">
@@ -249,7 +249,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -261,19 +261,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;title=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;description=Google%20Play%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f03%2fcollecting-logs-from-released-android-app%2f&amp;description=Google%20Play%20%e3%82%b9%e3%83%88%e3%82%a2%e3%81%8b%e3%82%89%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89%e3%81%97%e3%81%9fAndroid%e3%82%a2%e3%83%97%e3%83%aa%e3%81%ae%e3%83%ad%e3%82%b0%e3%82%92%e5%8f%96%e5%be%97%20%28Windows%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -289,7 +289,7 @@
   
 
   <div class="content">
-    <p>この記事では、Google PlayからダウンロードしたAndroidアプリのログを取得する方法について説明します。</p>
+    <p>この記事では、Google Play ストアからダウンロードしたAndroidアプリのログを取得する方法について説明します。</p>
 <p>この記事の内容です。</p>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -311,7 +311,7 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="対象読者">対象読者</h2>
 <ul>
-<li>何かしらの理由でGoogle Playからダウンロードしたアプリのログを取得したい方</li>
+<li>何かしらの理由でGoogle Play ストアからダウンロードしたアプリのログを取得したい方</li>
 </ul>
 <h2 id="環境">環境</h2>
 <ul>
@@ -439,7 +439,7 @@ List of devices attached
 
         </section>
         <header>
-          <h1><a href="/blog/ja/2022/03/03/collecting-logs-from-released-android-app/">Google PlayからダウンロードしたAndroidアプリのログを取得 (Windows使用)</a></h1>
+          <h1><a href="/blog/ja/2022/03/03/collecting-logs-from-released-android-app/">Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用)</a></h1>
           <time class="published" datetime="">2022-03-03</time>
         </header>
       </article>
