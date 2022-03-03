@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/android/</loc>
+    <lastmod>2022-03-03T20:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
-    <lastmod>2022-02-25T16:29:54+09:00</lastmod>
+    <lastmod>2022-03-03T20:49:15+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,8 +23,13 @@
   </url>
   
   <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/2022/03/03/collecting-logs-from-released-android-app/</loc>
+    <lastmod>2022-03-03T20:49:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
-    <lastmod>2022-02-25T16:29:54+09:00</lastmod>
+    <lastmod>2022-03-03T20:49:15+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,7 +44,7 @@
   
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
-    <lastmod>2022-02-25T16:29:54+09:00</lastmod>
+    <lastmod>2022-03-03T20:49:15+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -45,6 +55,11 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/posts/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/windows/</loc>
+    <lastmod>2022-03-03T20:49:15+09:00</lastmod>
   </url>
   
   <url>
@@ -124,11 +139,6 @@
   
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/google-drive/</loc>
-    <lastmod>2022-02-19T19:53:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/windows/</loc>
     <lastmod>2022-02-19T19:53:40+09:00</lastmod>
   </url>
   
