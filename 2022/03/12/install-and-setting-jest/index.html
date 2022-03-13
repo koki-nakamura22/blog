@@ -2,23 +2,35 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Haskell - Koki&#39;s personal blog</title>
+<title>About installing Jest, and how to set up intellicense and how solving an import error. - Koki&#39;s personal blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <meta name="generator" content="Hugo 0.68.3" />
-  <meta itemprop="name" content="Haskell">
-<meta itemprop="description" content="">
-  <meta property="og:title" content="Haskell" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://koki-nakamura22.github.io/blog/categories/haskell/" />
-<meta property="og:updated_time" content="2022-02-24T10:34:12+09:00" />
+  <meta itemprop="name" content="About installing Jest, and how to set up intellicense and how solving an import error.">
+<meta itemprop="description" content="This article explains how to install Jest, how to set up intellisense and how solving an import error.">
+<meta itemprop="datePublished" content="2022-03-12T22:24:57&#43;09:00" />
+<meta itemprop="dateModified" content="2022-03-12T22:24:57&#43;09:00" />
+<meta itemprop="wordCount" content="304">
+<meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Haskell"/>
-<meta name="twitter:description" content=""/>
+
+
+<meta itemprop="keywords" content="" />
+  <meta property="og:title" content="About installing Jest, and how to set up intellicense and how solving an import error." />
+<meta property="og:description" content="This article explains how to install Jest, how to set up intellisense and how solving an import error." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/2022/03/12/install-and-setting-jest/" />
+<meta property="og:image" content="https://koki-nakamura22.github.io/blog/" />
+<meta property="article:published_time" content="2022-03-12T22:24:57+09:00" />
+<meta property="article:modified_time" content="2022-03-12T22:24:57+09:00" />
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://koki-nakamura22.github.io/blog/"/>
+
+<meta name="twitter:title" content="About installing Jest, and how to set up intellicense and how solving an import error."/>
+<meta name="twitter:description" content="This article explains how to install Jest, how to set up intellisense and how solving an import error."/>
 <meta name="twitter:site" content="@koki_n22"/>
 
   
@@ -92,7 +104,7 @@
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="en" class="link active">English (en)</a>
   
-      <a href="https://koki-nakamura22.github.io/blog/ja/categories/haskell/" lang="ja" class="link">日本語 (ja)</a>
+      <a href="https://koki-nakamura22.github.io/blog/ja/2022/03/12/install-and-setting-jest/" lang="ja" class="link">日本語 (ja)</a>
     
   
 </menu>
@@ -107,37 +119,37 @@
 
   
     
-    <a href="//twitter.com/share?text=Haskell&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fcategories%2fhaskell%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error.&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fcategories%2fhaskell%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fcategories%2fhaskell%2f&amp;title=Haskell" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error." target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fcategories%2fhaskell%2f&amp;title=Haskell" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error." target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fcategories%2fhaskell%2f&amp;description=Haskell" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;description=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error." target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fcategories%2fhaskell%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -160,8 +172,6 @@
     <footer>
       <ul class="socnet-icons">
         
-    <li><a href="/blog/categories/haskell/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
@@ -210,39 +220,157 @@
 </section>
 
       <main id="site-main">
-        <h1>Haskell</h1>
-        
-        
-            <article class="post">
+        <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/2022/02/24/setup-haskell-dev-env-on-wsl2/">Set up a Haskell development environment with VS Code on WSL2 (Ubuntu 20.04)</a></h1>
+    <h1><a href="/blog/2022/03/12/install-and-setting-jest/">About installing Jest, and how to set up intellicense and how solving an import error.</a></h1>
     
     
-      <p>This article explains how to set up a Haskell development environment with VS Code on WSL2 (Ubuntu 20.04). Also, includes useful VS Code extensions for development with Haskell.</p>
+      <p>This article explains how to install Jest, how to set up intellisense and how solving an import error.</p>
     
   </div>
   <div class="meta">
-    <time datetime="2022-02-24 10:34:12 &#43;0900 JST">February 24, 2022</time>
+    <time datetime="2022-03-12 22:24:57 &#43;0900 JST">March 12, 2022</time>
     <p>Koki</p>
     <p>2-Minute Read</p>
   </div>
 </header>
 
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error.&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
   
 
   
-  <p>This article explains how to set up a Haskell development environment with VS Code on WSL2 (Ubuntu 20.04).</p>
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error." target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error." target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;description=About%20installing%20Jest%2c%20and%20how%20to%20set%20up%20intellicense%20and%20how%20solving%20an%20import%20error." target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    <p>This article explains how to install Jest, how to set up intellisense and how solving an import error.</p>
+<p>The following lists are the table of contents about this article.</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<ul>
+<li><font color="#1111cc"><a href="#target-audience">Target audience</a></font></li>
+<li><font color="#1111cc"><a href="#environment">Environment</a></font></li>
+<li><font color="#1111cc"><a href="#preconditions">Preconditions</a></font></li>
+<li><font color="#1111cc"><a href="#install-jest">Install Jest</a></font></li>
+<li><font color="#1111cc"><a href="#setup-intellisense">Setup intellisense</a></font></li>
+<li><font color="#1111cc"><a href="#set-up-for-solving-an-import-error">Set up for solving an import error</a></font></li>
+<li><font color="#1111cc"><a href="#digression">Digression</a></font>
+<ul>
+<li><font color="#1111cc"><a href="#why-did-i-choose-jest-for-javascript-testing">Why did I choose Jest for JavaScript testing?</a></font></li>
+<li><font color="#1111cc"><a href="#why-do-i-use-both-npm-and-yarn">Why do I use both npm and yarn?</a></font></li>
+</ul>
+</li>
+<li><font color="#1111cc"><a href="#reference-articles">Reference articles</a></font></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="target-audience">Target audience</h2>
+<ul>
+<li>Those who want to build Jest environment.</li>
+</ul>
+<h2 id="environment">Environment</h2>
+<ul>
+<li>Windows 10 (Ver. 21H2, Build. 19044.1526)</li>
+<li>WSL 2 (Ubuntu 20.04 LTS)</li>
+<li>Visual Studio Code</li>
+</ul>
+<h2 id="preconditions">Preconditions</h2>
+<ul>
+<li>Installed npm and yarn</li>
+</ul>
+<h2 id="install-jest">Install Jest</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --save-dev jest
+</code></pre></div><h2 id="setup-intellisense">Setup intellisense</h2>
+<p>Firstly, execute the below command to install Jest type definitions.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --save-dev jest@types/jest
+</code></pre></div><p>Then create a <strong>jsconfig.json</strong> to the project root directory.<br>
+Content is the below.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#a31515">&#34;typeAcquisition&#34;</span>: {
+    <span style="color:#a31515">&#34;include&#34;</span>: [
+      <span style="color:#a31515">&#34;jest&#34;</span>
+    ]
+  }
+}
+</code></pre></div><h2 id="set-up-for-solving-an-import-error">Set up for solving an import error</h2>
+<p>You need to set up another thing because an import error is happening when you use Jest if you use it as it is.<br>
+Firstly, execute the below command to build babel environment.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">yarn add --dev babel-jest @babel/core @babel/preset-env
+</code></pre></div><p>Then create a <strong>babel.config.cjs</strong> to the project root directory, which&rsquo;s content is the below.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">module.exports = {
+  presets: [
+    [
+      <span style="color:#a31515">&#34;@babel/preset-env&#34;</span>,
+      {
+        targets: {
+          node: <span style="color:#a31515">&#34;current&#34;</span>,
+        },
+      },
+    ],
+  ],
+};
+</code></pre></div><h2 id="digression">Digression</h2>
+<h3 id="why-did-i-choose-jest-for-javascript-testing">Why did I choose Jest for JavaScript testing?</h3>
+<p>From the below three reasons.</p>
+<ol>
+<li>The number of users is the highest in the world. (From npm trends) So it is easy to get information even if we are bothered by Jest.</li>
+<li>Easy to build environment</li>
+<li>Jest supports various JavaScript libraries and frameworks.</li>
+</ol>
+<h3 id="why-do-i-use-both-npm-and-yarn">Why do I use both npm and yarn?</h3>
+<p>Because yarn is needed to build the babel environment. (I mean npm can not build it.)</p>
+<h2 id="reference-articles">Reference articles</h2>
+<p><font color="#1111cc"><a href="https://jestjs.io/docs/configuration" target="_blank">Configuring Jest</a></font><br>
+<font color="#1111cc"><a href="https://www.npmtrends.com/jest-vs-jasmine-vs-mocha-vs-chai-vs-cypress" target="_blank">npm trends (chai vs cypress vs jasmine vs jest vs mocha)</a></font></p>
+
+  </div>
   <footer>
-    <a href="/blog/2022/02/24/setup-haskell-dev-env-on-wsl2/" class="button big">Read More</a>
     <div class="stats">
   
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/blog/categories/haskell/">Haskell</a></li>
-        
-          <li><a class="article-terms-link" href="/blog/categories/wsl/">WSL</a></li>
+          <li><a class="article-terms-link" href="/blog/categories/javascript/">JavaScript</a></li>
         
       
     </ul>
@@ -257,16 +385,14 @@
   </footer>
 </article>
 
-        
-        
+
 <div class="pagination">
   
-    <a href="#" class="disabled button big previous"><i class="fas fa-angle-left"></i></a>
+    <a href="/blog/2022/02/25/ignore-auto-formatting-specific-language/" class="button big previous"><i class="fas fa-angle-left"></i> Ignore auto-formatting a specific language on VS Code (Using Prettier)</a>
   
-  
-    <a href="#" class="disabled button big next"><i class="fas fa-angle-right"></i></a>
   
 </div>
+
 
       </main>
       <section id="site-sidebar">
@@ -424,8 +550,6 @@
   
       <ul class="socnet-icons">
         
-    <li><a href="/blog/categories/haskell/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 

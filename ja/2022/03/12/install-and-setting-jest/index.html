@@ -2,35 +2,35 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title>WSL上にRuby on Railsのチュートリアル環境を構築する方法 - Koki&#39;s personal blog</title>
+<title>Jestのインストール方法およびインテリセンスなどの設定方法について - Koki&#39;s personal blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <meta name="generator" content="Hugo 0.68.3" />
-  <meta itemprop="name" content="WSL上にRuby on Railsのチュートリアル環境を構築する方法">
-<meta itemprop="description" content="WSL上にRuby on Railsのチュートリアル環境を構築する方法について説明します。">
-<meta itemprop="datePublished" content="2019-10-13T21:33:28&#43;11:00" />
-<meta itemprop="dateModified" content="2019-10-13T21:33:28&#43;11:00" />
-<meta itemprop="wordCount" content="125">
+  <meta itemprop="name" content="Jestのインストール方法およびインテリセンスなどの設定方法について">
+<meta itemprop="description" content="この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。">
+<meta itemprop="datePublished" content="2022-03-12T22:24:54&#43;09:00" />
+<meta itemprop="dateModified" content="2022-03-12T22:24:54&#43;09:00" />
+<meta itemprop="wordCount" content="109">
 <meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
 
 
 
 <meta itemprop="keywords" content="" />
-  <meta property="og:title" content="WSL上にRuby on Railsのチュートリアル環境を構築する方法" />
-<meta property="og:description" content="WSL上にRuby on Railsのチュートリアル環境を構築する方法について説明します。" />
+  <meta property="og:title" content="Jestのインストール方法およびインテリセンスなどの設定方法について" />
+<meta property="og:description" content="この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/" />
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/2022/03/12/install-and-setting-jest/" />
 <meta property="og:image" content="https://koki-nakamura22.github.io/blog/" />
-<meta property="article:published_time" content="2019-10-13T21:33:28+11:00" />
-<meta property="article:modified_time" content="2019-10-13T21:33:28+11:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
+<meta property="article:published_time" content="2022-03-12T22:24:54+09:00" />
+<meta property="article:modified_time" content="2022-03-12T22:24:54+09:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
 
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://koki-nakamura22.github.io/blog/"/>
 
-<meta name="twitter:title" content="WSL上にRuby on Railsのチュートリアル環境を構築する方法"/>
-<meta name="twitter:description" content="WSL上にRuby on Railsのチュートリアル環境を構築する方法について説明します。"/>
+<meta name="twitter:title" content="Jestのインストール方法およびインテリセンスなどの設定方法について"/>
+<meta name="twitter:description" content="この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。"/>
 <meta name="twitter:site" content="@koki_n22"/>
 
   
@@ -104,7 +104,7 @@
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="ja" class="link active">日本語 (ja)</a>
   
-      <a href="https://koki-nakamura22.github.io/blog/2019/10/13/building-env-of-rails-tutorial-wsl/" lang="en" class="link">English (en)</a>
+      <a href="https://koki-nakamura22.github.io/blog/2022/03/12/install-and-setting-jest/" lang="en" class="link">English (en)</a>
     
   
 </menu>
@@ -119,37 +119,37 @@
 
   
     
-    <a href="//twitter.com/share?text=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f&amp;title=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f&amp;title=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f&amp;description=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;description=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -223,14 +223,14 @@
         <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/">WSL上にRuby on Railsのチュートリアル環境を構築する方法</a></h1>
+    <h1><a href="/blog/ja/2022/03/12/install-and-setting-jest/">Jestのインストール方法およびインテリセンスなどの設定方法について</a></h1>
     
     
-      <p>WSL上にRuby on Railsのチュートリアル環境を構築する方法について説明します。</p>
+      <p>この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。</p>
     
   </div>
   <div class="meta">
-    <time datetime="2019-10-13 21:33:28 &#43;1100 &#43;1100">2019-10-13</time>
+    <time datetime="2022-03-12 22:24:54 &#43;0900 JST">2022-03-12</time>
     <p>Koki</p>
     <p>1 分で読めます</p>
   </div>
@@ -244,37 +244,37 @@
 
   
     
-    <a href="//twitter.com/share?text=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f&amp;title=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f&amp;title=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;title=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f&amp;description=WSL%e4%b8%8a%e3%81%abRuby%20on%20Rails%e3%81%ae%e3%83%81%e3%83%a5%e3%83%bc%e3%83%88%e3%83%aa%e3%82%a2%e3%83%ab%e7%92%b0%e5%a2%83%e3%82%92%e6%a7%8b%e7%af%89%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f&amp;description=Jest%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%96%b9%e6%b3%95%e3%81%8a%e3%82%88%e3%81%b3%e3%82%a4%e3%83%b3%e3%83%86%e3%83%aa%e3%82%bb%e3%83%b3%e3%82%b9%e3%81%aa%e3%81%a9%e3%81%ae%e8%a8%ad%e5%ae%9a%e6%96%b9%e6%b3%95%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2019%2f10%2f13%2fbuilding-env-of-rails-tutorial-wsl%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2f2022%2f03%2f12%2finstall-and-setting-jest%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -284,56 +284,90 @@
   
 
   <div class="content">
-    <p>この記事では、WSL上にRuby on Railsのチュートリアル環境を構築する方法を説明します。</p>
+    <p>この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。</p>
 <p>この記事の内容です。</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <ul>
 <li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
 <li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
 <li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
-<li><font color="#1111cc"><a href="#ruby-on-rails%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB%E3%81%AE%E6%A7%8B%E7%AF%89">Ruby on Railsチュートリアルの構築</a></font></li>
-<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%95%E3%81%9B%E3%81%A6%E3%81%84%E3%81%9F%E3%81%A0%E3%81%84%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にさせていただいたページ</a></font></li>
+<li><font color="#1111cc"><a href="#jest%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Jestのインストール</a></font></li>
+<li><font color="#1111cc"><a href="#%E4%BE%BF%E5%88%A9%E3%81%AB%E4%BD%BF%E3%81%86%E3%81%9F%E3%82%81%E3%81%AE%E8%A8%AD%E5%AE%9A">便利に使うための設定</a></font>
+<ul>
+<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%83%86%E3%83%AA%E3%82%BB%E3%83%B3%E3%82%B9">インテリセンス</a></font></li>
+<li><font color="#1111cc"><a href="#import%E6%99%82%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E8%A7%A3%E6%B6%88">import時のエラー解消</a></font></li>
 </ul>
+</li>
+<li><font color="#1111cc"><a href="#%E4%BD%99%E8%AB%87">余談</a></font>
+<ul>
+<li><font color="#1111cc"><a href="#%E4%BD%95%E6%95%85jest%E3%82%92%E9%81%B8%E3%82%93%E3%81%A0%E3%81%AE%E3%81%8B">何故Jestを選んだのか？</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%81%AA%E3%81%9Cnpm%E3%81%A8yarn%E3%82%92%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE%E3%81%8B">なぜnpmとyarnを使い分けているのか？</a></font></li>
+</ul>
+</li>
+<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%97%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にしたページ</a></font></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="対象読者">対象読者</h2>
 <ul>
-<li>WSL上にRuby on Railsのチュートリアル環境を構築したい方</li>
+<li>Jestの利用環境を構築したい方</li>
 </ul>
 <h2 id="環境">環境</h2>
 <ul>
-<li>Windows 10 (1903)</li>
-<li>Ubuntu (WSLのディストリビューション, 必ず、バージョン情報が無いものを使用すること)</li>
+<li>Windows 10 (Ver. 21H2, Build. 19044.1526)</li>
+<li>WSL 2 (Ubuntu 20.04 LTS)</li>
+<li>Visual Studio Code</li>
 </ul>
 <h2 id="前提条件">前提条件</h2>
 <ul>
-<li>WSL有効済み</li>
-<li>Ubuntu (WSL)インストール済み</li>
+<li>npmおよびyarnインストール済</li>
 </ul>
-<h2 id="ruby-on-railsチュートリアルの構築">Ruby on Railsチュートリアルの構築</h2>
-<p>下記のコマンドを上から順に実行してください。<br>
-以上です！</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#008000"># Install necessary tools</span>
-sudo apt update
-sudo apt upgrade -y
-sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs-dev node-gyp npm git -y
-sudo npm install --global yarn
-
-<span style="color:#008000"># Install rbenv</span>
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo <span style="color:#a31515">&#39;export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.bashrc
-echo <span style="color:#a31515">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; ~/.bashrc
-source ~/.bashrc
-
-<span style="color:#008000"># Install ruby-build</span>
-git clone https://github.com/rbenv/ruby-build.git <span style="color:#a31515">&#34;</span><span style="color:#00f">$(</span>rbenv root<span style="color:#00f">)</span><span style="color:#a31515">&#34;</span>/plugins/ruby-build
-
-<span style="color:#008000"># Install Ruby</span>
-rbenv install 2.6.5
-rbenv global 2.6.5
-
-<span style="color:#008000"># Install Ruby on Rails</span>
-gem install rails -v 5.1.6 --no-document
-</code></pre></div><h2 id="参考にさせていただいたページ">参考にさせていただいたページ</h2>
-<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://railsgirls.jp/install#setup_for_windows" class="blog-card-thumbnail-link" target="_blank"><img src="https://capture.heartrails.com/120x120/shorten?https://railsgirls.jp/install#setup_for_windows" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://railsgirls.jp/install#setup_for_windows" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Rails Girls - Japanese</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="https://b.hatena.ne.jp/entry/https://railsgirls.jp/install#setup_for_windows" target="_blank"><img border="0" src="https://b.hatena.ne.jp/entry/image/https://railsgirls.jp/install#setup_for_windows" border="0" alt="" /></a></span></div></div>
-<div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://railstutorial.jp/chapters/beginning?version=5.1#sec-installing_rails" class="blog-card-thumbnail-link" target="_blank"><img src="https://capture.heartrails.com/120x120/shorten?https://railstutorial.jp/chapters/beginning?version=5.1#sec-installing_rails" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://railstutorial.jp/chapters/beginning?version=5.1#sec-installing_rails" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">第1章 ゼロからデプロイまで - Railsチュートリアル</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="https://b.hatena.ne.jp/entry/https://railstutorial.jp/chapters/beginning?version=5.1#sec-installing_rails" target="_blank"><img border="0" src="https://b.hatena.ne.jp/entry/image/https://railstutorial.jp/chapters/beginning?version=5.1#sec-installing_rails" border="0" alt="" /></a></span></div></div>
+<h2 id="jestのインストール">Jestのインストール</h2>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --save-dev jest
+</code></pre></div><h2 id="便利に使うための設定">便利に使うための設定</h2>
+<h3 id="インテリセンス">インテリセンス</h3>
+<p>まずは、以下のコマンドでJestの型定義をインストールします。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install --save-dev jest@types/jest
+</code></pre></div><p>次に、プロジェクトのルートディレクトリに以下のファイルを <strong>jsconfig.json</strong> という名前で作成します。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#a31515">&#34;typeAcquisition&#34;</span>: {
+    <span style="color:#a31515">&#34;include&#34;</span>: [
+      <span style="color:#a31515">&#34;jest&#34;</span>
+    ]
+  }
+}
+</code></pre></div><h3 id="import時のエラー解消">import時のエラー解消</h3>
+<p>このままではJestのテストファイル内でテスト対象をimportをした時に参照できずエラーが発生するので、対応するためにbabel環境を構築する必要があります。<br>
+最初に、以下のコマンドでbabelをインストールします。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">yarn add --dev babel-jest @babel/core @babel/preset-env
+</code></pre></div><p>次に、プロジェクトのルートディレクトリに以下のファイルを  <strong>babel.config.cjs</strong> という名前で作成します。</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">module.exports = {
+  presets: [
+    [
+      <span style="color:#a31515">&#34;@babel/preset-env&#34;</span>,
+      {
+        targets: {
+          node: <span style="color:#a31515">&#34;current&#34;</span>,
+        },
+      },
+    ],
+  ],
+};
+</code></pre></div><h2 id="余談">余談</h2>
+<h3 id="何故jestを選んだのか">何故Jestを選んだのか？</h3>
+<p>ざっくり、以下の3つの理由からです。</p>
+<ol>
+<li>npmでのダウンロード数が圧倒的に多い(利用者数が多い) ため、何かあっても情報を得やすい。</li>
+<li>環境構築が簡単。</li>
+<li>様々なライブラリやフレームワークに対応している。</li>
+</ol>
+<h3 id="なぜnpmとyarnを使い分けているのか">なぜnpmとyarnを使い分けているのか？</h3>
+<p>正直なところ、昨今のnpmの改良具合を見ているとパフォーマンスなどの差はどんどん縮まってきているのでNode.js公式パッケージマネージャーであるnpmのみを使っておいた方が安心安全だと思います。<br>
+が、今回の場合はbabel周りがyarnでしかインストールできなかったため、渋々使っています。<br>
+本当はnpmだけで統一したかった&hellip;</p>
+<h2 id="参考にしたページ">参考にしたページ</h2>
+<p><font color="#1111cc"><a href="https://jestjs.io/ja/docs/configuration" target="_blank">Jestの設定</a></font><br>
+<font color="#1111cc"><a href="https://www.npmtrends.com/jest-vs-jasmine-vs-mocha-vs-chai-vs-cypress" target="_blank">npm trends (chai vs cypress vs jasmine vs jest vs mocha)</a></font></p>
 
   </div>
   <footer>
@@ -342,7 +376,7 @@ gem install rails -v 5.1.6 --no-document
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/blog/ja/categories/ruby-on-rails/">Ruby on Rails</a></li>
+          <li><a class="article-terms-link" href="/blog/ja/categories/javascript/">JavaScript</a></li>
         
       
     </ul>
@@ -360,10 +394,8 @@ gem install rails -v 5.1.6 --no-document
 
 <div class="pagination">
   
-    <a href="/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/" class="button big previous"><i class="fas fa-angle-left"></i> Hugoブログの記事を自動デプロイする方法</a>
+    <a href="/blog/ja/2022/03/03/collecting-logs-from-released-android-app/" class="button big previous"><i class="fas fa-angle-left"></i> Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用)</a>
   
-  
-    <a href="/blog/ja/2019/12/24/operating-vimeo-by-js/" class="button big next">埋め込みVimeo動画をJavaScriptで操作するサンプルコード <i class="fas fa-angle-right"></i></a>
   
 </div>
 
