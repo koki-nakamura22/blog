@@ -13,14 +13,15 @@
     
     
     <item>
-      <title>About installing Jest, and how to set up intellicense and how solving an import error.</title>
+      <title>About installing Jest, and how to set up intellisense and how solving an import error.</title>
       <link>https://koki-nakamura22.github.io/blog/2022/03/12/install-and-setting-jest/</link>
       <pubDate>Sat, 12 Mar 2022 22:24:57 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/2022/03/12/install-and-setting-jest/</guid>
-      <description>This article explains how to install Jest, how to set up intellisense and how solving an import error.
+      <description>[17/03/2022] Fix the npm install command in the set up intellisense section.
+This article explains how to install Jest, how to set up intellisense and how solving an import error.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Install Jest Setup intellisense Set up for solving an import error Digression  Why did I choose Jest for JavaScript testing? Why do I use both npm and yarn?   Reference articles  Target audience  Those who want to build Jest environment.</description>
+ Target audience Environment Preconditions Install Jest Set up intellisense Set up for solving an import error Digression  Why did I choose Jest for JavaScript testing? Why do I use both npm and yarn?</description>
     </item>
     
     <item>

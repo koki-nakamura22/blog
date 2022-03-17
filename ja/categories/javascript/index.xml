@@ -18,7 +18,8 @@
       <pubDate>Sat, 12 Mar 2022 22:24:54 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/2022/03/12/install-and-setting-jest/</guid>
-      <description>この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。
+      <description>[2022/03/17更新] インテリセンス設定時のインストールコマンドが間違っていたので修正。
+この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。
 この記事の内容です。
  対象読者 環境 前提条件 Jestのインストール 便利に使うための設定  インテリセンス import時のエラー解消   余談  何故Jestを選んだのか？ なぜnpmとyarnを使い分けているのか？   参考にしたページ  対象読者  Jestの利用環境を構築したい方  環境  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS) Visual Studio Code  前提条件  npmおよびyarnインストール済  Jestのインストール npm install --save-dev jest便利に使うための設定 インテリセンス まずは、以下のコマンドでJestの型定義をインストールします。
 npm install --save-dev @types/jest次に、プロジェクトのルートディレクトリに以下のファイルを jsconfig.json という名前で作成します。
