@@ -7,32 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Thu, 24 Feb 2022 10:34:15 +0900</lastBuildDate>
-    
-	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/wsl/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 24 Feb 2022 10:34:15 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/wsl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WSL2 (Ubuntu 20.04) 上でVS Codeを使用したHaskell開発環境を構築する方法</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/2022/02/24/setup-haskell-dev-env-on-wsl2/</link>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/haskell/setup-haskell-dev-env-on-wsl2/</link>
       <pubDate>Thu, 24 Feb 2022 10:34:15 +0900</pubDate>
       
-      <guid>https://koki-nakamura22.github.io/blog/ja/2022/02/24/setup-haskell-dev-env-on-wsl2/</guid>
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/haskell/setup-haskell-dev-env-on-wsl2/</guid>
       <description>この記事では、WSL2 (Ubuntu 20.04) 上でVS Codeを使用したHaskell開発環境を構築する方法を説明します。
 この記事の内容です。
- 対象読者 環境 前提条件 開発環境構築  1. インストール 2. プロジェクト作成 3. プロジェクトをビルド可能にするための準備 4. インストールおよび環境構築に成功したことの確認 5. VS Codeの拡張機能インストール   参考にしたページ  対象読者  WSL2 (Ubuntu 20.04) 上で、VS Codeを使用したHaskell開発環境を構築したい方  環境  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS)  前提条件  WSL 2の環境構築済み WSL 2へVS Codeインストール済み  開発環境構築 1. インストール wget -qO- https://get.haskellstack.org/ | sh2. プロジェクト作成 stack new [your project name]3.</description>
+ 対象読者 環境 前提条件 開発環境構築  1. インストール 2. プロジェクト作成 3. プロジェクトをビルド可能にするための準備 4. インストールおよび環境構築に成功したことの確認 5. VS Codeの拡張機能インストール   参考にしたページ  対象読者  WSL2 (Ubuntu 20.04) 上で、VS Codeを使用したHaskell開発環境を構築したい方  環境  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS)  前提条件  WSL 2の環境構築済み WSL 2へVS Codeインストール済み  開発環境構築 1. インストール wget -qO- https://get.haskellstack.org/ | sh 2. プロジェクト作成 stack new [your project name] 3.</description>
     </item>
     
     <item>
       <title>WSL (Ubuntu 18.04 LTS)へpyenvおよびPythonをインストールする方法</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/</link>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu1804/</link>
       <pubDate>Sun, 26 Apr 2020 20:26:18 +1000</pubDate>
       
-      <guid>https://koki-nakamura22.github.io/blog/ja/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
       <description>この記事では、WSL (Ubuntu 18.04 LTS)へpyenvおよびpyenvを使用してPythonをインストールする方法を説明します。
 この記事の内容です。
  対象読者 環境 前提条件 pyenvインストール Pythonインストール  Pythonをインストールするために必要なライブラリをインストール Pythonをインストール   参考にさせていただいたページ  対象読者  WSLへpyenvとPythonをインストールしたい方  環境  WSL (Ubuntu 18.04 LTS)  前提条件  Gitインストール済み。  pyenvインストール 以下のコマンドを実行してpyenvをインストールします。
-git clone https://github.com/pyenv/pyenv.git ~/.pyenvecho &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileecho &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileecho -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profileexec &amp;#34;$SHELL&amp;#34;コマンドの実行が終わったら、設定を反映させるためにWSLを再起動します。
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile exec &amp;#34;$SHELL&amp;#34; コマンドの実行が終わったら、設定を反映させるためにWSLを再起動します。
 これで、pyenvのインストールは完了です。
 Pythonインストール Pythonをインストールするために必要なライブラリをインストール 以下のコマンドを実行します。</description>
     </item>

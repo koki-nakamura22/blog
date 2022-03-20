@@ -7,63 +7,59 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Tue, 08 Oct 2019 22:33:13 +1100</lastBuildDate>
-    
-	<atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Oct 2019 22:33:13 +1100</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugoブログの記事を自動デプロイする方法</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/</link>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/deploying-articles-on-hugo-automatically/</link>
       <pubDate>Tue, 08 Oct 2019 22:33:13 +1100</pubDate>
       
-      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/</guid>
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/hugo/deploying-articles-on-hugo-automatically/</guid>
       <description>この記事では、Hugoブログの記事を自動デプロイする方法を説明します。
 この記事の内容です。
  対象読者 環境 前提条件 自動デプロイの仕組みを作る  batファイルを作成 PowerShellスクリプトファイルを作成 スクリプトファイルの使い方    対象読者  Hugoでブログを作成しておりかつ自動でデプロイしたい方  環境  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2)  前提条件  GitHub上でHugoのブログ記事を管理している GitHub上のブログリポジトリを&amp;quot;public&amp;quot;ディレクトリとしてクローン済  自動デプロイの仕組みを作る スクリプトファイルを作成し、それを実行することで自動デプロイを行います。
 今回はbatファイルとPowerShellのスクリプトファイルの両方を使います。
 batファイルを使用する理由は、PowerShellスクリプトファイルを実行するのが楽になるからです。
 batファイルを作成 &amp;ldquo;deploy.bat&amp;quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
-powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1PowerShellスクリプトファイルを作成 &amp;ldquo;deploy.ps1&amp;quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
-# Build the project. hugo# Go to public directory. Set-Location .\public# Add changes to git. git add .</description>
+powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1 PowerShellスクリプトファイルを作成 &amp;ldquo;deploy.ps1&amp;quot;というファイルをブログのルートディレクトリに作成し、下記のコードをペーストします。
+# Build the project. hugo  # Go to public directory. Set-Location .\public  # Add changes to git. git add .</description>
     </item>
     
     <item>
       <title>Hugoブログのコードブロックにコピーボタンを追加する方法</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/</link>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-adding-copy-button/</link>
       <pubDate>Thu, 03 Oct 2019 21:52:51 +1000</pubDate>
       
-      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/</guid>
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-adding-copy-button/</guid>
       <description>この記事では、Hugoで作成したブログのコードブロックにコピーボタンを追加する方法を説明します。
 この記事の内容です。
  対象読者 環境 前提条件 コードブロックへコピーボタンを追加  JavaScriptのコードを追加 CSSのコードを追加   参考にさせていただいたページ  対象読者  Hugoで作成したブログのコードブロックにコピーボタンを追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  コードブロックへコピーボタンを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
 今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。
-(() =&amp;gt; {&amp;#39;use strict&amp;#39;;if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) {return;}function flashCopyMessage(el, msg) {el.textContent = msg;setTimeout(() =&amp;gt; {el.textContent = &amp;#34;Copy&amp;#34;;}, 1000);}function selectText(node) {let selection = window.getSelection();let range = document.createRange();if (node.</description>
+(() =&amp;gt; {  &amp;#39;use strict&amp;#39;;   if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) {  return;  }   function flashCopyMessage(el, msg) {  el.textContent = msg;  setTimeout(() =&amp;gt; {  el.textContent = &amp;#34;Copy&amp;#34;;  }, 1000);  }   function selectText(node) {  let selection = window.</description>
     </item>
     
     <item>
       <title>Hugoブログのコードブロックにタイトルを追加する方法</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/02/hugo-code-block-title/</link>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-code-block-title/</link>
       <pubDate>Wed, 02 Oct 2019 21:30:25 +1000</pubDate>
       
-      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/02/hugo-code-block-title/</guid>
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-code-block-title/</guid>
       <description>この記事では、Hugoで作成したブログのコードブロックにタイトルを追加する方法を説明します。
 この記事の内容です。
  対象読者 環境 前提条件 コードブロックへタイトルを追加  JavaScriptのコードを追加 CSSのコードを追加 タイトルの設定方法   参考にさせていただいたページ  対象読者  Hugoで作成したブログのコードブロックにタイトルを追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  コードブロックへタイトルを追加 JavaScriptのコードを追加 下記のコードをstatic/js/add-on.jsへ追加します。
 今回、即時関数を使用しているのは、今後機能を追加することを考えると変数のスコープ範囲を広げたくなかったからです。
-(function addTitleToCodeBlock() {let list = document.body.getElementsByClassName(&amp;#34;highlight&amp;#34;);for (i = 0; i &amp;lt;= list.length - 1; i++) {let code = list[i].firstElementChild.firstElementChild;let codeName = code ? code.className.split(&amp;#34;:&amp;#34;)[1] : null;if (codeName) {let div = document.</description>
+(function addTitleToCodeBlock() {  let list = document.body.getElementsByClassName(&amp;#34;highlight&amp;#34;);   for (i = 0; i &amp;lt;= list.length - 1; i++) {  let code = list[i].firstElementChild.firstElementChild;  let codeName = code ? code.className.split(&amp;#34;:&amp;#34;)[1] : null;   if (codeName) {  let div = document.</description>
     </item>
     
     <item>
       <title>Hugoブログにシンタックスハイライト機能を追加する方法</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/</link>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-syntax-highlight/</link>
       <pubDate>Tue, 01 Oct 2019 20:50:01 +1000</pubDate>
       
-      <guid>https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/</guid>
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-syntax-highlight/</guid>
       <description>この記事では、Hugoで作成したブログにシンタックスハイライト機能を追加する方法を説明します。
 この記事の内容です。
  対象読者 環境 前提条件 シンタックスハイライト機能を追加 参考にさせていただいたページ  対象読者  Hugoで作成したブログにシンタックスハイライト機能を追加したい方  環境  Hugo 0.57.2 Hugo-extended 0.58.2  前提条件  HugoおよびHugo-entendedインストール済み  シンタックスハイライト機能を追加 config.tomlへ下記のコードを追加します。
-pygmentsCodefences = truepygmentsStyle = &amp;#34;fruity&amp;#34;pygmentsStyleへ代入する値を変更することで、様々なスタイルを使用することができます。
+pygmentsCodefences = true pygmentsStyle = &amp;#34;fruity&amp;#34; pygmentsStyleへ代入する値を変更することで、様々なスタイルを使用することができます。
 また、スタイルは下記のページから選択することができます。
 Chroma Style Galleryxxxxxxxxxxちなみに、上記のコードで使用しているスタイルは&amp;quot;fruity&amp;quot;です。
 参考にさせていただいたページ Syntax highlighting in Hugo with Chroma | zwbetzxxxxxxxxxx</description>
@@ -71,10 +67,10 @@ Chroma Style Galleryxxxxxxxxxxちなみに、上記のコードで使用して�
     
     <item>
       <title>Hugo &#43; GitHub Pagesでブログを作成する方法</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/</link>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/how-to-make-blog-by-hugo-and-github-pages/</link>
       <pubDate>Sun, 15 Sep 2019 22:39:57 +1000</pubDate>
       
-      <guid>https://koki-nakamura22.github.io/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/</guid>
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/hugo/how-to-make-blog-by-hugo-and-github-pages/</guid>
       <description>本記事では、Hugo + GitHub Pagesの組み合わせでブログ環境を構築する方法について説明します。
 上から順番に読んでいただくと、ブログを作成できるような流れになっています。
 本記事の内容です。

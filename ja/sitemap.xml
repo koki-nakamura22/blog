@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,10 +14,9 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/javascript/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,24 +27,22 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/javascript/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2022/03/12/install-and-setting-jest/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/javascript/install-and-setting-jest/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2022/03/12/install-and-setting-jest/"
+                href="https://koki-nakamura22.github.io/blog/posts/javascript/install-and-setting-jest/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2022/03/12/install-and-setting-jest/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/javascript/install-and-setting-jest/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -56,10 +53,9 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -70,22 +66,18 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/posts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/android/</loc>
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2022/03/03/collecting-logs-from-released-android-app/</loc>
-  </url>
-  
-  <url>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/android/collecting-logs-from-released-android-app/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/windows/</loc>
-  </url>
-  
-  <url>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/visual-studio-code/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -96,24 +88,22 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/visual-studio-code/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2022/02/25/ignore-auto-formatting-specific-language/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/visual-studio-code/ignore-auto-formatting-specific-language/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2022/02/25/ignore-auto-formatting-specific-language/"
+                href="https://koki-nakamura22.github.io/blog/posts/visual-studio-code/ignore-auto-formatting-specific-language/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2022/02/25/ignore-auto-formatting-specific-language/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/visual-studio-code/ignore-auto-formatting-specific-language/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/haskell/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -124,10 +114,9 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/haskell/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/wsl/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -138,32 +127,28 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/wsl/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2022/02/24/setup-haskell-dev-env-on-wsl2/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/haskell/setup-haskell-dev-env-on-wsl2/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2022/02/24/setup-haskell-dev-env-on-wsl2/"
+                href="https://koki-nakamura22.github.io/blog/posts/haskell/setup-haskell-dev-env-on-wsl2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2022/02/24/setup-haskell-dev-env-on-wsl2/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/haskell/setup-haskell-dev-env-on-wsl2/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/google-drive/</loc>
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2022/02/19/uninstall-google-drive-app-on-windows/</loc>
-  </url>
-  
-  <url>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/google-drive/uninstall-google-drive-app-on-windows/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/chocolatey/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -174,10 +159,9 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/chocolatey/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/python/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -188,46 +172,41 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/python/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2022/02/13/install-pyenv-to-windows/</loc>
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2022/02/12/setting-environment-variable-permanently/</loc>
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/python/install-pyenv-to-windows/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/windows/setting-environment-variable-permanently/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu1804/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/"
+                href="https://koki-nakamura22.github.io/blog/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu1804/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2020/04/26/installing-pyenv-pyenv-on-wsl-ubuntu1804/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu1804/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/12/24/operating-vimeo-by-js/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/javascript/operating-vimeo-by-js/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/12/24/operating-vimeo-by-js/"
+                href="https://koki-nakamura22.github.io/blog/posts/javascript/operating-vimeo-by-js/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/12/24/operating-vimeo-by-js/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/javascript/operating-vimeo-by-js/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/ruby-on-rails/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -238,24 +217,22 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/ruby-on-rails/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/building-env-of-rails-tutorial-wsl/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/13/building-env-of-rails-tutorial-wsl/"
+                href="https://koki-nakamura22.github.io/blog/posts/ruby-on-rails/building-env-of-rails-tutorial-wsl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/13/building-env-of-rails-tutorial-wsl/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/building-env-of-rails-tutorial-wsl/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/hugo/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -266,38 +243,35 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/deploying-articles-on-hugo-automatically/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/08/deploying-articles-on-hugo-automatically/"
+                href="https://koki-nakamura22.github.io/blog/posts/hugo/deploying-articles-on-hugo-automatically/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/08/deploying-articles-on-hugo-automatically/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/hugo/deploying-articles-on-hugo-automatically/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/07/adjusting-link-dests-position/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/css/adjusting-link-dests-position/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/07/adjusting-link-dests-position/"
+                href="https://koki-nakamura22.github.io/blog/posts/css/adjusting-link-dests-position/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/07/adjusting-link-dests-position/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/css/adjusting-link-dests-position/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/css/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -308,10 +282,9 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/css/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/node.js/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -322,24 +295,22 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/node.js/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/05/creating-dev-env-of-nodejs/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/nodejs/creating-dev-env-of-nodejs/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/05/creating-dev-env-of-nodejs/"
+                href="https://koki-nakamura22.github.io/blog/posts/nodejs/creating-dev-env-of-nodejs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/05/creating-dev-env-of-nodejs/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/nodejs/creating-dev-env-of-nodejs/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/markdown/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -350,84 +321,77 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/markdown/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/04/making-table-of-contents-of-markdown/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/markdown/making-table-of-contents-of-markdown/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/04/making-table-of-contents-of-markdown/"
+                href="https://koki-nakamura22.github.io/blog/posts/markdown/making-table-of-contents-of-markdown/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/04/making-table-of-contents-of-markdown/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/markdown/making-table-of-contents-of-markdown/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-adding-copy-button/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/03/hugo-adding-copy-button/"
+                href="https://koki-nakamura22.github.io/blog/posts/hugo/hugo-adding-copy-button/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/03/hugo-adding-copy-button/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-adding-copy-button/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/02/hugo-code-block-title/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-code-block-title/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/02/hugo-code-block-title/"
+                href="https://koki-nakamura22.github.io/blog/posts/hugo/hugo-code-block-title/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/02/hugo-code-block-title/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-code-block-title/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-syntax-highlight/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/10/01/hugo-syntax-highlight/"
+                href="https://koki-nakamura22.github.io/blog/posts/hugo/hugo-syntax-highlight/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/10/01/hugo-syntax-highlight/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/hugo/hugo-syntax-highlight/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/09/30/how-to-install-rails-on-windows/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/how-to-install-rails-on-windows/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/09/30/how-to-install-rails-on-windows/"
+                href="https://koki-nakamura22.github.io/blog/posts/ruby-on-rails/how-to-install-rails-on-windows/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/09/30/how-to-install-rails-on-windows/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/how-to-install-rails-on-windows/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/09/15/how-to-make-blog-by-hugo-and-github-pages/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/how-to-make-blog-by-hugo-and-github-pages/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/about/</loc>
+    <lastmod>2019-09-22T14:03:00+10:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -438,23 +402,189 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/about/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/2019/09/04/how-to-install-chocolatey/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/chocolatey/how-to-install-chocolatey/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/2019/09/04/how-to-install-chocolatey/"
+                href="https://koki-nakamura22.github.io/blog/posts/chocolatey/how-to-install-chocolatey/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/2019/09/04/how-to-install-chocolatey/"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/chocolatey/how-to-install-chocolatey/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/android/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/android/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/android/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/chocolatey/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/chocolatey/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/chocolatey/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/css/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/css/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/google-drive/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/google-drive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/google-drive/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/haskell/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/haskell/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/haskell/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/hugo/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/javascript/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/javascript/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/javascript/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/markdown/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/markdown/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/nodejs/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/nodejs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/nodejs/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/python/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/python/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/ruby-on-rails/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/visual-studio-code/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/visual-studio-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/visual-studio-code/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/windows/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/windows/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/windows/"
+                />
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -467,5 +597,4 @@
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
   </url>
-  
 </urlset>

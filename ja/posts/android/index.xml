@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/ja/posts/android/</link>
+    <description>Recent content on Koki&#39;s personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/ja/posts/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Play ストアからダウンロードしたAndroidアプリのログを取得 (Windows使用)</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/android/collecting-logs-from-released-android-app/</link>
+      <pubDate>Thu, 03 Mar 2022 20:49:15 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/android/collecting-logs-from-released-android-app/</guid>
+      <description>この記事では、Google Play ストアからダウンロードしたAndroidアプリのログを取得する方法について説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 ログを取得できるようにするための準備を行う  AndroidデバイスのUSBデバッグを有効にする Android Debug Bridge (ADB) をダウンロードし使用可能な状態にする   ログを取得する 注意点 そもそも、何故こんなことをしようと思ったのかの経緯 (余談) 参考にしたページ  対象読者  何かしらの理由でGoogle Play ストアからダウンロードしたアプリのログを取得したい方  環境  Pixel 6 (Android 12, Build. SQ1D.220205.004) Windows 10 (Ver. 21H2, Build. 19044.1526)  前提条件 なし
+ログを取得できるようにするための準備を行う AndroidデバイスのUSBデバッグを有効にする  [設定] &amp;gt; [デバイス情報]に移動し、一番下にある ビルド番号 を開発者向けオプションがオンになるまで連打する。 [設定] &amp;gt; [システム] &amp;gt; [開発者向けオプション]に移動し、 USB デバッグ をオンにする。  Android Debug Bridge (ADB) をダウンロードし使用可能な状態にする  SDK Platform-Tools リリースノート の SDK Platform-Tools for Windows をダウンロード をクリックする。 表示される利用規約に同意した後に ダウンロードする: Android SDK Platform-Tools (Windows用) をクリックし、任意の場所にzipファイルをダウンロードする。 2でダウンロードしたzipファイルを解凍する。 コマンドプロンプトを開き、3で解凍してできたフォルダ内のplatform-toolsフォルダへ移動する。 adb devices を実行し、以下の内容が表示され正常に動作していることを確認する。  * daemon not running; starting now at tcp:5037 * daemon started successfully List of devices attached ログを取得する  Windows PCとAndroidスマホをUSB Type-Cケーブルなどで接続する。 Windows PC側でコマンドプロンプトから &amp;ldquo;Android Debug Bridge (ADB) をダウンロードし使用可能な状態にする&amp;quot;の4と5 を実行し、何かしらのデバイス情報が表示されることを確認しておく。 続けて adb logcat *:# を実行し、コマンドプロンプト上でログがリアルタイムで流れることを確認する。</description>
+    </item>
+    
+  </channel>
+</rss>

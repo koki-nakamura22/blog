@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/ja/posts/windows/</link>
+    <description>Recent content on Koki&#39;s personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/ja/posts/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windowsでコマンドを使用し環境変数を永続的に設定する方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/windows/setting-environment-variable-permanently/</link>
+      <pubDate>Sat, 12 Feb 2022 20:54:50 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/windows/setting-environment-variable-permanently/</guid>
+      <description>この記事では、Windows でコマンドを使用し環境変数を永続的に設定する方法を説明します。
+これによって、いちいちシステムのプロパティ画面を開かなくても、コマンド一発で環境変数を設定できるようになります。
+また、環境変数の設定が必要なインストール作業をスクリプト化することもできるようになります。
+この記事の内容です。
+ 対象読者 環境 前提条件 設定するためのコマンド  ユーザ環境に設定 システム環境に設定   参考にさせていただいたページ  対象読者  Windows の環境変数を設定するために、いちいちシステムのプロパティを開きたくない方  環境  Windows 10  前提条件 無し
+設定するためのコマンド SETX コマンドを使用します。
+以下は、TESTという変数名で、test variable valueという値を設定する例です。
+ユーザ環境に設定 SETX TEST &amp;#34;test variable value&amp;#34; システム環境に設定 以下のコマンドは、必ず Powershell を管理者権限で起動し実行する必要があります。
+SETX /M TEST &amp;#34;test variable value&amp;#34; 参考にさせていただいたページ setx | Microsoft Docs</description>
+    </item>
+    
+  </channel>
+</rss>

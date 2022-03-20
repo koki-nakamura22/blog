@@ -6,10 +6,6 @@
     <description>Recent content in Tags on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    
-	<atom:link href="https://koki-nakamura22.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

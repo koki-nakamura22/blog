@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/ja/posts/javascript/</link>
+    <description>Recent content on Koki&#39;s personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/ja/posts/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jestのインストール方法およびインテリセンスなどの設定方法について</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/javascript/install-and-setting-jest/</link>
+      <pubDate>Sat, 12 Mar 2022 22:24:54 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/javascript/install-and-setting-jest/</guid>
+      <description>[2022/03/17更新] インテリセンス設定時のインストールコマンドが間違っていたので修正。
+この記事では、JavaScriptのテストフレームワークであるJestのインストール方法、インテリセンスなどの設定方法について説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 Jestのインストール 便利に使うための設定  インテリセンス import時のエラー解消   余談  何故Jestを選んだのか？ なぜnpmとyarnを使い分けているのか？   参考にしたページ  対象読者  Jestの利用環境を構築したい方  環境  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS) Visual Studio Code  前提条件  npmおよびyarnインストール済  Jestのインストール npm install --save-dev jest 便利に使うための設定 インテリセンス まずは、以下のコマンドでJestの型定義をインストールします。
+npm install --save-dev @types/jest 次に、プロジェクトのルートディレクトリに以下のファイルを jsconfig.json という名前で作成します。
+{  &amp;#34;typeAcquisition&amp;#34;: {  &amp;#34;include&amp;#34;: [  &amp;#34;jest&amp;#34;  ]  } } import時のエラー解消 このままではJestのテストファイル内でテスト対象をimportをした時に参照できずエラーが発生するので、対応するためにbabel環境を構築する必要があります。</description>
+    </item>
+    
+    <item>
+      <title>埋め込みVimeo動画をJavaScriptで操作するサンプルコード</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/javascript/operating-vimeo-by-js/</link>
+      <pubDate>Tue, 24 Dec 2019 13:15:50 +1100</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/javascript/operating-vimeo-by-js/</guid>
+      <description>この記事では、埋め込みVimeo動画をJavaScriptで操作するサンプコードについて説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 JavaScriptでVimeo動画を操作する  HTMLファイルに埋め込み用Vimeo動画を読み込む 各HTML用のJavaScriptファイルを作成する Vimeoビデオを操作する機能のJavaScriptファイルを作成する   サンプルコード 参考にさせていただいたページ  対象読者  JavaScriptで埋め込みVimeo動画を操作したい方  環境  JavaScript (ES2015)  前提条件 なし
+JavaScriptでVimeo動画を操作する HTMLファイルに埋め込み用Vimeo動画を読み込む 最初に、埋め込み用Vimeo動画をiframeを使用して読み込みます。
+この記事では、サンプルのVimeo動画を使用しています。
+&amp;lt;html&amp;gt;  &amp;lt;head&amp;gt;  &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;  &amp;lt;/head&amp;gt;  &amp;lt;body&amp;gt;  &amp;lt;!-- Specific your video URL on src attribute. --&amp;gt;  &amp;lt;iframe  id=&amp;#34;sample-player&amp;#34;  src=&amp;#34;https://player.vimeo.com/video/76979871&amp;#34;  width=&amp;#34;640&amp;#34;  height=&amp;#34;360&amp;#34;  frameborder=&amp;#34;0&amp;#34;  webkitallowfullscreen  mozallowfullscreen  allowfullscreen  allow=&amp;#34;autoplay&amp;#34;  &amp;gt;&amp;lt;/iframe&amp;gt;  &amp;lt;div&amp;gt;  &amp;lt;button id=&amp;#34;play-button&amp;#34;&amp;gt;play&amp;lt;/button&amp;gt;  &amp;lt;button id=&amp;#34;pause-button&amp;#34;&amp;gt;pause&amp;lt;/button&amp;gt;  &amp;lt;button id=&amp;#34;play-pause-button&amp;#34;&amp;gt;play and pause&amp;lt;/button&amp;gt;  &amp;lt;/div&amp;gt;  &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 各HTML用のJavaScriptファイルを作成する もし、各HTML用にJavaScriptファイルを作成しない方なら、この内容は読み飛ばしてください。</description>
+    </item>
+    
+  </channel>
+</rss>
