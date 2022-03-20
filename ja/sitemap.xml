@@ -494,6 +494,18 @@
                 href="https://koki-nakamura22.github.io/blog/ja/posts/haskell/"
                 />
   </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/homebrew/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/homebrew/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/homebrew/"
+                />
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/</loc>
     <lastmod>2022-03-20T14:52:56+09:00</lastmod>
     <xhtml:link
