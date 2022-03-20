@@ -8,6 +8,17 @@
     <language>en</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/posts/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Add a robots.txt to the site Hugo builds.</title>
+      <link>https://koki-nakamura22.github.io/blog/posts/hugo/add-robots-txt-to-hugo-site/</link>
+      <pubDate>Sun, 20 Mar 2022 15:17:30 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/posts/hugo/add-robots-txt-to-hugo-site/</guid>
+      <description>This article explains how to add robots.txt to the site Hugo builds.
+The following lists are the table of contents about this article.
+ Target audience Environment Preconditions Add setting to the config file Create the robots.txt under the layouts directory Example Reference articles  Target audience  Those who want to add a robots.txt to the site Hugo builds.  Environment  Hugo (v0.94.2+extended linux/amd64 BuildDate=unknown)  Preconditions  Installed Hugo.</description>
+    </item>
+    
+    <item>
       <title>Deploying articles on Hugo blog automatically</title>
       <link>https://koki-nakamura22.github.io/blog/posts/hugo/deploying-articles-on-hugo-automatically/</link>
       <pubDate>Tue, 08 Oct 2019 22:33:12 +1100</pubDate>

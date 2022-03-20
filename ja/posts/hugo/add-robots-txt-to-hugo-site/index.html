@@ -2,23 +2,30 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title> - Koki&#39;s personal blog</title>
+<title>Hugoサイトへのrobots.txt作成および追加 - Koki&#39;s personal blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
   <meta name="generator" content="Hugo 0.94.2" />
-  <meta itemprop="name" content="">
-<meta itemprop="description" content="調べたことや試したことを書いていきます。">
-  <meta property="og:title" content="" />
-<meta property="og:description" content="調べたことや試したことを書いていきます。" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/markdown/" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
+  <meta itemprop="name" content="Hugoサイトへのrobots.txt作成および追加">
+<meta itemprop="description" content="この記事では、Hugoで生成するサイトへのrobots.txt作成および追加を行う方法を説明します。"><meta itemprop="datePublished" content="2022-03-20T15:17:26+09:00" />
+<meta itemprop="dateModified" content="2022-03-20T15:41:50+09:00" />
+<meta itemprop="wordCount" content="45"><meta itemprop="image" content="https://koki-nakamura22.github.io/blog/">
+<meta itemprop="keywords" content="" />
+  <meta property="og:title" content="Hugoサイトへのrobots.txt作成および追加" />
+<meta property="og:description" content="この記事では、Hugoで生成するサイトへのrobots.txt作成および追加を行う方法を説明します。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/hugo/add-robots-txt-to-hugo-site/" /><meta property="og:image" content="https://koki-nakamura22.github.io/blog/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-20T15:17:26+09:00" />
+<meta property="article:modified_time" content="2022-03-20T15:41:50+09:00" /><meta property="og:site_name" content="Koki&#39;s personal blog" />
 
 
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="調べたことや試したことを書いていきます。"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://koki-nakamura22.github.io/blog/"/>
+
+<meta name="twitter:title" content="Hugoサイトへのrobots.txt作成および追加"/>
+<meta name="twitter:description" content="この記事では、Hugoで生成するサイトへのrobots.txt作成および追加を行う方法を説明します。"/>
 <meta name="twitter:site" content="@koki_n22"/>
 
   
@@ -82,7 +89,7 @@
   <menu id="lang-menu" class="flyout-menu">
   <a href="#" lang="ja" class="link active">日本語 (ja)</a>
   
-      <a href="https://koki-nakamura22.github.io/blog/posts/markdown/" lang="en" class="link">English (en)</a>
+      <a href="https://koki-nakamura22.github.io/blog/posts/hugo/add-robots-txt-to-hugo-site/" lang="en" class="link">English (en)</a>
     
   
 </menu>
@@ -97,37 +104,37 @@
 
   
     
-    <a href="//twitter.com/share?text=&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fmarkdown%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fmarkdown%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fmarkdown%2f&amp;title=" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f&amp;title=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fmarkdown%2f&amp;title=" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f&amp;title=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fmarkdown%2f&amp;description=" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f&amp;description=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fmarkdown%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -150,8 +157,6 @@
     <footer>
       <ul class="socnet-icons">
         
-    <li><a href="/blog/ja/posts/markdown/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
@@ -200,37 +205,124 @@
 </section>
 
       <main id="site-main">
-        
-  
-  
-    <article class="post">
+        <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/ja/posts/markdown/making-table-of-contents-of-markdown/">Markdownファイルの目次を自動生成する方法</a></h1>
+    <h1><a href="/blog/ja/posts/hugo/add-robots-txt-to-hugo-site/">Hugoサイトへのrobots.txt作成および追加</a></h1>
     
     
-      <p>Markdownファイルの目次を自動生成する方法を説明します。</p>
+      <p>この記事では、Hugoで生成するサイトへのrobots.txt作成および追加を行う方法を説明します。</p>
     
   </div>
   <div class="meta">
-    <time datetime="2019-10-04 22:48:18 &#43;1000 &#43;1000">2019-10-04</time>
+    <time datetime="2022-03-20 15:17:26 &#43;0900 JST">2022-03-20</time>
     <p>Koki</p>
     <p>1 分で読めます</p>
   </div>
 </header>
 
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
   
 
   
-  <p>この記事では、Markdownファイルの目次を自動生成する方法を説明します。</p>
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f&amp;title=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f&amp;title=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f&amp;description=Hugo%e3%82%b5%e3%82%a4%e3%83%88%e3%81%b8%e3%81%aerobots.txt%e4%bd%9c%e6%88%90%e3%81%8a%e3%82%88%e3%81%b3%e8%bf%bd%e5%8a%a0" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fadd-robots-txt-to-hugo-site%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    <p>この記事では、Hugoで生成するサイトへのrobots.txt作成および追加を行う方法を説明します。</p>
+<p>この記事の内容です。</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<ul>
+<li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
+<li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
+<li><font color="#1111cc"><a href="#config%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%82%92%E8%BF%BD%E5%8A%A0">configファイルに設定を追加</a></font></li>
+<li><font color="#1111cc"><a href="#layouts%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E9%85%8D%E4%B8%8B%E3%81%ABrobotstxt%E3%82%92%E4%BD%9C%E6%88%90">layoutsディレクトリ配下にrobots.txtを作成</a></font></li>
+<li><font color="#1111cc"><a href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB">サンプル</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%97%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にしたページ</a></font></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="対象読者">対象読者</h2>
+<ul>
+<li>Hugoで生成したサイトへrobots.txtを追加したい方</li>
+</ul>
+<h2 id="環境">環境</h2>
+<ul>
+<li>Hugo (v0.94.2+extended linux/amd64 BuildDate=unknown)</li>
+</ul>
+<h2 id="前提条件">前提条件</h2>
+<ul>
+<li>Hugoインストール済</li>
+</ul>
+<h2 id="configファイルに設定を追加">configファイルに設定を追加</h2>
+<p>configファイル内のトップレベルに以下を追加します。<br>
+私の環境だと、configファイルがtoml形式だったので、以下を追加しています。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml:config.toml" data-lang="toml:config.toml"><span style="display:flex;"><span>enableRobotsTXT         = <span style="color:#00f">true</span>
+</span></span></code></pre></div><p>もし手元のconfigファイルがyaml形式であれば下記を、</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml:config.yaml" data-lang="yaml:config.yaml"><span style="display:flex;"><span>enableRobotsTXT: <span style="color:#00f">true</span>
+</span></span></code></pre></div><p>json形式であれば下記をトップレベルに追加してください。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json:config.json" data-lang="json:config.json"><span style="display:flex;"><span><span style="color:#a31515">&#34;enableRobotsTXT&#34;</span><span style="">:</span> <span style="color:#00f">true</span>
+</span></span></code></pre></div><p>これだけで、内容が</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-txt:robots.txt" data-lang="txt:robots.txt"><span style="display:flex;"><span>User-agent: *
+</span></span></code></pre></div><p>のrobots.txtが生成されるようになります。</p>
+<h2 id="layoutsディレクトリ配下にrobotstxtを作成">layoutsディレクトリ配下にrobots.txtを作成</h2>
+<p>実際はサイトマップ情報などをrobots.txtに追加したいので、カスタマイズしたくなります。<br>
+その時は、/layoutsディレクトリ配下にrobots.txtを追加するだけでビルド時に生成してくれるようになります。</p>
+<h2 id="サンプル">サンプル</h2>
+<p>以下に本ブログの設定を行った際のコミットログを置いておきますので、良かったら参考にどうぞ。<br>
+<font color="#1111cc"><a href="https://github.com/koki-nakamura22/env-for-blog/commit/0dc7d79a89fc2b59275b76adca7b3009e09e060c" target="_blank">add robots.txt</a></font></p>
+<h2 id="参考にしたページ">参考にしたページ</h2>
+<p><font color="#1111cc"><a href="https://gohugo.io/templates/robots/" target="_blank">Hugo: Robots.txt File</a></font></p>
+
+  </div>
   <footer>
-    <a href="/blog/ja/posts/markdown/making-table-of-contents-of-markdown/" class="button big">続きを読む</a>
     <div class="stats">
   
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/blog/ja/categories/markdown/">Markdown</a></li>
+          <li><a class="article-terms-link" href="/blog/ja/categories/hugo/">Hugo</a></li>
         
       
     </ul>
@@ -245,11 +337,14 @@
   </footer>
 </article>
 
+
+<div class="pagination">
   
-  <div class="pagination">
-    
-    
-  </div>
+    <a href="/blog/ja/posts/hugo/deploying-articles-on-hugo-automatically/" class="button big previous"><i class="fas fa-angle-left"></i> Hugoブログの記事を自動デプロイする方法</a>
+  
+  
+</div>
+
 
       </main>
       <section id="site-sidebar">
@@ -422,8 +517,6 @@
   
       <ul class="socnet-icons">
         
-    <li><a href="/blog/ja/posts/markdown/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
 
         <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
