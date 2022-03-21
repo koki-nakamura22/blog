@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homebrew on Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/categories/homebrew/</link>
+    <description>Recent content in Homebrew on Koki&#39;s personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
+    <lastBuildDate>Mon, 21 Mar 2022 14:45:15 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/categories/homebrew/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What to do when an error message &#34;error: Failed to merge in the changes&#34; appears when executing brew update.</title>
+      <link>https://koki-nakamura22.github.io/blog/posts/homebrew/homebrew-update-failed-to-merge-in-the-changes/</link>
+      <pubDate>Mon, 21 Mar 2022 14:45:15 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/posts/homebrew/homebrew-update-failed-to-merge-in-the-changes/</guid>
+      <description>This article explains how to solve an error message &amp;ldquo;error: Failed to merge in the changes&amp;rdquo; appears when executing brew update.
+The following lists are the table of contents about this article.
+ Target audience Environment Preconditions Executing brew update-reset What does brew update-reset command do? Reference articles  Target audience Those who want to break through the errors that occur when executing brew update and update Homebrew.
+Environment  WSL 2 (Ubuntu 20.</description>
+    </item>
+    
+  </channel>
+</rss>

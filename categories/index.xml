@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Sun, 20 Mar 2022 15:17:30 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Mar 2022 14:45:15 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homebrew</title>
+      <link>https://koki-nakamura22.github.io/blog/categories/homebrew/</link>
+      <pubDate>Mon, 21 Mar 2022 14:45:15 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/categories/homebrew/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hugo</title>
       <link>https://koki-nakamura22.github.io/blog/categories/hugo/</link>
