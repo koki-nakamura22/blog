@@ -7,7 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Sun, 20 Mar 2022 15:17:26 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Mar 2022 14:08:41 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugoの記事URLを/content/以下のディレクトリ構造と一緒にする</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/organizing-hugo-posts/</link>
+      <pubDate>Tue, 22 Mar 2022 14:08:41 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/hugo/organizing-hugo-posts/</guid>
+      <description>この記事では、記事URL/content/以下のディレクトリ構造と一緒にする方法を説明します。
+この記事の内容です。
+ 対象読者 環境 前提条件 Hugoアップデート configファイルへ設定追加 サンプル 参考にしたページ  対象読者  記事をディレクトリ毎に分け、かつURLの形式をそれに追従させたい方  環境  WSL 2 (Ubuntu 20.04 LTS) Hugo Homebrew  前提条件  Hugoインストール済 Homebrewインストール済  Hugoアップデート Hugoのバージョンが0.83.0以降の方は、本セクションは無視してconfigファイルへ設定追加を読んでください。
+今回設定ファイルに追加する属性はバージョン0.83.0から追加されたため、バージョンアップが必須になります。
+今回はapt-getにてHugoをインストールしてしまっていたため、まずはアンインストールし、その後にHomebrewでインストールしなおします。
+理由は、apt-getだとインストール可能な最新バージョンが0.64.0と古いためです。
+再インストール時のコマンドの流れは下記の通りです。
+sudo apt-get remove -y hugo brew update brew install hugo brew update実行時に
+error: Failed to merge in the changes と表示されてしまった方は、brew update-reset を実行した後、念のため、再度 brew update を実行してください。
+configファイルへ設定追加 config.tomlの[permalinks]セクションを、以下のように変更します。
+[permalinks]  posts = &amp;#34;/:year/:month/:day/:filename/&amp;#34; # 変更前  posts = &amp;#34;/:sections/:filename&amp;#34; # 変更後 変更前の値は、あくまでも一例です。</description>
+    </item>
+    
     <item>
       <title>Hugoサイトへのrobots.txt作成および追加</title>
       <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/add-robots-txt-to-hugo-site/</link>
