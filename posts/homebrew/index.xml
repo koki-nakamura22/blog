@@ -8,15 +8,19 @@
     <language>en</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/posts/homebrew/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What to do when an error message &#34;error: Failed to merge in the changes&#34; appears when executing brew update.</title>
+      <title>What to do when an error message &#39;error: Failed to merge in the changes&#39; appears when executing brew update.</title>
       <link>https://koki-nakamura22.github.io/blog/posts/homebrew/homebrew-update-failed-to-merge-in-the-changes/</link>
       <pubDate>Mon, 21 Mar 2022 14:45:15 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/posts/homebrew/homebrew-update-failed-to-merge-in-the-changes/</guid>
-      <description>This article explains how to solve an error message &amp;ldquo;error: Failed to merge in the changes&amp;rdquo; appears when executing brew update.
+      <description>This article explains how to solve an error message &amp;rsquo;error: Failed to merge in the changes&amp;rsquo; appears when executing brew update.
 The following lists are the table of contents about this article.
  Target audience Environment Preconditions Executing brew update-reset What does brew update-reset command do? Reference articles  Target audience Those who want to break through the errors that occur when executing brew update and update Homebrew.
-Environment  WSL 2 (Ubuntu 20.</description>
+Environment  WSL 2 (Ubuntu 20.04 LTS)  Preconditions  Installed Homebrew  Executing brew update-reset Executing the below command to solve the problem.
+brew update-reset That&amp;rsquo;s it!
+What does brew update-reset command do? Homebrew official and non-official remote repository information are reset, then reacquired and reconfigured.
+Reference articles Homebrew Documentation: update-reset 
+install brew error error: Failed to merge in the changes.</description>
     </item>
     
   </channel>

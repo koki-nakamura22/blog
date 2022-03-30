@@ -14,11 +14,7 @@
       <pubDate>Mon, 07 Oct 2019 18:31:02 +1100</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/posts/css/adjusting-link-dests-position/</guid>
-      <description>This article explains how to adjust the display position of the &amp;lt;a&amp;gt; link destination in the same page.
-If we are using a fixed header, we need to adjust the position of the anchor when clicked the &amp;lt;a&amp;gt; link.
-Because the anchor is hidden behind the header.
-The following lists are the table of contents about this article.
- Target audience Environment Preconditions Adjusting link destinations position Reference articles  Target audience  Those who want to adjust the display position of the &amp;lt;a&amp;gt; link destination in the same page.</description>
+      <description>This article explains how to adjust the display position of the &amp;lt;a&amp;gt; link destination in the same page. If we are using a fixed header, we need to adjust the position of the anchor when clicked the &amp;lt;a&amp;gt; link. Because the anchor is hidden behind the header. The following lists are the table of contents about this article. Target audience Environment Preconditions Adjusting link destinations position Reference articles Target audience Those who want to adjust the display position of the &amp;lt;a&amp;gt; link destination in the same page. Environment CSS3 Preconditions Nothing. Adjusting link destinations position Setting the following codes to the target anchor tag to add-on.css. When you set it, you must set the same number to padding-top and margin-top. #target-tag { display: block; padding-top: 60px; margin-top: -60px; } In this blog, I adjust the headings in the post using</description>
     </item>
     
   </channel>

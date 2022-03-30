@@ -15,7 +15,10 @@
       <guid>https://koki-nakamura22.github.io/blog/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
       <description>This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Installing pyenv Installing Python by pyenv  Installing libraries that need for installing Python Installing Python   Reference articles  Target audience  Those who want to install pyenv and Python on WSL.  Environment  WSL (Ubuntu 18.</description>
+ Target audience Environment Preconditions Installing pyenv Installing Python by pyenv  Installing libraries that need for installing Python Installing Python   Reference articles  Target audience  Those who want to install pyenv and Python on WSL.  Environment  WSL (Ubuntu 18.04 LTS)  Preconditions  Already installed git.  Installing pyenv Execution the following commands.
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile exec &amp;#34;$SHELL&amp;#34; Then reboot WSL for applying the setting.
+Installation of pyenv is now complete.
+Installing Python by pyenv Installing libraries that need for installing Python Execution the following command.</description>
     </item>
     
   </channel>

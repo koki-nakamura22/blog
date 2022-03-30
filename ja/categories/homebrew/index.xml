@@ -14,12 +14,7 @@
       <pubDate>Mon, 21 Mar 2022 14:45:15 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/homebrew/homebrew-update-failed-to-merge-in-the-changes/</guid>
-      <description>この記事では、brew updateを実行した時にerror: Failed to merge in the changesというエラーが表示され、Homebrewの更新に失敗した時の対処法について説明します。
-この記事の内容です。
- 対象読者 環境 前提条件 brew update-resetを実行 brew update-resetって何をしているの？ 参考にしたページ  対象読者  brew update実行時に発生したエラーを突破し、Homebrewの更新を行いたい方  環境  WSL 2 (Ubuntu 20.04 LTS)  前提条件  Homebrewインストール済  brew update-resetを実行 brew update-reset を実行するだけで解決できます。
-brew update-resetって何をしているの？ Homebrew公式および公式以外のリモートリポジトリ情報を一旦リセットした後に再取得し、設定しなおしています。
-参考にしたページ Homebrew Documentation: update-reset 
-install brew error error: Failed to merge in the changes.</description>
+      <description>この記事では、brew updateを実行した時にerror: Failed to merge in the changesというエラーが表示され、Homebrewの更新に失敗した時の対処法について説明します。 この記事の内容です。 対象読者 環境 前提条件 brew update-resetを実行 brew update-resetって何をして</description>
     </item>
     
   </channel>

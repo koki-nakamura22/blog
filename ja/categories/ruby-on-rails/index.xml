@@ -14,11 +14,7 @@
       <pubDate>Sun, 13 Oct 2019 21:33:28 +1100</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/building-env-of-rails-tutorial-wsl/</guid>
-      <description>この記事では、WSL上にRuby on Railsのチュートリアル環境を構築する方法を説明します。
-この記事の内容です。
- 対象読者 環境 前提条件 Ruby on Railsチュートリアルの構築 参考にさせていただいたページ  対象読者  WSL上にRuby on Railsのチュートリアル環境を構築したい方  環境  Windows 10 (1903) Ubuntu (WSLのディストリビューション, 必ず、バージョン情報が無いものを使用すること)  前提条件  WSL有効済み Ubuntu (WSL)インストール済み  Ruby on Railsチュートリアルの構築 下記のコマンドを上から順に実行してください。
-以上です！
-# Install necessary tools sudo apt update sudo apt upgrade -y sudo apt install autoconf bison build-essential libssl1.0-dev libyaml-dev libreadline-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm-dev sqlite3 libsqlite3-dev nodejs-dev node-gyp npm git -y sudo npm install --global yarn  # Install rbenv git clone https://github.</description>
+      <description>この記事では、WSL上にRuby on Railsのチュートリアル環境を構築する方法を説明します。 この記事の内容です。 対象読者 環境 前提条件 Ruby on Railsチュートリアルの構築 参考にさせていただいたページ 対象読者 WSL上にRuby on Railsのチュートリアル環境を構築したい方 環境 Windows 10 (1903) Ubuntu (</description>
     </item>
     
     <item>
@@ -27,10 +23,7 @@
       <pubDate>Mon, 30 Sep 2019 21:23:27 +1000</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/ruby-on-rails/how-to-install-rails-on-windows/</guid>
-      <description>本記事では、Windows 10環境にRuby on Railsをインストールする方法を説明していきます。
-本記事の内容です。
- 対象読者 環境 前提条件 インストール方法 RubyとRuby on Railsがインストールされたことを確認 参考にさせていただいたページ  対象読者  Windows 10にRuby on Rails環境を作成したい方  環境  Windows 10 (1903) Chocolatey (0.10.15)  前提条件  Chocolateyインストール済み  インストール方法 下記のコマンドたちを管理者権限のコマンドプロンプトもしくはPowerShellで実行します。
-REM Install Yarn choco install yarn -y  REM Install Ruby choco install ruby -y  REM Install msys2 choco install msys2 --params &amp;#34;/NoUpdate&amp;#34; -y refreshenv ridk install 2 3  REM Install SQLite gem uninstall sqlite3 --all ridk exec pacman -S mingw-w64-x86_64-sqlite3 gem install sqlite3 --platform ruby  REM Install bundle gem install bundle  REM Install Ruby on Rails gem install rails RubyやRuby on Railsインストール時にバージョンを指定したい方は、下記の様にRubyおよびRuby on Railsのインストールコマンドを置き換えてください。</description>
+      <description>本記事では、Windows 10環境にRuby on Railsをインストールする方法を説明していきます。 本記事の内容です。 対象読者 環境 前提条件 インストール方法 RubyとRuby on Railsがインストールされたことを確認 参考にさせていただいたページ 対象読者 Windows 10にRuby on Rails環境</description>
     </item>
     
   </channel>

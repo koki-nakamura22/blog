@@ -14,15 +14,7 @@
       <pubDate>Sun, 13 Feb 2022 20:46:22 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/python/install-pyenv-to-windows/</guid>
-      <description>この記事では、WindowsでChocolateyを使用し、pyenvをインストールする方法を説明します。
-この記事の内容です。
- 対象読者 環境 前提条件 インストール  1. インストールコマンド実行 2. 環境変数設定 3. インストールされたことを確認   余談  対象読者  Windowsにpyenvをインストールしたい方  環境  Windows 10  前提条件  Chocolateyインストール済み
-インストール方法はWindows 10でパッケージマネージャ(Chocolatey)を使用する方法を参照。  インストール 1. インストールコマンド実行 以下のコマンドをPowershellコンソール上で実行します。
-choco install pyenv-win 2. 環境変数設定 以下、2つのパスを環境変数Pathへ追加します。
-%USERPROFILE%\.pyenv\pyenv-win\bin%USERPROFILE%\.pyenv\pyenv-win\shims 3. インストールされたことを確認 最後に、Powershell コンソールで
-pyenv --version を実行し、以下のようにバージョン情報が表示されたらインストール完了です。
-pyenv 1.2.22-47-g4c302a02 余談 環境変数Pathの設定は
-SETX PATH &amp;#34;%PATH%;%USERPROFILE%\.pyenv\pyenv-win\bin;%USERPROFILE%\.pyenv\pyenv-win\shims&amp;#34; をPowershellコンソール上で実行しても行うことができます。が、これを行う時に環境変数の値の合計文字数が1024文字を超えていると、警告: 保存されたデータは 1024 文字に切り捨てられました。と表示され、環境変数Pathの値の一部が吹っ飛ぶので気を付けましょう。 筆者は一度Pathの一部を吹っ飛ばしましたが、幸い、直前にPathの値すべてをテキストエディタに貼り付けていたため、事なきを得ました。</description>
+      <description>この記事では、WindowsでChocolateyを使用し、pyenvをインストールする方法を説明します。 この記事の内容です。 対象読者 環境 前提条件 インストール 1. インストールコマンド実行 2. 環境変数設定 3. インストールされたことを確認 余談 対象読者 Windowsにpyenvをインストール</description>
     </item>
     
     <item>
@@ -31,21 +23,7 @@ SETX PATH &amp;#34;%PATH%;%USERPROFILE%\.pyenv\pyenv-win\bin;%USERPROFILE%\.pyen
       <pubDate>Wed, 04 Sep 2019 16:38:27 +1000</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/chocolatey/how-to-install-chocolatey/</guid>
-      <description>本記事では、Chocolateyを使用し、Windows環境でLinuxのapt-getやyumを使用するパッケージ管理を実現する方法について説明します。
-本記事の内容です。
- 対象読者 インストール方法 インストールされたことを確認 実際に何かインストールしてみる インストール済みのパッケージ確認 アンインストール方法 パッケージのアップデート方法 参考にさせていただいたページ  対象読者  WindowsでもLinuxのapt-getやyumのような機能を使用したい方  インストール方法 下記のコマンドを、管理者権限で起動したコマンドプロンプト上で実行します。
-@&amp;#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;#34; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;#34;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;))&amp;#34; &amp;amp;&amp;amp; SET &amp;#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;#34; もしくは、下記のコマンドを管理者権限で起動したPowerShell上で実行します。
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://chocolatey.org/install.ps1&amp;#39;)) インストールされたことを確認 上記のコマンドが終了した後に
-choco -v を実行し、下記のようにバージョン情報が表示されたらインストールが成功しています。
-C:\WINDOWS\system32&amp;gt;choco -v 0.10.15 実際に何かインストールしてみる Chocolatey Software | Packagesxxxxxxxxxxを参考に、試しに7zipをインストールしてみます。
-下記のコマンドを実行します。
-この時、コマンドプロンプトやPowerShellは管理者権限で起動しておきましょう。(ソフトウェアをインストールする時は管理者権限が求められるため。)
-また、途中で処理を続行するかを問われるので、「Y」を入力し続行します。
-choco install 7zip インストール済みのパッケージ確認 インストール済みのパッケージを確認する場合は、下記のコマンドを実行します。
-試しに、上記でインストールした7zipが表示されるか確認してみましょう。
-choco list -localonly アンインストール方法 インストール済みのパッケージをアンインストールする際は、下記コマンドを実行します。
-この時、本当に削除してもよいかを聞かれるので「Y」を入力し、処理を続行します。
-choco install [package name] 例えば、上記でインストールしたものをアンインストールするには下記のコマンドを実行します。</description>
+      <description>本記事では、Chocolateyを使用し、Windows環境でLinuxのapt-getやyumを使用するパッケージ管理を実現する方法について説明します。 本記事の内容です。 対象読者 インストール方法 インストールされたことを確認 実際に何かインストールしてみる インストール済みのパッケー</description>
     </item>
     
   </channel>

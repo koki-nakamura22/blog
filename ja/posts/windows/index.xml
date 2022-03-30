@@ -13,15 +13,7 @@
       <pubDate>Sat, 12 Feb 2022 20:54:50 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/windows/setting-environment-variable-permanently/</guid>
-      <description>この記事では、Windows でコマンドを使用し環境変数を永続的に設定する方法を説明します。
-これによって、いちいちシステムのプロパティ画面を開かなくても、コマンド一発で環境変数を設定できるようになります。
-また、環境変数の設定が必要なインストール作業をスクリプト化することもできるようになります。
-この記事の内容です。
- 対象読者 環境 前提条件 設定するためのコマンド  ユーザ環境に設定 システム環境に設定   参考にさせていただいたページ  対象読者  Windows の環境変数を設定するために、いちいちシステムのプロパティを開きたくない方  環境  Windows 10  前提条件 無し
-設定するためのコマンド SETX コマンドを使用します。
-以下は、TESTという変数名で、test variable valueという値を設定する例です。
-ユーザ環境に設定 SETX TEST &amp;#34;test variable value&amp;#34; システム環境に設定 以下のコマンドは、必ず Powershell を管理者権限で起動し実行する必要があります。
-SETX /M TEST &amp;#34;test variable value&amp;#34; 参考にさせていただいたページ setx | Microsoft Docs</description>
+      <description>この記事では、Windows でコマンドを使用し環境変数を永続的に設定する方法を説明します。 これによって、いちいちシステムのプロパティ画面を開かなくても、コマンド一発で環境変数を設定できるようになります。 また、環境変数の設定が必要なインストール作業をスクリプト化することもできるよう</description>
     </item>
     
   </channel>

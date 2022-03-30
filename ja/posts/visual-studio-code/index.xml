@@ -13,13 +13,7 @@
       <pubDate>Fri, 25 Feb 2022 16:29:54 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/visual-studio-code/ignore-auto-formatting-specific-language/</guid>
-      <description>この記事では、Visual Studio Code (VS Code)で特定言語のみ自動フォーマット機能を無効 (オフ)にする方法を説明します。
-この記事の内容です。
- 対象読者 環境 前提条件 setting.jsonを編集  1. setting.jsonを開く 2. 特定言語の自動フォーマット機能をオフに設定する   参考にしたページ  対象読者  使用する言語によって、自動フォーマットを使う・使わないを切り替えたい方  環境  Visual Studio Code  前提条件  Prettierインストール済み (Prettierは拡張機能)  setting.jsonを編集 1. setting.jsonを開く お使いのOSがWindowsの場合はCtrl + Shift + Pを、Macの場合はCommand + Shift + Pを同時押しし、その後、Preferences: Open Settings(JSON)(日本語化済みなら基本設定:　設定(JSON)を開く)を選択します。
-2. 特定言語の自動フォーマット機能をオフに設定する  &amp;#34;[言語名]&amp;#34;: {  ...  }, となっているセクションに、
-&amp;#34;editor.formatOnSave&amp;#34;: false を追加します。
-以下の例は、markdownファイル編集時のみ自動フォーマットをオフにする設定です。
- &amp;#34;[markdown]&amp;#34;: {  &amp;#34;editor.formatOnSave&amp;#34;: false  }, もし特定言語のセクションが存在しない場合は、自分で追加することも可能です。</description>
+      <description>この記事では、Visual Studio Code (VS Code)で特定言語のみ自動フォーマット機能を無効 (オフ)にする方法を説明します。 この記事の内容です。 対象読者 環境 前提条件 setting.jsonを編集 1. setting.jsonを開く 2. 特定言語の自動フォーマット機能をオフに設定する 参考にしたページ</description>
     </item>
     
   </channel>

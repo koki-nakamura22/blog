@@ -13,14 +13,7 @@
       <pubDate>Sat, 19 Feb 2022 19:53:40 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/posts/google-drive/uninstall-google-drive-app-on-windows/</guid>
-      <description>この記事では、WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法を説明します。
-この記事の内容です。
- 対象読者 環境 前提条件 原因 Google Driveアプリを終了させる方法  手動で行う方法 コマンド一発で行う方法    対象読者  WindowsでGoogle Driveをアンインストールする時にメッセージが表示され邪魔された方  環境  Windows 10  前提条件 なし
-原因 表示されるメッセージの通り、Google Driveアプリが起動されているせいです。
-空気を読んで、自分で自分を終了させてくれりゃいいのに。
-Google Driveアプリを終了させる方法 手動で行う方法 以下の流れで作業を行います。
- ctrl, shift, escキーを同時押しし、タスクマネージャーを起動します。 「プロセス」タブを開きます。 「バックグラウンドプロセス」一覧から「Google Drive」を右クリックし、「タスクの終了」をクリックします。(表示されている複数のGoogle Driveに対して行います。)  コマンド一発で行う方法 Windows Powershellを起動し、以下のコマンドを実行し、数秒待ちます。
-taskkill /F /IM GoogleDriveFS.exe 上記を行った後、Google Driveをアンインストールできるようになります。</description>
+      <description>この記事では、WindowsでGoogle Driveをアンインストールする時に「Googleドライブが使用中です。終了してからアンインストールしてください」と言われた時の対処法を説明します。 この記事の内容です。 対象読者 環境 前提条件 原因 Google Driveアプリを終了させる方法 手動で行う方</description>
     </item>
     
   </channel>
