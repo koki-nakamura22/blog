@@ -132,11 +132,27 @@
                 href="https://koki-nakamura22.github.io/blog/ja/posts/javascript/install-and-setting-jest/"
                 />
   </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/android/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/android/</loc>
     <lastmod>2022-03-20T14:52:56+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/android/collecting-logs-from-released-android-app/</loc>
     <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/tags/"
+                />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/windows/</loc>
     <lastmod>2022-03-20T14:52:56+09:00</lastmod>
@@ -660,18 +676,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/posts/windows/"
-                />
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
   </url>
 </urlset>
