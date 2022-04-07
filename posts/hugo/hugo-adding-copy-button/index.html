@@ -20,19 +20,13 @@ I use IIFE (Immediately Invoked Function Expression) because I want to narrow th
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://koki-nakamura22.github.io/blog/posts/hugo/hugo-adding-copy-button/">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="Adding copy code button to Hugo blog">
-<meta property="twitter:description" content="This article explains how to add a copy code button on Hugo blog.
-The following lists are the table of contents about this article.
- Target audience Environment Preconditions Adding copy code button  Adding JavaScript code Adding CSS code   Reference articles  Target audience  Those who want to add a copy code button to code block on Hugo blog.  Environment  Hugo 0.57.2 Hugo-extended 0.58.2  Preconditions  Installed Hugo and Hugo-extended  Adding copy code button Adding JavaScript code Add the following code to static/js/add-on.js.
-I use IIFE (Immediately Invoked Function Expression) because I want to narrow the scope of a variable.
-(() =&gt; {  &#39;use strict&#39;;   if(!document.queryCommandSupported(&#39;copy&#39;)) {  return;  }   function flashCopyMessage(el, msg) {  el.textContent = msg;  setTimeout(() =&gt; {  el.textContent = &#34;Copy&#34;;  }, 1000);  }   function selectText(node) {  let selection = window.">
-<meta property="twitter:url" content="https://koki-nakamura22.github.io/blog/posts/hugo/hugo-adding-copy-button/">
+
 
 
 
   
-  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/main/logo0.jpg?t=1649321016">
-  <meta name="twitter:image" content="https://koki-nakamura22.github.io/blog/img/main/logo0.jpg?t=1649321016">
+  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/main/logo0.jpg?t=1649321273">
+
 
 <meta property="og:image:alt" content="The Open Graph logo">
 
