@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Tue, 22 Mar 2022 14:08:41 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Apr 2022 14:52:06 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Colabで書いたコードをGitHubで管理する方法</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/python/google-colab-with-github/</link>
+      <pubDate>Sat, 09 Apr 2022 14:52:06 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/python/google-colab-with-github/</guid>
+      <description>この記事では、Google Colabで書いたコードをGitHubで管理する方法を説明します。 ローカルに環境構築をせずに開発をしつつ、そのコードを管理したい人向けの内容となっています。 パブリックリポジトリ、プライベートリポジトリ両方を対象としています。 この記事の内容です。 対象読者 環</description>
+    </item>
+    
     <item>
       <title>Hugoの記事URLを/content/以下のディレクトリ構造と一緒にする</title>
       <link>https://koki-nakamura22.github.io/blog/ja/posts/hugo/organizing-hugo-posts/</link>
