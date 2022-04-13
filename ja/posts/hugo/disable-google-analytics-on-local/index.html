@@ -2,21 +2,21 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title>VS Codeで特定言語のみ自動フォーマット機能を無効にする (Prettier使用) - Koki&#39;s personal blog</title>
-<meta name="description" content="この記事では、Visual Studio Code (VS Code)で特定言語のみ自動フォーマット機能を無効 (オフ)にする方法を説明します。 この記事の内容です。 対象読者 環境 前提条件 setting.jsonを編集 1. setting.jsonを開く 2. 特定言語の自動フォーマット機能をオフに設定する 参考にしたページ">
+<title>Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする - Koki&#39;s personal blog</title>
+<meta name="description" content="この記事では、Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする方法を説明します。 これによって、ローカルの確認によりAnalytics情報が汚れることがなくなります。 この記事の内容です。 対象読者 環境 前提条件 localhost上でのみGoogle">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta property="og:site_name" content="Koki&#39;s personal blog">
-<meta property="og:title" content="VS Codeで特定言語のみ自動フォーマット機能を無効にする (Prettier使用)">
-<meta property="og:description" content="この記事では、Visual Studio Code (VS Code)で特定言語のみ自動フォーマット機能を無効 (オフ)にする方法を説明します。 この記事の内容です。 対象読者 環境 前提条件 setting.jsonを編集 1. setting.jsonを開く 2. 特定言語の自動フォーマット機能をオフに設定する 参考にしたページ">
+<meta property="og:title" content="Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする">
+<meta property="og:description" content="この記事では、Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする方法を説明します。 これによって、ローカルの確認によりAnalytics情報が汚れることがなくなります。 この記事の内容です。 対象読者 環境 前提条件 localhost上でのみGoogle">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/visual-studio-code/ignore-auto-formatting-specific-language/">
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/hugo/disable-google-analytics-on-local/">
 
 
 
-<meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   
-  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/main/logo0.jpg">
+  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/og/disable-google-analytics-on-local.ja.png">
 
 <meta property="og:image:alt" content="The Open Graph logo">
 
@@ -68,7 +68,12 @@
   <menu id="lang-menu" class="flyout-menu menu">
   <a href="#" lang="ja" class="nav link active">日本語 (ja)</a>
   
-      <a href="https://koki-nakamura22.github.io/blog/posts/visual-studio-code/ignore-auto-formatting-specific-language/" lang="en" class="nav link">English (en)</a>
+    
+      
+        <a href="/blog/en" lang="en" class="nav no-lang link">English (en)</a>
+      
+    
+      
     
   
 </menu>
@@ -83,37 +88,37 @@
 
   
     
-    <a href="//twitter.com/share?text=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f&amp;title=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f&amp;title=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f&amp;title=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f&amp;title=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f&amp;description=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f&amp;description=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -188,14 +193,14 @@
         <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/ja/posts/visual-studio-code/ignore-auto-formatting-specific-language/">VS Codeで特定言語のみ自動フォーマット機能を無効にする (Prettier使用)</a></h1>
+    <h1><a href="/blog/ja/posts/hugo/disable-google-analytics-on-local/">Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする</a></h1>
     
     
-      <p>この記事では、Visual Studio Code (VS Code)で特定言語のみ自動フォーマット機能を無効 (オフ)にする方法を説明します。</p>
+      <p>この記事では、Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする方法を説明します。これによって、ローカルの確認によりAnalytics情報が汚れることがなくなります。</p>
     
   </div>
   <div class="meta">
-    <span><i class="fas fa-calendar-day" aria-hidden="true"></i><time class="entry-date" datetime="2022-02-25 16:29:54 &#43;0900 JST">2022-02-25</time></span>
+    <span><i class="fas fa-calendar-day" aria-hidden="true"></i><time class="entry-date" datetime="2022-04-13 18:40:09 &#43;0900 JST">2022-04-13</time></span>
     
     
     
@@ -212,37 +217,37 @@
 
   
     
-    <a href="//twitter.com/share?text=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f&amp;title=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f&amp;title=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f&amp;title=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f&amp;title=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f&amp;description=VS%20Code%e3%81%a7%e7%89%b9%e5%ae%9a%e8%a8%80%e8%aa%9e%e3%81%ae%e3%81%bf%e8%87%aa%e5%8b%95%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88%e6%a9%9f%e8%83%bd%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b%20%28Prettier%e4%bd%bf%e7%94%a8%29" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f&amp;description=Hugo%e3%82%b5%e3%83%bc%e3%83%90%e3%82%92%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e8%b5%b7%e5%8b%95%e3%81%97%e3%81%a6%e3%81%84%e3%82%8b%e6%99%82%e3%81%ae%e3%81%bfGoogle%20Analytics%e3%82%92%e7%84%a1%e5%8a%b9%e3%81%ab%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fvisual-studio-code%2fignore-auto-formatting-specific-language%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fhugo%2fdisable-google-analytics-on-local%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -252,7 +257,8 @@
   
 
   <div class="content">
-    <p>この記事では、Visual Studio Code (VS Code)で特定言語のみ自動フォーマット機能を無効 (オフ)にする方法を説明します。</p>
+    <p>この記事では、Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする方法を説明します。<br>
+これによって、ローカルの確認によりAnalytics情報が汚れることがなくなります。</p>
 <p>この記事の内容です。</p>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -260,10 +266,10 @@
 <li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
 <li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
 <li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
-<li><font color="#1111cc"><a href="#settingjson%E3%82%92%E7%B7%A8%E9%9B%86">setting.jsonを編集</a></font>
+<li><font color="#1111cc"><a href="#localhost%E4%B8%8A%E3%81%A7%E3%81%AE%E3%81%BFgoogle-analytics%E3%82%92%E7%84%A1%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B">localhost上でのみGoogle Analyticsを無効にする</a></font>
 <ul>
-<li><font color="#1111cc"><a href="#1-settingjson%E3%82%92%E9%96%8B%E3%81%8F">1. setting.jsonを開く</a></font></li>
-<li><font color="#1111cc"><a href="#2-%E7%89%B9%E5%AE%9A%E8%A8%80%E8%AA%9E%E3%81%AE%E8%87%AA%E5%8B%95%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E6%A9%9F%E8%83%BD%E3%82%92%E3%82%AA%E3%83%95%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">2. 特定言語の自動フォーマット機能をオフに設定する</a></font></li>
+<li><font color="#1111cc"><a href="#1-google-analytics%E3%81%AE%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%93%E3%81%A7%E3%81%84%E3%82%8B%E5%80%8B%E6%89%80%E3%82%92%E6%8A%8A%E6%8F%A1%E3%81%99%E3%82%8B">1. Google Analyticsのテンプレートを読み込んでいる個所を把握する</a></font></li>
+<li><font color="#1111cc"><a href="#2-localhost%E4%B8%8A%E3%81%A7%E3%81%AFgoogle-analytics%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BE%E3%81%AA%E3%81%84%E3%82%88%E3%81%86%E3%81%AB%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B">2. localhost上ではGoogle Analyticsを読み込まないように変更する</a></font></li>
 </ul>
 </li>
 <li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%97%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にしたページ</a></font></li>
@@ -271,36 +277,35 @@
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="対象読者">対象読者</h2>
 <ul>
-<li>使用する言語によって、自動フォーマットを使う・使わないを切り替えたい方</li>
+<li>Hugoブログ上で、本番環境でのみGoogle Analyticsを有効にしたい方</li>
 </ul>
 <h2 id="環境">環境</h2>
 <ul>
-<li>Visual Studio Code</li>
+<li>Hugo (v0.94.2+extended linux/amd64 BuildDate=unknown)</li>
 </ul>
 <h2 id="前提条件">前提条件</h2>
 <ul>
-<li>Prettierインストール済み (Prettierは拡張機能)</li>
+<li>Hugoインストール済</li>
 </ul>
-<h2 id="settingjsonを編集">setting.jsonを編集</h2>
-<h3 id="1-settingjsonを開く">1. setting.jsonを開く</h3>
-<p>お使いのOSがWindowsの場合はCtrl + Shift + Pを、Macの場合はCommand + Shift + Pを同時押しし、その後、Preferences: Open Settings(JSON)(日本語化済みなら基本設定:　設定(JSON)を開く)を選択します。</p>
-<h3 id="2-特定言語の自動フォーマット機能をオフに設定する">2. 特定言語の自動フォーマット機能をオフに設定する</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#a31515">&#34;[言語名]&#34;</span><span style="">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="">...</span>
-</span></span><span style="display:flex;"><span>  }<span style="">,</span>
-</span></span></code></pre></div><p>となっているセクションに、</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a31515">&#34;editor.formatOnSave&#34;</span><span style="">:</span> <span style="color:#00f">false</span>
-</span></span></code></pre></div><p>を追加します。<br>
-以下の例は、markdownファイル編集時のみ自動フォーマットをオフにする設定です。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#a31515">&#34;[markdown]&#34;</span><span style="">:</span> {
-</span></span><span style="display:flex;"><span>    &#34;editor.formatOnSave&#34;: <span style="color:#00f">false</span>
-</span></span><span style="display:flex;"><span>  }<span style="">,</span>
-</span></span></code></pre></div><p>もし特定言語のセクションが存在しない場合は、自分で追加することも可能です。<br>
-キーに設定可能な言語名は、以下のVS Code公式ページから確認することが可能です。<br>
-<a href="https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers"  target="_blank">Language Identifiers#Known language identifiers</a></p>
-<p>以上で設定は終了です。</p>
+<h2 id="localhost上でのみgoogle-analyticsを無効にする">localhost上でのみGoogle Analyticsを無効にする</h2>
+<h3 id="1-google-analyticsのテンプレートを読み込んでいる個所を把握する">1. Google Analyticsのテンプレートを読み込んでいる個所を把握する</h3>
+<p>まずは、Google Analyticsのテンプレートを読み込んでいる個所を探します。<br>
+自分の場合は layouts/partials/scripts.html が対象でしたが、お使いのテーマによって異なると思いますので、以下のようなコマンドを実行し、それぞれ探したほうがいいと思います。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>grep <span style="color:#a31515">&#39;{{- template &#34;_internal/google_analytics_async.html&#34; . -}}&#39;</span> -rl .
+</span></span></code></pre></div><h3 id="2-localhost上ではgoogle-analyticsを読み込まないように変更する">2. localhost上ではGoogle Analyticsを読み込まないように変更する</h3>
+<p>次に、以下のように該当箇所を変更します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:変更前.html" data-lang="html:変更前.html"><span style="display:flex;"><span>{{- template &#34;_internal/google_analytics_async.html&#34; . -}}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:変更後.html" data-lang="html:変更後.html"><span style="display:flex;"><span>{{ if .Site.IsServer }}
+</span></span><span style="display:flex;"><span>  &lt;script type=<span style="color:#a31515">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    console.info(<span style="color:#a31515">&#34;Disable Google Analytics on Localhost&#34;</span>);
+</span></span><span style="display:flex;"><span>  &lt;/script&gt;
+</span></span><span style="display:flex;"><span>{{ else}}
+</span></span><span style="display:flex;"><span>  {{- template &#34;_internal/google_analytics_async.html&#34; . -}}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>今回は、ローカルでHugoサーバを起動している時にはコンソールにメッセージを表示するようにしました。<br>
+行っていることは簡単で、.Site.IsServer変数がサーバがローカルで起動しているかどうかのフラグを管理しているため、それを利用して条件分岐をしているだけです。</p>
 <h2 id="参考にしたページ">参考にしたページ</h2>
-<p><a href="https://github.com/prettier/prettier-vscode" target="_blank">prettier / prettier-vscode</a></p>
+<p><font color="#1111cc"><a href="https://discourse.gohugo.io/t/how-to-exclude-google-analytics-when-running-under-hugo-local-server/6092/32" target="_blank">How to Exclude Google Analytics When Running Under Hugo Local Server</a></font></p>
 
   </div>
   <footer>
@@ -309,14 +314,18 @@
     <ul class="categories">
       
         
-          <li><a class="article-terms-link" href="/blog/ja/categories/visual-studio-code/">Visual Studio Code</a></li>
+          <li><a class="article-terms-link" href="/blog/ja/categories/hugo/">Hugo</a></li>
         
       
     </ul>
   
   
     <ul class="tags">
-      <li>None</li>
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/tags/hugo/">Hugo</a></li>
+        
+      
     </ul>
   
 </div>
@@ -326,6 +335,8 @@
 
 
 <div class="pagination">
+  
+    <a href="/blog/ja/posts/hugo/organizing-hugo-posts/" class="button big previous"><i class="fas fa-angle-left"></i> Hugoの記事URLを/content/以下のディレクトリ構造と一緒にする</a>
   
   
 </div>

@@ -1,4 +1,10 @@
 [{
+    "title": "Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする",
+    "date": "",
+    "description": "この記事では、Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする方法を説明します。これによって、ローカルの確認によりAnalytics情報が汚れることがなくなります。",
+    "body": "この記事では、Hugoサーバをローカルで起動している時のみGoogle Analyticsを無効にする方法を説明します。\nこれによって、ローカルの確認によりAnalytics情報が汚れることがなくなります。\nこの記事の内容です。\n 対象読者 環境 前提条件 localhost上でのみGoogle Analyticsを無効にする  1. Google Analyticsのテンプレートを読み込んでいる個所を把握する 2. localhost上ではGoogle Analyticsを読み込まないように変更する   参考にしたページ  対象読者  Hugoブログ上で、本番環境でのみGoogle Analyticsを有効にしたい方  環境  Hugo (v0.94.2+extended linux/amd64 BuildDate=unknown)  前提条件  Hugoインストール済  localhost上でのみGoogle Analyticsを無効にする 1. Google Analyticsのテンプレートを読み込んでいる個所を把握する まずは、Google Analyticsのテンプレートを読み込んでいる個所を探します。\n自分の場合は layouts/partials/scripts.html が対象でしたが、お使いのテーマによって異なると思いますので、以下のようなコマンドを実行し、それぞれ探したほうがいいと思います。\ngrep \u0026#39;{{- template \u0026#34;_internal/google_analytics_async.html\u0026#34; . -}}\u0026#39; -rl . 2. localhost上ではGoogle Analyticsを読み込まないように変更する 次に、以下のように該当箇所を変更します。\n{{- template \u0026#34;_internal/google_analytics_async.html\u0026#34; . -}} {{ if .Site.IsServer }}  \u0026lt;script type=\u0026#34;text/javascript\u0026#34;\u0026gt;  console.info(\u0026#34;Disable Google Analytics on Localhost\u0026#34;);  \u0026lt;/script\u0026gt; {{ else}}  {{- template \u0026#34;_internal/google_analytics_async.html\u0026#34; . -}} {{ end }} 今回は、ローカルでHugoサーバを起動している時にはコンソールにメッセージを表示するようにしました。\n行っていることは簡単で、.Site.IsServer変数がサーバがローカルで起動しているかどうかのフラグを管理しているため、それを利用して条件分岐をしているだけです。\n参考にしたページ How to Exclude Google Analytics When Running Under Hugo Local Server\n",
+    "ref": "/blog/ja/posts/hugo/disable-google-analytics-on-local/"
+  },{
     "title": "Google Colabで書いたコードをGitHubで管理する方法",
     "date": "",
     "description": "",
