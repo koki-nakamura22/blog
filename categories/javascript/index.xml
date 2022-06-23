@@ -17,8 +17,9 @@
       <description>[17/03/2022] Fix the npm install command in the set up intellisense section.
 This article explains how to install Jest, how to set up intellisense and how solving an import error.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Install Jest Set up intellisense Set up for solving an import error Digression  Why did I choose Jest for JavaScript testing? Why do I use both npm and yarn?   Reference articles  Target audience  Those who want to build Jest environment.  Environment  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS) Visual Studio Code  Preconditions  Installed npm and yarn  Install Jest npm install --save-dev jest Set up intellisense Firstly, execute the below command to install Jest type definitions.
-npm install --save-dev @types/jest Then create a jsconfig.</description>
+Target audience Environment Preconditions Install Jest Set up intellisense Set up for solving an import error Digression Why did I choose Jest for JavaScript testing? Why do I use both npm and yarn? Reference articles Target audience Those who want to build Jest environment. Environment Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS) Visual Studio Code Preconditions Installed npm and yarn Install Jest npm install --save-dev jest Set up intellisense Firstly, execute the below command to install Jest type definitions.
+npm install --save-dev @types/jest Then create a jsconfig.json to the project root directory.
+Content is the below.</description>
     </item>
     
     <item>
@@ -29,10 +30,10 @@ npm install --save-dev @types/jest Then create a jsconfig.</description>
       <guid>https://koki-nakamura22.github.io/blog/posts/javascript/operating-vimeo-by-js/</guid>
       <description>This article explains the example codes of operating the embedded Vimeo video by JavaScript.
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Operating an embedded Vimeo video by JavaScript  Loading the embedded Vimeo video to a HTML file Create a JavaScript file for each HTML file Create a JavaScript to operating the Vimeo video.   Example code Reference articles  Target audience  Those who want to operating the Vimeo video by JavaScript.  Environment  JavaScript (ES2015)  Preconditions Nothing.
+Target audience Environment Preconditions Operating an embedded Vimeo video by JavaScript Loading the embedded Vimeo video to a HTML file Create a JavaScript file for each HTML file Create a JavaScript to operating the Vimeo video. Example code Reference articles Target audience Those who want to operating the Vimeo video by JavaScript. Environment JavaScript (ES2015) Preconditions Nothing.
 Operating an embedded Vimeo video by JavaScript Loading the embedded Vimeo video to a HTML file First, load the embedded Vimeo video to a HTML file by iframe.
 In this article case, using a sample Vimeo video.
-&amp;lt;html&amp;gt;  &amp;lt;head&amp;gt;  &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;  &amp;lt;/head&amp;gt;  &amp;lt;body&amp;gt;  &amp;lt;!</description>
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- Specific your video URL on src attribute. --&amp;gt; &amp;lt;iframe id=&amp;#34;sample-player&amp;#34; src=&amp;#34;https://player.vimeo.com/video/76979871&amp;#34; width=&amp;#34;640&amp;#34; height=&amp;#34;360&amp;#34; frameborder=&amp;#34;0&amp;#34; webkitallowfullscreen mozallowfullscreen allowfullscreen allow=&amp;#34;autoplay&amp;#34; &amp;gt;&amp;lt;/iframe&amp;gt; &amp;lt;div&amp;gt; &amp;lt;button id=&amp;#34;play-button&amp;#34;&amp;gt;play&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;#34;pause-button&amp;#34;&amp;gt;pause&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;#34;play-pause-button&amp;#34;&amp;gt;play and pause&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Create a JavaScript file for each HTML file If you do not create a JavaScript file each HTML file, ignore this chapter, please.</description>
     </item>
     
   </channel>

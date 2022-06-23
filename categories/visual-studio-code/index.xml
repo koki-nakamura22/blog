@@ -16,11 +16,11 @@
       <guid>https://koki-nakamura22.github.io/blog/posts/visual-studio-code/ignore-auto-formatting-specific-language/</guid>
       <description>This article explains how to gnore auto-formatting a specific language on VS Code (Using Prettier).
 The following lists are the table of contents about this article.
- Target audience Environment Preconditions Edit setting.json  1. Open setting.json 2. Disable specific language auto-formatting function   Reference articles  Target audience  Those who want to switch the on-off auto-formatting function on a specific language  Environment  Visual Studio Code  Preconditions  Install Prettier (Prettier is VS Code extention)  Edit setting.json 1. Open setting.json Pushing Ctrl + Shift + P simultaneously then choosing Preferences: Open Settings(JSON).
+Target audience Environment Preconditions Edit setting.json 1. Open setting.json 2. Disable specific language auto-formatting function Reference articles Target audience Those who want to switch the on-off auto-formatting function on a specific language Environment Visual Studio Code Preconditions Install Prettier (Prettier is VS Code extention) Edit setting.json 1. Open setting.json Pushing Ctrl + Shift + P simultaneously then choosing Preferences: Open Settings(JSON).
 If your environment is Mac OS, push Command + Shift + P instead of Ctrl + Shift + P.
 2. Disable specific language auto-formatting function Add the below line to a specific language section.
 &amp;#34;editor.formatOnSave&amp;#34;: false e.g. Add to markdown section.
- &amp;#34;[markdown]&amp;#34;: {  &amp;#34;editor.</description>
+&amp;#34;[markdown]&amp;#34;: { &amp;#34;editor.formatOnSave&amp;#34;: false }, When a specific language section does not exist in the setting.</description>
     </item>
     
   </channel>

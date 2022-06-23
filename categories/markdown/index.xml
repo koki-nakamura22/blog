@@ -16,7 +16,7 @@
       <guid>https://koki-nakamura22.github.io/blog/posts/markdown/making-table-of-contents-of-markdown/</guid>
       <description>This article explains how to make a table of contents of Markdown automatically..
 The following lists are the table of contents about this article.
- Target audience Preconditions Install doctoc Making a table of contents of Markdown automatically Reference articles  Target audience  Those who want to make a table of contents of Markdown automatically.  Preconditions  Installed Node.js  Install doctoc Execute the following command.
+Target audience Preconditions Install doctoc Making a table of contents of Markdown automatically Reference articles Target audience Those who want to make a table of contents of Markdown automatically. Preconditions Installed Node.js Install doctoc Execute the following command.
 npm install -g doctoc Making a table of contents of Markdown automatically Specify the directory where contains the Markdown file for making the table of contents exists in the doctoc parameter, and execute it. For the following example, specifying current directory.
 doctoc . Wait to show &amp;ldquo;Everything is OK.&amp;rdquo;. Then open the file, the table of contents has been added to the top between the following comments.
 &amp;lt;!-- START doctoc generated TOC please keep comment here to allow auto update --&amp;gt; &amp;lt;!</description>
