@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/other/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/other/"
+                />
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
     <lastmod>2022-06-23T16:16:58+09:00</lastmod>
     <xhtml:link
@@ -28,11 +40,9 @@
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/network/</loc>
-    <lastmod>2022-06-23T16:16:58+09:00</lastmod>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/network/</loc>
-    <lastmod>2022-06-23T16:16:58+09:00</lastmod>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
     <lastmod>2022-06-23T16:16:58+09:00</lastmod>
@@ -59,6 +69,14 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/installer-of-yayoiaoiro-did-not-start-normally/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/network/</loc>
+    <lastmod>2022-06-23T16:16:58+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/network/</loc>
+    <lastmod>2022-06-23T16:16:58+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/network/route-lan-cable-from-next-room/</loc>
     <lastmod>2022-06-23T16:16:58+09:00</lastmod>
