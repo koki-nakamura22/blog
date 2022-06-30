@@ -204,6 +204,8 @@
     
     
     
+      <span><i class="fas fa-sync" aria-hidden="true"></i><time class="update" datetime="2022-06-30 16:10:46 &#43;0900 JST">2022-06-30</time></span>
+    
     <p>Koki</p>
     <p>6 分で読めます</p>
   </div>
@@ -315,9 +317,9 @@
 コマンドは以下の通りです。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install go
 </span></span></code></pre></div><p>インストールが終わったら、以下のコマンドを実行し初期化しておきます。<br>
-今回はGitHub上のモジュールを参照するため、引数であるimportpathにgithub.com/m/v2を指定しています。<br>
-(ただし、Versionが2だったかどうかは記憶が曖昧なので自信が無いです&hellip; 間違っていたら指摘をお願いします。)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>go mod init github.com/m/v2
+go mod initの引数には、適当なモジュール名を指定します。<br>
+今回は、他のプログラムから特にモジュールを呼び出さないので、私のブログ環境のリポジトリ名をそのまま指定しています。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>go mod init env-for-blog
 </span></span></code></pre></div><h3 id="4-tcardgenのインストールおよび設定">4. tcardgenのインストールおよび設定</h3>
 <p>以下のコマンドを実行し、tcardgenをインストールします。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>go get github.com/Ladicle/tcardgen
@@ -385,7 +387,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#00f">for</span> (<span style="color:#00f">let</span> i = 2; i &lt; process.argv.length; i++) {
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">const</span> filePath = path.join(__dirname, process.argv[i]);
 </span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (fs.existsSync(filePath)) {
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">const</span> commandStr = <span style="color:#a31515">`tcardgen --fontDir </span><span style="color:#a31515">${</span>fontDir<span style="color:#a31515">}</span><span style="color:#a31515"> --output </span><span style="color:#a31515">${</span>outputDir<span style="color:#a31515">}</span><span style="color:#a31515"> --config </span><span style="color:#a31515">${</span>configFilePath<span style="color:#a31515">}</span><span style="color:#a31515"> </span><span style="color:#a31515">${</span>filePath<span style="color:#a31515">}</span><span style="color:#a31515">`</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">const</span> commandStr = <span style="color:#a31515">`~/go/bin/tcardgen --fontDir </span><span style="color:#a31515">${</span>fontDir<span style="color:#a31515">}</span><span style="color:#a31515"> --output </span><span style="color:#a31515">${</span>outputDir<span style="color:#a31515">}</span><span style="color:#a31515"> --config </span><span style="color:#a31515">${</span>configFilePath<span style="color:#a31515">}</span><span style="color:#a31515"> </span><span style="color:#a31515">${</span>filePath<span style="color:#a31515">}</span><span style="color:#a31515">`</span>;
 </span></span><span style="display:flex;"><span>    execSync(commandStr);
 </span></span><span style="display:flex;"><span>    console.info(<span style="color:#a31515">`</span><span style="color:#a31515">${</span>process.argv[i]<span style="color:#a31515">}</span><span style="color:#a31515"> completed`</span>);
 </span></span><span style="display:flex;"><span>  } <span style="color:#00f">else</span> {
