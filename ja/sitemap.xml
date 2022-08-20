@@ -28,12 +28,6 @@
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
-    <lastmod>2022-07-04T14:01:34+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
-    <lastmod>2022-07-04T14:01:34+09:00</lastmod>
-  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
     <lastmod>2022-07-04T14:01:34+09:00</lastmod>
     <xhtml:link
@@ -47,6 +41,24 @@
                 href="https://koki-nakamura22.github.io/blog/ja/posts/"
                 />
   </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/python/</loc>
+    <lastmod>2022-04-09T15:23:09+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/python/</loc>
+    <lastmod>2022-04-09T15:23:09+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/categories/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/categories/python/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/python/static-python-type-check/</loc>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
     <lastmod>2022-07-04T14:01:34+09:00</lastmod>
     <xhtml:link
@@ -59,6 +71,12 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
+    <lastmod>2022-07-04T14:01:34+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
+    <lastmod>2022-07-04T14:01:34+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/chuden-smartlifeplan-midnight-mysterious-electricity-bill/</loc>
     <lastmod>2022-07-04T14:01:34+09:00</lastmod>
@@ -105,22 +123,6 @@
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/python/google-colab-with-github/</loc>
     <lastmod>2022-04-09T15:23:09+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/python/</loc>
-    <lastmod>2022-04-09T15:23:09+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/python/</loc>
-    <lastmod>2022-04-09T15:23:09+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/categories/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/categories/python/"
-                />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/organizing-hugo-posts/</loc>
     <lastmod>2022-03-22T14:10:41+09:00</lastmod>
