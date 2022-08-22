@@ -7,22 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Sat, 20 Aug 2022 18:42:32 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Aug 2022 13:19:23 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Other</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/categories/other/</link>
+      <pubDate>Mon, 22 Aug 2022 13:19:23 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/categories/other/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Python</title>
       <link>https://koki-nakamura22.github.io/blog/ja/categories/python/</link>
       <pubDate>Sat, 20 Aug 2022 18:42:32 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Other</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/categories/other/</link>
-      <pubDate>Mon, 04 Jul 2022 12:13:03 +0900</pubDate>
-      
-      <guid>https://koki-nakamura22.github.io/blog/ja/categories/other/</guid>
       <description></description>
     </item>
     

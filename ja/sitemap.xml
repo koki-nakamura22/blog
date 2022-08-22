@@ -15,6 +15,8 @@
                 href="https://koki-nakamura22.github.io/blog/ja/categories/"
                 />
   </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/invoice/</loc>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
     <lastmod>2022-08-20T19:25:25+09:00</lastmod>
     <xhtml:link
@@ -28,6 +30,9 @@
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
   </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
+    <lastmod>2022-07-04T14:01:34+09:00</lastmod>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
     <lastmod>2022-08-20T19:25:25+09:00</lastmod>
     <xhtml:link
@@ -40,6 +45,21 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/posts/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
+    <lastmod>2022-08-20T19:25:25+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/tags/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/invoice-system-information-articles/</loc>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/python/</loc>
     <lastmod>2022-08-20T19:25:25+09:00</lastmod>
@@ -60,23 +80,7 @@
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/python/static-python-type-check/</loc>
     <lastmod>2022-08-20T19:25:25+09:00</lastmod>
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
-    <lastmod>2022-08-20T19:25:25+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/tags/"
-                />
-  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
-    <lastmod>2022-07-04T14:01:34+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
     <lastmod>2022-07-04T14:01:34+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/chuden-smartlifeplan-midnight-mysterious-electricity-bill/</loc>
