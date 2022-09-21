@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+  <meta charset="utf-8">
+<title>WEBデザインが大の苦手なSEがデザインを学ぶための資料集 - Koki&#39;s personal blog</title>
+<meta name="description" content="この記事では、WEBデザインが大の苦手な筆者 (SE、プログラマ) がデザインを学ぶために使用する資料集を紹介します。 はい、ただの個人メモです。 対象読者 WEBデザインを勉強したい方 WEBデザインを学ぶためのページ これだけ守れば見やすくなるデザインの基礎 2019/04/18に株式会社g">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:site_name" content="Koki&#39;s personal blog">
+<meta property="og:title" content="WEBデザインが大の苦手なSEがデザインを学ぶための資料集">
+<meta property="og:description" content="この記事では、WEBデザインが大の苦手な筆者 (SE、プログラマ) がデザインを学ぶために使用する資料集を紹介します。 はい、ただの個人メモです。 対象読者 WEBデザインを勉強したい方 WEBデザインを学ぶためのページ これだけ守れば見やすくなるデザインの基礎 2019/04/18に株式会社g">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/design/introduction-to-web-design-for-se/">
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/og/introduction-to-web-design-for-se.ja.png">
+
+<meta property="og:image:alt" content="The Open Graph logo">
+
+
+  <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
+
+  <meta name="generator" content="Hugo 0.102.3" />
+  
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
+          <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ja/" class="nav">
+        <h1>Koki's personal blog</h1>
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/blog/ja/" class="nav link"><i class='fas fa-home'></i> ホーム</a>
+        
+      
+        
+          
+          <a href="/blog/ja/about/" class="nav link"><i class='far fa-id-card'></i> このブログについて</a>
+        
+      
+        
+          
+          <a href="/blog/ja/categories/" class="nav link"><i class='fas fa-sitemap'></i> カテゴリ</a>
+        
+      
+      <div class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</div>
+      <div class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</div>
+    </menu>
+    <div class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></div>
+    <div class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></div>
+    <div class="nav lang-toggle" lang="ja">ja</div>
+    <div class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></div>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="ja" class="nav link active">日本語 (ja)</a>
+  
+    
+      
+        <a href="/blog/en" lang="en" class="nav no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f&amp;title=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f&amp;title=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f&amp;description=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <header>
+    <h1>Koki's personal blog</h1>
+  </header>
+  <main>
+    <p>Another fine, responsive site template by <a href='https://html5up.net'>HTML5 UP</a>.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//www.linkedin.com/in/koki-nakamura" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+<li><a href="//facebook.com/koki.nakamura22" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/koki_n22" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+<li><a href="skype:koki.nakamura22?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:koki.nakamura22@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <h1><a href="/blog/ja/posts/design/introduction-to-web-design-for-se/">WEBデザインが大の苦手なSEがデザインを学ぶための資料集</a></h1>
+    
+    
+      <p>WEBデザインが大の苦手なSEがデザインを学ぶための資料集を紹介します。</p>
+    
+  </div>
+  <div class="meta">
+    <span><i class="fas fa-calendar-day" aria-hidden="true"></i><time class="entry-date" datetime="2022-09-21 22:50:22 &#43;0900 JST">2022-09-21</time></span>
+    
+    
+    
+    <p>Koki</p>
+    <p>3 分で読めます</p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f&amp;title=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f&amp;title=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f&amp;description=WEB%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%81%8c%e5%a4%a7%e3%81%ae%e8%8b%a6%e6%89%8b%e3%81%aaSE%e3%81%8c%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%e3%82%92%e5%ad%a6%e3%81%b6%e3%81%9f%e3%82%81%e3%81%ae%e8%b3%87%e6%96%99%e9%9b%86" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdesign%2fintroduction-to-web-design-for-se%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    <p>この記事では、WEBデザインが大の苦手な筆者 (SE、プログラマ) がデザインを学ぶために使用する資料集を紹介します。<br>
+はい、ただの個人メモです。</p>
+<h2 id="対象読者">対象読者</h2>
+<ul>
+<li>WEBデザインを勉強したい方</li>
+</ul>
+<h2 id="webデザインを学ぶためのページ">WEBデザインを学ぶためのページ</h2>
+<a href="https://speakerdeck.com/kinakobooster/koredakeshou-rebajian-yasukunarudezainfalseji-chu" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">これだけ守れば見やすくなるデザインの基礎</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">2019/04/18に株式会社gumi様で行ったデザイン講義のスライドです。
+デザインとは何か？デザイナーは何を考えてデザインを作っているのか？
+という話から、実際にデザインを評価・検討するための言葉を紹介しています。
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png" /></a><br />この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">クリエイティブ・コモンズ 表示 - 改変禁止 4.0 国際 ライセンス</a>の下に提供されています。
+<p>第二回「UIデザインをはじめよう」はこちら
+<a href="https://speakerdeck.com/kinakobooster/uidezainwohazimeyou">https://speakerdeck.com/kinakobooster/uidezainwohazimeyou</a></p>
+<p>第三回「今日からできるUXデザイン」はこちら
+<a href="https://speakerdeck.com/kinakobooster/jin-ri-karadekiruuxdezain">https://speakerdeck.com/kinakobooster/jin-ri-karadekiruuxdezain</a></p>
+<p>※訪問講座のご案内※
+あなたの会社に話しに行きます。料金表はこちら
+<a href="https://xemono.life/#/workwith/consulting">https://xemono.life/#/workwith/consulting</a></p>
+<p>ご質問はTwitter@kinakoboosterまでお気軽にどうぞ。
+<a href="https://twitter.com/kinakobooster">https://twitter.com/kinakobooster</a></p>
+<p>株式会社Xemonoの詳細はこちら
+<a href="https://xemono.life">https://xemono.life</a></p>
+<p>実践編・アイコンを実際に作る過程はこちら
+<a href="https://note.mu/xemono/n/nd7b696b78702">https://note.mu/xemono/n/nd7b696b78702</a></p>
+<p>とりいめぐみはこんなことを考えている人です
+<a href="http://noubrain.hateblo.jp/entry/2019/04/05/171255">http://noubrain.hateblo.jp/entry/2019/04/05/171255</a></div>
+</div>
+<div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">speakerdeck.com</div></p>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://files.speakerdeck.com/presentations/f3dcbd9c455740c6a630870105217d0a/slide_0.jpg?12396484 alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<br/>
+<a href="https://baigie.me/officialblog/2019/10/30/web-design-workbook/" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">未経験でも1カ月で即戦力クラスの知識が身に付く『webデザインドリル』公開 | knowledge / baigie</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;"></div>
+    </div>
+    <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">baigie.me</div>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://baigie.me/officialblog/wp-content/uploads/2019/10/OGP_web-design-drill.png?1663767642 alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<br/>
+<a href="https://note.com/minelva2754r/n/n55b521c01a14" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">【保存版】「もうデザイナー用の最強チートシート作っちゃおうよ」と現役デザイナー4人で超便利サイト情報を集約してみた20211017更新｜ryota_funakoshi｜note</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">こんにちはデザイナー社長の船越です！久々のnote投稿ですが、ツイッターを見ていてデザイナー初学者の人から  「どこから画像を引っ張ってくればいいかわからない😭」  「日々の情報収集どうすればいいの？🤔」  という悩みをよく見かけます。そこでデザインオタクの僕が、普段見ているサイトや参考になる選りすぐりの情報を全部まとめました！デザイナーのクオリティと速度は引き出しで決まると僕は考えています。このまとめを見て皆さんの学習と仕事が少しでも捗るようになれば嬉しいです！たくさんのデザイナーさんの役に立つ記事にしたいため、「このツールも便利だよ！」というのがあればぜひコメントで教えてください！</div>
+    </div>
+    <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">note.com</div>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://assets.st-note.com/production/uploads/images/32873886/rectangle_large_type_2_b553754317779fa96261315a20e39182.jpg?fit=bounds&quality=85&width=1280 alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<br/>
+<a href="https://note.com/pittan/n/n5789d09c5575" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">フロントエンドエンジニアから、デザイナーさんに意識してほしい10のこと｜Pittan｜note</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">フロントエンドエンジニアとデザイナーさんは日々協力してプロダクトを作っていく関係にあります。デザイナーさんが作ってくれたものをエンジニアが素早く実現できるよう、いくつかエンジニアから意識してほしいことをまとめました。  なんでこんな話になったのか  （前置きなので次の章まで飛ばしてOKです）  デザイナーさんから「この画面をこんな風に作ってください」とXDやSketch、PSDなどいろいろな形で渡されることがあると思います。 僕の個人的な意見・経験ですが、いざ実装するぞとなったときに  「あれ…ここってどうしたらいいんだろう？」  と迷って作業のスピードが落ちてしまうことがとてもストレ</div>
+    </div>
+    <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">note.com</div>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://assets.st-note.com/production/uploads/images/8408346/rectangle_large_type_2_cc994431eddd5f2f9a3ec4cdcb199d38.jpg?fit=bounds&quality=85&width=1280 alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<br/>
+<a href="https://qiita.com/mskmiki/items/544149987475719e417b" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">なぜエンジニアが作る画面はダサいのか…?「理由」と「対策」を徹底解説【エンジニア向け画面デザイン講座】 - Qiita</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">
+<p>目次</p>
+<ol>
+<li>はじめに</li>
+<li>アプリの画面デザインを考えてみよう</li>
+<li>SEのAさんの画面デザイン</li>
+<li>デザイナーのBさんの画面デザイン</li>
+<li>二人の画面デザインを比べてみよう</li>
+<li>SEが覚えておきたい画面デザインの心得6か条&hellip;</div>
+ </div>
+ <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">qiita.com</div>
+</li>
+</ol>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9JUUzJTgxJUFBJUUzJTgxJTlDJUUzJTgyJUE4JUUzJTgzJUIzJUUzJTgyJUI4JUUzJTgzJThCJUUzJTgyJUEyJUUzJTgxJThDJUU0JUJEJTlDJUUzJTgyJThCJUU3JTk0JUJCJUU5JTlEJUEyJUUzJTgxJUFGJUUzJTgzJTgwJUUzJTgyJUI1JUUzJTgxJTg0JUUzJTgxJUFFJUUzJTgxJThCJUUyJTgwJUE2JTNGJUUzJTgwJThDJUU3JTkwJTg2JUU3JTk0JUIxJUUzJTgwJThEJUUzJTgxJUE4JUUzJTgwJThDJUU1JUFGJUJFJUU3JUFEJTk2JUUzJTgwJThEJUUzJTgyJTkyJUU1JUJFJUI5JUU1JUJBJTk1JUU4JUE3JUEzJUU4JUFBJUFDJUUzJTgwJTkwJUUzJTgyJUE4JUUzJTgzJUIzJUUzJTgyJUI4JUUzJTgzJThCJUUzJTgyJUEyJUU1JTkwJTkxJUUzJTgxJTkxJUU3JTk0JUJCJUU5JTlEJUEyJUUzJTgzJTg3JUUzJTgyJUI2JUUzJTgyJUE0JUUzJTgzJUIzJUU4JUFDJTlCJUU1JUJBJUE3JUUzJTgwJTkxJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz05ZGFjMDQ4MGMyMTFmMmQ1NWIxMTlmZDE5MDdkYzMwNQ&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbXNrbWlraSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YzgzNTA4N2M2MGJkZGVlZmFjYjBkODkwMDgwNGFlYmM&blend-x=142&blend-y=491&blend-mode=normal&s=a917abb9f4f121b143b207400a51ca27 alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<h2 id="参考にした情報">参考にした情報</h2>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">エンジニアもチェックしたいWEBデザインの基礎などが学べる人気エントリー<a href="https://twitter.com/hashtag/Web%E5%88%B6%E4%BD%9C?src=hash&amp;ref_src=twsrc%5Etfw">#Web制作</a> <a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%88%9D%E5%BF%83%E8%80%85?src=hash&amp;ref_src=twsrc%5Etfw">#プログラミング初心者</a> <a href="https://twitter.com/hashtag/%E9%A7%86%E3%81%91%E5%87%BA%E3%81%97%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%81%A8%E7%B9%8B%E3%81%8C%E3%82%8A%E3%81%9F%E3%81%84?src=hash&amp;ref_src=twsrc%5Etfw">#駆け出しエンジニアと繋がりたい</a> <a href="https://twitter.com/hashtag/web%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3?src=hash&amp;ref_src=twsrc%5Etfw">#webデザイン</a> <a href="https://t.co/oFoAKuU5ul">pic.twitter.com/oFoAKuU5ul</a></p>&mdash; ハクト@WEBエンジニア (@hakuto00) <a href="https://twitter.com/hakuto00/status/1572063386812424194?ref_src=twsrc%5Etfw">September 20, 2022</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+  </div>
+  <footer>
+    <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/categories/design/">Design</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/tags/design/">Design</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最近の投稿</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/design/introduction-to-web-design-for-se/">WEBデザインが大の苦手なSEがデザインを学ぶための資料集</a></h2>
+          <time class="published" datetime="2022-09-21 22:50:22 &#43;0900 JST">2022-09-21</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/python/chalice-automatic-policy-generation-range/">CHALICEの自動ポリシー生成 (Automatic policy generation) 対象範囲の検証</a></h2>
+          <time class="published" datetime="2022-08-30 17:17:27 &#43;0900 JST">2022-08-30</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/other/invoice-system-information-articles/">インボイス制度に関する記事一覧</a></h2>
+          <time class="published" datetime="2022-08-22 13:19:23 &#43;0900 JST">2022-08-22</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/python/static-python-type-check/">Pythonの静的型チェックをコマンドもしくはVS Code拡張機能に自動で行わせる方法</a></h2>
+          <time class="published" datetime="2022-08-20 18:42:32 &#43;0900 JST">2022-08-20</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/other/chuden-smartlifeplan-midnight-mysterious-electricity-bill/">不在の時間や深夜帯に記憶にない電気利用が発生し、電気利用料が発生している件とその理由について</a></h2>
+          <time class="published" datetime="2022-07-04 12:13:03 &#43;0900 JST">2022-07-04</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/ja/posts/" class="button">続きを見る</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/blog/ja/categories">カテゴリー</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/blog/ja/categories/hugo/">hugo<span class="count">9</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/python/">python<span class="count">5</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/windows/">windows<span class="count">4</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/other/">other<span class="count">3</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/chocolatey/">chocolatey<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/javascript/">javascript<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/ruby-on-rails/">ruby-on-rails<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/wsl/">wsl<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/android/">android<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/css/">css<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/design/">design<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/google-colab/">google-colab<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/google-drive/">google-drive<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/haskell/">haskell<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/homebrew/">homebrew<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/markdown/">markdown<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/network/">network<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/node.js/">node.js<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/visual-studio-code/">visual-studio-code<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//www.linkedin.com/in/koki-nakamura" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+<li><a href="//facebook.com/koki.nakamura22" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/koki_n22" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+<li><a href="skype:koki.nakamura22?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:koki.nakamura22@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    Powered by Hugo. Copyright © 2022 Koki NAKAMURA
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/blog/js/highlight.js"></script>
+    
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script src="/blog/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-148138479-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Tue, 30 Aug 2022 17:17:27 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 22:50:22 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WEBデザインが大の苦手なSEがデザインを学ぶための資料集</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/design/introduction-to-web-design-for-se/</link>
+      <pubDate>Wed, 21 Sep 2022 22:50:22 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/design/introduction-to-web-design-for-se/</guid>
+      <description>この記事では、WEBデザインが大の苦手な筆者 (SE、プログラマ) がデザインを学ぶために使用する資料集を紹介します。 はい、ただの個人メモです。 対象読者 WEBデザインを勉強したい方 WEBデザインを学ぶためのページ これだけ守れば見やすくなるデザインの基礎 2019/04/18に株式会社g</description>
+    </item>
+    
     <item>
       <title>CHALICEの自動ポリシー生成 (Automatic policy generation) 対象範囲の検証</title>
       <link>https://koki-nakamura22.github.io/blog/ja/posts/python/chalice-automatic-policy-generation-range/</link>
