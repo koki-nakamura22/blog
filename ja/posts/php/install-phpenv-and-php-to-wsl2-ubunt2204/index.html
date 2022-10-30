@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+  <meta charset="utf-8">
+<title>WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法 - Koki&#39;s personal blog</title>
+<meta name="description" content="この記事では、WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法を説明します。 この記事の内容です。 対象読者 環境 前提条件 phpenvを使用しPHPをインストール phpenvのインストール phpenvを使用しPHPのインストール PHPが正常にインストールされたか確認 参考にし">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:site_name" content="Koki&#39;s personal blog">
+<meta property="og:title" content="WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法">
+<meta property="og:description" content="この記事では、WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法を説明します。 この記事の内容です。 対象読者 環境 前提条件 phpenvを使用しPHPをインストール phpenvのインストール phpenvを使用しPHPのインストール PHPが正常にインストールされたか確認 参考にし">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/php/install-phpenv-and-php-to-wsl2-ubunt2204/">
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/og/install-phpenv-and-php-to-wsl2-ubunt2204.ja.png">
+
+<meta property="og:image:alt" content="The Open Graph logo">
+
+
+  <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
+
+  <meta name="generator" content="Hugo 0.102.3" />
+  
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
+          <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/ja/" class="nav">
+        <h1>Koki's personal blog</h1>
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/blog/ja/" class="nav link"><i class='fas fa-home'></i> ホーム</a>
+        
+      
+        
+          
+          <a href="/blog/ja/about/" class="nav link"><i class='far fa-id-card'></i> このブログについて</a>
+        
+      
+        
+          
+          <a href="/blog/ja/categories/" class="nav link"><i class='fas fa-sitemap'></i> カテゴリ</a>
+        
+      
+      <div class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</div>
+      <div class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</div>
+    </menu>
+    <div class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></div>
+    <div class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></div>
+    <div class="nav lang-toggle" lang="ja">ja</div>
+    <div class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></div>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="ja" class="nav link active">日本語 (ja)</a>
+  
+    
+      
+        <a href="/blog/en" lang="en" class="nav no-lang link">English (en)</a>
+      
+    
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f&amp;title=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f&amp;title=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f&amp;description=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <header>
+    <h1>Koki's personal blog</h1>
+  </header>
+  <main>
+    <p>Another fine, responsive site template by <a href='https://html5up.net'>HTML5 UP</a>.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//www.linkedin.com/in/koki-nakamura" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+<li><a href="//facebook.com/koki.nakamura22" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/koki_n22" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+<li><a href="skype:koki.nakamura22?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:koki.nakamura22@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    <h1><a href="/blog/ja/posts/php/install-phpenv-and-php-to-wsl2-ubunt2204/">WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法</a></h1>
+    
+    
+      <p>本記事では、WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法を説明します。</p>
+    
+  </div>
+  <div class="meta">
+    <span><i class="fas fa-calendar-day" aria-hidden="true"></i><time class="entry-date" datetime="2022-10-30 22:25:09 &#43;0900 JST">2022-10-30</time></span>
+    
+    
+    
+    <p>Koki</p>
+    <p>2 分で読めます</p>
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f&amp;title=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f&amp;title=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f&amp;description=WSL2%20%28Ubuntu%2022.04%29%20%e3%81%b8phpenv%e3%81%8a%e3%82%88%e3%81%b3PHP%e3%82%92%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e3%81%99%e3%82%8b%e6%96%b9%e6%b3%95" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fphp%2finstall-phpenv-and-php-to-wsl2-ubunt2204%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+  </section>
+  
+
+  <div class="content">
+    <p>この記事では、WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法を説明します。</p>
+<p>この記事の内容です。</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<ul>
+<li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
+<li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
+<li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
+<li><font color="#1111cc"><a href="#phpenv%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97php%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">phpenvを使用しPHPをインストール</a></font>
+<ul>
+<li><font color="#1111cc"><a href="#phpenv%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">phpenvのインストール</a></font></li>
+<li><font color="#1111cc"><a href="#phpenv%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97php%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">phpenvを使用しPHPのインストール</a></font></li>
+<li><font color="#1111cc"><a href="#php%E3%81%8C%E6%AD%A3%E5%B8%B8%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%95%E3%82%8C%E3%81%9F%E3%81%8B%E7%A2%BA%E8%AA%8D">PHPが正常にインストールされたか確認</a></font></li>
+</ul>
+</li>
+<li><font color="#1111cc"><a href="#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%97%E3%81%9F%E3%83%9A%E3%83%BC%E3%82%B8">参考にしたページ</a></font></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="対象読者">対象読者</h2>
+<ul>
+<li>WSL2環境へphpenvを使用してPHP環境を構築をしたい方</li>
+</ul>
+<h2 id="環境">環境</h2>
+<ul>
+<li>WSL2 (Ubuntu 22.04)</li>
+</ul>
+<h2 id="前提条件">前提条件</h2>
+<ul>
+<li>WSL2環境が使用可能</li>
+</ul>
+<h2 id="phpenvを使用しphpをインストール">phpenvを使用しPHPをインストール</h2>
+<h3 id="phpenvのインストール">phpenvのインストール</h3>
+<ol>
+<li>
+<p>phpenv公式の手順に従いインストール<br>
+この時、<font color="#1111cc"><a href="https://github.com/phpenv/phpenv#installation" target="_blank">phpenv公式のインストール手順</a></font> に記載のある <strong>Install php-build into it and any php</strong> も必ず行う。</p>
+</li>
+<li>
+<p>PHPのダウンロードおよびインストールに必要なライブラリインストール<br>
+以下のコマンドを上から順に実行する。</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y libcurl4-openssl-dev libjpeg-dev libonig-dev libtidy-dev libxslt-dev libzip-dev autoconf
+</span></span><span style="display:flex;"><span>curl -s https://raw.githubusercontent.com/php-build/php-build/master/build-openssl-1.0.sh | sh
+</span></span></code></pre></div><h3 id="phpenvを使用しphpのインストール">phpenvを使用しPHPのインストール</h3>
+<p>以下のコマンドを実行しphpenvを使用しPHPをインストールする。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>PKG_CONFIG_PATH=<span style="color:#a31515">&#34;</span>$PKG_CONFIG_PATH<span style="color:#a31515">:/usr/local/opt/openssl@1.0/lib/pkgconfig&#34;</span> phpenv install [バージョン番号]
+</span></span></code></pre></div><p>e.g. バージョン8.0.25をインストールする場合。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>PKG_CONFIG_PATH=<span style="color:#a31515">&#34;</span>$PKG_CONFIG_PATH<span style="color:#a31515">:/usr/local/opt/openssl@1.0/lib/pkgconfig&#34;</span> phpenv install 8.0.25
+</span></span></code></pre></div><h3 id="phpが正常にインストールされたか確認">PHPが正常にインストールされたか確認</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>phpenv local [バージョン番号]
+</span></span></code></pre></div><p>や</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>phpenv global [バージョン番号]
+</span></span></code></pre></div><p>を実行し、使用するPHPのバージョンを指定する。<br>
+その後、</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>php -v
+</span></span></code></pre></div><p>を実行しターミナル上に上記で指定したPHPのバージョンが表示されることを確認する。</p>
+<h2 id="参考にしたページ">参考にしたページ</h2>
+<a href="https://github.com/phpenv/phpenv" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">GitHub - phpenv/phpenv: Simple PHP version management</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">Simple PHP version management. Contribute to phpenv/phpenv development by creating an account on GitHub.</div>
+    </div>
+    <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">github.com</div>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://opengraph.githubassets.com/b78669e09b6f85301c45a45f45eb0eb9c17884eb719f80c2b557dff5d0630a44/phpenv/phpenv alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<br>
+<a href="https://qiita.com/akirak47/items/a7be7ffd2e0c7b084e95" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">Ubuntu22.04でphpenv使おうと思ったらopensslのバージョン違いでbuildできない件 - Qiita</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">macの対策はたくさん記事が引っかかるけどubuntuの情報はあまり無いので同様の現象で詰まった方のために残しておきます。
+掲題ですが、phpenvとphp-buildをインストールしたubuntu22.04で、php7.4.30や8...</div>
+    </div>
+    <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">qiita.com</div>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9VWJ1bnR1MjIuMDQlRTMlODElQTdwaHBlbnYlRTQlQkQlQkYlRTMlODElOEElRTMlODElODYlRTMlODElQTglRTYlODAlOUQlRTMlODElQTMlRTMlODElOUYlRTMlODIlODlvcGVuc3NsJUUzJTgxJUFFJUUzJTgzJTkwJUUzJTgzJUJDJUUzJTgyJUI4JUUzJTgzJUE3JUUzJTgzJUIzJUU5JTgxJTk1JUUzJTgxJTg0JUUzJTgxJUE3YnVpbGQlRTMlODElQTclRTMlODElOEQlRTMlODElQUElRTMlODElODQlRTQlQkIlQjYmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTNkZjEzMGQ5ZTRiZThjMDAwYTFlMTExYzc0MGI2ZWFj&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwYWtpcmFrNDcmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTBhMWY4ZjU1MjE5ZTA1ODhjNjFlN2ViZWNjM2ViMWFi&blend-x=142&blend-y=491&blend-mode=normal&s=83e5b346f5c705b1bbb3fc837f4314d0 alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<br>
+<a href="https://github.com/php-build/php-build/issues/718" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">FIX nothing below PHP 8.1 installs in Ubuntu 22.04 (`RSA_SSLV23_PADDING` undeclared in OpenSSL 3.0.0) · Issue #718 · php-build/php-build</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">my system has openssl 3.0.2-0ubuntu1.1 ~/.phpenv/plugins/php-build/install-dependencies.sh: autoconf is already the newest version (2.71-2). bash is already the newest version (5.1-6ubuntu1). bison...</div>
+    </div>
+    <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">github.com</div>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=https://opengraph.githubassets.com/9866a0331fd33e2ce6cb88886a415aa73efd9e9ef29d3a1b4290401202b4029b/php-build/php-build/issues/718 alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+<br>
+<a href="https://www.kabanoki.net/1301/" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
+<div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
+  <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="color: rgb(31, 41, 55); font-size: 1.0rem; line-height: 1.5rem; max-height: 3.0rem; overflow: hidden;">CentOS7にphpenvを導入しようとしたらエラーが出た part2 | カバの樹</div>
+      <div style="font-size: 0.8rem; line-height: 1.25rem; max-height: 2.5rem; color: rgb(107, 114, 128); overflow: hidden; text-overflow: ellipsis;">undefined</div>
+    </div>
+    <div style="font-size: 0.75rem; line-height: 1rem; color: rgb(31, 41, 55);">www.kabanoki.net</div>
+  </div>
+  <div style="border-left-width: 1px; width: 25%;">
+    <img src=undefined alt="No Image" style="object-fit: cover; width: 100%; height: 100%; background-color: rgb(209, 213, 219);" loading="lazy" />
+  </div>
+</div></a>
+
+  </div>
+  <footer>
+    <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/categories/php/">PHP</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/ja/categories/wsl/">WSL</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/blog/ja/tags/php/">PHP</a></li>
+        
+          <li><a class="article-terms-link" href="/blog/ja/tags/wsl/">WSL</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>最近の投稿</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/php/install-phpenv-and-php-to-wsl2-ubunt2204/">WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法</a></h2>
+          <time class="published" datetime="2022-10-30 22:25:09 &#43;0900 JST">2022-10-30</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/other/heroku-migration-destination-articles/">Heroku無料プラン終了に伴う移行先に関する記事一覧</a></h2>
+          <time class="published" datetime="2022-10-17 08:02:44 &#43;0900 JST">2022-10-17</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/design/introduction-to-web-design-for-se/">WEBデザインが大の苦手なSEがデザインを学ぶための資料集</a></h2>
+          <time class="published" datetime="2022-09-21 22:50:22 &#43;0900 JST">2022-09-21</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/python/chalice-automatic-policy-generation-range/">CHALICEの自動ポリシー生成 (Automatic policy generation) 対象範囲の検証</a></h2>
+          <time class="published" datetime="2022-08-30 17:17:27 &#43;0900 JST">2022-08-30</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
+          <h2><a href="/blog/ja/posts/other/invoice-system-information-articles/">インボイス制度に関する記事一覧</a></h2>
+          <time class="published" datetime="2022-08-22 13:19:23 &#43;0900 JST">2022-08-22</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/ja/posts/" class="button">続きを見る</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/blog/ja/categories">カテゴリー</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/blog/ja/categories/hugo/">hugo<span class="count">9</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/python/">python<span class="count">5</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/other/">other<span class="count">4</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/windows/">windows<span class="count">4</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/wsl/">wsl<span class="count">3</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/chocolatey/">chocolatey<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/javascript/">javascript<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/ruby-on-rails/">ruby-on-rails<span class="count">2</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/android/">android<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/css/">css<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/design/">design<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/google-colab/">google-colab<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/google-drive/">google-drive<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/haskell/">haskell<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/homebrew/">homebrew<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/markdown/">markdown<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/network/">network<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/node.js/">node.js<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/php/">php<span class="count">1</span></a>
+          
+          <li>
+              <a href="/blog/ja/categories/visual-studio-code/">visual-studio-code<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/koki-nakamura22" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//www.linkedin.com/in/koki-nakamura" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+<li><a href="//facebook.com/koki.nakamura22" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/koki_n22" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+<li><a href="skype:koki.nakamura22?userinfo" target="_blank" rel="noopener" title="Skype" class="fab fa-skype"></a></li>
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:koki.nakamura22@gmail.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    Powered by Hugo. Copyright © 2022 Koki NAKAMURA
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/blog/js/highlight.js"></script>
+    
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script src="/blog/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-148138479-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    </div>
+  </body>
+</html>

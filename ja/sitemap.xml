@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/php/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/php/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/php/"
+                />
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
-    <lastmod>2022-09-21T22:59:32+09:00</lastmod>
+    <lastmod>2022-10-17T08:11:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,12 +27,8 @@
                 href="https://koki-nakamura22.github.io/blog/ja/categories/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/heroku/</loc>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/heroku-migration-destination-articles/</loc>
-  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
-    <lastmod>2022-09-21T22:59:32+09:00</lastmod>
+    <lastmod>2022-10-17T08:11:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -32,11 +40,12 @@
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
-    <lastmod>2022-08-22T13:32:43+09:00</lastmod>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/php/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/php/</loc>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
-    <lastmod>2022-09-21T22:59:32+09:00</lastmod>
+    <lastmod>2022-10-17T08:11:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -49,7 +58,7 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
-    <lastmod>2022-09-21T22:59:32+09:00</lastmod>
+    <lastmod>2022-10-17T08:11:00+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -60,6 +69,32 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/wsl/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/wsl/</loc>
+    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/categories/wsl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/categories/wsl/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/php/install-phpenv-and-php-to-wsl2-ubunt2204/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/heroku/</loc>
+    <lastmod>2022-10-17T08:11:00+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/heroku-migration-destination-articles/</loc>
+    <lastmod>2022-10-17T08:11:00+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
+    <lastmod>2022-10-17T08:11:00+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/design/</loc>
     <lastmod>2022-09-21T22:59:32+09:00</lastmod>
@@ -274,19 +309,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/categories/haskell/"
-                />
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/wsl/</loc>
-    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/categories/wsl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/categories/wsl/"
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/haskell/setup-haskell-dev-env-on-wsl2/</loc>
