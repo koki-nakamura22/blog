@@ -1,4 +1,10 @@
 [{
+    "title": "DjangoのViewでキャッシュを無効化する",
+    "date": "",
+    "description": "この記事では、DjangoのViewでキャッシュを無効化する方法について説明します。",
+    "body": "この記事では、DjangoのViewでキャッシュを無効化する方法について説明します。\nGoogle Chrome, Microsoft Edge, Firefoxにて動作確認済みです。\nこの記事の内容です。\n対象読者 環境 前提条件 DjangoのViewでキャッシュを無効化する方法 対象読者 DjangoのViewでキャッシュを無効化したい方 環境 Django v4.1.2 前提条件 なし DjangoのViewでキャッシュを無効化する方法 まず最初に、 以下のコードを追加し必要なものをインポートします。\nfrom django.utils.decorators import method_decorator from django.views.decorators.cache import never_cache 次に、以下の様にデコレータをキャッシュを無効化したいViewのクラスに設定します。\n@method_decorator(never_cache, name=\u0026#39;dispatch\u0026#39;) class HogeView(LoginRequiredMixin, FormView): ... これだけでViewのキャッシュを無効化できます。\n",
+    "ref": "/blog/ja/posts/django/disable-cache-on-django/"
+  },{
     "title": "WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法",
     "date": "",
     "description": "本記事では、WSL2 (Ubuntu 22.04) へphpenvおよびPHPをインストールする方法を説明します。",
