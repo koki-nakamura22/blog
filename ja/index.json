@@ -1,4 +1,10 @@
 [{
+    "title": "DjangoのFormで多重submitを防ぐ",
+    "date": "",
+    "description": "この記事では、DjangoのFormで多重submitを防ぐ方法について説明します。Djangoの...と書いてはいますが、Djangoに限らず、HTMLのformを使用するのであればどこでも使用可能だと思います。",
+    "body": "この記事では、DjangoのFormで多重submitを防ぐ方法について説明します。\nDjangoの\u0026hellip;と書いてはいますが、Djangoに限らず、HTMLのformを使用するのであればどこでも使用可能だと思います。\nこの記事の内容です。\n対象読者 環境 前提条件 DjangoのFormで多重submitを防ぐ 対象読者 DjangoのFormで多重submitを防ぎたい方 環境 Django v4.1.2 前提条件 なし DjangoのFormで多重submitを防ぐ 以下のようにformのtypeがsubmitのinput要素に、onclickイベントを設定する。\n\u0026lt;input type=\u0026#34;submit\u0026#34; value=\u0026#34;送信\u0026#34; onclick=\u0026#34;this.disabled=true,this.form.submit();\u0026#34;\u0026gt; これだけで、HTMLのformで多重submitを防ぐことができます。\nただ、この方法だと連続でクリックしても2回目以降がsubmitされないというだけで、見た目は何も変わりません。\nもし見た目の変化 (1回クリックされたらグレーアウトするなど) が必要であれば、別途JavaScriptやTypeScriptにてCSSを動的に変更する処理を実装し使用してください。\n",
+    "ref": "/blog/ja/posts/django/prevent-multiple-submit-on-django/"
+  },{
     "title": "DjangoのViewでキャッシュを無効化する",
     "date": "",
     "description": "この記事では、DjangoのViewでキャッシュを無効化する方法について説明します。",
