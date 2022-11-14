@@ -1,4 +1,10 @@
 [{
+    "title": "実行環境のOSに依存しないHugoで作成したサイトのビルドとデプロイを一括で行うスクリプトを開発した話",
+    "date": "",
+    "description": "この記事では、開発したHugoで作成したサイトのビルドとデプロイを一括で行うスクリプトを紹介します。",
+    "body": "この記事では、開発したHugoで作成したサイトのビルドとデプロイを一括で行うスクリプトを紹介します。\n過去にも似たような記事を書いていますが、今回は実行環境のOSに依存しないものにしています。\nこの記事の内容です。\n対象読者 環境 前提条件 開発したスクリプトについて ブログがGitHub Pagesでホストされていると、そもそもスクリプトが不要な話 対象読者 Hugoで作成したサイトのビルドおよびデプロイをいちいちコマンドを打って行いたくない方 環境 WSL2 (Ubuntu 22.04) Node.js (v18.1.0) 前提条件 Node.jsインストール済み 開発したスクリプトについて いちいちコマンドを順番に打ってビルドやデプロイを行いたくなかったため、以下のスクリプトを開発しました。\nよければ自由にお使いください + カスタマイズしてください。\n使用方法は、本スクリプトをHugoプロジェクトのルートディレクトリへ配置し、\nnode deploy.js を実行するだけです。\n事前準備として、publicディレクトリをGitHub Pagesのリポジトリを紐づけておく必要があります。\n本スクリプトの内容です。\n行っていることはシンプルで、以下のことを行っているだけです。\nHugoサイトをビルド 最新情報に更新されたpublicディレクトリへ移動し、git add、commit、pushを順に実行\n(コミットメッセージは年月日) ブログがGitHub Pagesでホストされていると、そもそもスクリプトが不要な話 ブログがGitHub Pagesでホストされている場合、そもそも、こういったスクリプトを作成しなくてもGitHub Actionsを使用したら同様のことを行えそうでした。\nどういった設定を行えばよいのかは以下の公式サイトにすべて記載されているので、そちらを参照ください。\nHost on GitHub\rDeploy Hugo as a GitHub Pages project or personal/organizational site and automate the whole process with Github Action Workflow\rgohugo.io\r",
+    "ref": "/blog/ja/posts/hugo/automatically-build-and-deploy-hugo-site-script/"
+  },{
     "title": "DjangoのFormで多重submitを防ぐ",
     "date": "",
     "description": "この記事では、DjangoのFormで多重submitを防ぐ方法について説明します。Djangoの...と書いてはいますが、Djangoに限らず、HTMLのformを使用するのであればどこでも使用可能だと思います。",

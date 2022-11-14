@@ -15,14 +15,21 @@
                 href="https://koki-nakamura22.github.io/blog/ja/categories/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/django/</loc>
-    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/hugo/</loc>
+    <lastmod>2022-06-30T16:10:46+09:00</lastmod>
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
-    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/prevent-multiple-submit-on-django/</loc>
-    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/hugo/</loc>
+    <lastmod>2022-06-30T16:10:46+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/categories/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/"
+                />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
     <lastmod>2022-11-11T17:08:13+09:00</lastmod>
@@ -62,6 +69,17 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/automatically-build-and-deploy-hugo-site-script/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/django/</loc>
+    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
+    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/prevent-multiple-submit-on-django/</loc>
+    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/disable-cache-on-django/</loc>
     <lastmod>2022-11-11T16:55:06+09:00</lastmod>
@@ -157,22 +175,6 @@
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/network/route-lan-cable-from-next-room/</loc>
     <lastmod>2022-06-23T16:16:58+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/hugo/</loc>
-    <lastmod>2022-06-30T16:10:46+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/hugo/</loc>
-    <lastmod>2022-06-30T16:10:46+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/categories/hugo/"
-                />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/generate-og-image-automatically/</loc>
     <lastmod>2022-06-30T16:10:46+09:00</lastmod>

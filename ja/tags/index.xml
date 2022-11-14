@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Fri, 11 Nov 2022 16:55:59 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Nov 2022 11:32:51 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/tags/hugo/</link>
+      <pubDate>Mon, 14 Nov 2022 11:32:51 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Django</title>
       <link>https://koki-nakamura22.github.io/blog/ja/tags/django/</link>
@@ -95,15 +104,6 @@
       <pubDate>Thu, 23 Jun 2022 15:12:24 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/ja/tags/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://koki-nakamura22.github.io/blog/ja/tags/hugo/</link>
-      <pubDate>Thu, 14 Apr 2022 13:40:41 +0900</pubDate>
-      
-      <guid>https://koki-nakamura22.github.io/blog/ja/tags/hugo/</guid>
       <description></description>
     </item>
     
