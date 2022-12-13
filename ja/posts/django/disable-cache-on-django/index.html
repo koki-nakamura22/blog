@@ -2,13 +2,13 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title>DjangoのViewでキャッシュを無効化する - Koki&#39;s personal blog</title>
-<meta name="description" content="この記事では、DjangoのViewでキャッシュを無効化する方法について説明します。 Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。 この記事の内容です。 対象読者 環境 前提条件 DjangoのViewでキャッシュを無効化する方法 対象読者 DjangoのViewでキャッシュを無効化したい方 環境">
+<title>Djangoの特定のViewでキャッシュを無効化する - Koki&#39;s personal blog</title>
+<meta name="description" content="この記事では、Djangoの特定のViewでキャッシュを無効化する方法について説明します。 Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。 この記事の内容です。 対象読者 環境 前提条件 Djangoの特定のViewでキャッシュを無効化する方法 対象読者 DjangoのViewでキャッシュを無効化">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta property="og:site_name" content="Koki&#39;s personal blog">
-<meta property="og:title" content="DjangoのViewでキャッシュを無効化する">
-<meta property="og:description" content="この記事では、DjangoのViewでキャッシュを無効化する方法について説明します。 Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。 この記事の内容です。 対象読者 環境 前提条件 DjangoのViewでキャッシュを無効化する方法 対象読者 DjangoのViewでキャッシュを無効化したい方 環境">
+<meta property="og:title" content="Djangoの特定のViewでキャッシュを無効化する">
+<meta property="og:description" content="この記事では、Djangoの特定のViewでキャッシュを無効化する方法について説明します。 Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。 この記事の内容です。 対象読者 環境 前提条件 Djangoの特定のViewでキャッシュを無効化する方法 対象読者 DjangoのViewでキャッシュを無効化">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/django/disable-cache-on-django/">
 
@@ -88,7 +88,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -100,19 +100,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;description=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;description=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -193,16 +193,18 @@
         <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/ja/posts/django/disable-cache-on-django/">DjangoのViewでキャッシュを無効化する</a></h1>
+    <h1><a href="/blog/ja/posts/django/disable-cache-on-django/">Djangoの特定のViewでキャッシュを無効化する</a></h1>
     
     
-      <p>この記事では、DjangoのViewでキャッシュを無効化する方法について説明します。</p>
+      <p>この記事では、Djangoの特定のViewでキャッシュを無効化する方法について説明します。</p>
     
   </div>
   <div class="meta">
     <span><i class="fas fa-calendar-day" aria-hidden="true"></i><time class="entry-date" datetime="2022-11-11 16:43:44 &#43;0900 JST">2022-11-11</time></span>
     
     
+    
+      <span><i class="fas fa-sync" aria-hidden="true"></i><time class="update" datetime="2022-12-13 11:08:46 &#43;0900 JST">2022-12-13</time></span>
     
     <p>Koki</p>
     <p>1 分で読めます</p>
@@ -217,7 +219,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -229,19 +231,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;title=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;description=Django%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fdisable-cache-on-django%2f&amp;description=Django%e3%81%ae%e7%89%b9%e5%ae%9a%e3%81%aeView%e3%81%a7%e3%82%ad%e3%83%a3%e3%83%83%e3%82%b7%e3%83%a5%e3%82%92%e7%84%a1%e5%8a%b9%e5%8c%96%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -257,7 +259,7 @@
   
 
   <div class="content">
-    <p>この記事では、DjangoのViewでキャッシュを無効化する方法について説明します。<br>
+    <p>この記事では、Djangoの特定のViewでキャッシュを無効化する方法について説明します。<br>
 Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。</p>
 <p>この記事の内容です。</p>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -266,7 +268,7 @@ Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。</p>
 <li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
 <li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
 <li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
-<li><font color="#1111cc"><a href="#django%E3%81%AEview%E3%81%A7%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">DjangoのViewでキャッシュを無効化する方法</a></font></li>
+<li><font color="#1111cc"><a href="#django%E3%81%AE%E7%89%B9%E5%AE%9A%E3%81%AEview%E3%81%A7%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">Djangoの特定のViewでキャッシュを無効化する方法</a></font></li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="対象読者">対象読者</h2>
@@ -281,7 +283,7 @@ Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。</p>
 <ul>
 <li>なし</li>
 </ul>
-<h2 id="djangoのviewでキャッシュを無効化する方法">DjangoのViewでキャッシュを無効化する方法</h2>
+<h2 id="djangoの特定のviewでキャッシュを無効化する方法">Djangoの特定のViewでキャッシュを無効化する方法</h2>
 <p>まず最初に、 以下のコードを追加し必要なものをインポートします。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00f">from</span> django.utils.decorators <span style="color:#00f">import</span> method_decorator
 </span></span><span style="display:flex;"><span><span style="color:#00f">from</span> django.views.decorators.cache <span style="color:#00f">import</span> never_cache
@@ -289,7 +291,7 @@ Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>@method_decorator(never_cache, name=<span style="color:#a31515">&#39;dispatch&#39;</span>)
 </span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">HogeView</span>(LoginRequiredMixin, FormView):
 </span></span><span style="display:flex;"><span>    ...
-</span></span></code></pre></div><p>これだけでViewのキャッシュを無効化できます。</p>
+</span></span></code></pre></div><p>これだけで、特定のViewのキャッシュを無効化できます。</p>
 
   </div>
   <footer>
@@ -338,6 +340,15 @@ Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。</p>
           
 
         <header>
+          <h2><a href="/blog/ja/posts/django/disable-all-page-cache-on-django/">Djangoの全ページのレスポンスに対しキャッシュを禁止する方法</a></h2>
+          <time class="published" datetime="2022-12-13 11:54:02 &#43;0900 JST">2022-12-13</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+
+        <header>
           <h2><a href="/blog/ja/posts/django/init-values-in-inline-in-admin/">TabularInline (インラインフォーム) の値に初期値を設定</a></h2>
           <time class="published" datetime="2022-12-13 10:35:15 &#43;0900 JST">2022-12-13</time>
         </header>
@@ -370,15 +381,6 @@ Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。</p>
         </header>
       </article>
       
-      <article class="mini-post">
-          
-
-        <header>
-          <h2><a href="/blog/ja/posts/django/disable-cache-on-django/">DjangoのViewでキャッシュを無効化する</a></h2>
-          <time class="published" datetime="2022-11-11 16:43:44 &#43;0900 JST">2022-11-11</time>
-        </header>
-      </article>
-      
       
         <footer>
           <a href="/ja/posts/" class="button">続きを見る</a>
@@ -404,13 +406,13 @@ Google Chrome, Microsoft Edge, Firefoxにて動作確認済みです。</p>
               <a href="/blog/ja/categories/python/">python<span class="count">5</span></a>
           
           <li>
+              <a href="/blog/ja/categories/django/">django<span class="count">4</span></a>
+          
+          <li>
               <a href="/blog/ja/categories/other/">other<span class="count">4</span></a>
           
           <li>
               <a href="/blog/ja/categories/windows/">windows<span class="count">4</span></a>
-          
-          <li>
-              <a href="/blog/ja/categories/django/">django<span class="count">3</span></a>
           
           <li>
               <a href="/blog/ja/categories/wsl/">wsl<span class="count">3</span></a>
