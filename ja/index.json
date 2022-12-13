@@ -1,4 +1,10 @@
 [{
+    "title": "TabularInline (インラインフォーム) の値に初期値を設定",
+    "date": "",
+    "description": "この記事では、TabularInlineを使用し実装するインラインフォームの値に初期値を設定する方法について説明します。",
+    "body": "この記事では、TabularInlineを使用し実装するインラインフォームの値に初期値を設定する方法について説明します。\nこの記事の内容です。\n対象読者 この記事で説明する内容 この記事で説明しない内容 環境 前提条件 インラインフォームに初期値を設定 対象読者 TabularInlineを使用し実装したインラインフォームの項目の値に初期値を設定したい方 この記事で説明する内容 TabularInlineを使用し実装するインラインフォームの項目の値に初期値を設定する方法 この記事で説明しない内容 TabularInlineの使い方\nTabularInlineの使い方については、 はじめての Django アプリ作成、その 7#リレーションを張ったオブジェクトの追加 あたりを参考に学習してください。 環境 Django (version 3.2.16) 前提条件 TabularInlineを使用しインラインフォーム実装済み インラインフォームに初期値を設定 以下の形でBaseInlineFormSetを継承したInlineFormSetクラスを作成し、\nそれをTabularInlineクラスを継承したInlineクラスのformsetプロパティに設定します。\nこれで、インラインフォームの各項目に好きな初期値を設定することができます。\n※各クラス名は、実際に使用しているものに読み替えてください。\nfrom django import forms from django.contrib import admin # 初期値設定のために、このクラスを作成。 class TestFormInlineFormSet(forms.models.BaseInlineFormSet): model = Test def __init__(self, *args, **kwargs): super(TestFormInlineFormSet, self).__init__(*args, **kwargs) if not self.instance.pk: # ここで設定する初期値は任意のもの。 self.initial = [ { \u0026#34;Modelの項目名\u0026#34;: \u0026#34;何かしらの初期値\u0026#34;, }, ] class TestInline(admin.TabularInline): model = Test formset = TestFormInlineFormSet # ここで、対象のインラインフォームに初期値設定のために作成したインラインフォームセットクラスを設定する。 # 以降、省略 @admin.register(Test) class TestForm(admin.ModelAdmin): # 省略 inlines = [TestInline] # 省略 ",
+    "ref": "/blog/ja/posts/django/init-values-in-inline-in-admin/"
+  },{
     "title": "doctocで目次を自動生成しつつ文字色を設定するスクリプト",
     "date": "",
     "description": "この記事では、doctocで目次を自動生成しつつ文字色を設定するスクリプトを紹介します。",

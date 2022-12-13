@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
-    <lastmod>2022-11-14T12:30:23+09:00</lastmod>
+    <lastmod>2022-11-14T13:03:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,10 +15,14 @@
                 href="https://koki-nakamura22.github.io/blog/ja/categories/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/posts/markdown/apply-link-color-to-table-of-contents-generated-by-doctoc/</loc>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/django/</loc>
+    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
+    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
-    <lastmod>2022-11-14T12:30:23+09:00</lastmod>
+    <lastmod>2022-11-14T13:03:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,23 +34,8 @@
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/markdown/</loc>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/markdown/</loc>
-    <lastmod>2022-03-20T14:52:56+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/categories/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/categories/markdown/"
-                />
-  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
-    <lastmod>2022-11-14T12:30:23+09:00</lastmod>
+    <lastmod>2022-11-14T13:03:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -58,8 +47,10 @@
                 href="https://koki-nakamura22.github.io/blog/ja/posts/"
                 />
   </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/init-values-in-inline-in-admin/</loc>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
-    <lastmod>2022-11-14T12:30:23+09:00</lastmod>
+    <lastmod>2022-11-14T13:03:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -69,6 +60,25 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/markdown/apply-link-color-to-table-of-contents-generated-by-doctoc/</loc>
+    <lastmod>2022-11-14T13:03:54+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/markdown/</loc>
+    <lastmod>2022-11-14T13:03:54+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/markdown/</loc>
+    <lastmod>2022-11-14T13:03:54+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/categories/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/categories/markdown/"
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/hugo/</loc>
@@ -89,12 +99,6 @@
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/hugo/automatically-build-and-deploy-hugo-site-script/</loc>
     <lastmod>2022-11-14T12:30:23+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/django/</loc>
-    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
-    <lastmod>2022-11-11T17:08:13+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/prevent-multiple-submit-on-django/</loc>
     <lastmod>2022-11-11T17:08:13+09:00</lastmod>
