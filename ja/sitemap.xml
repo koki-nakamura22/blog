@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
-    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
+    <lastmod>2022-12-17T20:38:25+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,15 +16,15 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/django/</loc>
-    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
+    <lastmod>2022-12-17T20:38:25+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
-    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
+    <lastmod>2022-12-17T20:38:25+09:00</lastmod>
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/forbid-direct-access-on-django/</loc>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/resolve-error-of-setting-db-data-to-choices-in-form-class/</loc>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
-    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
+    <lastmod>2022-12-17T20:38:25+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -37,7 +37,7 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
-    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
+    <lastmod>2022-12-17T20:38:25+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -50,7 +50,7 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
-    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
+    <lastmod>2022-12-17T20:38:25+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -61,6 +61,9 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/forbid-direct-access-on-django/</loc>
+    <lastmod>2022-12-17T20:38:25+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/disable-all-page-cache-on-django/</loc>
     <lastmod>2022-12-15T21:02:52+09:00</lastmod>

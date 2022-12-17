@@ -1,4 +1,10 @@
 [{
+    "title": "DjangoのForm項目のchoicesにDBから値を取得し設定する場合は、コンストラクタ内で設定しないとエラーが発生する話",
+    "date": "",
+    "description": "この記事では、Form項目のchoicesにDBから取得した値を設定する方法を説明します。",
+    "body": "この記事では、Form項目のchoicesにDBから取得した値を設定する方法を説明します。\nこの記事の内容です。\n対象読者 環境 前提条件 Form項目のchoisesにDBから取得した値を設定する方法 対象読者 Form項目のchoisesにDBから取得した値を設定したい方 環境 Django (version 4.1.2, 3.2.16) 前提条件 なし\nForm項目のchoisesにDBから取得した値を設定する方法 DjangoのFormでは、直接メンバーフィールドのchoicesにModel.objects.values_listなどでDBから取得した値を設定しようとすると、エラーが発生します。\nそれを回避するため、以下の様にコンストラクタ内で設定する必要があるというところに行きついたので、共有します。\nもし他に良い方法がある方が居たら、コソッと教えていただけると嬉しいです。\n以下の例は、HogeフォームでDBから取得した国リストをドロップダウンリスト形式で表示したい時の設定です。\n値も表記も両方、国名にしています。\n要求や仕様に応じて、自由にカスタマイズして使っていただければと思います。\nfrom django import forms class HogeForm(BaseModelForm): def __init__(self, data=None, files=None, auto_id=\u0026#39;id_%s\u0026#39;, prefix=None, initial=None, error_class=ErrorList, label_suffix=None, empty_permitted=False, instance=None, use_required_attribute=None, renderer=None, readonly=False): self.base_fields[\u0026#39;countries\u0026#39;] = forms.fields.ChoiceField( choices=Country.objects.values_list(\u0026#34;name\u0026#34;, \u0026#34;name\u0026#34;), required=True, widget=forms.widgets.Select(), label=\u0026#39;国\u0026#39; ) super().__init__(data, files, auto_id, prefix, initial, error_class, label_suffix, empty_permitted, instance, use_required_attribute, renderer, readonly) class Meta: model = Hoge ",
+    "ref": "/blog/ja/posts/django/resolve-error-of-setting-db-data-to-choices-in-form-class/"
+  },{
     "title": "Djangoの各ViewでURLを使用した直接アクセスを禁止する方法 (ミドルウェア未使用)",
     "date": "",
     "description": "",
