@@ -21,8 +21,7 @@
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
     <lastmod>2022-12-15T21:02:52+09:00</lastmod>
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/disable-all-page-cache-on-django/</loc>
-    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/forbid-direct-access-on-django/</loc>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
     <lastmod>2022-12-15T21:02:52+09:00</lastmod>
@@ -62,6 +61,9 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/disable-all-page-cache-on-django/</loc>
+    <lastmod>2022-12-15T21:02:52+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/init-values-in-inline-in-admin/</loc>
     <lastmod>2022-12-13T11:05:04+09:00</lastmod>
