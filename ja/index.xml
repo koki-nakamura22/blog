@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
-    <lastBuildDate>Mon, 19 Dec 2022 20:54:54 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Dec 2022 21:20:59 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/ja/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Formのデータを元に短いコードで素敵にModelインスタンスを作成する</title>
+      <link>https://koki-nakamura22.github.io/blog/ja/posts/django/create-model-instance-by-form-easily/</link>
+      <pubDate>Mon, 19 Dec 2022 21:20:59 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/ja/posts/django/create-model-instance-by-form-easily/</guid>
+      <description>この記事では、Formの入力されたデータを元に短いコードでModelインスタンスを作成するコードについて説明します。 Formで入力されたデータをサクッとDBに登録したい時に使えます。 この記事の内容です。 対象読者 環境 前提条件 Formの入力されたデータを元に短いコードでModelイン</description>
+    </item>
+    
     <item>
       <title>DjangoのAdmin内リストページで入力テキストでデータを絞るフィルターを実装する</title>
       <link>https://koki-nakamura22.github.io/blog/ja/posts/django/text-input-filter-on-admin-on-django/</link>

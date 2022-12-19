@@ -2,21 +2,21 @@
 <html lang="ja">
   <head>
   <meta charset="utf-8">
-<title>TabularInline (インラインフォーム) の値に初期値を設定 - Koki&#39;s personal blog</title>
-<meta name="description" content="この記事では、TabularInlineを使用し実装するインラインフォームの値に初期値を設定する方法について説明します。 この記事の内容です。 対象読者 この記事で説明する内容 この記事で説明しない内容 環境 前提条件 インラインフォームに初期値を設定 対象読者 TabularInlineを使用し">
+<title>Formのデータを元に短いコードで素敵にModelインスタンスを作成する - Koki&#39;s personal blog</title>
+<meta name="description" content="この記事では、Formの入力されたデータを元に短いコードでModelインスタンスを作成するコードについて説明します。 Formで入力されたデータをサクッとDBに登録したい時に使えます。 この記事の内容です。 対象読者 環境 前提条件 Formの入力されたデータを元に短いコードでModelイン">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta property="og:site_name" content="Koki&#39;s personal blog">
-<meta property="og:title" content="TabularInline (インラインフォーム) の値に初期値を設定">
-<meta property="og:description" content="この記事では、TabularInlineを使用し実装するインラインフォームの値に初期値を設定する方法について説明します。 この記事の内容です。 対象読者 この記事で説明する内容 この記事で説明しない内容 環境 前提条件 インラインフォームに初期値を設定 対象読者 TabularInlineを使用し">
+<meta property="og:title" content="Formのデータを元に短いコードで素敵にModelインスタンスを作成する">
+<meta property="og:description" content="この記事では、Formの入力されたデータを元に短いコードでModelインスタンスを作成するコードについて説明します。 Formで入力されたデータをサクッとDBに登録したい時に使えます。 この記事の内容です。 対象読者 環境 前提条件 Formの入力されたデータを元に短いコードでModelイン">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/django/init-values-in-inline-in-admin/">
+<meta property="og:url" content="https://koki-nakamura22.github.io/blog/ja/posts/django/create-model-instance-by-form-easily/">
 
 
 
   <meta name="twitter:card" content="summary_large_image">
   
-  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/og/init-values-in-inline-in-admin.ja.png">
+  <meta property="og:image" content="https://koki-nakamura22.github.io/blog/img/og/create-model-instance-by-form-easily.ja.png">
 
 <meta property="og:image:alt" content="The Open Graph logo">
 
@@ -88,37 +88,37 @@
 
   
     
-    <a href="//twitter.com/share?text=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f&amp;title=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f&amp;title=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f&amp;title=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f&amp;title=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f&amp;description=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f&amp;description=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -193,14 +193,14 @@
         <article class="post">
   <header>
   <div class="title">
-    <h1><a href="/blog/ja/posts/django/init-values-in-inline-in-admin/">TabularInline (インラインフォーム) の値に初期値を設定</a></h1>
+    <h1><a href="/blog/ja/posts/django/create-model-instance-by-form-easily/">Formのデータを元に短いコードで素敵にModelインスタンスを作成する</a></h1>
     
     
-      <p>この記事では、TabularInlineを使用し実装するインラインフォームの値に初期値を設定する方法について説明します。</p>
+      <p>この記事では、Formの入力されたデータを元に短いコードでModelインスタンスを作成するコードについて説明します。Formで入力されたデータをサクッとDBに登録したい時に使えます。</p>
     
   </div>
   <div class="meta">
-    <span><i class="fas fa-calendar-day" aria-hidden="true"></i><time class="entry-date" datetime="2022-12-13 10:35:15 &#43;0900 JST">2022-12-13</time></span>
+    <span><i class="fas fa-calendar-day" aria-hidden="true"></i><time class="entry-date" datetime="2022-12-19 21:20:59 &#43;0900 JST">2022-12-19</time></span>
     
     
     
@@ -217,37 +217,37 @@
 
   
     
-    <a href="//twitter.com/share?text=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b&amp;url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
 
   
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
         <p>Facebook</p>
         </a>
   
 
   
-    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f&amp;title=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f&amp;title=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f&amp;title=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f&amp;title=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f&amp;description=TabularInline%20%28%e3%82%a4%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a9%e3%83%bc%e3%83%a0%29%20%e3%81%ae%e5%80%a4%e3%81%ab%e5%88%9d%e6%9c%9f%e5%80%a4%e3%82%92%e8%a8%ad%e5%ae%9a" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f&amp;description=Form%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e3%82%92%e5%85%83%e3%81%ab%e7%9f%ad%e3%81%84%e3%82%b3%e3%83%bc%e3%83%89%e3%81%a7%e7%b4%a0%e6%95%b5%e3%81%abModel%e3%82%a4%e3%83%b3%e3%82%b9%e3%82%bf%e3%83%b3%e3%82%b9%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
 
   
-        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2finit-values-in-inline-in-admin%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+        <a href="mailto:?subject=%e3%81%93%e3%81%ae%e6%8a%95%e7%a8%bf%e3%82%92%e3%83%81%e3%82%a7%e3%83%83%e3%82%af%e3%81%99%e3%82%8b Koki&amp;body=https%3a%2f%2fkoki-nakamura22.github.io%2fblog%2fja%2fposts%2fdjango%2fcreate-model-instance-by-form-easily%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
           <p>Email</p>
         </a>
   
@@ -257,79 +257,67 @@
   
 
   <div class="content">
-    <p>この記事では、TabularInlineを使用し実装するインラインフォームの値に初期値を設定する方法について説明します。</p>
+    <p>この記事では、Formの入力されたデータを元に短いコードでModelインスタンスを作成するコードについて説明します。<br>
+Formで入力されたデータをサクッとDBに登録したい時に使えます。</p>
 <p>この記事の内容です。</p>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <ul>
 <li><font color="#1111cc"><a href="#%E5%AF%BE%E8%B1%A1%E8%AA%AD%E8%80%85">対象読者</a></font></li>
-<li><font color="#1111cc"><a href="#%E3%81%93%E3%81%AE%E8%A8%98%E4%BA%8B%E3%81%A7%E8%AA%AC%E6%98%8E%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9">この記事で説明する内容</a></font></li>
-<li><font color="#1111cc"><a href="#%E3%81%93%E3%81%AE%E8%A8%98%E4%BA%8B%E3%81%A7%E8%AA%AC%E6%98%8E%E3%81%97%E3%81%AA%E3%81%84%E5%86%85%E5%AE%B9">この記事で説明しない内容</a></font></li>
 <li><font color="#1111cc"><a href="#%E7%92%B0%E5%A2%83">環境</a></font></li>
 <li><font color="#1111cc"><a href="#%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">前提条件</a></font></li>
-<li><font color="#1111cc"><a href="#%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%81%AB%E5%88%9D%E6%9C%9F%E5%80%A4%E3%82%92%E8%A8%AD%E5%AE%9A">インラインフォームに初期値を設定</a></font></li>
+<li><font color="#1111cc"><a href="#form%E3%81%AE%E5%85%A5%E5%8A%9B%E3%81%95%E3%82%8C%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%85%83%E3%81%AB%E7%9F%AD%E3%81%84%E3%82%B3%E3%83%BC%E3%83%89%E3%81%A7model%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%82%92%E4%BD%9C%E6%88%90">Formの入力されたデータを元に短いコードでModelインスタンスを作成</a></font>
+<ul>
+<li><font color="#1111cc"><a href="#1-form%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%ABdict%E5%A4%89%E6%8F%9B%E7%94%A8%E5%87%A6%E7%90%86%E5%AE%9F%E8%A3%85">1. Formクラスにdict変換用処理実装</a></font></li>
+<li><font color="#1111cc"><a href="#2-form%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%82%92%E5%85%83%E3%81%ABmodel%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E4%BD%9C%E6%88%90">2. Formインスタンスを元にModelインスタンス作成</a></font></li>
+</ul>
+</li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h2 id="対象読者">対象読者</h2>
 <ul>
-<li>TabularInlineを使用し実装したインラインフォームの項目の値に初期値を設定したい方</li>
-</ul>
-<h2 id="この記事で説明する内容">この記事で説明する内容</h2>
-<ul>
-<li>TabularInlineを使用し実装するインラインフォームの項目の値に初期値を設定する方法</li>
-</ul>
-<h2 id="この記事で説明しない内容">この記事で説明しない内容</h2>
-<ul>
-<li>TabularInlineの使い方<br>
-TabularInlineの使い方については、
-<font color="#1111cc"><a href="https://docs.djangoproject.com/ja/4.1/intro/tutorial07/#adding-related-objects" target="_blank">はじめての Django アプリ作成、その 7#リレーションを張ったオブジェクトの追加</a></font>
-あたりを参考に学習してください。</li>
+<li>Formの入力されたデータを元に短いコードでModelインスタンスを作成したい方</li>
 </ul>
 <h2 id="環境">環境</h2>
 <ul>
-<li>Django (version 3.2.16)</li>
+<li>Django (version 4.1.2, 3.2.16)</li>
 </ul>
 <h2 id="前提条件">前提条件</h2>
-<ul>
-<li>TabularInlineを使用しインラインフォーム実装済み</li>
-</ul>
-<h2 id="インラインフォームに初期値を設定">インラインフォームに初期値を設定</h2>
-<p>以下の形でBaseInlineFormSetを継承したInlineFormSetクラスを作成し、<br>
-それをTabularInlineクラスを継承したInlineクラスのformsetプロパティに設定します。<br>
-これで、インラインフォームの各項目に好きな初期値を設定することができます。<br>
-※各クラス名は、実際に使用しているものに読み替えてください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00f">from</span> django <span style="color:#00f">import</span> forms
-</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> django.contrib <span style="color:#00f">import</span> admin
+<p>なし</p>
+<h2 id="formの入力されたデータを元に短いコードでmodelインスタンスを作成">Formの入力されたデータを元に短いコードでModelインスタンスを作成</h2>
+<p>簡単に説明すると、以下のステップで処理を行う。</p>
+<ol>
+<li>POSTデータを元にFormインスタンス作成</li>
+<li>Formインスタンスをdictに変換、展開しModelのコンストラクタへ渡しModelのインスタンス作成</li>
+</ol>
+<h3 id="1-formクラスにdict変換用処理実装">1. Formクラスにdict変換用処理実装</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python:forms.py" data-lang="python:forms.py"><span style="display:flex;"><span><span style="color:#00f">from</span> django <span style="color:#00f">import</span> forms
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000"># 初期値設定のために、このクラスを作成。</span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">TestFormInlineFormSet</span>(forms.models.BaseInlineFormSet):
-</span></span><span style="display:flex;"><span>    model = Test
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">def</span> __init__(self, *args, **kwargs):
-</span></span><span style="display:flex;"><span>        super(TestFormInlineFormSet, self).__init__(*args, **kwargs)
-</span></span><span style="display:flex;"><span>        <span style="color:#00f">if</span> <span style="color:#00f">not</span> self.instance.pk:
-</span></span><span style="display:flex;"><span>            <span style="color:#008000"># ここで設定する初期値は任意のもの。</span>
-</span></span><span style="display:flex;"><span>            self.initial = [
-</span></span><span style="display:flex;"><span>                {
-</span></span><span style="display:flex;"><span>                    <span style="color:#a31515">&#34;Modelの項目名&#34;</span>: <span style="color:#a31515">&#34;何かしらの初期値&#34;</span>,
-</span></span><span style="display:flex;"><span>                },
-</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span><span style="color:#008000"># 共通処理として使用するためにベースクラスを作成し、</span>
+</span></span><span style="display:flex;"><span><span style="color:#008000"># それを継承させた方が楽。</span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">BaseModelForm</span>(forms.ModelForm):
+</span></span><span style="display:flex;"><span>    <span style="color:#008000"># これを追加することでdict()でdictに変換できる。</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">def</span> __iter__(self):
+</span></span><span style="display:flex;"><span>        <span style="color:#00f">for</span> k <span style="color:#00f">in</span> self.fields:
+</span></span><span style="display:flex;"><span>            <span style="color:#00f">yield</span> (k, self.data[k])
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">TestInline</span>(admin.TabularInline):
-</span></span><span style="display:flex;"><span>    model = Test
-</span></span><span style="display:flex;"><span>    formset = TestFormInlineFormSet <span style="color:#008000"># ここで、対象のインラインフォームに初期値設定のために作成したインラインフォームセットクラスを設定する。</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008000"># 以降、省略</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@admin.register(Test)
-</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">TestForm</span>(admin.ModelAdmin):
+</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">HogeForm</span>(forms.ModelForm):
 </span></span><span style="display:flex;"><span>    <span style="color:#008000"># 省略</span>
+</span></span></code></pre></div><h3 id="2-formインスタンスを元にmodelインスタンス作成">2. Formインスタンスを元にModelインスタンス作成</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00f">from</span> django.views <span style="color:#00f">import</span> generic
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    inlines = [TestInline]
+</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> .forms <span style="color:#00f">import</span> HogeForm
+</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> .models <span style="color:#00f">import</span> Hoge
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008000"># 省略</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">TestView</span>(generic.TemplateView):
+</span></span><span style="display:flex;"><span>    <span style="color:#00f">def</span> post(self, request, *args, **kwargs):
+</span></span><span style="display:flex;"><span>        hoge_form = HogeForm(data=request.POST)
+</span></span><span style="display:flex;"><span>        <span style="color:#008000"># 任意の何かしらの処理</span>
+</span></span><span style="display:flex;"><span>        hoge = Hoge(**dict(hoge_form))
+</span></span><span style="display:flex;"><span>        <span style="color:#008000"># 以降はhoge.save()など、ご自由に</span>
 </span></span></code></pre></div>
   </div>
   <footer>
@@ -360,10 +348,8 @@ TabularInlineの使い方については、
 
 <div class="pagination">
   
-    <a href="/blog/ja/posts/django/prevent-multiple-submit-on-django/" class="button big previous"><i class="fas fa-angle-left"></i> DjangoのFormで多重submitを防ぐ</a>
+    <a href="/blog/ja/posts/django/text-input-filter-on-admin-on-django/" class="button big previous"><i class="fas fa-angle-left"></i> DjangoのAdmin内リストページで入力テキストでデータを絞るフィルターを実装する</a>
   
-  
-    <a href="/blog/ja/posts/django/disable-all-page-cache-on-django/" class="button big next">Djangoの全ページのレスポンスに対しキャッシュを禁止する方法 <i class="fas fa-angle-right"></i></a>
   
 </div>
 
