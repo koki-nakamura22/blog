@@ -1,4 +1,10 @@
 [{
+    "title": "docker-composeのbuild時、Dockerfile内のpip installでNewConnectionError Failed to establish a new connectionが発生した時の対処法",
+    "date": "",
+    "description": "この記事では、docker-composeのbuild時、Dockerfile内のpip installでNewConnectionError Failed to establish a new connectionが発生した時の対処法方法を説明します。",
+    "body": "この記事では、docker-composeのbuild時、Dockerfile内のpip installでNewConnectionError Failed to establish a new connectionが発生した時の対処法方法を説明します。\nこの記事の内容です。\n対象読者 環境 前提条件 NewConnectionErrorの対処法 参考にしたページ 対象読者 Dockerコンテナ内でpip installを実行したい方 環境 Docker docker-compose 前提条件 docker-compose使用\nNewConnectionErrorの対処法 docker-compose build時に\nWARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by \u0026#39;NewConnectionError(\u0026#39;\u0026lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x7f8275464590\u0026gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution\u0026#39;)\u0026#39;: /simple/django/ が発生した場合は、docker-compose.yml内のpip installを行っているコンテナ部分、buildセクションを以下の通り書き換える。\n書き換え前\n# 省略 services: web: container_name: python-app-container build: . # 省略 書き換え後\n# 省略 services: web: container_name: python-app-container build: context: . network: host # 省略 本記事のエラーは、コンテナがネットワークに接続できないのが原因で発生している。\nなので、コンテナのネットワークをホストのものを使用するように指定することでネットワークに接続できるようにしている。\n参考にしたページ How to Specify $docker build --network=\"host\" mode in docker-compose at the time of build\rWhile building docker image like docker build -t name:tag --network=\"host\" so it will Set the networking mode for the RUN instructions during build (default \"default\")\rSo I am trying to build Docker stackoverflow.com\n",
+    "ref": "/blog/ja/posts/python/solve-pip-network-error-on-docker-compose/"
+  },{
     "title": "Formのデータを元に短いコードで素敵にModelインスタンスを作成する",
     "date": "",
     "description": "この記事では、Formの入力されたデータを元に短いコードでModelインスタンスを作成するコードについて説明します。Formで入力されたデータをサクッとDBに登録したい時に使えます。",
