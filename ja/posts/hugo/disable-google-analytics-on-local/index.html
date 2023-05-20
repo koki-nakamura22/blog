@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -291,18 +291,18 @@
 <h3 id="1-google-analyticsのテンプレートを読み込んでいる個所を把握する">1. Google Analyticsのテンプレートを読み込んでいる個所を把握する</h3>
 <p>まずは、Google Analyticsのテンプレートを読み込んでいる個所を探します。<br>
 自分の場合は layouts/partials/scripts.html が対象でしたが、お使いのテーマによって異なると思いますので、以下のようなコマンドを実行し、それぞれ探したほうがいいと思います。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>grep <span style="color:#a31515">&#39;{{- template &#34;_internal/google_analytics_async.html&#34; . -}}&#39;</span> -rl .
-</span></span></code></pre></div><h3 id="2-localhost上ではgoogle-analyticsを読み込まないように変更する">2. localhost上ではGoogle Analyticsを読み込まないように変更する</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">grep <span style="color:#a31515">&#39;{{- template &#34;_internal/google_analytics_async.html&#34; . -}}&#39;</span> -rl .
+</code></pre></div><h3 id="2-localhost上ではgoogle-analyticsを読み込まないように変更する">2. localhost上ではGoogle Analyticsを読み込まないように変更する</h3>
 <p>次に、以下のように該当箇所を変更します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:変更前.html" data-lang="html:変更前.html"><span style="display:flex;"><span>{{- template &#34;_internal/google_analytics_async.html&#34; . -}}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:変更後.html" data-lang="html:変更後.html"><span style="display:flex;"><span>{{ if .Site.IsServer }}
-</span></span><span style="display:flex;"><span>  &lt;script type=<span style="color:#a31515">&#34;text/javascript&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    console.info(<span style="color:#a31515">&#34;Disable Google Analytics on Localhost&#34;</span>);
-</span></span><span style="display:flex;"><span>  &lt;/script&gt;
-</span></span><span style="display:flex;"><span>{{ else}}
-</span></span><span style="display:flex;"><span>  {{- template &#34;_internal/google_analytics_async.html&#34; . -}}
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div><p>今回は、ローカルでHugoサーバを起動している時にはコンソールにメッセージを表示するようにしました。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:変更前.html" data-lang="html:変更前.html">{{- template &#34;_internal/google_analytics_async.html&#34; . -}}
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:変更後.html" data-lang="html:変更後.html">{{ if .Site.IsServer }}
+  &lt;script type=<span style="color:#a31515">&#34;text/javascript&#34;</span>&gt;
+    console.info(<span style="color:#a31515">&#34;Disable Google Analytics on Localhost&#34;</span>);
+  &lt;/script&gt;
+{{ else}}
+  {{- template &#34;_internal/google_analytics_async.html&#34; . -}}
+{{ end }}
+</code></pre></div><p>今回は、ローカルでHugoサーバを起動している時にはコンソールにメッセージを表示するようにしました。<br>
 行っていることは簡単で、.Site.IsServer変数がサーバがローカルで起動しているかどうかのフラグを管理しているため、それを利用して条件分岐をしているだけです。</p>
 <h2 id="参考にしたページ">参考にしたページ</h2>
 <p><font color="#1111cc"><a href="https://discourse.gohugo.io/t/how-to-exclude-google-analytics-when-running-under-hugo-local-server/6092/32" target="_blank">How to Exclude Google Analytics When Running Under Hugo Local Server</a></font></p>
@@ -399,7 +399,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -545,14 +545,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

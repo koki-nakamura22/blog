@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -282,26 +282,26 @@
 <p>docker-compose使用</p>
 <h2 id="newconnectionerrorの対処法">NewConnectionErrorの対処法</h2>
 <p>docker-compose build時に</p>
-<pre tabindex="0"><code>WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by &#39;NewConnectionError(&#39;&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x7f8275464590&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;)&#39;: /simple/django/
+<pre tabindex="0"><code>WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;pip._vendor.urllib3.connection.HTTPSConnection object at 0x7f8275464590&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution')': /simple/django/
 </code></pre><p>が発生した場合は、docker-compose.yml内のpip installを行っているコンテナ部分、buildセクションを以下の通り書き換える。<br>
 <br>
 書き換え前</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#008000"># 省略</span>
-</span></span><span style="display:flex;"><span>services:
-</span></span><span style="display:flex;"><span>  web:
-</span></span><span style="display:flex;"><span>    container_name: python-app-container
-</span></span><span style="display:flex;"><span>    build: .
-</span></span><span style="display:flex;"><span><span style="color:#008000"># 省略</span>
-</span></span></code></pre></div><p>書き換え後</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#008000"># 省略</span>
-</span></span><span style="display:flex;"><span>services:
-</span></span><span style="display:flex;"><span>  web:
-</span></span><span style="display:flex;"><span>    container_name: python-app-container
-</span></span><span style="display:flex;"><span>    build:
-</span></span><span style="display:flex;"><span>      context: .
-</span></span><span style="display:flex;"><span>      network: host
-</span></span><span style="display:flex;"><span><span style="color:#008000"># 省略</span>
-</span></span></code></pre></div><p>本記事のエラーは、コンテナがネットワークに接続できないのが原因で発生している。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#008000"># 省略</span>
+services:
+  web:
+    container_name: python-app-container
+    build: .
+<span style="color:#008000"># 省略</span>
+</code></pre></div><p>書き換え後</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#008000"># 省略</span>
+services:
+  web:
+    container_name: python-app-container
+    build:
+      context: .
+      network: host
+<span style="color:#008000"># 省略</span>
+</code></pre></div><p>本記事のエラーは、コンテナがネットワークに接続できないのが原因で発生している。<br>
 なので、コンテナのネットワークをホストのものを使用するように指定することでネットワークに接続できるようにしている。</p>
 <h2 id="参考にしたページ">参考にしたページ</h2>
 <a href="https://stackoverflow.com/questions/47074457/how-to-specify-docker-build-network-host-mode-in-docker-compose-at-the-time" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
@@ -417,7 +417,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -563,14 +563,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

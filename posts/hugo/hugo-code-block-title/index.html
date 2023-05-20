@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/" class="nav">
+      <a href="/blog/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -125,7 +125,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -286,43 +286,43 @@
 <h3 id="add-javascript-code">Add JavaScript code</h3>
 <p>Add the following code to static/js/add-on.js.<br>
 I use IIFE (Immediately Invoked Function Expression) because I want to narrow the scope of a variable.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript:add-on.js" data-lang="javascript:add-on.js"><span style="display:flex;"><span>(<span style="color:#00f">function</span> addTitleToCodeBlock() {
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">let</span> list = document.body.getElementsByClassName(<span style="color:#a31515">&#34;highlight&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">for</span> (i = 0; i &lt;= list.length - 1; i++) {
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> code = list[i].firstElementChild.firstElementChild;
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">let</span> codeName = code ? code.className.split(<span style="color:#a31515">&#34;:&#34;</span>)[1] : <span style="color:#00f">null</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">if</span> (codeName) {
-</span></span><span style="display:flex;"><span>      <span style="color:#00f">let</span> div = document.createElement(<span style="color:#a31515">&#34;div&#34;</span>);
-</span></span><span style="display:flex;"><span>      div.textContent = codeName;
-</span></span><span style="display:flex;"><span>      div.classList.add(<span style="color:#a31515">&#34;code-name&#34;</span>);
-</span></span><span style="display:flex;"><span>      code.parentNode.insertBefore(div, code);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}());
-</span></span></code></pre></div><h3 id="add-css-code">Add CSS code</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:add-on.js" data-lang="javascript:add-on.js">(<span style="color:#00f">function</span> addTitleToCodeBlock() {
+  <span style="color:#00f">let</span> list = document.body.getElementsByClassName(<span style="color:#a31515">&#34;highlight&#34;</span>);
+
+  <span style="color:#00f">for</span> (i = 0; i &lt;= list.length - 1; i++) {
+    <span style="color:#00f">let</span> code = list[i].firstElementChild.firstElementChild;
+    <span style="color:#00f">let</span> codeName = code ? code.className.split(<span style="color:#a31515">&#34;:&#34;</span>)[1] : <span style="color:#00f">null</span>;
+
+    <span style="color:#00f">if</span> (codeName) {
+      <span style="color:#00f">let</span> div = document.createElement(<span style="color:#a31515">&#34;div&#34;</span>);
+      div.textContent = codeName;
+      div.classList.add(<span style="color:#a31515">&#34;code-name&#34;</span>);
+      code.parentNode.insertBefore(div, code);
+    }
+  }
+}());
+</code></pre></div><h3 id="add-css-code">Add CSS code</h3>
 <p>Add the following code to static/css/add-on.css.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css:add-on.css" data-lang="css:add-on.css"><span style="display:flex;"><span>pre.<span style="color:#2b91af">chroma</span> code {  
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin-top</span>: -28<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-top</span>: 40<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-bottom</span>: 12<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#2b91af">code-name</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">display</span>: <span style="color:#00f">inline-block</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">position</span>: <span style="color:#00f">relative</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding</span>: 4<span style="color:#2b91af">px</span> 8<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">background-color</span>: #E7E9EB;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">color</span>: #485A60;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">font-size</span>: 13<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">font-weight</span>: 400;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="how-to-set-a-title">How to set a title</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css">pre.<span style="color:#2b91af">chroma</span> code {  
+  <span style="color:#00f">margin-top</span>: -28<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">padding-top</span>: 40<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">padding-bottom</span>: 12<span style="color:#2b91af">px</span>;
+}
+
+.<span style="color:#2b91af">code-name</span> {
+  <span style="color:#00f">display</span>: <span style="color:#00f">inline-block</span>;
+  <span style="color:#00f">position</span>: <span style="color:#00f">relative</span>;
+  <span style="color:#00f">padding</span>: 4<span style="color:#2b91af">px</span> 8<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">background-color</span>: #E7E9EB;
+  <span style="color:#00f">color</span>: #485A60;
+  <span style="color:#00f">font-size</span>: 13<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">font-weight</span>: 400;
+}
+</code></pre></div><h3 id="how-to-set-a-title">How to set a title</h3>
 <p>When you use code block, add &ldquo;:[title]&rdquo; to after language name.<br>
 The following thing is example.</p>
 <pre tabindex="0"><code>```javascript:test.js
-console.log(&#34;Have a nice blog life!!!&#34;);
+console.log(&quot;Have a nice blog life!!!&quot;);
 ```
 </code></pre><br>
 That's it! It's so easy!  
@@ -419,7 +419,7 @@ Guys, have a nice blog life!
       
       
         <footer>
-          <a href="/posts/" class="button">See More</a>
+          <a href="/blog/posts/" class="button">See More</a>
         </footer>
       
     </section>
@@ -532,14 +532,14 @@ Guys, have a nice blog life!
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

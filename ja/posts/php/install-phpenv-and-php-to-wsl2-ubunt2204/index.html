@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -299,22 +299,22 @@
 以下のコマンドを上から順に実行する。</p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get update
-</span></span><span style="display:flex;"><span>sudo apt-get install -y libcurl4-openssl-dev libjpeg-dev libonig-dev libtidy-dev libxslt-dev libzip-dev autoconf
-</span></span><span style="display:flex;"><span>curl -s https://raw.githubusercontent.com/php-build/php-build/master/build-openssl-1.0.sh | sh
-</span></span></code></pre></div><h3 id="phpenvを使用しphpのインストール">phpenvを使用しPHPのインストール</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get update
+sudo apt-get install -y libcurl4-openssl-dev libjpeg-dev libonig-dev libtidy-dev libxslt-dev libzip-dev autoconf
+curl -s https://raw.githubusercontent.com/php-build/php-build/master/build-openssl-1.0.sh | sh
+</code></pre></div><h3 id="phpenvを使用しphpのインストール">phpenvを使用しPHPのインストール</h3>
 <p>以下のコマンドを実行しphpenvを使用しPHPをインストールする。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>PKG_CONFIG_PATH=<span style="color:#a31515">&#34;</span>$PKG_CONFIG_PATH<span style="color:#a31515">:/usr/local/opt/openssl@1.0/lib/pkgconfig&#34;</span> phpenv install [バージョン番号]
-</span></span></code></pre></div><p>e.g. バージョン8.0.25をインストールする場合。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>PKG_CONFIG_PATH=<span style="color:#a31515">&#34;</span>$PKG_CONFIG_PATH<span style="color:#a31515">:/usr/local/opt/openssl@1.0/lib/pkgconfig&#34;</span> phpenv install 8.0.25
-</span></span></code></pre></div><h3 id="phpが正常にインストールされたか確認">PHPが正常にインストールされたか確認</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>phpenv local [バージョン番号]
-</span></span></code></pre></div><p>や</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>phpenv global [バージョン番号]
-</span></span></code></pre></div><p>を実行し、使用するPHPのバージョンを指定する。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">PKG_CONFIG_PATH=<span style="color:#a31515">&#34;</span>$PKG_CONFIG_PATH<span style="color:#a31515">:/usr/local/opt/openssl@1.0/lib/pkgconfig&#34;</span> phpenv install [バージョン番号]
+</code></pre></div><p>e.g. バージョン8.0.25をインストールする場合。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">PKG_CONFIG_PATH=<span style="color:#a31515">&#34;</span>$PKG_CONFIG_PATH<span style="color:#a31515">:/usr/local/opt/openssl@1.0/lib/pkgconfig&#34;</span> phpenv install 8.0.25
+</code></pre></div><h3 id="phpが正常にインストールされたか確認">PHPが正常にインストールされたか確認</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">phpenv local [バージョン番号]
+</code></pre></div><p>や</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">phpenv global [バージョン番号]
+</code></pre></div><p>を実行し、使用するPHPのバージョンを指定する。<br>
 その後、</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>php -v
-</span></span></code></pre></div><p>を実行しターミナル上に上記で指定したPHPのバージョンが表示されることを確認する。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">php -v
+</code></pre></div><p>を実行しターミナル上に上記で指定したPHPのバージョンが表示されることを確認する。</p>
 <h2 id="参考にしたページ">参考にしたページ</h2>
 <a href="https://github.com/phpenv/phpenv" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
 <div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
@@ -465,7 +465,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -611,14 +611,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

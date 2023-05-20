@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -315,111 +315,111 @@
 <h3 id="3-go言語のインストールおよび初期化">3. Go言語のインストールおよび初期化</h3>
 <p>OGP画像の自動生成に使用するライブラリ、tcardgenを使用するのにGo言語をインストールする必要があるのでインストールします。<br>
 コマンドは以下の通りです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>brew install go
-</span></span></code></pre></div><p>インストールが終わったら、以下のコマンドを実行し初期化しておきます。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">brew install go
+</code></pre></div><p>インストールが終わったら、以下のコマンドを実行し初期化しておきます。<br>
 go mod initの引数には、適当なモジュール名を指定します。<br>
 今回は、他のプログラムから特にモジュールを呼び出さないので、私のブログ環境のリポジトリ名をそのまま指定しています。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>go mod init env-for-blog
-</span></span></code></pre></div><h3 id="4-tcardgenのインストールおよび設定">4. tcardgenのインストールおよび設定</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go mod init env-for-blog
+</code></pre></div><h3 id="4-tcardgenのインストールおよび設定">4. tcardgenのインストールおよび設定</h3>
 <p>以下のコマンドを実行し、tcardgenをインストールします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>go get github.com/Ladicle/tcardgen
-</span></span></code></pre></div><p>インストールが完了したら、プロジェクトのルートディレクトリに以下の設定ファイル、tcargen.ymlを作成します。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go get github.com/Ladicle/tcardgen
+</code></pre></div><p>インストールが完了したら、プロジェクトのルートディレクトリに以下の設定ファイル、tcargen.ymlを作成します。<br>
 以下はあくまでも一例なため、自身の好みに合わせていろいろといじってみてください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml:tcargen.yml" data-lang="yaml:tcargen.yml"><span style="display:flex;"><span>template: static/img/og/ogp-template.png
-</span></span><span style="display:flex;"><span>title:
-</span></span><span style="display:flex;"><span>  fontSize: 65
-</span></span><span style="display:flex;"><span>  fontStyle: Bold
-</span></span><span style="display:flex;"><span>info:
-</span></span><span style="display:flex;"><span>  start:
-</span></span><span style="display:flex;"><span>    pX: 126
-</span></span><span style="display:flex;"><span>    pY: 495
-</span></span><span style="display:flex;"><span>  fontSize: 30
-</span></span><span style="display:flex;"><span>  fontStyle: Regular
-</span></span><span style="display:flex;"><span>  separator: <span style="color:#a31515">&#34; - &#34;</span>
-</span></span><span style="display:flex;"><span>tags:
-</span></span><span style="display:flex;"><span>  start:
-</span></span><span style="display:flex;"><span>    pX: 1100
-</span></span><span style="display:flex;"><span>    pY: 495
-</span></span><span style="display:flex;"><span>  fontStyle: Regular
-</span></span><span style="display:flex;"><span>  fontSize: 0
-</span></span></code></pre></div><h3 id="5-ブログ記事のテンプレートを編集">5. ブログ記事のテンプレートを編集</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml:tcargen.yml" data-lang="yaml:tcargen.yml">template: static/img/og/ogp-template.png
+title:
+  fontSize: 65
+  fontStyle: Bold
+info:
+  start:
+    pX: 126
+    pY: 495
+  fontSize: 30
+  fontStyle: Regular
+  separator: <span style="color:#a31515">&#34; - &#34;</span>
+tags:
+  start:
+    pX: 1100
+    pY: 495
+  fontStyle: Regular
+  fontSize: 0
+</code></pre></div><h3 id="5-ブログ記事のテンプレートを編集">5. ブログ記事のテンプレートを編集</h3>
 <p>tcardgenを使用しOGP画像を生成するためには、記事へのタグ設定が必須となっています。<br>
 私の環境だとブログ記事のテンプレートにtagsが無かったため、ここで追加しておきます。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml:archetypes/default.md" data-lang="yaml:archetypes/default.md"><span style="display:flex;"><span>+++
-</span></span><span style="display:flex;"><span>author = &#34;Koki&#34;
-</span></span><span style="display:flex;"><span>categories = [&#34;&#34;]
-</span></span><span style="display:flex;"><span>tags = [&#34;&#34;] # ←これを追加
-</span></span><span style="display:flex;"><span>date = {{ .Date }}
-</span></span><span style="display:flex;"><span>linktitle = &#34;&#34;
-</span></span><span style="display:flex;"><span>title = &#34;&#34;
-</span></span><span style="display:flex;"><span>description = &#34;&#34;
-</span></span><span style="display:flex;"><span>type = &#34;post&#34;
-</span></span><span style="display:flex;"><span>draft = true
-</span></span><span style="display:flex;"><span>+++
-</span></span><span style="display:flex;"><span><span style="font-weight:bold"># 以下省略
-</span></span></span></code></pre></div><p>また、tagsの設定内容が空だとOGP画像生成時にエラーが発生し生成できないため、必ず設定するようにしましょう。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml:archetypes/default.md" data-lang="yaml:archetypes/default.md">+++
+author = &#34;Koki&#34;
+categories = [&#34;&#34;]
+tags = [&#34;&#34;] # ←これを追加
+date = {{ .Date }}
+linktitle = &#34;&#34;
+title = &#34;&#34;
+description = &#34;&#34;
+type = &#34;post&#34;
+draft = true
++++
+<span style="font-weight:bold"># 以下省略
+</span></code></pre></div><p>また、tagsの設定内容が空だとOGP画像生成時にエラーが発生し生成できないため、必ず設定するようにしましょう。</p>
 <h3 id="6-複数のogp画像を一気に作成するためにスクリプト化">6. 複数のOGP画像を一気に作成するためにスクリプト化</h3>
 <p>ここまできたら、tcardgenコマンドを実行しOGP画像を自動生成できるようになります。<br>
 コマンド例は</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>tcardgen <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--fontDir [フォントファイルが存在するディレクトリパス] <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--outDir [生成したOGP画像ファイルの出力先] <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--template [OGP画像生成に使用するテンプレート画像のパス] <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--config tcargen.yml <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>[生成対象記事ファイルのパス]
-</span></span></code></pre></div><p>で、本記事のOGP画像を生成する時のコマンドは以下になります。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>tcardgen <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--fontDir static/fonts/hackgen/HackGen <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--outDir static/img/og <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--template static/img/og/ogp-template.png <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>--config tcargen.yml <span style="color:#a31515">\
-</span></span></span><span style="display:flex;"><span><span style="color:#a31515"></span>content/post/hugo/generate-og-image-automatically.ja.md
-</span></span></code></pre></div><p>ただ、これだと複数記事に対応できないため、スクリプト化しておきます。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">tcardgen <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--fontDir [フォントファイルが存在するディレクトリパス] <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--outDir [生成したOGP画像ファイルの出力先] <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--template [OGP画像生成に使用するテンプレート画像のパス] <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--config tcargen.yml <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>[生成対象記事ファイルのパス]
+</code></pre></div><p>で、本記事のOGP画像を生成する時のコマンドは以下になります。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">tcardgen <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--fontDir static/fonts/hackgen/HackGen <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--outDir static/img/og <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--template static/img/og/ogp-template.png <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>--config tcargen.yml <span style="color:#a31515">\
+</span><span style="color:#a31515"></span>content/post/hugo/generate-og-image-automatically.ja.md
+</code></pre></div><p>ただ、これだと複数記事に対応できないため、スクリプト化しておきます。<br>
 私が実際に使用しているスクリプトは以下の通りです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript:gen-ogp-image.js" data-lang="javascript:gen-ogp-image.js"><span style="display:flex;"><span><span style="color:#00f">const</span> fs = require(<span style="color:#a31515">&#34;fs&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> path = require(<span style="color:#a31515">&#34;path&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> { execSync } = require(<span style="color:#a31515">&#34;child_process&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> fontDir = <span style="color:#a31515">&#34;static/fonts/hackgen/HackGen&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> outputDir = <span style="color:#a31515">&#34;static/img/og&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> configFilePath = <span style="color:#a31515">&#34;tcargen.yml&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">for</span> (<span style="color:#00f">let</span> i = 2; i &lt; process.argv.length; i++) {
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">const</span> filePath = path.join(__dirname, process.argv[i]);
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">if</span> (fs.existsSync(filePath)) {
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">const</span> commandStr = <span style="color:#a31515">`~/go/bin/tcardgen --fontDir </span><span style="color:#a31515">${</span>fontDir<span style="color:#a31515">}</span><span style="color:#a31515"> --output </span><span style="color:#a31515">${</span>outputDir<span style="color:#a31515">}</span><span style="color:#a31515"> --config </span><span style="color:#a31515">${</span>configFilePath<span style="color:#a31515">}</span><span style="color:#a31515"> </span><span style="color:#a31515">${</span>filePath<span style="color:#a31515">}</span><span style="color:#a31515">`</span>;
-</span></span><span style="display:flex;"><span>    execSync(commandStr);
-</span></span><span style="display:flex;"><span>    console.info(<span style="color:#a31515">`</span><span style="color:#a31515">${</span>process.argv[i]<span style="color:#a31515">}</span><span style="color:#a31515"> completed`</span>);
-</span></span><span style="display:flex;"><span>  } <span style="color:#00f">else</span> {
-</span></span><span style="display:flex;"><span>    console.error(<span style="color:#a31515">`\x1b[31m</span><span style="color:#a31515">${</span>filePath<span style="color:#a31515">}</span><span style="color:#a31515"> was not found.`</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>引数として渡された記事ファイルの分、tcardgenコマンドを実行します。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:gen-ogp-image.js" data-lang="javascript:gen-ogp-image.js"><span style="color:#00f">const</span> fs = require(<span style="color:#a31515">&#34;fs&#34;</span>);
+<span style="color:#00f">const</span> path = require(<span style="color:#a31515">&#34;path&#34;</span>);
+<span style="color:#00f">const</span> { execSync } = require(<span style="color:#a31515">&#34;child_process&#34;</span>);
+
+<span style="color:#00f">const</span> fontDir = <span style="color:#a31515">&#34;static/fonts/hackgen/HackGen&#34;</span>;
+<span style="color:#00f">const</span> outputDir = <span style="color:#a31515">&#34;static/img/og&#34;</span>;
+<span style="color:#00f">const</span> configFilePath = <span style="color:#a31515">&#34;tcargen.yml&#34;</span>;
+
+<span style="color:#00f">for</span> (<span style="color:#00f">let</span> i = 2; i &lt; process.argv.length; i++) {
+  <span style="color:#00f">const</span> filePath = path.join(__dirname, process.argv[i]);
+  <span style="color:#00f">if</span> (fs.existsSync(filePath)) {
+    <span style="color:#00f">const</span> commandStr = <span style="color:#a31515">`~/go/bin/tcardgen --fontDir </span><span style="color:#a31515">${</span>fontDir<span style="color:#a31515">}</span><span style="color:#a31515"> --output </span><span style="color:#a31515">${</span>outputDir<span style="color:#a31515">}</span><span style="color:#a31515"> --config </span><span style="color:#a31515">${</span>configFilePath<span style="color:#a31515">}</span><span style="color:#a31515"> </span><span style="color:#a31515">${</span>filePath<span style="color:#a31515">}</span><span style="color:#a31515">`</span>;
+    execSync(commandStr);
+    console.info(<span style="color:#a31515">`</span><span style="color:#a31515">${</span>process.argv[i]<span style="color:#a31515">}</span><span style="color:#a31515"> completed`</span>);
+  } <span style="color:#00f">else</span> {
+    console.error(<span style="color:#a31515">`\x1b[31m</span><span style="color:#a31515">${</span>filePath<span style="color:#a31515">}</span><span style="color:#a31515"> was not found.`</span>);
+  }
+}
+</code></pre></div><p>引数として渡された記事ファイルの分、tcardgenコマンドを実行します。<br>
 本スクリプトは以下のように使用することができます。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>node gen-ogp-image.js content/post/hugo/generate-og-image-automatically.ja.md content/post/hugo/generate-og-image-automatically.md
-</span></span></code></pre></div><h2 id="ogp画像を自動で参照するための設定">OGP画像を自動で参照するための設定</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node gen-ogp-image.js content/post/hugo/generate-og-image-automatically.ja.md content/post/hugo/generate-og-image-automatically.md
+</code></pre></div><h2 id="ogp画像を自動で参照するための設定">OGP画像を自動で参照するための設定</h2>
 <p>最後に、自動生成したOGP画像を自動で参照するための設定を行います。<br>
 使用しているテーマであるHugo Future Imperfect Slimのメタタグ設定箇所は <strong>layouts/partials/meta.html</strong> なため、このファイルを触っていきます。<br>
 該当箇所は</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:layouts/partials/meta.html" data-lang="html:layouts/partials/meta.html"><span style="display:flex;"><span>{{- with or (.Params.openGraph) (.Params.images) -}}
-</span></span><span style="display:flex;"><span>  {{ range . }}
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ .src | absURL }}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;meta property=<span style="color:#a31515">&#34;og:image:alt&#34;</span> content=<span style="color:#a31515">&#34;{{ .alt }}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  {{- end -}}
-</span></span><span style="display:flex;"><span>{{ else }}
-</span></span><span style="display:flex;"><span>  &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ .Site.Params.intro.pic.src | absURL }}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span></code></pre></div><p>なのですが、何故かテーマディレクトリ配下のサンプルサイトを元に設定しても <strong>.src</strong> を参照できないとエラーを吐かれたので、以下の様に独自処理に書き換えました。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:layouts/partials/meta.html" data-lang="html:layouts/partials/meta.html"><span style="display:flex;"><span>{{ $ogImagePathBase := printf &#34;/img/og/%s.png&#34; .File.BaseFileName }}
-</span></span><span style="display:flex;"><span>{{ $ogImagePathForCheckExists := printf &#34;/static%s&#34; $ogImagePathBase }}
-</span></span><span style="display:flex;"><span>{{ if fileExists $ogImagePathForCheckExists }}
-</span></span><span style="display:flex;"><span>  {{ $ogImagePath := printf &#34;/blog%s&#34; $ogImagePathBase }}
-</span></span><span style="display:flex;"><span>  &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ $ogImagePath | absURL }}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>{{ else }}
-</span></span><span style="display:flex;"><span>  &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ .Site.Params.intro.pic.src | absURL }}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>{{ end }}
-</span></span><span style="display:flex;"><span>&lt;meta property=<span style="color:#a31515">&#34;og:image:alt&#34;</span> content=<span style="color:#a31515">&#34;The Open Graph logo&#34;</span>&gt;
-</span></span></code></pre></div><p>static/img/og/配下に記事ファイル名と同じ名前のpngファイルが存在していたらそれをOGP画像として使用し、そうでなければサイトプロフィールの画像をOGP画像として使用しています。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:layouts/partials/meta.html" data-lang="html:layouts/partials/meta.html">{{- with or (.Params.openGraph) (.Params.images) -}}
+  {{ range . }}
+    &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ .src | absURL }}&#34;</span>&gt;
+    &lt;meta property=<span style="color:#a31515">&#34;og:image:alt&#34;</span> content=<span style="color:#a31515">&#34;{{ .alt }}&#34;</span>&gt;
+  {{- end -}}
+{{ else }}
+  &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ .Site.Params.intro.pic.src | absURL }}&#34;</span>&gt;
+{{ end }}
+</code></pre></div><p>なのですが、何故かテーマディレクトリ配下のサンプルサイトを元に設定しても <strong>.src</strong> を参照できないとエラーを吐かれたので、以下の様に独自処理に書き換えました。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:layouts/partials/meta.html" data-lang="html:layouts/partials/meta.html">{{ $ogImagePathBase := printf &#34;/img/og/%s.png&#34; .File.BaseFileName }}
+{{ $ogImagePathForCheckExists := printf &#34;/static%s&#34; $ogImagePathBase }}
+{{ if fileExists $ogImagePathForCheckExists }}
+  {{ $ogImagePath := printf &#34;/blog%s&#34; $ogImagePathBase }}
+  &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ $ogImagePath | absURL }}&#34;</span>&gt;
+{{ else }}
+  &lt;meta property=<span style="color:#a31515">&#34;og:image&#34;</span> content=<span style="color:#a31515">&#34;{{ .Site.Params.intro.pic.src | absURL }}&#34;</span>&gt;
+{{ end }}
+&lt;meta property=<span style="color:#a31515">&#34;og:image:alt&#34;</span> content=<span style="color:#a31515">&#34;The Open Graph logo&#34;</span>&gt;
+</code></pre></div><p>static/img/og/配下に記事ファイル名と同じ名前のpngファイルが存在していたらそれをOGP画像として使用し、そうでなければサイトプロフィールの画像をOGP画像として使用しています。<br>
 altは、とりあえず The Open Graph logo としておけばよさそうだったので、固定にしています。</p>
 <h2 id="本記事の対応を行った際のコミットログ">本記事の対応を行った際のコミットログ</h2>
 <p>全体的に何をどのように触ったのかを確認したい方向けに、コミットログやファイル変更情報をおいておきます。<br>
@@ -427,14 +427,14 @@ altは、とりあえず The Open Graph logo としておけばよさそうだ�
 <font color="#1111cc"><a href="https://github.com/koki-nakamura22/env-for-blog/pull/13/files" target="_blank">Pull request Files changed: 8 generate an ogp image automatically 2</a></font></p>
 <h2 id="ハマった点">ハマった点</h2>
 <p>Go言語をインストールする際にapt-getコマンドを使用したところ、インストールされたバージョンが古くtcardgenインストール時に以下のエラーが発生しました。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#008000"># cd .; git clone -- https://gopkg.in/yaml.v2 /home/koki-n/go/src/gopkg.in/yaml.v2</span>
-</span></span><span style="display:flex;"><span>Cloning into <span style="color:#a31515">&#39;/home/koki-n/go/src/gopkg.in/yaml.v2&#39;</span>...
-</span></span><span style="display:flex;"><span>fatal: unable to access <span style="color:#a31515">&#39;https://gopkg.in/yaml.v2/&#39;</span>: server certificate verification failed. CAfile: none CRLfile: none
-</span></span><span style="display:flex;"><span>package gopkg.in/yaml.v2: exit status 128
-</span></span><span style="display:flex;"><span>package github.com/pelletier/go-toml/v2: cannot find package <span style="color:#a31515">&#34;github.com/pelletier/go-toml/v2&#34;</span> in any of:
-</span></span><span style="display:flex;"><span>        /usr/lib/go-1.13/src/github.com/pelletier/go-toml/v2 (from $GOROOT)
-</span></span><span style="display:flex;"><span>        /home/koki-n/go/src/github.com/pelletier/go-toml/v2 (from $GOPATH)
-</span></span></code></pre></div><p>apt-getコマンドでインストールすると最新安定版ではない古いバージョンのものがインストールされることが多々あるため、許されるならば可能な限りHomebrewを使用するなど、別ルートでライブラリをインストールした方が良いと思います。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#008000"># cd .; git clone -- https://gopkg.in/yaml.v2 /home/koki-n/go/src/gopkg.in/yaml.v2</span>
+Cloning into <span style="color:#a31515">&#39;/home/koki-n/go/src/gopkg.in/yaml.v2&#39;</span>...
+fatal: unable to access <span style="color:#a31515">&#39;https://gopkg.in/yaml.v2/&#39;</span>: server certificate verification failed. CAfile: none CRLfile: none
+package gopkg.in/yaml.v2: exit status 128
+package github.com/pelletier/go-toml/v2: cannot find package <span style="color:#a31515">&#34;github.com/pelletier/go-toml/v2&#34;</span> in any of:
+        /usr/lib/go-1.13/src/github.com/pelletier/go-toml/v2 (from $GOROOT)
+        /home/koki-n/go/src/github.com/pelletier/go-toml/v2 (from $GOPATH)
+</code></pre></div><p>apt-getコマンドでインストールすると最新安定版ではない古いバージョンのものがインストールされることが多々あるため、許されるならば可能な限りHomebrewを使用するなど、別ルートでライブラリをインストールした方が良いと思います。</p>
 <h2 id="参考にしたページ">参考にしたページ</h2>
 <p><font color="#1111cc"><a href="https://michimani.net/post/development-generate-ogp-image-by-tcardgen-in-hugo/" target="_blank">[Hugo] tcardgen を使って OGP 画像を自動生成する</a></font><br>
 <font color="#1111cc"><a href="https://github.com/Ladicle/tcardgen">https://github.com/Ladicle/tcardgen</a><a href="" target="_blank">Ladicle/tcardgen</a></font></p>
@@ -531,7 +531,7 @@ altは、とりあえず The Open Graph logo としておけばよさそうだ�
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -677,14 +677,14 @@ altは、とりあえず The Open Graph logo としておけばよさそうだ�
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -125,7 +125,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -287,18 +287,18 @@
 <p>今回はapt-getにてHugoをインストールしてしまっていたため、まずはアンインストールし、その後にHomebrewでインストールしなおします。<br>
 理由は、apt-getだとインストール可能な最新バージョンが0.64.0と古いためです。</p>
 <p>再インストール時のコマンドの流れは下記の通りです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt-get remove -y hugo
-</span></span><span style="display:flex;"><span>brew update
-</span></span><span style="display:flex;"><span>brew install hugo
-</span></span></code></pre></div><p>brew update実行時に</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>error: Failed to merge in the changes
-</span></span></code></pre></div><p>と表示されてしまった方は、<strong>brew update-reset</strong> を実行した後、念のため、再度 <strong>brew update</strong> を実行してください。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt-get remove -y hugo
+brew update
+brew install hugo
+</code></pre></div><p>brew update実行時に</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">error: Failed to merge in the changes
+</code></pre></div><p>と表示されてしまった方は、<strong>brew update-reset</strong> を実行した後、念のため、再度 <strong>brew update</strong> を実行してください。</p>
 <h2 id="configファイルへ設定追加">configファイルへ設定追加</h2>
 <p>config.tomlの[permalinks]セクションを、以下のように変更します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml:config.toml" data-lang="toml:config.toml"><span style="display:flex;"><span>[permalinks]
-</span></span><span style="display:flex;"><span>    posts = <span style="color:#a31515">&#34;/:year/:month/:day/:filename/&#34;</span> <span style="color:#008000"># 変更前</span>
-</span></span><span style="display:flex;"><span>    posts = <span style="color:#a31515">&#34;/:sections/:filename&#34;</span> <span style="color:#008000"># 変更後</span>
-</span></span></code></pre></div><p>変更前の値は、あくまでも一例です。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml:config.toml" data-lang="toml:config.toml">[permalinks]
+    posts = <span style="color:#a31515">&#34;/:year/:month/:day/:filename/&#34;</span> <span style="color:#008000"># 変更前</span>
+    posts = <span style="color:#a31515">&#34;/:sections/:filename&#34;</span> <span style="color:#008000"># 変更後</span>
+</code></pre></div><p>変更前の値は、あくまでも一例です。<br>
 あと、上記はconfigファイルの形式がtomlだった場合です。他の形式については、
 <font color="#1111cc"><a href="https://gohugo.io/content-management/urls/" target="_blank">Hugo: URL Management</a></font>
 を参考にしてください。</p>
@@ -398,7 +398,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -544,14 +544,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

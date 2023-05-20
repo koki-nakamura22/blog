@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/" class="nav">
+      <a href="/blog/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -125,7 +125,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -278,24 +278,24 @@ Because the anchor is hidden behind the header.</p>
 <h2 id="adjusting-link-destinations-position">Adjusting link destinations position</h2>
 <p>Setting the following codes to the target anchor tag to add-on.css.<br>
 When you set it, you must set the same number to padding-top and margin-top.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css:add-on.css" data-lang="css:add-on.css"><span style="display:flex;"><span>#target-tag {
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">display</span>: <span style="color:#00f">block</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-top</span>: 60<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin-top</span>: -60<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>In this blog, I adjust the headings in the post using the following codes.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css:add-on.css" data-lang="css:add-on.css"><span style="display:flex;"><span><span style="color:#008000">/* For link destinations adjustment. */</span>
-</span></span><span style="display:flex;"><span>#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h1,
-</span></span><span style="display:flex;"><span>#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h2,
-</span></span><span style="display:flex;"><span>#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h3,
-</span></span><span style="display:flex;"><span>#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h4,
-</span></span><span style="display:flex;"><span>#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h5,
-</span></span><span style="display:flex;"><span>#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h6 {
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">display</span>: <span style="color:#00f">block</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">padding-top</span>: 60<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">margin-top</span>: -60<span style="color:#2b91af">px</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="reference-articles">Reference articles</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css">#target-tag {
+  <span style="color:#00f">display</span>: <span style="color:#00f">block</span>;
+  <span style="color:#00f">padding-top</span>: 60<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">margin-top</span>: -60<span style="color:#2b91af">px</span>;
+}
+</code></pre></div><p>In this blog, I adjust the headings in the post using the following codes.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css:add-on.css" data-lang="css:add-on.css"><span style="color:#008000">/* For link destinations adjustment. */</span>
+#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h1,
+#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h2,
+#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h3,
+#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h4,
+#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h5,
+#site-main .<span style="color:#2b91af">post</span> .<span style="color:#2b91af">content</span> h6 {
+  <span style="color:#00f">display</span>: <span style="color:#00f">block</span>;
+  <span style="color:#00f">padding-top</span>: 60<span style="color:#2b91af">px</span>;
+  <span style="color:#00f">margin-top</span>: -60<span style="color:#2b91af">px</span>;
+}
+</code></pre></div><h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://y-com.info/contents/?p=5641" class="blog-card-thumbnail-link" target="_blank"><img src="https://capture.heartrails.com/120x120/shorten?https://y-com.info/contents/?p=5641" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://y-com.info/contents/?p=5641" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">ページ内リンクのジャンプ先の位置を複雑なタグは無しでCSSだけで調整する方法 | 大阪のホームページ制作会社YCOM</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="https://b.hatena.ne.jp/entry/https://y-com.info/contents/?p=5641" target="_blank"><img border="0" src="https://b.hatena.ne.jp/entry/image/https://y-com.info/contents/?p=5641" border="0" alt="" /></a></span></div></div>
 
   </div>
@@ -382,7 +382,7 @@ When you set it, you must set the same number to padding-top and margin-top.</p>
       
       
         <footer>
-          <a href="/posts/" class="button">See More</a>
+          <a href="/blog/posts/" class="button">See More</a>
         </footer>
       
     </section>
@@ -495,14 +495,14 @@ When you set it, you must set the same number to padding-top and margin-top.</p>
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

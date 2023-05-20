@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/" class="nav">
+      <a href="/blog/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -125,7 +125,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -277,44 +277,44 @@
 </ul>
 <h2 id="install">Install</h2>
 <p>Execute the following commands on Command Prompt or PowerShell as administrator.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span><span style="color:#008000">REM Install Yarn</span>
-</span></span><span style="display:flex;"><span>choco install yarn -y
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Install Ruby</span>
-</span></span><span style="display:flex;"><span>choco install ruby -y
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Install msys2</span>
-</span></span><span style="display:flex;"><span>choco install msys2 --params <span style="color:#a31515">&#34;/NoUpdate&#34;</span>  -y
-</span></span><span style="display:flex;"><span>refreshenv
-</span></span><span style="display:flex;"><span>ridk install 2 3
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Install SQLite</span>
-</span></span><span style="display:flex;"><span>gem uninstall sqlite3 --all
-</span></span><span style="display:flex;"><span>ridk exec pacman -S mingw-w64-x86_64-sqlite3
-</span></span><span style="display:flex;"><span>gem install sqlite3 --platform ruby
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Install bundle</span>
-</span></span><span style="display:flex;"><span>gem install bundle
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Install Ruby on Rails</span>
-</span></span><span style="display:flex;"><span>gem install rails
-</span></span></code></pre></div><p>If you want to specify version Ruby and Ruby on Rails, replace install Ruby and Ruby on Rails commands.<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#008000">REM Install Yarn</span>
+choco install yarn -y
+
+<span style="color:#008000">REM Install Ruby</span>
+choco install ruby -y
+
+<span style="color:#008000">REM Install msys2</span>
+choco install msys2 --params <span style="color:#a31515">&#34;/NoUpdate&#34;</span>  -y
+refreshenv
+ridk install 2 3
+
+<span style="color:#008000">REM Install SQLite</span>
+gem uninstall sqlite3 --all
+ridk exec pacman -S mingw-w64-x86_64-sqlite3
+gem install sqlite3 --platform ruby
+
+<span style="color:#008000">REM Install bundle</span>
+gem install bundle
+
+<span style="color:#008000">REM Install Ruby on Rails</span>
+gem install rails
+</code></pre></div><p>If you want to specify version Ruby and Ruby on Rails, replace install Ruby and Ruby on Rails commands.<br>
 The following commands are an example.
 When you install Ruby 2.4.2.2, use the following command instead of &ldquo;choco install ruby -y&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>choco install ruby --version=2.4.2.2 -y
-</span></span></code></pre></div><p>Also, when you install Ruby on Rails 5.2.2, use the following command instead of &ldquo;gem install bundle rails&rdquo;.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>gem install rails -v 5.2.2
-</span></span></code></pre></div><h2 id="how-to-check-installed-packages">How to check installed packages</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install ruby --version=2.4.2.2 -y
+</code></pre></div><p>Also, when you install Ruby on Rails 5.2.2, use the following command instead of &ldquo;gem install bundle rails&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">gem install rails -v 5.2.2
+</code></pre></div><h2 id="how-to-check-installed-packages">How to check installed packages</h2>
 <p>Execute the following commands on Command Prompt or Power Shell.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>ruby -v
-</span></span><span style="display:flex;"><span>rails -v
-</span></span></code></pre></div><p>You can check each version. The following information is an example.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>C:\Users\testuser<span style="color:#008000">&gt;ruby -v</span>
-</span></span><span style="display:flex;"><span>ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>C:\Users\testuser<span style="color:#008000">&gt;rails -v</span>
-</span></span><span style="display:flex;"><span>Rails 6.0.0
-</span></span></code></pre></div><h2 id="reference-articles">Reference articles</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">ruby -v
+rails -v
+</code></pre></div><p>You can check each version. The following information is an example.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">C:\Users\testuser<span style="color:#008000">&gt;ruby -v</span>
+ruby 2.6.4p104 (2019-08-28 revision 67798) [x64-mingw32]
+
+C:\Users\testuser<span style="color:#008000">&gt;rails -v</span>
+Rails 6.0.0
+</code></pre></div><h2 id="reference-articles">Reference articles</h2>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-thumbnail-link" target="_blank"><img src="https://capture.heartrails.com/120x120/shorten?https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://qiita.com/toriiico/items/a0765ffdc0419512ae53" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">chocolateyでruby on rails環境を構築 - Qiita</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="https://b.hatena.ne.jp/entry/https://qiita.com/toriiico/items/a0765ffdc0419512ae53" target="_blank"><img border="0" src="https://b.hatena.ne.jp/entry/image/https://qiita.com/toriiico/items/a0765ffdc0419512ae53" border="0" alt="" /></a></span></div></div>
 <div class="blog-card" style="padding:12px;margin:15px 0;border:1px solid #ddd;word-wrap:break-word;max-width:474px;width:auto;border-radius:5px;"><div class="blog-card-thumbnail" style="float:right;"><a href="https://prog-8.com/docs/rails-env-win" class="blog-card-thumbnail-link" target="_blank"><img src="https://capture.heartrails.com/120x120/shorten?https://prog-8.com/docs/rails-env-win" class="blog-card-thumb-image wp-post-image" alt="12436288584_94d6bc46d2_b.jpg" style="width:100px;height:100px;"></a></div><div class="blog-card-content" style="margin-left:0;margin-right:110px;line-height:120%;"><div class="blog-card-title" style="margin-bottom:5px;"><a href="https://prog-8.com/docs/rails-env-win" class="blog-card-title-link" style="font-weight:bold;text-decoration:none;color:#111;" target="_blank">Ruby on Railsの環境構築をしてみよう！(Windows) | プログラミングの入門なら基礎から学べるProgate[プロゲート]</a></div><div class="blog-card-excerpt" style="color:#333;font-size:90%;">xxxxxxxxxx</div></div><div class="blog-card-footer" style="font-size:70%;color:#777;margin-top:10px;clear:both;"><span class="blog-card-hatena"><a href="https://b.hatena.ne.jp/entry/https://prog-8.com/docs/rails-env-win" target="_blank"><img border="0" src="https://b.hatena.ne.jp/entry/image/https://prog-8.com/docs/rails-env-win" border="0" alt="" /></a></span></div></div>
 
@@ -404,7 +404,7 @@ When you install Ruby 2.4.2.2, use the following command instead of &ldquo;choco
       
       
         <footer>
-          <a href="/posts/" class="button">See More</a>
+          <a href="/blog/posts/" class="button">See More</a>
         </footer>
       
     </section>
@@ -517,14 +517,14 @@ When you install Ruby 2.4.2.2, use the following command instead of &ldquo;choco
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

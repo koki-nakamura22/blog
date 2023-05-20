@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -309,20 +309,20 @@
 <h3 id="1-gitアカウント設定">1. Gitアカウント設定</h3>
 <p>pushを行えるようにするため、以下のコードブロックを作成し実行します。<br>
 メールアドレスとユーザ名は、お使いのものに置き換えてください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>!git config --global user.email <span style="color:#a31515">&#34;メールアドレス&#34;</span>
-</span></span><span style="display:flex;"><span>!git config --global user.name <span style="color:#a31515">&#34;ユーザ名&#34;</span>
-</span></span></code></pre></div><h3 id="2-gitパブリックリポジトリをclone">2. Gitパブリックリポジトリをclone</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">!git config --global user.email <span style="color:#a31515">&#34;メールアドレス&#34;</span>
+!git config --global user.name <span style="color:#a31515">&#34;ユーザ名&#34;</span>
+</code></pre></div><h3 id="2-gitパブリックリポジトリをclone">2. Gitパブリックリポジトリをclone</h3>
 <p>以下のコードブロックを作成し、実行します。<br>
 [リポジトリURL]は、対象のものに置き換えてください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>%cd /content/drive/MyDrive/Colab Notebooks
-</span></span><span style="display:flex;"><span>!git clone [リポジトリURL]
-</span></span></code></pre></div><h3 id="3-コードのcommitおよびpush">3. コードのcommitおよびpush</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">%cd /content/drive/MyDrive/Colab Notebooks
+!git clone [リポジトリURL]
+</code></pre></div><h3 id="3-コードのcommitおよびpush">3. コードのcommitおよびpush</h3>
 <p>Google Colab外で行う方法とほぼ同じです。<br>
 以下のコードブロックを作成し、実行します。(addやcommit、pushの対象はお好みで。)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>!git add .
-</span></span><span style="display:flex;"><span>!git commit -m <span style="color:#a31515">&#34;コミットメッセージ&#34;</span>
-</span></span><span style="display:flex;"><span>!git push origin main
-</span></span></code></pre></div><h2 id="プライベートリポジトリを使用">プライベートリポジトリを使用</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">!git add .
+!git commit -m <span style="color:#a31515">&#34;コミットメッセージ&#34;</span>
+!git push origin main
+</code></pre></div><h2 id="プライベートリポジトリを使用">プライベートリポジトリを使用</h2>
 <p>プライベートリポジトリを使用する際は、Personal access tokenを利用して認証を行う必要があるため、手順が変わってきます。</p>
 <h3 id="1-github側でpersonal-access-tokens作成">1. GitHub側でPersonal access tokens作成</h3>
 <p>以下の手順で、Personal access tokensを作成します。<br>
@@ -338,23 +338,23 @@
 <h3 id="2-gitアカウント設定">2. Gitアカウント設定</h3>
 <p>pushを行えるようにするため、以下のコードブロックを作成し実行します。<br>
 メールアドレスとユーザ名は、お使いのものに置き換えてください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>!git config --global user.email <span style="color:#a31515">&#34;メールアドレス&#34;</span>
-</span></span><span style="display:flex;"><span>!git config --global user.name <span style="color:#a31515">&#34;ユーザ名&#34;</span>
-</span></span></code></pre></div><h3 id="3-gitプライベートリポジトリをclone">3. Gitプライベートリポジトリをclone</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">!git config --global user.email <span style="color:#a31515">&#34;メールアドレス&#34;</span>
+!git config --global user.name <span style="color:#a31515">&#34;ユーザ名&#34;</span>
+</code></pre></div><h3 id="3-gitプライベートリポジトリをclone">3. Gitプライベートリポジトリをclone</h3>
 <p>以下のコードブロックを作成し、実行します。<br>
 [Personal access tokens]は、先ほどコピーしたものを、<br>
 [GitHubアカウント名]と[リポジトリ名]は、使用しているものや対象のものに置き換えてください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>!git clone リポジトリURL
-</span></span><span style="display:flex;"><span>%env TOKEN=[Personal access tokens]
-</span></span><span style="display:flex;"><span>%cd /content/drive/MyDrive/Colab Notebooks
-</span></span><span style="display:flex;"><span>!git clone https://$$TOKEN@github.com/[GitHubアカウント名]/[リポジトリ名].git
-</span></span></code></pre></div><h3 id="4-コードのcommitおよびpush">4. コードのcommitおよびpush</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">!git clone リポジトリURL
+%env TOKEN=[Personal access tokens]
+%cd /content/drive/MyDrive/Colab Notebooks
+!git clone https://$$TOKEN@github.com/[GitHubアカウント名]/[リポジトリ名].git
+</code></pre></div><h3 id="4-コードのcommitおよびpush">4. コードのcommitおよびpush</h3>
 <p>Google Colab外で行う方法とほぼ同じです。<br>
 以下のコードブロックを作成し、実行します。(addやcommit、pushの対象はお好みで。)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>!git add .
-</span></span><span style="display:flex;"><span>!git commit -m <span style="color:#a31515">&#34;コミットメッセージ&#34;</span>
-</span></span><span style="display:flex;"><span>!git push origin main
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">!git add .
+!git commit -m <span style="color:#a31515">&#34;コミットメッセージ&#34;</span>
+!git push origin main
+</code></pre></div>
   </div>
   <footer>
     <div class="stats">
@@ -451,7 +451,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -597,14 +597,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -310,29 +310,29 @@
 <p>参考にしたページの内容とほぼ同じですが、以下の設定を行います。</p>
 <h4 id="1-confsettingspyへの設定追加">1. conf/settings.pyへの設定追加</h4>
 <p>conf/settings.pyのMIDDLEWAREリストへ、後ほど作成するミドルウェアを登録します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>MIDDLEWARE = [
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;corsheaders.middleware.CorsMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;[アプリ名].middleware.nocache.NoCacheMiddleware&#39;</span>, <span style="color:#008000"># これを追加</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;django.middleware.security.SecurityMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;django.middleware.common.CommonMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;django.contrib.messages.middleware.MessageMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a31515">&#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;</span>,
-</span></span><span style="display:flex;"><span>]
-</span></span></code></pre></div><h4 id="2-ミドルウェアの作成">2. ミドルウェアの作成</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">MIDDLEWARE = [
+    <span style="color:#a31515">&#39;corsheaders.middleware.CorsMiddleware&#39;</span>,
+    <span style="color:#a31515">&#39;[アプリ名].middleware.nocache.NoCacheMiddleware&#39;</span>, <span style="color:#008000"># これを追加</span>
+    <span style="color:#a31515">&#39;django.middleware.security.SecurityMiddleware&#39;</span>,
+    <span style="color:#a31515">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span>,
+    <span style="color:#a31515">&#39;django.middleware.common.CommonMiddleware&#39;</span>,
+    <span style="color:#a31515">&#39;django.middleware.csrf.CsrfViewMiddleware&#39;</span>,
+    <span style="color:#a31515">&#39;django.contrib.auth.middleware.AuthenticationMiddleware&#39;</span>,
+    <span style="color:#a31515">&#39;django.contrib.messages.middleware.MessageMiddleware&#39;</span>,
+    <span style="color:#a31515">&#39;django.middleware.clickjacking.XFrameOptionsMiddleware&#39;</span>,
+]
+</code></pre></div><h4 id="2-ミドルウェアの作成">2. ミドルウェアの作成</h4>
 <p>アプリのルートディレクトリにmiddlewareディレクトリを作成し、その中にnocache.pyを作成します。<br>
 そして、nocache.pyの中に以下のコードを書きます。(コピペします。)</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#00f">from</span> django.conf <span style="color:#00f">import</span> settings
-</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> django.utils.deprecation <span style="color:#00f">import</span> MiddlewareMixin
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">NoCacheMiddleware</span>(MiddlewareMixin):
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">def</span> process_response(self, request, response):
-</span></span><span style="display:flex;"><span>        response[<span style="color:#a31515">&#39;Cache-Control&#39;</span>] = <span style="color:#a31515">&#39;private, no-store, no-cache, must-revalidate&#39;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#00f">return</span> response
-</span></span></code></pre></div><p>これだけでアプリの全ページへアクセスした際のResponseに、上記で設定したキャッシュ利用を禁止する設定が追加されるようになります。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00f">from</span> django.conf <span style="color:#00f">import</span> settings
+<span style="color:#00f">from</span> django.utils.deprecation <span style="color:#00f">import</span> MiddlewareMixin
+
+
+<span style="color:#00f">class</span> <span style="color:#2b91af">NoCacheMiddleware</span>(MiddlewareMixin):
+    <span style="color:#00f">def</span> process_response(self, request, response):
+        response[<span style="color:#a31515">&#39;Cache-Control&#39;</span>] = <span style="color:#a31515">&#39;private, no-store, no-cache, must-revalidate&#39;</span>
+        <span style="color:#00f">return</span> response
+</code></pre></div><p>これだけでアプリの全ページへアクセスした際のResponseに、上記で設定したキャッシュ利用を禁止する設定が追加されるようになります。</p>
 <h2 id="参考にしたページ">参考にしたページ</h2>
 <a href="https://bicstone.me/django-nocache" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
 <div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
@@ -440,7 +440,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -586,14 +586,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -298,181 +298,182 @@
 <p>今回は複数条件を元にANDでフィルタリングを行いたかったため、全項目をformタグで囲っている。<br>
 また、各項目の横に [適用] ボタンを配置するとくどいと感じたため、フィルターリストの一番上と一番下に [適用] ボタンを配置し、それをクリックすることで入力されたテキストを元にフィルタリングを行うようにしている。<br>
 勿論、テキストボックスで入力をした後にEnterを押してもformのsubmit処理が走るため、フィルタリングが行われる。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:testapp_hoge_change_list.html" data-lang="html:testapp_hoge_change_list.html"><span style="display:flex;"><span>{% extends &#34;admin/base_site.html&#34; %}
-</span></span><span style="display:flex;"><span>{% load i18n admin_urls static admin_list %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{% block extrastyle %}
-</span></span><span style="display:flex;"><span>  {{ block.super }}
-</span></span><span style="display:flex;"><span>  &lt;link rel=<span style="color:#a31515">&#34;stylesheet&#34;</span> type=<span style="color:#a31515">&#34;text/css&#34;</span> href=<span style="color:#a31515">&#34;{% static &#34;</span>admin<span style="">/</span>css<span style="">/</span>changelists<span style="">.</span>css<span style="">&#34;</span> <span style="">%}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  {% if cl.formset %}
-</span></span><span style="display:flex;"><span>    &lt;link rel=<span style="color:#a31515">&#34;stylesheet&#34;</span> type=<span style="color:#a31515">&#34;text/css&#34;</span> href=<span style="color:#a31515">&#34;{% static &#34;</span>admin<span style="">/</span>css<span style="">/</span>forms<span style="">.</span>css<span style="">&#34;</span> <span style="">%}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  {% endif %}
-</span></span><span style="display:flex;"><span>  {% if cl.formset or action_form %}
-</span></span><span style="display:flex;"><span>    &lt;script src=<span style="color:#a31515">&#34;{% url &#39;admin:jsi18n&#39; %}&#34;</span>&gt;&lt;/script&gt;
-</span></span><span style="display:flex;"><span>  {% endif %}
-</span></span><span style="display:flex;"><span>  {{ media.css }}
-</span></span><span style="display:flex;"><span>  {% if not actions_on_top and not actions_on_bottom %}
-</span></span><span style="display:flex;"><span>    &lt;style&gt;
-</span></span><span style="display:flex;"><span>      #changelist table thead th:first-child {<span style="color:#00f">width</span>: <span style="color:#00f">inherit</span>}
-</span></span><span style="display:flex;"><span>    &lt;/style&gt;
-</span></span><span style="display:flex;"><span>  {% endif %}
-</span></span><span style="display:flex;"><span>{% endblock %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{% block extrahead %}
-</span></span><span style="display:flex;"><span>{{ block.super }}
-</span></span><span style="display:flex;"><span>{{ media.js }}
-</span></span><span style="display:flex;"><span>{% endblock %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-list{% endblock %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{% if not is_popup %}
-</span></span><span style="display:flex;"><span>{% block breadcrumbs %}
-</span></span><span style="display:flex;"><span>&lt;div class=<span style="color:#a31515">&#34;breadcrumbs&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;a href=<span style="color:#a31515">&#34;{% url &#39;admin:index&#39; %}&#34;</span>&gt;{% translate &#39;Home&#39; %}&lt;/a&gt;
-</span></span><span style="display:flex;"><span>&amp;rsaquo; &lt;a href=<span style="color:#a31515">&#34;{% url &#39;admin:app_list&#39; app_label=cl.opts.app_label %}&#34;</span>&gt;{{ cl.opts.app_config.verbose_name }}&lt;/a&gt;
-</span></span><span style="display:flex;"><span>&amp;rsaquo; {{ cl.opts.verbose_name_plural|capfirst }}
-</span></span><span style="display:flex;"><span>&lt;/div&gt;
-</span></span><span style="display:flex;"><span>{% endblock %}
-</span></span><span style="display:flex;"><span>{% endif %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{% block coltype %}{% endblock %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{% block content %}
-</span></span><span style="display:flex;"><span>  &lt;div id=<span style="color:#a31515">&#34;content-main&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    {% block object-tools %}
-</span></span><span style="display:flex;"><span>        &lt;ul class=<span style="color:#a31515">&#34;object-tools&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>          {% block object-tools-items %}
-</span></span><span style="display:flex;"><span>            {% change_list_object_tools %}
-</span></span><span style="display:flex;"><span>          {% endblock %}
-</span></span><span style="display:flex;"><span>        &lt;/ul&gt;
-</span></span><span style="display:flex;"><span>    {% endblock %}
-</span></span><span style="display:flex;"><span>    {% if cl.formset and cl.formset.errors %}
-</span></span><span style="display:flex;"><span>        &lt;p class=<span style="color:#a31515">&#34;errornote&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        {% if cl.formset.total_error_count == 1 %}{% translate &#34;Please correct the error below.&#34; %}{% else %}{% translate &#34;Please correct the errors below.&#34; %}{% endif %}
-</span></span><span style="display:flex;"><span>        &lt;/p&gt;
-</span></span><span style="display:flex;"><span>        {{ cl.formset.non_form_errors }}
-</span></span><span style="display:flex;"><span>    {% endif %}
-</span></span><span style="display:flex;"><span>    &lt;div class=<span style="color:#a31515">&#34;module{% if cl.has_filters %} filtered{% endif %}&#34;</span> id=<span style="color:#a31515">&#34;changelist&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>      &lt;div class=<span style="color:#a31515">&#34;changelist-form-container&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        {% block search %}{% search_form cl %}{% endblock %}
-</span></span><span style="display:flex;"><span>        {% block date_hierarchy %}{% if cl.date_hierarchy %}{% date_hierarchy cl %}{% endif %}{% endblock %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        &lt;form id=<span style="color:#a31515">&#34;changelist-form&#34;</span> method=<span style="color:#a31515">&#34;post&#34;</span><span style="">{%</span> if cl<span style="">.</span>formset and cl<span style="">.</span>formset<span style="">.</span>is_multipart <span style="">%}</span> enctype=<span style="color:#a31515">&#34;multipart/form-data&#34;</span><span style="">{%</span> endif <span style="">%}</span> novalidate&gt;{% csrf_token %}
-</span></span><span style="display:flex;"><span>        {% if cl.formset %}
-</span></span><span style="display:flex;"><span>          &lt;div&gt;{{ cl.formset.management_form }}&lt;/div&gt;
-</span></span><span style="display:flex;"><span>        {% endif %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        {% block result_list %}
-</span></span><span style="display:flex;"><span>          {% if action_form and actions_on_top and cl.show_admin_actions %}{% admin_actions %}{% endif %}
-</span></span><span style="display:flex;"><span>          {% result_list cl %}
-</span></span><span style="display:flex;"><span>          {% if action_form and actions_on_bottom and cl.show_admin_actions %}{% admin_actions %}{% endif %}
-</span></span><span style="display:flex;"><span>        {% endblock %}
-</span></span><span style="display:flex;"><span>        {% block pagination %}{% pagination cl %}{% endblock %}
-</span></span><span style="display:flex;"><span>        &lt;/form&gt;
-</span></span><span style="display:flex;"><span>      &lt;/div&gt;
-</span></span><span style="display:flex;"><span>      {% block filters %}
-</span></span><span style="display:flex;"><span>        {% if cl.has_filters %}
-</span></span><span style="display:flex;"><span>          &lt;div id=<span style="color:#a31515">&#34;changelist-filter&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;h2&gt;{% translate &#39;Filter&#39; %}&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>            &lt;form method=<span style="color:#a31515">&#34;GET&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>              &lt;input class=<span style="color:#a31515">&#34;btn btn-info&#34;</span> type=<span style="color:#a31515">&#34;submit&#34;</span> value=<span style="color:#a31515">&#34;{% trans &#39;適用&#39; %}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>              {% if cl.has_active_filters %}&lt;h3 id=<span style="color:#a31515">&#34;changelist-filter-clear&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>                &lt;a href=<span style="color:#a31515">&#34;{{ cl.clear_all_filters_qs }}&#34;</span>&gt;&amp;#10006; {% translate &#34;Clear all filters&#34; %}&lt;/a&gt;
-</span></span><span style="display:flex;"><span>              &lt;/h3&gt;{% endif %}
-</span></span><span style="display:flex;"><span>              {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
-</span></span><span style="display:flex;"><span>              &lt;input class=<span style="color:#a31515">&#34;btn btn-info&#34;</span> type=<span style="color:#a31515">&#34;submit&#34;</span> value=<span style="color:#a31515">&#34;{% trans &#39;適用&#39; %}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;/form&gt;
-</span></span><span style="display:flex;"><span>          &lt;/div&gt;
-</span></span><span style="display:flex;"><span>        {% endif %}
-</span></span><span style="display:flex;"><span>      {% endblock %}
-</span></span><span style="display:flex;"><span>    &lt;/div&gt;
-</span></span><span style="display:flex;"><span>  &lt;/div&gt;
-</span></span><span style="display:flex;"><span>{% endblock %}
-</span></span></code></pre></div><h3 id="2-filterで使用するテンプレート作成">2. Filterで使用するテンプレート作成</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:testapp_hoge_change_list.html" data-lang="html:testapp_hoge_change_list.html">{% extends &#34;admin/base_site.html&#34; %}
+{% load i18n admin_urls static admin_list %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  &lt;link rel=<span style="color:#a31515">&#34;stylesheet&#34;</span> type=<span style="color:#a31515">&#34;text/css&#34;</span> href=<span style="color:#a31515">&#34;{% static &#34;</span>admin<span style="">/</span>css<span style="">/</span>changelists<span style="">.</span>css<span style="">&#34;</span> <span style="">%}&#34;</span>&gt;
+  {% if cl.formset %}
+    &lt;link rel=<span style="color:#a31515">&#34;stylesheet&#34;</span> type=<span style="color:#a31515">&#34;text/css&#34;</span> href=<span style="color:#a31515">&#34;{% static &#34;</span>admin<span style="">/</span>css<span style="">/</span>forms<span style="">.</span>css<span style="">&#34;</span> <span style="">%}&#34;</span>&gt;
+  {% endif %}
+  {% if cl.formset or action_form %}
+    &lt;script src=<span style="color:#a31515">&#34;{% url &#39;admin:jsi18n&#39; %}&#34;</span>&gt;&lt;/script&gt;
+  {% endif %}
+  {{ media.css }}
+  {% if not actions_on_top and not actions_on_bottom %}
+    &lt;style&gt;
+      #changelist table thead th:first-child {<span style="color:#00f">width</span>: <span style="color:#00f">inherit</span>}
+    &lt;/style&gt;
+  {% endif %}
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+{{ media.js }}
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-list{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+&lt;div class=<span style="color:#a31515">&#34;breadcrumbs&#34;</span>&gt;
+&lt;a href=<span style="color:#a31515">&#34;{% url &#39;admin:index&#39; %}&#34;</span>&gt;{% translate &#39;Home&#39; %}&lt;/a&gt;
+&amp;rsaquo; &lt;a href=<span style="color:#a31515">&#34;{% url &#39;admin:app_list&#39; app_label=cl.opts.app_label %}&#34;</span>&gt;{{ cl.opts.app_config.verbose_name }}&lt;/a&gt;
+&amp;rsaquo; {{ cl.opts.verbose_name_plural|capfirst }}
+&lt;/div&gt;
+{% endblock %}
+{% endif %}
+
+{% block coltype %}{% endblock %}
+
+{% block content %}
+  &lt;div id=<span style="color:#a31515">&#34;content-main&#34;</span>&gt;
+    {% block object-tools %}
+        &lt;ul class=<span style="color:#a31515">&#34;object-tools&#34;</span>&gt;
+          {% block object-tools-items %}
+            {% change_list_object_tools %}
+          {% endblock %}
+        &lt;/ul&gt;
+    {% endblock %}
+    {% if cl.formset and cl.formset.errors %}
+        &lt;p class=<span style="color:#a31515">&#34;errornote&#34;</span>&gt;
+        {% if cl.formset.total_error_count == 1 %}{% translate &#34;Please correct the error below.&#34; %}{% else %}{% translate &#34;Please correct the errors below.&#34; %}{% endif %}
+        &lt;/p&gt;
+        {{ cl.formset.non_form_errors }}
+    {% endif %}
+    &lt;div class=<span style="color:#a31515">&#34;module{% if cl.has_filters %} filtered{% endif %}&#34;</span> id=<span style="color:#a31515">&#34;changelist&#34;</span>&gt;
+      &lt;div class=<span style="color:#a31515">&#34;changelist-form-container&#34;</span>&gt;
+        {% block search %}{% search_form cl %}{% endblock %}
+        {% block date_hierarchy %}{% if cl.date_hierarchy %}{% date_hierarchy cl %}{% endif %}{% endblock %}
+
+        &lt;form id=<span style="color:#a31515">&#34;changelist-form&#34;</span> method=<span style="color:#a31515">&#34;post&#34;</span><span style="">{%</span> if cl<span style="">.</span>formset and cl<span style="">.</span>formset<span style="">.</span>is_multipart <span style="">%}</span> enctype=<span style="color:#a31515">&#34;multipart/form-data&#34;</span><span style="">{%</span> endif <span style="">%}</span> novalidate&gt;{% csrf_token %}
+        {% if cl.formset %}
+          &lt;div&gt;{{ cl.formset.management_form }}&lt;/div&gt;
+        {% endif %}
+
+        {% block result_list %}
+          {% if action_form and actions_on_top and cl.show_admin_actions %}{% admin_actions %}{% endif %}
+          {% result_list cl %}
+          {% if action_form and actions_on_bottom and cl.show_admin_actions %}{% admin_actions %}{% endif %}
+        {% endblock %}
+        {% block pagination %}{% pagination cl %}{% endblock %}
+        &lt;/form&gt;
+      &lt;/div&gt;
+      {% block filters %}
+        {% if cl.has_filters %}
+          &lt;div id=<span style="color:#a31515">&#34;changelist-filter&#34;</span>&gt;
+            &lt;h2&gt;{% translate &#39;Filter&#39; %}&lt;/h2&gt;
+            &lt;form method=<span style="color:#a31515">&#34;GET&#34;</span>&gt;
+              &lt;input class=<span style="color:#a31515">&#34;btn btn-info&#34;</span> type=<span style="color:#a31515">&#34;submit&#34;</span> value=<span style="color:#a31515">&#34;{% trans &#39;適用&#39; %}&#34;</span>&gt;
+              {% if cl.has_active_filters %}&lt;h3 id=<span style="color:#a31515">&#34;changelist-filter-clear&#34;</span>&gt;
+                &lt;a href=<span style="color:#a31515">&#34;{{ cl.clear_all_filters_qs }}&#34;</span>&gt;&amp;#10006; {% translate &#34;Clear all filters&#34; %}&lt;/a&gt;
+              &lt;/h3&gt;{% endif %}
+              {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
+              &lt;input class=<span style="color:#a31515">&#34;btn btn-info&#34;</span> type=<span style="color:#a31515">&#34;submit&#34;</span> value=<span style="color:#a31515">&#34;{% trans &#39;適用&#39; %}&#34;</span>&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+        {% endif %}
+      {% endblock %}
+    &lt;/div&gt;
+  &lt;/div&gt;
+{% endblock %}
+</code></pre></div><h3 id="2-filterで使用するテンプレート作成">2. Filterで使用するテンプレート作成</h3>
 <p>以下のファイル名、内容でテンプレートファイルを作成する。<br>
 既に適用済みテキストの復元も併せて対応している。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html:templates/admin/input_filter.html" data-lang="html:templates/admin/input_filter.html"><span style="display:flex;"><span>{% load i18n %}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&lt;h3&gt;{% blocktrans with filter_title=title %} By {{ filter_title }} {% endblocktrans %}&lt;/h3&gt;
-</span></span><span style="display:flex;"><span>&lt;ul&gt;
-</span></span><span style="display:flex;"><span>    &lt;li&gt;
-</span></span><span style="display:flex;"><span>        {% with choices.0 as all_choice %}
-</span></span><span style="display:flex;"><span>            &lt;input type=<span style="color:#a31515">&#34;text&#34;</span> name=<span style="color:#a31515">&#34;{{ spec.parameter_name }}&#34;</span> value=<span style="color:#a31515">&#34;{{ spec.used_parameters|get_item:spec.parameter_name|default_if_none:&#34;</span><span style="">&#34;</span> <span style="">}}&#34;</span>/&gt;
-</span></span><span style="display:flex;"><span>            {% if spec.used_parameters|get_item:spec.parameter_name|default_if_none:&#34;&#34; %}
-</span></span><span style="display:flex;"><span>                &lt;button
-</span></span><span style="display:flex;"><span>                    type=<span style="color:#a31515">&#34;button&#34;</span>
-</span></span><span style="display:flex;"><span>                    class=<span style="color:#a31515">&#34;btn btn-info clear-button button&#34;</span>
-</span></span><span style="display:flex;"><span>                    onclick=<span style="color:#a31515">&#34;location.href=&#39;{{ all_choice.query_string }}&#39;&#34;</span>
-</span></span><span style="display:flex;"><span>                    &gt;
-</span></span><span style="display:flex;"><span>                    Clear
-</span></span><span style="display:flex;"><span>                &lt;/button&gt;
-</span></span><span style="display:flex;"><span>            {% endif %}
-</span></span><span style="display:flex;"><span>        {% endwith %}
-</span></span><span style="display:flex;"><span>    &lt;/li&gt;
-</span></span><span style="display:flex;"><span>&lt;/ul&gt;
-</span></span></code></pre></div><h3 id="3-フィルタークラス作成">3. フィルタークラス作成</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html:templates/admin/input_filter.html" data-lang="html:templates/admin/input_filter.html">{% load i18n %}
+
+&lt;h3&gt;{% blocktrans with filter_title=title %} By {{ filter_title }} {% endblocktrans %}&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        {% with choices.0 as all_choice %}
+            &lt;input type=<span style="color:#a31515">&#34;text&#34;</span> name=<span style="color:#a31515">&#34;{{ spec.parameter_name }}&#34;</span> value=<span style="color:#a31515">&#34;{{ spec.used_parameters|get_item:spec.parameter_name|default_if_none:&#34;</span><span style="">&#34;</span> <span style="">}}&#34;</span>/&gt;
+            {% if spec.used_parameters|get_item:spec.parameter_name|default_if_none:&#34;&#34; %}
+                &lt;button
+                    type=<span style="color:#a31515">&#34;button&#34;</span>
+                    class=<span style="color:#a31515">&#34;btn btn-info clear-button button&#34;</span>
+                    onclick=<span style="color:#a31515">&#34;location.href=&#39;{{ all_choice.query_string }}&#39;&#34;</span>
+                    &gt;
+                    Clear
+                &lt;/button&gt;
+            {% endif %}
+        {% endwith %}
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><h3 id="3-フィルタークラス作成">3. フィルタークラス作成</h3>
 <p>アプリのルートディレクトリに、以下のフィルタークラスを実装するためのファイルを作成する。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python:filters.py" data-lang="python:filters.py"><span style="display:flex;"><span><span style="color:#00f">from</span> django.contrib <span style="color:#00f">import</span> admin
-</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> django.db.models <span style="color:#00f">import</span> Q
-</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> django.template.defaulttags <span style="color:#00f">import</span> register
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> .models <span style="color:#00f">import</span> Hoge
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@register.filter
-</span></span><span style="display:flex;"><span><span style="color:#00f">def</span> get_item(dictionary, key):
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">return</span> dictionary.get(key)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000"># ベースクラス</span>
-</span></span><span style="display:flex;"><span><span style="color:#008000"># このクラスを元に各フォーム項目のフィルタークラスを作成する。</span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">InputTextFilter</span>(admin.SimpleListFilter):
-</span></span><span style="display:flex;"><span>    template = <span style="color:#a31515">&#39;admin/input_filter.html&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">def</span> lookups(self, request, model_admin):
-</span></span><span style="display:flex;"><span>        <span style="color:#008000"># Dummy, required to show the filter.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#00f">return</span> ((),)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">def</span> choices(self, changelist):
-</span></span><span style="display:flex;"><span>        query_params = changelist.get_filters_params()
-</span></span><span style="display:flex;"><span>        query_params.pop(self.parameter_name, <span style="color:#00f">None</span>)
-</span></span><span style="display:flex;"><span>        all_choice = next(super().choices(changelist))
-</span></span><span style="display:flex;"><span>        all_choice[<span style="color:#a31515">&#39;query_params&#39;</span>] = query_params
-</span></span><span style="display:flex;"><span>        <span style="color:#00f">yield</span> all_choice
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">def</span> queryset(self, request, queryset):
-</span></span><span style="display:flex;"><span>        value = self.value()
-</span></span><span style="display:flex;"><span>        <span style="color:#00f">if</span> value:
-</span></span><span style="display:flex;"><span>            q = Q(**{<span style="color:#a31515">&#34;</span><span style="color:#a31515">%s</span><span style="color:#a31515">__icontains&#34;</span> % self.parameter_name: value})
-</span></span><span style="display:flex;"><span>            <span style="color:#00f">return</span> queryset.filter(q)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">HogeFilters</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#00f">class</span> <span style="color:#2b91af">NameFilter</span>(SchoolFilters):
-</span></span><span style="display:flex;"><span>        parameter_name = Hoge.name.field.name
-</span></span><span style="display:flex;"><span>        title = Hoge.name.field.verbose_name
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008000"># 以降、上記のNameFilterの形で対象の項目数フィルタークラスを実装する。</span>
-</span></span></code></pre></div><h3 id="4-adminに対しフィルター適用">4. Adminに対しフィルター適用</h3>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python:admin.py" data-lang="python:admin.py"><span style="display:flex;"><span><span style="color:#00f">from</span> django.contrib <span style="color:#00f">import</span> admin
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> .filters <span style="color:#00f">import</span> HogeFilters
-</span></span><span style="display:flex;"><span><span style="color:#00f">from</span> .models <span style="color:#00f">import</span> Hoge
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>@admin.register(User)
-</span></span><span style="display:flex;"><span><span style="color:#00f">class</span> <span style="color:#2b91af">HogeAdmin</span>(admin.ModelAdmin):
-</span></span><span style="display:flex;"><span>    change_list_template = <span style="color:#a31515">&#39;testapp_hoge_change_list.html&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008000"># 省略</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    list_filter = [
-</span></span><span style="display:flex;"><span>      HogeFilters.NameFilter,
-</span></span><span style="display:flex;"><span>      <span style="color:#008000"># 以降、使用するフィルターを設定する。</span>
-</span></span><span style="display:flex;"><span>    ]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#008000"># 省略</span>
-</span></span></code></pre></div><h2 id="参考にしたページ">参考にしたページ</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:filters.py" data-lang="python:filters.py"><span style="color:#00f">from</span> django.contrib <span style="color:#00f">import</span> admin
+<span style="color:#00f">from</span> django.db.models <span style="color:#00f">import</span> Q
+<span style="color:#00f">from</span> django.template.defaulttags <span style="color:#00f">import</span> register
+
+<span style="color:#00f">from</span> .models <span style="color:#00f">import</span> Hoge
+
+
+@register.filter
+<span style="color:#00f">def</span> get_item(dictionary, key):
+    <span style="color:#00f">return</span> dictionary.get(key)
+
+
+<span style="color:#008000"># ベースクラス</span>
+<span style="color:#008000"># このクラスを元に各フォーム項目のフィルタークラスを作成する。</span>
+<span style="color:#00f">class</span> <span style="color:#2b91af">InputTextFilter</span>(admin.SimpleListFilter):
+    template = <span style="color:#a31515">&#39;admin/input_filter.html&#39;</span>
+
+    <span style="color:#00f">def</span> lookups(self, request, model_admin):
+        <span style="color:#008000"># Dummy, required to show the filter.</span>
+        <span style="color:#00f">return</span> ((),)
+
+    <span style="color:#00f">def</span> choices(self, changelist):
+        query_params = changelist.get_filters_params()
+        query_params.pop(self.parameter_name, <span style="color:#00f">None</span>)
+        all_choice = next(super().choices(changelist))
+        all_choice[<span style="color:#a31515">&#39;query_params&#39;</span>] = query_params
+        <span style="color:#00f">yield</span> all_choice
+
+    <span style="color:#00f">def</span> queryset(self, request, queryset):
+        value = self.value()
+        <span style="color:#00f">if</span> value:
+            q = Q(**{<span style="color:#a31515">&#34;</span><span style="color:#a31515">%s</span><span style="color:#a31515">__icontains&#34;</span> % self.parameter_name: value})
+            <span style="color:#00f">return</span> queryset.filter(q)
+
+
+<span style="color:#00f">class</span> <span style="color:#2b91af">HogeFilters</span>:
+    <span style="color:#00f">class</span> <span style="color:#2b91af">NameFilter</span>(SchoolFilters):
+        parameter_name = Hoge.name.field.name
+        title = Hoge.name.field.verbose_name
+
+    <span style="color:#008000"># 以降、上記のNameFilterの形で対象の項目数フィルタークラスを実装する。</span>
+
+</code></pre></div><h3 id="4-adminに対しフィルター適用">4. Adminに対しフィルター適用</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:admin.py" data-lang="python:admin.py"><span style="color:#00f">from</span> django.contrib <span style="color:#00f">import</span> admin
+
+<span style="color:#00f">from</span> .filters <span style="color:#00f">import</span> HogeFilters
+<span style="color:#00f">from</span> .models <span style="color:#00f">import</span> Hoge
+
+
+@admin.register(User)
+<span style="color:#00f">class</span> <span style="color:#2b91af">HogeAdmin</span>(admin.ModelAdmin):
+    change_list_template = <span style="color:#a31515">&#39;testapp_hoge_change_list.html&#39;</span>
+
+    <span style="color:#008000"># 省略</span>
+
+    list_filter = [
+      HogeFilters.NameFilter,
+      <span style="color:#008000"># 以降、使用するフィルターを設定する。</span>
+    ]
+
+    <span style="color:#008000"># 省略</span>
+</code></pre></div><h2 id="参考にしたページ">参考にしたページ</h2>
 <a href="https://codelab.website/django-admin-add-text-filter/" target="_blank" rel="noopener noreferrer" style="all: unset; cursor: pointer;" >
 <div style="width: 100%; max-width: 36rem; height: 9rem; border-width: 1px; border-style: solid; border-color: rgb(209, 213, 219); display: flex; background-color: rgb(255, 255, 255);" onMouseOut="this.style.background='rgb(255, 255, 255)'" onMouseOver="this.style.background='rgb(243, 244, 246)'">
   <div style="padding: 0.75rem; width: 75%; display: flex; flex-direction: column; justify-content: space-between;">
@@ -579,7 +580,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -725,14 +726,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

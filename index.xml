@@ -23,13 +23,14 @@
       <pubDate>Mon, 21 Mar 2022 14:45:15 +0900</pubDate>
       
       <guid>https://koki-nakamura22.github.io/blog/posts/homebrew/homebrew-update-failed-to-merge-in-the-changes/</guid>
-      <description>This article explains how to solve an error message &amp;rsquo;error: Failed to merge in the changes&amp;rsquo; appears when executing brew update.
+      <description>This article explains how to solve an error message &amp;lsquo;error: Failed to merge in the changes&amp;rsquo; appears when executing brew update.
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Executing brew update-reset What does brew update-reset command do? Reference articles Target audience Those who want to break through the errors that occur when executing brew update and update Homebrew.
-Environment WSL 2 (Ubuntu 20.04 LTS) Preconditions Installed Homebrew Executing brew update-reset Executing the below command to solve the problem.
+ Target audience Environment Preconditions Executing brew update-reset What does brew update-reset command do? Reference articles  Target audience Those who want to break through the errors that occur when executing brew update and update Homebrew.
+Environment  WSL 2 (Ubuntu 20.04 LTS)  Preconditions  Installed Homebrew  Executing brew update-reset Executing the below command to solve the problem.
 brew update-reset That&amp;rsquo;s it!
 What does brew update-reset command do? Homebrew official and non-official remote repository information are reset, then reacquired and reconfigured.
-Reference articles Homebrew Documentation: update-reset install brew error error: Failed to merge in the changes.</description>
+Reference articles Homebrew Documentation: update-reset 
+install brew error error: Failed to merge in the changes.</description>
     </item>
     
     <item>
@@ -40,11 +41,11 @@ Reference articles Homebrew Documentation: update-reset install brew error error
       <guid>https://koki-nakamura22.github.io/blog/posts/hugo/add-robots-txt-to-hugo-site/</guid>
       <description>This article explains how to add robots.txt to the site Hugo builds.
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Add setting to the config file Create the robots.txt under the layouts directory Example Reference articles Target audience Those who want to add a robots.txt to the site Hugo builds. Environment Hugo (v0.94.2+extended linux/amd64 BuildDate=unknown) Preconditions Installed Hugo. Add setting to the config file Add the below code to top-level in the config file.
+ Target audience Environment Preconditions Add setting to the config file Create the robots.txt under the layouts directory Example Reference articles  Target audience  Those who want to add a robots.txt to the site Hugo builds.  Environment  Hugo (v0.94.2+extended linux/amd64 BuildDate=unknown)  Preconditions  Installed Hugo.  Add setting to the config file Add the below code to top-level in the config file.
 In this site case, I added the below code because the config file type is toml.
 enableRobotsTXT = true If you use a YAML type config file, add the below code.
 enableRobotsTXT: true If you use a JSON type config file, add the below code.
-&amp;#34;enableRobotsTXT&amp;#34;: true Hugo will create the robots.txt that contents are below when generate the site.</description>
+&amp;#34;enableRobotsTXT&amp;#34;: true Hugo will create the robots.</description>
     </item>
     
     <item>
@@ -56,9 +57,8 @@ enableRobotsTXT: true If you use a JSON type config file, add the below code.
       <description>[17/03/2022] Fix the npm install command in the set up intellisense section.
 This article explains how to install Jest, how to set up intellisense and how solving an import error.
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Install Jest Set up intellisense Set up for solving an import error Digression Why did I choose Jest for JavaScript testing? Why do I use both npm and yarn? Reference articles Target audience Those who want to build Jest environment. Environment Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS) Visual Studio Code Preconditions Installed npm and yarn Install Jest npm install --save-dev jest Set up intellisense Firstly, execute the below command to install Jest type definitions.
-npm install --save-dev @types/jest Then create a jsconfig.json to the project root directory.
-Content is the below.</description>
+ Target audience Environment Preconditions Install Jest Set up intellisense Set up for solving an import error Digression  Why did I choose Jest for JavaScript testing? Why do I use both npm and yarn?   Reference articles  Target audience  Those who want to build Jest environment.  Environment  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS) Visual Studio Code  Preconditions  Installed npm and yarn  Install Jest npm install --save-dev jest Set up intellisense Firstly, execute the below command to install Jest type definitions.
+npm install --save-dev @types/jest Then create a jsconfig.</description>
     </item>
     
     <item>
@@ -69,11 +69,11 @@ Content is the below.</description>
       <guid>https://koki-nakamura22.github.io/blog/posts/visual-studio-code/ignore-auto-formatting-specific-language/</guid>
       <description>This article explains how to gnore auto-formatting a specific language on VS Code (Using Prettier).
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Edit setting.json 1. Open setting.json 2. Disable specific language auto-formatting function Reference articles Target audience Those who want to switch the on-off auto-formatting function on a specific language Environment Visual Studio Code Preconditions Install Prettier (Prettier is VS Code extention) Edit setting.json 1. Open setting.json Pushing Ctrl + Shift + P simultaneously then choosing Preferences: Open Settings(JSON).
+ Target audience Environment Preconditions Edit setting.json  1. Open setting.json 2. Disable specific language auto-formatting function   Reference articles  Target audience  Those who want to switch the on-off auto-formatting function on a specific language  Environment  Visual Studio Code  Preconditions  Install Prettier (Prettier is VS Code extention)  Edit setting.json 1. Open setting.json Pushing Ctrl + Shift + P simultaneously then choosing Preferences: Open Settings(JSON).
 If your environment is Mac OS, push Command + Shift + P instead of Ctrl + Shift + P.
 2. Disable specific language auto-formatting function Add the below line to a specific language section.
 &amp;#34;editor.formatOnSave&amp;#34;: false e.g. Add to markdown section.
-&amp;#34;[markdown]&amp;#34;: { &amp;#34;editor.formatOnSave&amp;#34;: false }, When a specific language section does not exist in the setting.</description>
+&amp;#34;[markdown]&amp;#34;: { &amp;#34;editor.</description>
     </item>
     
     <item>
@@ -84,7 +84,7 @@ If your environment is Mac OS, push Command + Shift + P instead of Ctrl + Shift 
       <guid>https://koki-nakamura22.github.io/blog/posts/haskell/setup-haskell-dev-env-on-wsl2/</guid>
       <description>This article explains how to set up a Haskell development environment with VS Code on WSL2 (Ubuntu 20.04).
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Set up the development environment 1. Install 2. Create a project 3. Prepare to enable build the project 4. Check setting up the development environment successful 5. Install VS Code extensions for development with Haskell Reference articles Target audience Those who want to set up a Haskell development environment with VS Code on WSL2 (Ubuntu 20.04). Environment Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS) Preconditions Install WSL 2 (Ubuntu 20.04 LTS) to Windows 10 Install VS Code to WSL 2 Set up the development environment 1. Install wget -qO- https://get.haskellstack.org/ | sh 2. Create a project stack new [your project name] 3. Prepare to enable build the project cd [your project name] stack setup stack build 4.</description>
+ Target audience Environment Preconditions Set up the development environment  1. Install 2. Create a project 3. Prepare to enable build the project 4. Check setting up the development environment successful 5. Install VS Code extensions for development with Haskell   Reference articles  Target audience  Those who want to set up a Haskell development environment with VS Code on WSL2 (Ubuntu 20.04).  Environment  Windows 10 (Ver. 21H2, Build. 19044.1526) WSL 2 (Ubuntu 20.04 LTS)  Preconditions  Install WSL 2 (Ubuntu 20.04 LTS) to Windows 10 Install VS Code to WSL 2  Set up the development environment 1. Install wget -qO- https://get.haskellstack.org/ | sh 2.</description>
     </item>
     
     <item>
@@ -95,11 +95,10 @@ Target audience Environment Preconditions Set up the development environment 1. 
       <guid>https://koki-nakamura22.github.io/blog/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu1804/</guid>
       <description>This article explains how to install pyenv, and Python by pyenv on WSL (Ubuntu 18.04 LTS).
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Installing pyenv Installing Python by pyenv Installing libraries that need for installing Python Installing Python Reference articles Target audience Those who want to install pyenv and Python on WSL. Environment WSL (Ubuntu 18.04 LTS) Preconditions Already installed git. Installing pyenv Execution the following commands.
+ Target audience Environment Preconditions Installing pyenv Installing Python by pyenv  Installing libraries that need for installing Python Installing Python   Reference articles  Target audience  Those who want to install pyenv and Python on WSL.  Environment  WSL (Ubuntu 18.04 LTS)  Preconditions  Already installed git.  Installing pyenv Execution the following commands.
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv echo &amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo &amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo -e &amp;#39;if command -v pyenv 1&amp;gt;/dev/null 2&amp;gt;&amp;amp;1; then\n eval &amp;#34;$(pyenv init -)&amp;#34;\nfi&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile exec &amp;#34;$SHELL&amp;#34; Then reboot WSL for applying the setting.
 Installation of pyenv is now complete.
-Installing Python by pyenv Installing libraries that need for installing Python Execution the following command.
-sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev Installing Python Execution the following command, then setting Python version that will use.</description>
+Installing Python by pyenv Installing libraries that need for installing Python Execution the following command.</description>
     </item>
     
     <item>
@@ -110,10 +109,10 @@ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev li
       <guid>https://koki-nakamura22.github.io/blog/posts/javascript/operating-vimeo-by-js/</guid>
       <description>This article explains the example codes of operating the embedded Vimeo video by JavaScript.
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Operating an embedded Vimeo video by JavaScript Loading the embedded Vimeo video to a HTML file Create a JavaScript file for each HTML file Create a JavaScript to operating the Vimeo video. Example code Reference articles Target audience Those who want to operating the Vimeo video by JavaScript. Environment JavaScript (ES2015) Preconditions Nothing.
+ Target audience Environment Preconditions Operating an embedded Vimeo video by JavaScript  Loading the embedded Vimeo video to a HTML file Create a JavaScript file for each HTML file Create a JavaScript to operating the Vimeo video.   Example code Reference articles  Target audience  Those who want to operating the Vimeo video by JavaScript.  Environment  JavaScript (ES2015)  Preconditions Nothing.
 Operating an embedded Vimeo video by JavaScript Loading the embedded Vimeo video to a HTML file First, load the embedded Vimeo video to a HTML file by iframe.
 In this article case, using a sample Vimeo video.
-&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- Specific your video URL on src attribute. --&amp;gt; &amp;lt;iframe id=&amp;#34;sample-player&amp;#34; src=&amp;#34;https://player.vimeo.com/video/76979871&amp;#34; width=&amp;#34;640&amp;#34; height=&amp;#34;360&amp;#34; frameborder=&amp;#34;0&amp;#34; webkitallowfullscreen mozallowfullscreen allowfullscreen allow=&amp;#34;autoplay&amp;#34; &amp;gt;&amp;lt;/iframe&amp;gt; &amp;lt;div&amp;gt; &amp;lt;button id=&amp;#34;play-button&amp;#34;&amp;gt;play&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;#34;pause-button&amp;#34;&amp;gt;pause&amp;lt;/button&amp;gt; &amp;lt;button id=&amp;#34;play-pause-button&amp;#34;&amp;gt;play and pause&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Create a JavaScript file for each HTML file If you do not create a JavaScript file each HTML file, ignore this chapter, please.</description>
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;script type=&amp;#34;module&amp;#34; src=&amp;#34;./javascript/index.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;!-- Specific your video URL on src attribute.</description>
     </item>
     
     <item>
@@ -133,10 +132,9 @@ In this article case, using a sample Vimeo video.
       <guid>https://koki-nakamura22.github.io/blog/posts/hugo/deploying-articles-on-hugo-automatically/</guid>
       <description>This article explains how to deploy articles on Hugo blog automatically.
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions How to deploy articles automatically Make batch file Make PowerShell script file How to use script files Target audience Those who want to deploy articles automatically. Environment Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2) Preconditions Manage blog posts on GitHub. Cloned Hugo blog repository as &amp;ldquo;public&amp;rdquo; directory. How to deploy articles automatically Make script files, then execute it.
+ Target audience Environment Preconditions How to deploy articles automatically  Make batch file Make PowerShell script file How to use script files    Target audience  Those who want to deploy articles automatically.  Environment  Windows 10 (1903) Command Prompt Power Shell (5.1.18362.145) Hugo (0.57.2) Hugo-extended (0.58.2)  Preconditions  Manage blog posts on GitHub. Cloned Hugo blog repository as &amp;ldquo;public&amp;rdquo; directory.  How to deploy articles automatically Make script files, then execute it.
 In this case, use batch file and Powershell script file because use batch file is easier to execute PowerShell script file.
-Make batch file Make &amp;ldquo;deploy.bat&amp;rdquo; file in blog root directory and copy and paste the following codes to it.
-powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1 Make PowerShell script file Make &amp;ldquo;deploy.ps1&amp;rdquo; file in blog root directory and copy and paste the following codes to it.</description>
+Make batch file Make &amp;ldquo;deploy.bat&amp;rdquo; file in blog root directory and copy and paste the following codes to it.</description>
     </item>
     
     <item>
@@ -156,9 +154,7 @@ powershell -NoProfile -ExecutionPolicy Unrestricted .\deploy.ps1 Make PowerShell
       <guid>https://koki-nakamura22.github.io/blog/posts/nodejs/creating-dev-env-of-nodejs/</guid>
       <description>This article explains how to create a development environment of Node.js (Use Express) including a function of hot reload. (VS Code)
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Creating the development environment Make project directory Install Express Install Create a environment for test Install Nodemon globally Install Make a setting file Make and edit launch.json Edit package.json How to execute in debug mode Reference articles Target audience Those who want to create the development environment of Node.js (Express) on VS Code. Environment Windows 10 (1903) Visual Studio Code (1.38.1) Node.js (v10.16.3) npm (6.11.2) Preconditions Installed Node.js, npm and VS Code Creating the development environment Make project directory Execute the following command to make the directory.
-Use the command that is the same on Windows, Mac and Linux.
-mkdir [project name] Install Express Install First, Move to the directory that was made.</description>
+ Target audience Environment Preconditions Creating the development environment  Make project directory Install Express  Install Create a environment for test   Install Nodemon globally  Install Make a setting file Make and edit launch.json Edit package.json   How to execute in debug mode   Reference articles  Target audience  Those who want to create the development environment of Node.js (Express) on VS Code.  Environment  Windows 10 (1903) Visual Studio Code (1.38.1) Node.js (v10.16.3) npm (6.11.2)  Preconditions  Installed Node.js, npm and VS Code  Creating the development environment Make project directory Execute the following command to make the directory.</description>
     </item>
     
     <item>
@@ -169,7 +165,7 @@ mkdir [project name] Install Express Install First, Move to the directory that w
       <guid>https://koki-nakamura22.github.io/blog/posts/markdown/making-table-of-contents-of-markdown/</guid>
       <description>This article explains how to make a table of contents of Markdown automatically..
 The following lists are the table of contents about this article.
-Target audience Preconditions Install doctoc Making a table of contents of Markdown automatically Reference articles Target audience Those who want to make a table of contents of Markdown automatically. Preconditions Installed Node.js Install doctoc Execute the following command.
+ Target audience Preconditions Install doctoc Making a table of contents of Markdown automatically Reference articles  Target audience  Those who want to make a table of contents of Markdown automatically.  Preconditions  Installed Node.js  Install doctoc Execute the following command.
 npm install -g doctoc Making a table of contents of Markdown automatically Specify the directory where contains the Markdown file for making the table of contents exists in the doctoc parameter, and execute it. For the following example, specifying current directory.
 doctoc . Wait to show &amp;ldquo;Everything is OK.&amp;rdquo;. Then open the file, the table of contents has been added to the top between the following comments.
 &amp;lt;!-- START doctoc generated TOC please keep comment here to allow auto update --&amp;gt; &amp;lt;!</description>
@@ -183,9 +179,9 @@ doctoc . Wait to show &amp;ldquo;Everything is OK.&amp;rdquo;. Then open the fil
       <guid>https://koki-nakamura22.github.io/blog/posts/hugo/hugo-adding-copy-button/</guid>
       <description>This article explains how to add a copy code button on Hugo blog.
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Adding copy code button Adding JavaScript code Adding CSS code Reference articles Target audience Those who want to add a copy code button to code block on Hugo blog. Environment Hugo 0.57.2 Hugo-extended 0.58.2 Preconditions Installed Hugo and Hugo-extended Adding copy code button Adding JavaScript code Add the following code to static/js/add-on.js.
+ Target audience Environment Preconditions Adding copy code button  Adding JavaScript code Adding CSS code   Reference articles  Target audience  Those who want to add a copy code button to code block on Hugo blog.  Environment  Hugo 0.57.2 Hugo-extended 0.58.2  Preconditions  Installed Hugo and Hugo-extended  Adding copy code button Adding JavaScript code Add the following code to static/js/add-on.js.
 I use IIFE (Immediately Invoked Function Expression) because I want to narrow the scope of a variable.
-(() =&amp;gt; { &amp;#39;use strict&amp;#39;; if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) { return; } function flashCopyMessage(el, msg) { el.textContent = msg; setTimeout(() =&amp;gt; { el.textContent = &amp;#34;Copy&amp;#34;; }, 1000); } function selectText(node) { let selection = window.getSelection(); let range = document.createRange(); if (node.childElementCount === 2) { // Skip the title.</description>
+(() =&amp;gt; { &amp;#39;use strict&amp;#39;; if(!document.queryCommandSupported(&amp;#39;copy&amp;#39;)) { return; } function flashCopyMessage(el, msg) { el.textContent = msg; setTimeout(() =&amp;gt; { el.textContent = &amp;#34;Copy&amp;#34;; }, 1000); } function selectText(node) { let selection = window.getSelection(); let range = document.</description>
     </item>
     
     <item>
@@ -205,7 +201,7 @@ I use IIFE (Immediately Invoked Function Expression) because I want to narrow th
       <guid>https://koki-nakamura22.github.io/blog/posts/hugo/hugo-syntax-highlight/</guid>
       <description>This article explains how to add a function of syntax highlight on Hugo blog.
 The following lists are the table of contents about this article.
-Target audience Environment Preconditions Add a function of syntax highlight Reference articles Target audience Those who want to add a function of syntax highlight on Hugo blog. Environment Hugo 0.57.2 Hugo-extended 0.58.2 Preconditions Installed Hugo and Hugo-extended Add a function of syntax highlight Add the following codes to config.toml.
+ Target audience Environment Preconditions Add a function of syntax highlight Reference articles  Target audience  Those who want to add a function of syntax highlight on Hugo blog.  Environment  Hugo 0.57.2 Hugo-extended 0.58.2  Preconditions  Installed Hugo and Hugo-extended  Add a function of syntax highlight Add the following codes to config.toml.
 pygmentsCodefences = true pygmentsStyle = &amp;#34;fruity&amp;#34; You can chose a style on pygmentsStyle from the below pages.
 Chroma Style GalleryxxxxxxxxxxThe above code chooses style that is &amp;ldquo;fruity&amp;rdquo;.
 Reference articles Syntax highlighting in Hugo with Chroma | zwbetzxxxxxxxxxx</description>

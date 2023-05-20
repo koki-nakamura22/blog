@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -125,7 +125,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -301,86 +301,86 @@
 <h3 id="プロジェクトディレクトリを作成">プロジェクトディレクトリを作成</h3>
 <p>下記のコマンドを実行し、プロジェクト用のディレクトリを作成します。<br>
 使用するコマンドはWindows, MacおよびLinux環境すべてで同じです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-winbatch" data-lang="winbatch"><span style="display:flex;"><span><span style="color:#00f">mkdir</span> [project name]
-</span></span></code></pre></div><h3 id="expressインストール">Expressインストール</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch"><span style="color:#00f">mkdir</span> [project name]
+</code></pre></div><h3 id="expressインストール">Expressインストール</h3>
 <h4 id="インストール">インストール</h4>
 <p>最初に、作成したプロジェクト用ディレクトリへ移動しておきます。<br>
 次に、下記のコマンドを実行しExpressをローカルインストールします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-winbatch" data-lang="winbatch"><span style="display:flex;"><span>npm install express --save-dev
-</span></span></code></pre></div><h4 id="テスト用環境を構築">テスト用環境を構築</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm install express --save-dev
+</code></pre></div><h4 id="テスト用環境を構築">テスト用環境を構築</h4>
 <p>最初に下記にコマンドを実行します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-winbatch" data-lang="winbatch"><span style="display:flex;"><span>npm init
-</span></span></code></pre></div><p>次にapp.jsというファイルを作成し、下記のコマンドをペーストします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript:app.js" data-lang="javascript:app.js"><span style="display:flex;"><span><span style="color:#00f">const</span> express = require(<span style="color:#a31515">&#34;express&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> app = express();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
-</span></span><span style="display:flex;"><span>  res.send(<span style="color:#a31515">&#34;Hello World!&#34;</span>);
-</span></span><span style="display:flex;"><span>});
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">const</span> server = app.listen(3000, () =&gt; {
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">const</span> host = server.address().address;
-</span></span><span style="display:flex;"><span>  <span style="color:#00f">const</span> port = server.address().port;
-</span></span><span style="display:flex;"><span>  console.log(<span style="color:#a31515">&#34;Example app listening at http://%s:%s&#34;</span>, host, port);
-</span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><p>これでExpressの環境構築は終了です。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm init
+</code></pre></div><p>次にapp.jsというファイルを作成し、下記のコマンドをペーストします。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript:app.js" data-lang="javascript:app.js"><span style="color:#00f">const</span> express = require(<span style="color:#a31515">&#34;express&#34;</span>);
+<span style="color:#00f">const</span> app = express();
+
+app.get(<span style="color:#a31515">&#34;/&#34;</span>, (req, res) =&gt; {
+  res.send(<span style="color:#a31515">&#34;Hello World!&#34;</span>);
+});
+
+<span style="color:#00f">const</span> server = app.listen(3000, () =&gt; {
+  <span style="color:#00f">const</span> host = server.address().address;
+  <span style="color:#00f">const</span> port = server.address().port;
+  console.log(<span style="color:#a31515">&#34;Example app listening at http://%s:%s&#34;</span>, host, port);
+});
+</code></pre></div><p>これでExpressの環境構築は終了です。<br>
 次は、ホットリロードの設定をしていきます。
 <br></p>
 <h3 id="nodemonのグローバルインストール">Nodemonのグローバルインストール</h3>
 <p>ホットリロードの環境を構築するためにNodemonを使用します。</p>
 <h4 id="インストール-1">インストール</h4>
 <p>下記のコマンドを実行し、Nodemonをグローバルインストールします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-winbatch" data-lang="winbatch"><span style="display:flex;"><span>npm install nodemon -g
-</span></span></code></pre></div><h4 id="設定ファイル作成">設定ファイル作成</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm install nodemon -g
+</code></pre></div><h4 id="設定ファイル作成">設定ファイル作成</h4>
 <p>.nodemon.jsonをプロジェクトのルートパスに作成します。<br>
 ファイルを作成したら、下記のコードをファイル内へペーストします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json:.nodemon.json" data-lang="json:.nodemon.json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  &#34;watch&#34;: <span style="color:#a31515">&#34;./*&#34;</span>,
-</span></span><span style="display:flex;"><span>  &#34;ext&#34;: <span style="color:#a31515">&#34;js,json&#34;</span>,
-</span></span><span style="display:flex;"><span>  &#34;exec&#34;: <span style="color:#a31515">&#34;node ./app&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="launchjsonの作成および編集">launch.jsonの作成および編集</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json:.nodemon.json" data-lang="json:.nodemon.json">{
+  &#34;watch&#34;: <span style="color:#a31515">&#34;./*&#34;</span>,
+  &#34;ext&#34;: <span style="color:#a31515">&#34;js,json&#34;</span>,
+  &#34;exec&#34;: <span style="color:#a31515">&#34;node ./app&#34;</span>
+}
+</code></pre></div><h4 id="launchjsonの作成および編集">launch.jsonの作成および編集</h4>
 <p>最初に、launch.jsonを下記の作業を行い作成します。
 <br>
 [Debug] in a left menu -&gt; [Gear icon] -&gt; Select Environmentのところで&quot;Node.js&quot;を選択.
 <br>
 次に、launch.json内の&quot;configuration&quot;の中身を下記に置き換えます。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    &#34;type&#34;: <span style="color:#a31515">&#34;node&#34;</span>,
-</span></span><span style="display:flex;"><span>    &#34;request&#34;: <span style="color:#a31515">&#34;attach&#34;</span>,
-</span></span><span style="display:flex;"><span>    &#34;name&#34;: <span style="color:#a31515">&#34;Node: Nodemon&#34;</span>,
-</span></span><span style="display:flex;"><span>    &#34;processId&#34;: <span style="color:#a31515">&#34;${command:PickProcess}&#34;</span>,
-</span></span><span style="display:flex;"><span>    &#34;restart&#34;: <span style="color:#00f">true</span>,
-</span></span><span style="display:flex;"><span>    &#34;protocol&#34;: <span style="color:#a31515">&#34;inspector&#34;</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>下記のコードは置き換え後の、ファイル内全体のコードです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json:launch.json" data-lang="json:launch.json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#008000">// Use IntelliSense to learn about possible attributes.
-</span></span></span><span style="display:flex;"><span><span style="color:#008000"></span>    <span style="color:#008000">// Hover to view descriptions of existing attributes.
-</span></span></span><span style="display:flex;"><span><span style="color:#008000"></span>    <span style="color:#008000">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-</span></span></span><span style="display:flex;"><span><span style="color:#008000"></span>    &#34;version&#34;: <span style="color:#a31515">&#34;0.2.0&#34;</span>,
-</span></span><span style="display:flex;"><span>    &#34;configurations&#34;: [
-</span></span><span style="display:flex;"><span>        {
-</span></span><span style="display:flex;"><span>            &#34;type&#34;: <span style="color:#a31515">&#34;node&#34;</span>,
-</span></span><span style="display:flex;"><span>            &#34;request&#34;: <span style="color:#a31515">&#34;attach&#34;</span>,
-</span></span><span style="display:flex;"><span>            &#34;name&#34;: <span style="color:#a31515">&#34;Node: Nodemon&#34;</span>,
-</span></span><span style="display:flex;"><span>            &#34;processId&#34;: <span style="color:#a31515">&#34;${command:PickProcess}&#34;</span>,
-</span></span><span style="display:flex;"><span>            &#34;restart&#34;: <span style="color:#00f">true</span>,
-</span></span><span style="display:flex;"><span>            &#34;protocol&#34;: <span style="color:#a31515">&#34;inspector&#34;</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    ]
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="packagejsonを編集">package.jsonを編集</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    &#34;type&#34;: <span style="color:#a31515">&#34;node&#34;</span>,
+    &#34;request&#34;: <span style="color:#a31515">&#34;attach&#34;</span>,
+    &#34;name&#34;: <span style="color:#a31515">&#34;Node: Nodemon&#34;</span>,
+    &#34;processId&#34;: <span style="color:#a31515">&#34;${command:PickProcess}&#34;</span>,
+    &#34;restart&#34;: <span style="color:#00f">true</span>,
+    &#34;protocol&#34;: <span style="color:#a31515">&#34;inspector&#34;</span>
+}
+</code></pre></div><p>下記のコードは置き換え後の、ファイル内全体のコードです。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json:launch.json" data-lang="json:launch.json">{
+    <span style="color:#008000">// Use IntelliSense to learn about possible attributes.
+</span><span style="color:#008000"></span>    <span style="color:#008000">// Hover to view descriptions of existing attributes.
+</span><span style="color:#008000"></span>    <span style="color:#008000">// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+</span><span style="color:#008000"></span>    &#34;version&#34;: <span style="color:#a31515">&#34;0.2.0&#34;</span>,
+    &#34;configurations&#34;: [
+        {
+            &#34;type&#34;: <span style="color:#a31515">&#34;node&#34;</span>,
+            &#34;request&#34;: <span style="color:#a31515">&#34;attach&#34;</span>,
+            &#34;name&#34;: <span style="color:#a31515">&#34;Node: Nodemon&#34;</span>,
+            &#34;processId&#34;: <span style="color:#a31515">&#34;${command:PickProcess}&#34;</span>,
+            &#34;restart&#34;: <span style="color:#00f">true</span>,
+            &#34;protocol&#34;: <span style="color:#a31515">&#34;inspector&#34;</span>
+        }
+    ]
+}
+</code></pre></div><h4 id="packagejsonを編集">package.jsonを編集</h4>
 <p>最後に、プログラムを実行するためのコマンドをpackage.jsonへ追加します。<br>
 下記のコマンドをファイル内の&quot;script&quot;へ追加します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#a31515">&#34;debug&#34;</span><span style="">:</span> <span style="color:#a31515">&#34;nodemon --inspect app.js&#34;</span>
-</span></span></code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#a31515">&#34;debug&#34;</span><span style="">:</span> <span style="color:#a31515">&#34;nodemon --inspect app.js&#34;</span>
+</code></pre></div><br>
 これで開発環境の構築は終了です。
 <br>
 <h3 id="プログラムのデバッグ実行方法">プログラムのデバッグ実行方法</h3>
 <p>プログラムをデバッグ実行する場合、下記のコマンドをプロジェクト用ディレクトリのルートで実行します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-winbatch" data-lang="winbatch"><span style="display:flex;"><span>npm run debug
-</span></span></code></pre></div><p>その後、VS Code上でF5キーを押します。<br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-winbatch" data-lang="winbatch">npm run debug
+</code></pre></div><p>その後、VS Code上でF5キーを押します。<br>
 この時にVS Codeからアタッチするプロセスを聞かれた場合は、&ldquo;node &ndash;inspect app.js&quot;を選択してください。<br>
 プログラムを終了したい場合はShift + F5を押すか、デバッグメニューの&quot;Disconnect&quot;をクリックしてください。また、コマンドプロンプトもしくはPowerShell上でCtrl + Cを押すのも忘れないようにしてください。</p>
 <h1 id="参考にさせていただいたページ">参考にさせていただいたページ</h1>
@@ -472,7 +472,7 @@
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -618,14 +618,14 @@
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     

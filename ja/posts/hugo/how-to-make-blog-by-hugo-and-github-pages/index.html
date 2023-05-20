@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" href="/blog/favicon.ico?v=1">
 
-  <meta name="generator" content="Hugo 0.102.3" />
+  <meta name="generator" content="Hugo 0.92.2" />
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/github.min.css">
           <link rel="stylesheet" href="/blog/css/bundle.min.ccd11d3cc6baba9db19cba4a8b6291c7351b0dd74e5c6030da5549472441fd88.css" integrity="sha256-zNEdPMa6up2xnLpKi2KRxzUbDddOXGAw2lVJRyRB/Yg="><link rel="stylesheet" href="/blog/css/add-on.css">
@@ -35,7 +35,7 @@
 <header id="site-header">
   <nav id="site-nav">
     <h1 class="nav-title">
-      <a href="/ja/" class="nav">
+      <a href="/blog/ja/" class="nav">
         <h1>Koki's personal blog</h1>
       </a>
     </h1>
@@ -130,7 +130,7 @@
 
     <div id="wrapper">
       <section id="site-intro" >
-  <a href="/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
+  <a href="/blog/ja/"><img src="/blog/img/main/logo0.jpg" class="circle" width="160" alt="Koki&#39;s personal blog" /></a>
   <header>
     <h1>Koki's personal blog</h1>
   </header>
@@ -297,33 +297,33 @@
 </ul>
 <h2 id="インストール">インストール</h2>
 <p>下記コマンドを実行します。コマンドを実行するディレクトリはどこでも良いです。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>choco install hugo -confirm
-</span></span><span style="display:flex;"><span>choco install hugo-extended -confirm
-</span></span></code></pre></div><h2 id="サイトを作成">サイトを作成</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">choco install hugo -confirm
+choco install hugo-extended -confirm
+</code></pre></div><h2 id="サイトを作成">サイトを作成</h2>
 <p>サイトを作成したいディレクトリで下記コマンドを実行します。<br>
 [サイト名]には、好きなサイト名を入力してください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>hugo new site [サイト名]
-</span></span></code></pre></div><h2 id="記事を作成">記事を作成</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo new site [サイト名]
+</code></pre></div><h2 id="記事を作成">記事を作成</h2>
 <p>記事を作成するには、作成したサイトディレクトリのルートで下記コマンドを実行します。<br>
 [ディレクトリ名]は、後述する各テーマに沿って指定します。<br>
 [記事名]は、好きな記事名を入力してください。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>hugo new [ディレクトリ名]/[記事名].md
-</span></span></code></pre></div><p>記事作成後は、自由に作成したMarkdownファイルを編集します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo new [ディレクトリ名]/[記事名].md
+</code></pre></div><p>記事作成後は、自由に作成したMarkdownファイルを編集します。</p>
 <h2 id="テーマを適用">テーマを適用</h2>
 <p>本記事内では、hugo-future-imperfect-slimを適用します。<br>
 最初に作成したサイトディレクトリのルートで下記のコマンドを実行し、GitHubからthemesディレクトリへテーマをダウンロードします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>git clone https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim
-</span></span></code></pre></div><p>その後、下記コマンドを同ディレクトリで実行し、サンプルサイトの設定を適用します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>xcopy /s /e .\themes\hugo-future-imperfect-slim\exampleSite .
-</span></span></code></pre></div><p>ちなみに、テーマを適用する場合は、下記の様にconfig.tomlへ「theme=&quot;[テーマ名]&quot;」の行を追記します。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>theme = <span style="color:#a31515">&#34;hugo-future-imperfect-slim&#34;</span>
-</span></span></code></pre></div><p>テーマの一覧を確認できるページについては、本記事最後に記述します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">git clone https://github.com/pacollins/hugo-future-imperfect-slim.git themes/hugo-future-imperfect-slim
+</code></pre></div><p>その後、下記コマンドを同ディレクトリで実行し、サンプルサイトの設定を適用します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">xcopy /s /e .\themes\hugo-future-imperfect-slim\exampleSite .
+</code></pre></div><p>ちなみに、テーマを適用する場合は、下記の様にconfig.tomlへ「theme=&quot;[テーマ名]&quot;」の行を追記します。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">theme = <span style="color:#a31515">&#34;hugo-future-imperfect-slim&#34;</span>
+</code></pre></div><p>テーマの一覧を確認できるページについては、本記事最後に記述します。</p>
 <h2 id="ローカルでサーバ起動">ローカルでサーバ起動</h2>
 <p>下記コマンドを実行する。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>hugo server
-</span></span></code></pre></div><p>また、下記のように「-p [ポート番号]」とオプションを付けると、そのポート番号で起動することが可能。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>hugo server -p 12345
-</span></span></code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo server
+</code></pre></div><p>また、下記のように「-p [ポート番号]」とオプションを付けると、そのポート番号で起動することが可能。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">hugo server -p 12345
+</code></pre></div><br>
 これで、最低限ホームページを作成することができます。
 <h2 id="github-pagesへdeploy">GitHub PagesへDeploy</h2>
 <h3 id="ゴール">ゴール</h3>
@@ -336,43 +336,43 @@
 <h3 id="作成したリポジトリをクローン">作成したリポジトリをクローン</h3>
 <p>サイトディレクトリのルートで下記コマンドを実行し、作成したリポジトリをクローンします。<br>
 下記のコマンドでは、念のためクローン前に既存のpublicディレクトリを削除しています。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span><span style="color:#00f">rmdir</span> /s /q public
-</span></span><span style="display:flex;"><span>git clone https://github.com/koki-nakamura22/test-hugo-blog.git public
-</span></span></code></pre></div><h3 id="デプロイ用スクリプト作成">デプロイ用スクリプト作成</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#00f">rmdir</span> /s /q public
+git clone https://github.com/koki-nakamura22/test-hugo-blog.git public
+</code></pre></div><h3 id="デプロイ用スクリプト作成">デプロイ用スクリプト作成</h3>
 <p>deploy.batというファイルをサイトディレクトリのルートに作成し、下記コードをファイル内にコピー&amp;ペーストします。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>@<span style="color:#00f">echo</span> off
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Build the project.</span>
-</span></span><span style="display:flex;"><span>hugo
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Go to public directory.</span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">cd</span> public
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Add changes to git.</span>
-</span></span><span style="display:flex;"><span>git add .
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Create a commit message.</span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> d=%date%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> yyyy=%d:~-10,4%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> mm=%d:~-5,2%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> dd=%d:~-2,2%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> t=%time: =0%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> hh=%t:~0,2%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> mn=%t:~3,2%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> ss=%t:~6,2%
-</span></span><span style="display:flex;"><span><span style="color:#00f">set</span> commitMsg=Site updated: %yyyy%-%mm%-%dd% %hh%:%mn%:%ss%
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Commit.</span>
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#a31515">&#34;</span>%commitMsg%<span style="color:#a31515">&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Push source and build repos.</span>
-</span></span><span style="display:flex;"><span>git push origin master
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#008000">REM Come back to the project root.</span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">cd</span> ..
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#00f">echo</span> <span style="color:#a31515">&#34;The web page has been updated!&#34;</span>
-</span></span></code></pre></div><h3 id="github-pagesの設定">GitHub Pagesの設定</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">@<span style="color:#00f">echo</span> off
+
+<span style="color:#008000">REM Build the project.</span>
+hugo
+
+<span style="color:#008000">REM Go to public directory.</span>
+<span style="color:#00f">cd</span> public
+
+<span style="color:#008000">REM Add changes to git.</span>
+git add .
+
+<span style="color:#008000">REM Create a commit message.</span>
+<span style="color:#00f">set</span> d=%date%
+<span style="color:#00f">set</span> yyyy=%d:~-10,4%
+<span style="color:#00f">set</span> mm=%d:~-5,2%
+<span style="color:#00f">set</span> dd=%d:~-2,2%
+<span style="color:#00f">set</span> t=%time: =0%
+<span style="color:#00f">set</span> hh=%t:~0,2%
+<span style="color:#00f">set</span> mn=%t:~3,2%
+<span style="color:#00f">set</span> ss=%t:~6,2%
+<span style="color:#00f">set</span> commitMsg=Site updated: %yyyy%-%mm%-%dd% %hh%:%mn%:%ss%
+
+<span style="color:#008000">REM Commit.</span>
+git commit -m <span style="color:#a31515">&#34;</span>%commitMsg%<span style="color:#a31515">&#34;</span>
+
+<span style="color:#008000">REM Push source and build repos.</span>
+git push origin master
+
+<span style="color:#008000">REM Come back to the project root.</span>
+<span style="color:#00f">cd</span> ..
+
+<span style="color:#00f">echo</span> <span style="color:#a31515">&#34;The web page has been updated!&#34;</span>
+</code></pre></div><h3 id="github-pagesの設定">GitHub Pagesの設定</h3>
 <p>「GitHub上でブログ用のリポジトリを作成」で作成したリポジトリのページを開き、下記の設定を行います。<br>
 Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合はmaster branchだと思います。)<br>
 実際の画面を確認しながら作業を行いたい方は、下記ページを参考にするとわかりやすいです。</p>
@@ -481,7 +481,7 @@ Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合�
       
       
         <footer>
-          <a href="/ja/posts/" class="button">続きを見る</a>
+          <a href="/blog/ja/posts/" class="button">続きを見る</a>
         </footer>
       
     </section>
@@ -627,14 +627,14 @@ Settings -&gt; GitHub PagesのSourceでmaster branchを選択 (大体の場合�
   <p class="copyright">
     Powered by Hugo. Copyright © 2022 Koki NAKAMURA
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.102.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.92.2' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/blog/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.51d8c98606b9dcc8efba6e0f281d1a31e36e6747bf1d7090b19819abfa0f2a47.js" integrity="sha256-UdjJhga53Mjvum4PKB0aMeNuZ0e/HXCQsZgZq/oPKkc="></script>
+    <script>hljs.highlightAll();</script><script src="/blog/js/bundle.min.08604861cabdfae04cd27b45a23ab2dff44e226e96fda3ff2d6f566eef9ab9a3.js" integrity="sha256-CGBIYcq9&#43;uBM0ntFojqy3/ROIm6W/aP/LW9Wbu&#43;auaM="></script>
     <script src="/blog/js/add-on.js"></script>
   
     
