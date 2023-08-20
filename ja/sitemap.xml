@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/goals-for-2023/</loc>
-    <lastmod>2023-05-21T01:07:12+09:00</lastmod>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/terraform/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/terraform/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/terraform/"
+                />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
-    <lastmod>2023-05-21T01:07:12+09:00</lastmod>
+    <lastmod>2023-07-17T18:23:58+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +28,7 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
-    <lastmod>2023-05-21T01:07:12+09:00</lastmod>
+    <lastmod>2023-07-17T18:23:58+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -31,14 +40,8 @@
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
-    <lastmod>2023-05-21T01:07:12+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
-    <lastmod>2023-05-21T01:07:12+09:00</lastmod>
-  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
-    <lastmod>2023-05-21T01:07:12+09:00</lastmod>
+    <lastmod>2023-07-17T18:23:58+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -51,7 +54,7 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
-    <lastmod>2023-05-21T01:07:12+09:00</lastmod>
+    <lastmod>2023-07-17T18:23:58+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -62,6 +65,21 @@
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
                 />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/terraform/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/terraform/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/terraform/sharing-tfstate-through-s3/</loc>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/goals-for-2023/</loc>
+    <lastmod>2023-07-17T18:23:58+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
+    <lastmod>2023-07-17T18:23:58+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
+    <lastmod>2023-07-17T18:23:58+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/docker/</loc>
     <lastmod>2022-12-26T17:39:58+09:00</lastmod>

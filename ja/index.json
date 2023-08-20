@@ -1,4 +1,10 @@
 [{
+    "title": "tfstateファイルをS3経由で共有 (チームでTerraformを運用する際に必須の設定について)",
+    "date": "",
+    "description": "この記事では、tfstateファイルをS3経由で共有・管理する方法、また、なぜそれが必要なのかについて説明します。",
+    "body": "この記事では、tfstateファイルをS3経由で共有・管理する方法、また、なぜそれが必要なのかについて説明します。\nこの記事の内容です。\n 対象読者 環境 前提条件 なぜtfstateをS3経由で共有管理する必要があるのか tfstateをS3で管理  設定追加 設定反映   参考にしたページ  対象読者  チームで、tfstateファイルをローカルではなくS3経由で共有・管理したい方  環境  Terraform v1.5.0  前提条件  なし  なぜtfstateをS3経由で共有管理する必要があるのか なぜtfstateをS3経由で共有・管理する必要があるのか？について説明します。\nまず、tfstateファイルはAWSへデプロイしたインフラ構成を記録・管理するためのファイルです。\nそのため、1人でインフラ構成を管理をしているなら問題は発生しないのですが、チームでインフラ構成を管理していると誰の環境に最新のtfstateファイルが存在しているのかわからなくなってしまいます。\nそのまま運用を行うと、デグレードが発生しやすくなり、問題が発生しやすくなります。\nこれをどのように解決するのかについてですが、S3でtfstateファイルを管理し、それを各メンバーの環境から参照させることで、常に最新のtfstateファイルが1つだけでかつそれを参照させる解決します。\ntfstateをS3で管理 設定追加 main.tfのterraformブロックへ、backendブロックを追加します。\nterraform { required_providers { aws = { source = \u0026#34;hashicorp/aws\u0026#34; version = \u0026#34;5.5.0\u0026#34; } }# 以下を追加  backend \u0026#34;s3\u0026#34; { key = \u0026#34;terraform.tfstate\u0026#34;# S3に保存する際のパスおよびファイル名指定  region = \u0026#34;ap-northeast-1\u0026#34;# S3バケットのリージョン  bucket = \u0026#34;test-bucket\u0026#34;# 保存先のバケット名  } } 設定反映 もし、既にTerraformを運用している際は、tfstateファイルをS3で管理するようにした設定を反映させる必要があります。\nこれは簡単で、対象のmain.tfが存在するディレクトリで以下のコマンドを実行するだけです。\nterraform init 上記コマンドを実行すると、処理を継続してもよいかを問われるので\nyes を入力しEnter/Returnを押してください。\n参考にしたページ \rBackend Configuration - Configuration Language | Terraform | HashiCorp Developer\rUse the `backend` block to control where Terraform stores state. Learn about the available state backends, the backend block, initializing backends, partial backend configuration, changing backend configuration, and unconfiguring a backend.\r\rdeveloper.hashicorp.com\r\r\r\r",
+    "ref": "/blog/ja/posts/terraform/sharing-tfstate-through-s3/"
+  },{
     "title": "2023年の目標",
     "date": "",
     "description": "2023年の目標メモ",
