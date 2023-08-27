@@ -1,4 +1,10 @@
 [{
+    "title": "WSL2 Ubuntu 22.04にpyenvをインストールする方法",
+    "date": "",
+    "description": "この記事では、WSL2上のUbuntu 22.04にpyenvをインストールする手順をわかりやすく説明します。pyenvのインストールに必要なパッケージの導入から、pyenvのセットアップまでの全手順を紹介します。",
+    "body": "この記事では、WSL2上のUbuntu 22.04にpyenvをインストールする手順をわかりやすく説明します。pyenvのインストールに必要なパッケージの導入から、pyenvのセットアップまでの全手順を紹介します。\nこの記事の内容です。\n 対象読者 環境 前提条件 インストール手順  1. 必要なパッケージのインストール 2. pyenvのインストール 3. pyenvの初期設定   参考にしたページ  対象読者  WSL2を使用している方 Pythonのバージョン管理を効率よく行いたい方 pyenvをUbuntuにインストールしたい方  環境  WSL2 Ubuntu 22.04  前提条件  インターネットへのアクセスが可能であること  インストール手順 1. 必要なパッケージのインストール 最初に、pyenvのインストールに必要なパッケージを導入します。以下のコマンドを実行してください。\nsudo apt install -y gcc make build-essential libssl-dev libffi-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev liblzma-dev 2. pyenvのインストール 次に、公式のインストールスクリプトを使用してpyenvをインストールします。\ncurl https://pyenv.run | bash 3. pyenvの初期設定 最後に、pyenvを利用するための環境変数を設定します。以下の行を.bashrcに追加してください。\nexport PYENV_ROOT=\u0026#34;$HOME/.pyenv\u0026#34; command -v pyenv \u0026gt;/dev/null || export PATH=\u0026#34;$PYENV_ROOT/bin:$PATH\u0026#34; eval \u0026#34;$(pyenv init -)\u0026#34; これで、WSL2上のUbuntu 22.04にpyenvがインストールされ、使えるようになります。\n参考にしたページ  Install Pyenv on Ubuntu 22.04 Ubuntu に pyenv を利用して Python をインストールする  ",
+    "ref": "/blog/ja/posts/python/installing-pyenv-pyenv-on-wsl-ubuntu2204/"
+  },{
     "title": "WSL2 Ubuntu起動時にエラーメッセージが表示され起動できない時の対処法",
     "date": "",
     "description": "WSL2のUbuntuをストア経由でインストールすると、起動時にエラーメッセージが表示される場合があります。そんな時の解決方法を本記事では説明します。",
