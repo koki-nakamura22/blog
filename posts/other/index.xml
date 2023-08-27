@@ -7,5 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/posts/other/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What to do when an error message is displayed when launching WSL2 Ubuntu and it cannot be started</title>
+      <link>https://koki-nakamura22.github.io/blog/posts/other/resolve-wsl2-launch-error/</link>
+      <pubDate>Sun, 27 Aug 2023 13:55:30 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/posts/other/resolve-wsl2-launch-error/</guid>
+      <description>When you install Ubuntu for WSL2 via the Microsoft Store, there&amp;rsquo;s a chance you might face error messages upon launch. This article provides guidance on how to address these issues.
+Table of Contents here.
+ Target Audience Environment Prerequisites Issues with Microsoft Store Installation How to Resolve the Issue  1. Uninstalling Ubuntu on WSL2 2. Installing Ubuntu on WSL2 via Command Line Side Note: Checking Available Distributions    Target Audience  Those encountering error messages when starting WSL2 Ubuntu  Environment  Windows 10 or newer versions A setup where WSL2 can be utilized  Prerequisites  Activation of the Windows Subsystem for Linux (WSL)  Issues with Microsoft Store Installation Upon installing Ubuntu for WSL2 via the Microsoft Store, you might see the following error messages, and Ubuntu on WSL2 might fail to start:
+Command not found.</description>
+    </item>
+    
   </channel>
 </rss>

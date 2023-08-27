@@ -6,6 +6,16 @@
     <description>Recent content in Tags on Koki&#39;s personal blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright><atom:link href="https://koki-nakamura22.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
+    <lastBuildDate>Sun, 27 Aug 2023 13:55:30 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL</title>
+      <link>https://koki-nakamura22.github.io/blog/tags/wsl/</link>
+      <pubDate>Sun, 27 Aug 2023 13:55:30 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/tags/wsl/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
