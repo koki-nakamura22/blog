@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on Koki&#39;s personal blog</title>
+    <link>https://koki-nakamura22.github.io/blog/categories/django/</link>
+    <description>Recent content in Django on Koki&#39;s personal blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Powered by Hugo. Copyright © 2022 Koki NAKAMURA</copyright>
+    <lastBuildDate>Sun, 03 Sep 2023 17:54:18 +0900</lastBuildDate><atom:link href="https://koki-nakamura22.github.io/blog/categories/django/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSRF Token Authentication in Django REST framework</title>
+      <link>https://koki-nakamura22.github.io/blog/posts/django/csrf-protect-on-django-rest-framework/</link>
+      <pubDate>Sun, 03 Sep 2023 17:54:18 +0900</pubDate>
+      
+      <guid>https://koki-nakamura22.github.io/blog/posts/django/csrf-protect-on-django-rest-framework/</guid>
+      <description>This article explains how to implement CSRF token authentication in Web APIs using Django REST framework..
+The following lists are the table of contents about this article.
+ Target Audience Environment Prerequisites How to Implement CSRF Token Authentication  Why Implement CSRF Token Authentication? Implementing an API to Return CSRF Tokens Creating the Authentication Class Setting APIView Points to Note for Testing    Target Audience  Those developing REST APIs using Django REST framework. Individuals interested in mechanisms to prevent data tampering. Those with basic knowledge of CSRF token authentication.  Environment Here is the environment in which the author confirmed the operation:
+ Python 3.11 Django 4.2.2 Django REST framework 3.14.0  Prerequisites  Django and Django REST framework should be installed. A Django project should already be set up. Familiarity with the basic concepts of REST APIs.</description>
+    </item>
+    
+  </channel>
+</rss>
