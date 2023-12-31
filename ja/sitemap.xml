@@ -2,8 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/summary-or-review-of-2023/</loc>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/categories/</loc>
-    <lastmod>2023-08-27T14:53:44+09:00</lastmod>
+    <lastmod>2023-09-03T18:26:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,46 +17,8 @@
                 href="https://koki-nakamura22.github.io/blog/ja/categories/"
                 />
   </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/django/</loc>
-    <lastmod>2022-12-19T22:03:02+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/tags/django/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/tags/django/"
-                />
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
-    <lastmod>2022-12-19T22:03:02+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/categories/django/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/categories/django/"
-                />
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/csrf-protect-on-django-rest-framework/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://koki-nakamura22.github.io/blog/posts/django/csrf-protect-on-django-rest-framework/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://koki-nakamura22.github.io/blog/ja/posts/django/csrf-protect-on-django-rest-framework/"
-                />
-  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/</loc>
-    <lastmod>2023-08-27T14:53:44+09:00</lastmod>
+    <lastmod>2023-09-03T18:26:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -66,8 +30,14 @@
                 href="https://koki-nakamura22.github.io/blog/ja/"
                 />
   </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
+    <lastmod>2023-08-20T21:21:51+09:00</lastmod>
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
+    <lastmod>2023-08-20T21:21:51+09:00</lastmod>
+  </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/</loc>
-    <lastmod>2023-08-27T14:53:44+09:00</lastmod>
+    <lastmod>2023-09-03T18:26:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -80,7 +50,7 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/</loc>
-    <lastmod>2023-08-27T14:53:44+09:00</lastmod>
+    <lastmod>2023-09-03T18:26:54+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -90,6 +60,45 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://koki-nakamura22.github.io/blog/ja/tags/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/tags/django/</loc>
+    <lastmod>2023-09-03T18:26:54+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/tags/django/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/tags/django/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/categories/django/</loc>
+    <lastmod>2023-09-03T18:26:54+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/categories/django/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/categories/django/"
+                />
+  </url><url>
+    <loc>https://koki-nakamura22.github.io/blog/ja/posts/django/csrf-protect-on-django-rest-framework/</loc>
+    <lastmod>2023-09-03T18:26:54+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://koki-nakamura22.github.io/blog/posts/django/csrf-protect-on-django-rest-framework/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://koki-nakamura22.github.io/blog/ja/posts/django/csrf-protect-on-django-rest-framework/"
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/python/</loc>
@@ -171,12 +180,6 @@
                 />
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/posts/other/resolve-shared-content-goes-black-on-google-meet/</loc>
-    <lastmod>2023-08-20T21:21:51+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/tags/other/</loc>
-    <lastmod>2023-08-20T21:21:51+09:00</lastmod>
-  </url><url>
-    <loc>https://koki-nakamura22.github.io/blog/ja/categories/other/</loc>
     <lastmod>2023-08-20T21:21:51+09:00</lastmod>
   </url><url>
     <loc>https://koki-nakamura22.github.io/blog/ja/tags/terraform/</loc>
